@@ -3,8 +3,10 @@
 #include <cstdio>
 #include <cstdlib>
 #include <windows.h>
-constexpr int FIRST_INTRODUCTION = 0;;
+constexpr int FIRST_INTRODUCTION = 0;
 constexpr int MANIPUNATE_INSTRUCTION = 1;
+constexpr int WITH_GENERATION_INFO = 1;
+constexpr int NO_GENERATION_INFO = 0;
 //Define rules;
 int BOTTOM_LIMIT = 1;
 int UPPER_LIMIT = 4;
@@ -154,7 +156,7 @@ public:
 		int i, j, k;
 		cout << "Please insert three value to define the rules: (Defaul Configuration:1 4 3)" << endl
 			<< "BOTTOM_LIMIT UPPER_LIMIT REBIRTH_NUM" << endl;
-	inputrule: cin >> i >> j >> k;
+	inputrule: cout << ">> "; cin >> i >> j >> k;
 		if (cin.fail() || i >= 8 || j >= 8 || k >= 8 || i < 0 || j < 0 || k < 0) {
 			cout << "Invalid input, please input three positive integers smaller than 8." << endl;
 			cin.clear();
@@ -191,7 +193,7 @@ input: cin >> X >> Y;
 	Map.instructor(MANIPUNATE_INSTRUCTION);
 	cout << "This is all the cells you have." << endl;
 	Map.initialize(X, Y);
-	Map.printer(0);
+	Map.printer(NO_GENERATION_INFO);
 	cin.clear();
 	while (cin.get() != '\n') continue; // Clear datas in the cache.
 	char command;
@@ -218,7 +220,7 @@ input: cin >> X >> Y;
 				Map.SetDying(X, Y);
 			break;
 		case 'P':
-			Map.printer(1);
+			Map.printer(WITH_GENERATION_INFO);
 			break;
 		case 'N':
 			//gens mens the number of generations to evolve
@@ -226,7 +228,7 @@ input: cin >> X >> Y;
 			int i, gens, interval;
 			if (cin.get() != '\n') {
 				cin >> gens;
-				if (cin.get() == '\n')interval = 0;
+				if (cin.get() == '\n') interval = 0;
 				else cin >> interval;
 				if (gens <= 0 || interval < 0) {
 					cout << "Unvalid input, please enter positive integers." << endl;
@@ -238,7 +240,7 @@ input: cin >> X >> Y;
 						system("cls");
 						Map.instructor(MANIPUNATE_INSTRUCTION);
 						Map.Next();
-						Map.printer(1);
+						Map.printer(WITH_GENERATION_INFO);
 						Sleep(interval);
 					}
 				}
@@ -247,7 +249,7 @@ input: cin >> X >> Y;
 				system("cls");
 				Map.instructor(MANIPUNATE_INSTRUCTION);
 				Map.Next();
-				Map.printer(1);
+				Map.printer(WITH_GENERATION_INFO);
 			}
 			break;
 		case 'R':
@@ -257,7 +259,7 @@ input: cin >> X >> Y;
 		case '!':
 			Map.Radomlize();
 			cout << "OK, now it's just chaos." << endl;
-			Map.printer(1);
+			Map.printer(WITH_GENERATION_INFO);
 			break;
 		case 'X':
 			Map.Definer();
@@ -268,7 +270,7 @@ input: cin >> X >> Y;
 			//while (cin.get() != '\n') continue;
 		}
 	}
-	cout << "See you:)\n";
+	cout << "See you:)\n\n";
 	system("pause");
 	return 0;
 }
