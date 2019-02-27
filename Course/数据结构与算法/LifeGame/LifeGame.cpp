@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <windows.h>
+
 constexpr int FIRST_INTRODUCTION = 0;
 constexpr int MANIPUNATE_INSTRUCTION = 1;
 constexpr int WITH_GENERATION_INFO = 1;
@@ -17,12 +18,13 @@ const char DIEC = '.';
 const int MAXL = 101;
 using namespace std;
 class LifeMap {
-public:
+private:
 	int width;
 	int height;
 	int matrix[MAXL][MAXL] = { 0 };
 	int surround[MAXL][MAXL] = { 0 };
 	int generation = 0;
+public:
 	void instructor(int type) {
 		switch (type) {
 		case FIRST_INTRODUCTION:
