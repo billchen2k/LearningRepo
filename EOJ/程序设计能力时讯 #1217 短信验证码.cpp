@@ -1,7 +1,5 @@
 #include <iostream>
 #include <string.h>
-#include <cmath>
-
 using namespace std;
 int order[5] = {0, 2, 4, 3, 1};
 void alter(char * toalter){
@@ -13,13 +11,14 @@ void alter(char * toalter){
     }
     toalter[5] = '\0';
 }
-int process(char * toprocess){
+char * process(char * toprocess){
     long int temp = atoi(toprocess);
     long int output = 1;
     for (int i = 0; i < 5; i++)    {
         output = output * temp % 100000;
     }
-    return output;
+    char coutput[6] = {0};
+    
 }
 int main(){
     int len;

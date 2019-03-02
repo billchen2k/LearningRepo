@@ -4,16 +4,20 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
-        { 
-            "name": "Attach C++",
+        {
+            "name": "Launch C",
+            "preLaunchTask": "build c",
             "type": "cppdbg",
-            "request": "attach",
+            "request": "launch",
             "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
-            "processId": "${command:pickProcess}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
             "MIMode": "lldb"
         },
-
+        
 
         {
             "preLaunchTask": "build c++",

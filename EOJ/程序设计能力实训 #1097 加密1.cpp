@@ -4,11 +4,9 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
-int main()
-{
+int main(){
     unsigned int input;
-    while (cin >> input && !cin.eof())
-    {
+    while (cin >> input && !cin.eof()){
         unsigned int H16, L16, output;
         H16 = (input & 0xffff0000) >> 16;
         L16 = (input << 16) & 0xffff0000;

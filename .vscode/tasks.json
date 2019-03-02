@@ -11,8 +11,28 @@
                 "-g",
                 "${file}",
                 // Ask msbuild to generate full paths for file names.
-                
                 "-std=c++17",
+                "-o",
+                //"${fileDirname}/${fileBasenameNoExtension}.out",
+                "${workspaceFolder}/temp/${fileBasenameNoExtension}.out"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        },
+
+        {
+            "label": "build c",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${file}",
+                // Ask msbuild to generate full paths for file names.
                 "-o",
                 //"${fileDirname}/${fileBasenameNoExtension}.out",
                 "${workspaceFolder}/temp/${fileBasenameNoExtension}.out"
