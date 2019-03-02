@@ -8,12 +8,14 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                // Ask msbuild to generate full paths for file names.
+                "-g",
                 "${file}",
+                // Ask msbuild to generate full paths for file names.
+                
+                "-std=c++17",
                 "-o",
                 //"${fileDirname}/${fileBasenameNoExtension}.out",
-                "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
-                "-g"
+                "${workspaceFolder}/temp/${fileBasenameNoExtension}.out"
             ],
             "group": "build",
             "presentation": {
