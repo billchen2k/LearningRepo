@@ -3,42 +3,61 @@
 #include <stack>
 const int MAXL = 1000;
 using namespace std;
-// class myStack
-// {
-//   private:
-//     int data[1000];
-//     int position;
-
-//   public:
-// };
+char left_bracket[4] = {'(', '[', '{', '<'};
+char right_bracket[4] = {')', ']', '}', '>'};
+int is_subset(char src, char *dst)
+{
+    int i;
+    for (i = 0; i < sizeof(src) / sizeof(char); i++)
+    {
+        if (src == dst[i])
+            return i + 1;
+    }
+    return 0;
+}
+void printer(int flag)
+{
+    cout << (flag ? "Matched.\n" : "Not Matched.\n");
+}
 int main()
 {
     cout << "Please type one line including brackets(Eg. ()[]{}),\n and we weill verify if these brackets are correctly matched." << endl
          << endl
          << "input Q or q or an empty line to quit." << endl;
-    char input[1000];
-    char c;
-    while ((c = cin.get()) != '\n')
+    char input[MAXL];
+    while (cin.getline(input, MAXL) && !cin.fail() && !((toupper(input[0]) == 'Q' && input[1] == '\0') || input[0] == '\0'))
     {
-        if (toupper(c) == 'Q')
-            break;
+        int flag = -1;
         stack<char> data;
-        if (c == '(' || c == '[' || c == '{' || c == '<')
-            data.push(c);
-        if (c == ')' || c == ']' || c == '}' || c == '>')
+        for (int i = 0; i < strlen(input); i++)
         {
-            if (!data.empty())
+            if (is_subset(input[i], left_bracket))
             {
-                if (c - (char)data.top() != 1 && c - (char)data.top() != 2)
+                data.push(input[i]);
+            }
+            if (is_subset(input[i], right_bracket))
+            {
+                if (!data.empty())
                 {
-                    cout << "Not Matched." << endl;
-                    break;
+                    if (!((is_subset(data.top(), left_bracket)) == (is_subset(input[i], right_bracket))))
+                    {
+                        flag = 0;
+                        break;
+                    }
+                    else
+                        data.pop();
                 }
                 else
-                    data.pop();
+                {
+                    flag = 0;
+                    break;
+                }
             }
         }
-        cout << "Matched." << endl;
+        if (!data.empty())
+            flag = 0;
+        else if (data.empty() && flag == -1)
+            flag = 1;
+        printer(flag);
     }
-    return 0;
 }

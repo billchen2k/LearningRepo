@@ -10,7 +10,8 @@ int int_size_is_32(){
         return msb && !(moved_msb);
     }
     else{
-        int moved_msb = msb <<31;
+        int
+        moved_msb = msb <<31;
         return msb && !(moved_msb);
     }
 }
