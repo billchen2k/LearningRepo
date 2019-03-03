@@ -18,7 +18,7 @@ class myStack{
             pos--;
         }
         char top(){
-            return data[pos];
+            return data[pos-1];
         }
         int empty(){
             return pos == 0 ? 1 : 0;
