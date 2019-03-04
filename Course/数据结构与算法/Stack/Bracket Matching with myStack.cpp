@@ -2,6 +2,8 @@
 #include <string>
 #include <stack>
 const int MAXL = 1000;
+const int ERROR_OVERFLOW = 1;
+const int ERROR_UNDERFLOW = 2;
 using namespace std;
 char left_bracket[5] = {'(', '[', '{', '<', '\0'};
 char right_bracket[5] = {')', ']', '}', '>', '\0'};
