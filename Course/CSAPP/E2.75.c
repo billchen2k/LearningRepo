@@ -1,12 +1,8 @@
 #include <stdio.h>
-#include "bytepointer.h"
-
-int main(){
-    int x, y;
-    while(scanf("%d %d", &x, &y)!=EOF){
-        unsigned ux = (unsigned)x;
-        unsigned uy = (unsigned)y;
- //     printf("%d\n", ((x + y) << 4) + y - x == 17 * y + 15 * x);
-        printf("%d\n", ((x>>2)<<2 <= x));
-	}
+int int_high_prod(int x, int y){
+    return 0;
+}
+unsigned unsigned_high_prod(unsigned x, unsigned y){
+    int w = sizeof(int) << 3;
+    return int_high_prod(x, y);
 }

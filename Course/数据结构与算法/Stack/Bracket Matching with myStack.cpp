@@ -1,33 +1,51 @@
 #include <iostream>
 #include <string>
-#include <stack>
 const int MAXL = 1000;
 const int ERROR_OVERFLOW = 1;
 const int ERROR_UNDERFLOW = 2;
 using namespace std;
-char left_bracket[5] = {'(', '[', '{', '<', '\0'};
-char right_bracket[5] = {')', ']', '}', '>', '\0'};
+char left_bracket[5] = "([{<";
+char right_bracket[5] = ")]}>";
 class myStack{
-    private:
-        char data[1000];
-        int pos = 0;
-    public:
-        void push(char ch){
+  private:
+    char data[MAXL];
+    int pos = 0;
+  public:
+    int push(char ch){
+        if (pos == MAXL){
+            cout << "ERROR: OVERFLOW." << endl;
+            return ERROR_OVERFLOW;
+        }
+        else{
             data[pos] = ch;
             pos++;
+            return 0;
         }
-        void pop(){
+    }
+    int pop(){
+        if (pos == 0){
+            cout << "ERROR: UNDERFLOW." << endl;
+            return ERROR_UNDERFLOW;
+        }
+        else{
             pos--;
+            return 0;
         }
-        char top(){
-            return data[pos-1];
+    }
+    char top(){
+        if (pos == 0){
+            cout << "ERROR: UNDERFLOW." << endl;
+            return ERROR_UNDERFLOW;
         }
-        int empty(){
-            return pos == 0 ? 1 : 0;
-        }
-        void clear(){
-            pos = 0;
-        }
+        else
+            return data[pos - 1];
+    }
+    int empty(){
+        return pos == 0 ? 1 : 0;
+    }
+    void clear(){
+        pos = 0;
+    }
 };
 int is_subset(char src, char *dst)
 {

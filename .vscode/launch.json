@@ -4,9 +4,6 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
-
-
         {
             "name": "Launch C",
             "preLaunchTask": "build c",
@@ -18,7 +15,12 @@
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
-            "MIMode": "lldb"
+            "MIMode": "lldb",
+            "logging": {
+                //   "engineLogging": true,
+                "trace": true,
+                "traceResponse": true,
+            }
         },
         
 
@@ -34,6 +36,11 @@
             "environment": [],
             "externalConsole": true,
             "MIMode": "lldb",
+            "logging": {
+            //   "engineLogging": true,
+               "trace": true,
+               "traceResponse": true,
+            }
 
         }
     ]

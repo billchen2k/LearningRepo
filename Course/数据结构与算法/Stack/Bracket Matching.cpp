@@ -3,8 +3,8 @@
 #include <stack>
 const int MAXL = 1000;
 using namespace std;
-char left_bracket[5] = {'(', '[', '{', '<', '\0'};
-char right_bracket[5] = {')', ']', '}', '>', '\0'};
+char left_bracket[5] = "([{<";
+char right_bracket[5] = ")]}>";
 int is_subset(char src, char *dst){
     int i;
     for (i = 0; i < strlen(dst); i++){

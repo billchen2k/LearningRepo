@@ -8,21 +8,25 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g",
                 "${file}",
                 // Ask msbuild to generate full paths for file names.
-                "-std=c++17",
                 "-o",
                 //"${fileDirname}/${fileBasenameNoExtension}.out",
-                "${workspaceFolder}/temp/${fileBasenameNoExtension}.out"
+                "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
+                "-g",
             ],
             "group": "build",
             "presentation": {
+                "echo": true,
+                "focus": false,
+                "panel":"shared",
+                "showReuseMessage": true,
+                "clear": false,
                 // Reveal the output only if unrecognized errors occur.
                 "reveal": "silent"
             },
             // Use the standard MS compiler pattern to detect errors, warnings and infos
-            "problemMatcher": "$msCompile"
+           // "problemMatcher": "$msCompile"
         },
 
         {
