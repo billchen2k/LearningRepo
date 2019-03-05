@@ -43,6 +43,9 @@ class myStack{
     int empty(){
         return pos == 0 ? 1 : 0;
     }
+    int size(){
+        return pos;
+    }
     void clear(){
         pos = 0;
     }
@@ -66,34 +69,50 @@ int main(){
     char input[MAXL];
     while (cin.getline(input, MAXL) && !cin.fail() 
             && !((toupper(input[0]) == 'Q' && input[1] == '\0') || input[0] == '\0')) {
-        int flag = -1;
+        int flag = -1, flagFinal = 1;
         //stack<char> data;
         myStack data;
+        myStack wrong;
         for (int i = 0; i < strlen(input); i++){
             if (is_subset(input[i], left_bracket)){
                 data.push(input[i]);
+                wrong.push(i + 1);
             }
             else if (is_subset(input[i], right_bracket)){
                 if (!data.empty()) {
                     if ((is_subset(data.top(), left_bracket)) == (is_subset(input[i], right_bracket))) {
                         flag = 1;
                         data.pop();
+                        wrong.pop();
                     }
                     else{
-                        flag = 0;
-                        break;
+                        flagFinal = 0;
+                        wrong.push(i + 1);
                     }
              }
                 else{
-                    flag = 0;
-                    break;
+                    flagFinal = 0;
+                    wrong.push(i + 1);
                 }
             }
         }
-        if (!data.empty())
+        if (!data.empty()){
             flag = 0;
+        }
         if (data.empty() && flag == -1)
             flag = 1;
-        printer(flag);
+        if(flag==1 && flagFinal!=0){
+            cout << "Matched." << endl;
+        }
+        else{
+            cout << "Not Matched." << endl
+                 << "Dismatched Position: ";
+            while (!wrong.empty()){
+                printf("%d ", wrong.top());
+                wrong.pop();
+            }
+            cout << endl;
+        }
     }
+    return 0;
 }
