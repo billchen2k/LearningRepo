@@ -2,6 +2,10 @@
     "files.associations": {
         "stack": "cpp",
         "__config": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "iterator": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "istream": "cpp"
     }
 }

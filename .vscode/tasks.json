@@ -9,11 +9,12 @@
             "command": "g++",
             "args": [
                 "${file}",
+                "-Wc++11-extensions",
                 // Ask msbuild to generate full paths for file names.
                 "-o",
                 //"${fileDirname}/${fileBasenameNoExtension}.out",
                 "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
-                "-g",
+                "-g"
             ],
             "group": "build",
             "presentation": {
