@@ -27,7 +27,7 @@ int operate(char command, stack<double> &num){
     int errorStatus;
     switch (command){
         case '+':
-            if (num.size() >= 1){
+            if (num.size() > 1){
                 tempA = num.top();
                 num.pop();
                 tempB = num.top();
@@ -39,7 +39,7 @@ int operate(char command, stack<double> &num){
             }
             break;
         case '-':
-            if (num.size() >= 1){
+            if (num.size() > 1){
                 tempA = num.top();
                 num.pop();
                 tempB = num.top();
@@ -51,7 +51,7 @@ int operate(char command, stack<double> &num){
             }
             break;
         case '*':
-            if (num.size() >= 1){
+            if (num.size() > 1){
                 tempA = num.top();
                 num.pop();
                 tempB = num.top();
@@ -63,7 +63,7 @@ int operate(char command, stack<double> &num){
             }
             break;
         case '/':
-            if (num.size() >= 1){
+            if (num.size() > 1){
                 tempA = num.top();
                 num.pop();
                 tempB = num.top();
@@ -126,6 +126,9 @@ int main(){
         else{
             if (strlen(tempCommand)!=1){
                 sayError(ERROR_INVALIDINPUT);
+            }
+            else if(strlen(tempCommand)>=18){
+                sayError(ERROR_MAXNUMBER);
             }
             else if (toupper(tempCommand[0]) == 'X'){
                 while (!numbers.empty())
