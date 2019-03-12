@@ -1,79 +1,49 @@
 #include <iostream>
 #include <string.h>
+#include <algorithm>
 using namespace std;
-typedef struct
-{
-    char username[1000000];
-    char domain[1000000];
+typedef struct{
+	string username;
+	string domain;
 } email;
-typedef struct
-{
-    char username[101];
-    char domain[101];
-} emailsmall;
 int cmp(const void *pa, const void *pb)
 {
-    email *pta = (email *)pa;
-    email *ptb = (email *)pb;
-    if (strcmp(pta->domain, ptb->domain) != 0)
-        return strcmp(pta->domain, ptb->domain);
-    else
-        return -strcmp(pta->username, ptb->username);
+	email *pta = (email *)pa;
+	email *ptb = (email *)pb;
+	if (pta->domain != ptb->domain){
+		int a = (pta->domain < ptb->domain);
+		return pta->domain > ptb->domain ? 1 : -1;
+	}
+	else
+		return pta->username < ptb->username ? 1 : -1;
 }
-int cmpsmall(const void *pa, const void *pb)
-{
-    emailsmall *pta = (emailsmall *)pa;
-    emailsmall *ptb = (emailsmall *)pb;
-    if (strcmp(pta->domain, ptb->domain) != 0)
-        return strcmp(pta->domain, ptb->domain);
-    else
-        return -strcmp(pta->username, ptb->username);
+bool cmpq(email a, email b){
+	if (a.domain != b.domain){
+		return a.domain < b.domain;
+	}
+	else
+		return a.username > b.username;
 }
 int main()
 {
-    int len;
-    scanf("%d", &len);
-    if (len >= 100000)
-    {
-        emailsmall data[len];
-        while (cin.get() != '\n')
-            continue;
-        for (int i = 0; i < len; i++)
-        {
-            char temp[202] = {0};
-            cin.getline(temp, 202);
-            int j = 0;
-            while (temp[j] != '@')
-                j++;
-            strncpy(data[i].username, temp, j);
-            data[i].username[j] = '\0';
-            strncpy(data[i].domain, temp + j + 1, strlen(temp) - j - 1);
-            data[i].domain[strlen(temp) - j - 1] = '\0';
-        }
-        qsort(data, len, sizeof(data[0]), cmpsmall);
-        for (int k = 0; k < len; k++)
-            printf("%s@%s\n", data[k].username, data[k].domain);
-    }
-    else
-    {
-        email data[len];
-        while (cin.get() != '\n')
-            continue;
-        for (int i = 0; i < len; i++)
-        {
-            char temp[1000000] = {0};
-            cin.getline(temp, 1000000);
-            int j = 0;
-            while (temp[j] != '@')
-                j++;
-            strncpy(data[i].username, temp, j);
-            data[i].username[j] = '\0';
-            strncpy(data[i].domain, temp + j + 1, strlen(temp) - j - 1);
-            data[i].domain[strlen(temp) - j - 1] = '\0';
-        }
-        qsort(data, len, sizeof(data[0]), cmp);
-        for (int k = 0; k < len; k++)
-            printf("%s@%s\n", data[k].username, data[k].domain);
-    }
-    return 0;
+	int len;
+	scanf("%d", &len);
+	email *data;
+	data = new email[len];
+	while (cin.get() != '\n')
+		continue;
+	for (int i = 0; i < len; i++){
+		char ch;
+		while((ch=cin.get())!='@'){
+			data[i].username += ch;
+		}
+		while ((ch = cin.get()) != '\n' && ch != EOF){
+			data[i].domain += ch;
+		}
+	}
+	sort(data, data + len, cmpq);
+	//qsort(data, len, sizeof(data[0]), cmp);
+	for (int k = 0; k < len; k++)
+		cout << data[k].username << "@" << data[k].domain << endl;
+	return 0;
 }
