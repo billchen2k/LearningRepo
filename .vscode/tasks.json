@@ -9,7 +9,7 @@
             "command": "g++",
             "args": [
                 "${file}",
-                "-Wc++11-extensions",
+                //"-Wc++11-extensions",
                 "-std=c++17",
                 // Ask msbuild to generate full paths for file names.
                 "-o",

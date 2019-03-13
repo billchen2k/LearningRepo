@@ -4,6 +4,8 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+        
         
         
         {
@@ -46,6 +48,27 @@
             "environment": [],
             "externalConsole": true,
             "MIMode": "lldb",
+            "logging": {
+            //   "engineLogging": true,
+               "trace": true,
+               "traceResponse": true,
+            }
+
+        }
+
+
+        {
+            "preLaunchTask": "build c++",
+            "name": "Launch C++ (gdb)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
             "logging": {
             //   "engineLogging": true,
                "trace": true,
