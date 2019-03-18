@@ -28,5 +28,5 @@ int main()
     cout << "The char p0 points to is:" << p0->entry << endl;
     cout << "The char p1 points to is:" << p0->next->entry << endl;
     cout << "The char p2 points to is:" << p0->next->next->entry << endl;
-    retun 0;
+    return 0;
 }

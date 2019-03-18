@@ -4,11 +4,10 @@
 using namespace std;
 int main()
 {
+    float inTime, outTime, Unit;
     cout << "\033[2J\033[0;0H";
-    cout << "Welcome to the \033[36mAIRPORT STIMULATOR.\033[0m" << endl;
+    cout << "Welcome to the \033[36mAIRPORT SIMULATOR\033[0m." << endl;
     sleep(1);
-    printf("\033[42mHI\033[0m\n");
-    cout << "HI" << endl;
-    sleep(1);
-    cout << "HI" << endl;
+    cout << "\033[42mPlease enter how many flights will come per unit time:\033[0m\n";
+
 }
