@@ -14,10 +14,18 @@ or 0 if such node can’t be found
 */
 { //TODO: your definition
     NODE *p = h;
-    int totalLen = 0;
-    while (p->next != NULL){
-        
+    int totalLen = 1;
+    while (p->next != 0){
+        totalLen++;
+        p = p->next;
     }
+    if(n > totalLen)
+        return 0;
+    p = h;
+    for (int i = 0; i < totalLen - n; i++){
+        p = p->next;
+    }
+    return p;
 }
 /*/////////////////////////////////////////////////////*/
 /***************************************************************/
@@ -26,7 +34,7 @@ or 0 if such node can’t be found
 /*                                                             */
 /***************************************************************/
 #include <stdio.h>
-#include <malloc.h>
+#include <stdlib.h>
 static unsigned long next = 1;
 int RND()
 {
@@ -68,15 +76,15 @@ void solve()
         n++;
         free(p);
     }
-    printf("\\n");
+    printf("\n");
 }
 int main()
 {
       int i, t;
-      scanf("%d\\n", &t);
+      scanf("%d\n", &t);
     for (i = 0; i < t; i++)
     {
-        printf("case #%d:\\n", i);
+        printf("case #%d:\n", i);
         solve();
     }
     return 0;
