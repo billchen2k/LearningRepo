@@ -14,7 +14,7 @@ or 0 if such node can’t be found
 */
 { //TODO: your definition
     NODE *p = h;
-    int totalLen = 1;
+    int totalLen = 0;
     while (p->next != 0){
         totalLen++;
         p = p->next;
