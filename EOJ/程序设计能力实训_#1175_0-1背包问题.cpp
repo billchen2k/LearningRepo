@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <cstdlib>
 using namespace std;
 int main(){
     int n, M, len;
@@ -27,6 +28,6 @@ int main(){
             }
         }
         cout << mem[n][M] << endl;
-        return 0;
     }
+    return 0;
 }
