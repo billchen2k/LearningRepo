@@ -1,4 +1,4 @@
-# LearnigRepo
+# LearningRepo
 
 This is a repo that stores my codes and materials during my learning process of Software Engineering in ECNU.
 
