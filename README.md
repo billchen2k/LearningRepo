@@ -23,8 +23,10 @@ Problems and contest solutions in EOJ(http://acm.ecnu.edu.cn).
 I created this directory to store the output files for VS Code.
 It's messy there.
 
+# 
+
 *Settings sync token for VSCode:*
 
-36fa9db0f020139734de98d43e5456cfbd050c58
+26ea45608f44475a1e1fc24c6d2bd3d8156823bc
 
-ID:273981830
+ID:273982386
