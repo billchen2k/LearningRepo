@@ -22,3 +22,5 @@ Problems and contest solutions in EOJ(http://acm.ecnu.edu.cn).
 
 I created this directory to store the output files for VS Code.
 It's messy there.
+
+*Settings sync token: 36fa9db0f020139734de98d43e5456cfbd050c58*

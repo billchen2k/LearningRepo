@@ -392,5 +392,5 @@ int float_f2i(unsigned uf){
 			output = M >> (23 - E);
 		}
 	}
-	return sig ? output :output;
+	return sig ? output : -output;
 }
