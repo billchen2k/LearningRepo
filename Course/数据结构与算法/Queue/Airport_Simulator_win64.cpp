@@ -37,30 +37,30 @@ class Plane{
 		status = null;
 	}
 	Plane(int _ID, int _comingTime, flightStatus _status){
-		usleep(USPEED_SHORT);
+		//u//sleep(USPEED_SHORT);
 		ID = _ID;
 		comingTime = _comingTime;
 		status = _status;
 		cout << "[PLANE MESSAGE] Plane NO." << ID << " is applying to " << ((status == toLand) ? "land " : "take off ") << endl;
 	}
 	feedback land(int currentTime){
-		usleep(USPEED_LONG);
-		cout << "\033[42m[PLANE MESSAGE] Plane NO." << ID << " has landed safely.\033[0m" << endl
+		//u//sleep(USPEED_LONG);
+		cout << "[PLANE MESSAGE] Plane NO." << ID << " has landed safely." << endl
 			 << "                Waiting time before landing: " << currentTime - comingTime << "." << endl;
 	}
 	feedback takeoff(int currentTime){
-		usleep(USPEED_LONG);
-		cout << "\033[42m[PLANE MESSAGE] Plane NO." << ID << " has taken off.\033[0m" << endl
+		//u//sleep(USPEED_LONG);
+		cout << "[PLANE MESSAGE] Plane NO." << ID << " has taken off." << endl
 			 << "                Waiting time before taking off: " << currentTime - comingTime << "." << endl;
 	}
 	feedback reject(int currentTime){
-		usleep(USPEED_LONG);
+		//u//sleep(USPEED_LONG);
 		if(status == toLand){
-			cout << "\033[41m[AIRPORT MESSAGE] Plane NO." << ID << "'s landing request is rejected.\033[0m" << endl
+			cout << "[AIRPORT MESSAGE] Plane NO." << ID << "'s landing request is rejected." << endl
 				 << "                  It has been directed to other airports." << endl;
 		}
 		else{
-			cout << "\033[41m[AIRPORT MESSAGE] Plane NO." << ID << " 's taking off request is rejected.\033[0m" << endl
+			cout << "[AIRPORT MESSAGE] Plane NO." << ID << " 's taking off request is rejected." << endl
 				 << "                  This flight is delayed." << endl;
 		}
 	}
@@ -146,11 +146,11 @@ class Runaway{
 	}
 	void SumUp(int simulationTime){
 		cout << endl;
-		cout << "\033[36m=============== SIMULATION RESULTS ===============\033[0m" << endl
-			 << "\033[5;3mCalculating...\033[0m" << endl;
-		sleep(2);
+		cout << "=============== SIMULATION RESULTS ===============" << endl
+			 << "Calculating..." << endl;
+		//sleep(2);
 		cout
-			<< "\033[1ATotal simulation time:                         " << simulationTime << endl
+			<< "Total simulation time:                         " << simulationTime << endl
 			<< "Total flights simulated:                       " << landingRequests + takeoffRequests << endl
 			<< "Total flights required to land:                " << landingRequests << endl
 			<< "Landing request accepted:                      " << landingAccepted << endl
@@ -168,23 +168,22 @@ class Runaway{
 			<< "Ratio for successfully took off flights:       " << percentage(landingAccepted, landingRequests) << endl
 			<< "Ratio of runaway idle time:                    " << percentage(idleUnit, simulationTime) << endl
 			<< endl
-			<< "\033[3;2mSimulation finished.\033[0m" << endl;
+			<< "Simulation finished." << endl;
 	}
 };
 void initilize(int &totalTime, int &queueLimit, float &arrivingRate, float &departureRate){
-	cout << "\033[2J\033[0;0H";
-	cout << "Welcome to the \033[46mAIRPORT SIMULATOR\033[0m." << endl;
-	sleep(1);
-	cout << "\033[36mPlease enter how many time units you will simulate:\033[0m\n"
+	cout << "Welcome to the AIRPORT SIMULATOR." << endl;
+	//sleep(1);
+	cout << "Please enter how many time units you will simulate:\n"
 		 << flush;
 	cin >> totalTime;
-	cout << "\033[36mHow many flights can be waiting to land or takeoff?\033[0m" << endl
+	cout << "How many flights can be waiting to land or takeoff?" << endl
 		 << flush;
 	cin >> queueLimit;
-	cout << "\033[36mWhat is the expected arriving flights per unit time?\033[0m" << endl
+	cout << "What is the expected arriving flights per unit time?" << endl
 		 << flush;
 	cin >> arrivingRate;
-	cout << "\033[36mWhat is the expected departing flights per unit time?\033[0m" << endl
+	cout << "What is the expected departing flights per unit time?" << endl
 		 << flush;
 	cin >> departureRate;
 }
@@ -199,7 +198,7 @@ START:
 	Random randomSeed;
 	Runaway airport(queueLimit);
 	for (currentTime = 0; currentTime < totalTime; currentTime++){
-		cout << "\033[2m----- Current excution time: " << currentTime << " -----\033[0m" << endl;
+		cout << "----- Current excution time: " << currentTime << " -----" << endl;
 		int comingPerUnit = randomSeed.poisson(arrivingRate);
 		for (int num = 0; num < comingPerUnit; num++, planeID++){
 			Plane currentPlane(planeID, currentTime, toLand);
@@ -223,13 +222,13 @@ START:
 			movingPlane.takeoff(currentTime);
 			break;
 		case idle:
-			cout << "\033[46m[AIRPORT MESSAGE]: Runaway is idle.\033[0m" << endl;
+			cout << "[AIRPORT MESSAGE]: Runaway is idle." << endl;
 			break;
 		}
 	}
 	airport.SumUp(totalTime);
 	char ch;
-	cout << "\033[36mDo you want to initialize another simulation? \n([R] or [r] to restart, any other key to exit.)\033[0m" << endl;
+	cout << "Do you want to initialize another simulation? \n([R] or [r] to restart, any other key to exit.)" << endl;
 	while(cin.get()!='\n')
 		;
 	if (toupper(ch = cin.get()) == 'R')
