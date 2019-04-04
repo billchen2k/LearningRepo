@@ -58,5 +58,5 @@
         "utility": "cpp",
         "vector": "cpp"
     },
-    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3"
+    "python.pythonPath": "/Users/billchen/anaconda3/envs/bills/bin/python"
 }

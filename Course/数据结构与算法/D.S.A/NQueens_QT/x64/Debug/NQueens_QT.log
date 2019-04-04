@@ -1,0 +1,6 @@
+﻿  QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly.
+  Uic'ing NQueens_QT.ui...
+  moc_NQueens_QT.cpp
+  NQueens_QT.cpp
+  main.cpp
+  NQueens_QT.vcxproj -> C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\数据结构与算法\D.S.A\x64\Debug\NQueens_QT.exe
