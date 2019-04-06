@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5261ede-78af-4dcc-af9d-803b24792b5e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/buttons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/googlelogo_color_272x92dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Course/数据结构与算法/List/Polynomio.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Course/数据结构与算法/List/Polynomio.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Course/数据结构与算法/Queue/Airport_Simulator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Course/数据结构与算法/Queue/Airport_Simulator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Python3/playground.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/playground.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temp/Airport_Simulator.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Airport_Simulator.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temp/Airport_Simulator.out.dSYM/Contents/Resources/DWARF/Airport_Simulator.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Airport_Simulator.out.dSYM/Contents/Resources/DWARF/Airport_Simulator.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temp/Polynomio.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Polynomio.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temp/Polynomio.out.dSYM/Contents/Resources/DWARF/Polynomio.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Polynomio.out.dSYM/Contents/Resources/DWARF/Polynomio.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Course/数据结构与算法/D.S.A/.vs/D.S.A/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Course/数据结构与算法/D.S.A/.vs/D.S.A/v16/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/hi.css" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,7 +76,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -101,6 +92,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -156,14 +148,16 @@
       <updated>1554187215624</updated>
       <workItem from="1554187217689" duration="9720000" />
       <workItem from="1554267903882" duration="908000" />
+      <workItem from="1554489388699" duration="412000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10628000" />
+    <option name="totallyTimeSpent" value="11040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="125" width="1680" height="967" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20735383" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
