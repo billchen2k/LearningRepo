@@ -58,5 +58,6 @@
         "utility": "cpp",
         "vector": "cpp"
     },
-    "python.pythonPath": "/Users/billchen/anaconda3/envs/bills/bin/python"
+    "python.pythonPath": "/Users/billchen/anaconda3/envs/crawller/bin/python",
+    "python.linting.pylintEnabled": true
 }
