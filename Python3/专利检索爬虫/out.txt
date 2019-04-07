@@ -1,0 +1,4907 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+		<title>结果显示</title>
+<script type="text/javascript" language="javascript" src="/Search/result/js/dtree12.js"></script>
+<script type="text/javascript" language="javascript" src="/Search/result/js/loadframe.js"></script>
+<script type="text/javascript" language="javascript" src="/Search/result/js/changeimage.js"></script>
+<script type="text/javascript" language="javascript" src="/Search/result/js/setHiddenValue.js"></script>
+<script type="text/javascript" language="javascript" src="/Search/result/js/stat.js"></script>
+<script type="text/javascript" language="javascript" src="/Search/js/submitWaiting.js"></script>
+<script type="text/javascript" language="javascript" src="/Search/js/search.js"></script>
+<link href="/Search/style/style1/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/Search/result/js/dtree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+//  zhangjiyong add begin
+var sObj = "";
+function nihao()
+{
+	document.getElementById("Layer1").style.left = event.pageX || (event.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft))-100;
+	document.getElementById("Layer1").style.top =  event.pageY || (event.clientY + (document.documentElement.scrollTop || document.body.scrollTop))-100;
+}
+function displayLayer1()
+{
+	//document.getElementById("Layer1").click();
+	//document.getElementById("Layer1").style.display = "block";
+}
+function StaSelf()
+{
+	document.getElementById("querys").value = document.getElementById("query").value;
+	document.getElementById("dbs").value = document.getElementById("db").value;
+	document.getElementById("querydates").value = document.getElementById("querydate").value;
+	document.getElementById("thesauruss").value = document.getElementById("thesaurus").value;
+	document.getElementById("dictionarys").value = document.getElementById("dictionary").value;
+	document.getElementById("fuzzyipcs").value = document.getElementById("fuzzyipc").value;
+	document.getElementById("singledbs").value = document.getElementById("singledb").value;
+	document.getElementById("conceptdics").value = document.getElementById("conceptdic").value;
+	var def1 = document.getElementById("USER_DEFINED11").value;
+	var def2 = document.getElementById("USER_DEFINED22").value;
+	document.getElementById("USER_DEFINED1").value=def1;
+	document.getElementById("USER_DEFINED2").value=def2;
+	if(def1=='IC1'&amp;&amp;def2=='IC1'){
+		alert("主分类号不可重复选择");
+		return false;
+	}
+	if(def1=='ADY'&amp;&amp;def2=='ADY'){
+		alert("申请日不可重复选择");
+		return false;
+	}
+	if(def1=='PDY'&amp;&amp;def2=='PDY'){
+		alert("公告日不可重复选择");
+		return false;
+	}
+	var frmObj = document.getElementById("statForm");
+	if(def2!='EMPTY'){
+		frmObj.action = "/Search/stat/statShow/doubleStat.jsp";
+	}
+	else{
+		frmObj.action = "/Search/stat/statShow/singleStat.jsp";
+	}
+	displayLayer1();
+	nowaitSubmit('statForm');
+}
+	
+function getStatType(statTypeValue,TYPE)
+{
+	document.getElementById("STATTYPE").value = statTypeValue;
+	document.getElementById("querys").value = document.getElementById("query").value;
+	document.getElementById("dbs").value = document.getElementById("db").value;
+	document.getElementById("querydates").value = document.getElementById("querydate").value;
+	document.getElementById("thesauruss").value = document.getElementById("thesaurus").value;
+	document.getElementById("dictionarys").value = document.getElementById("dictionary").value;
+	document.getElementById("fuzzyipcs").value = document.getElementById("fuzzyipc").value;
+	document.getElementById("singledbs").value = document.getElementById("singledb").value;
+	document.getElementById("conceptdics").value = document.getElementById("conceptdic").value;
+	var frmObj = document.getElementById("statForm");
+	if( 'D'==TYPE)
+	{
+		frmObj.action = "/Search/stat/statShow/doubleStat.jsp";
+	}
+	else if( 'S'==TYPE)
+	{
+		frmObj.action = "/Search/stat/statShow/singleStat.jsp";
+	}else
+	{
+		frmObj.action = "/Search/stat/statShow/lifeCircleStat.jsp";
+	}
+	displayLayer1();
+	nowaitSubmit('statForm');
+}
+//  zhangjiyong add end
+document.write('&lt;iframe id=CalFrame name=CalFrame frameborder=0 src=result/inputNode.htm style=width:276px;height:77px;display:none;position:absolute;z-index:100&gt;&lt;/iframe&gt;');
+document.onclick = hideAll;
+function trim(str){return str.replace(/(^\s*)|(\s*$)/g, "");}
+function showCalendar(sImg,bOpenBound,sFld1,sFld2,sCallback)
+{
+	var fld1,fld2;
+	var cf = $("CalFrame");
+	var wcf = window.frames.CalFrame;
+	var oImg = $(sImg);
+	if(!oImg)
+	{
+		alert("控制对象不存在！");
+		return;
+	}
+	if(!sFld1)
+	{
+		alert("输入控件未指定！");
+		return;
+	}
+	fld1 = $(sFld1);
+	if(!fld1)
+	{
+		alert("输入控件不存在！");
+		return;
+	}
+	if(sFld2)
+	{
+		fld2 = $(sFld2);
+		if(!fld2)
+		{
+			alert("参考控件不存在！");
+			return;
+		}
+		if(fld2.tagName != "INPUT" || fld2.type != "text")
+		{
+			alert("参考控件类型错误！");
+			return;
+		}
+	}
+	if(cf.style.display == "block")
+	{
+		cf.style.display = "none";
+		return;
+	}
+	var eT = 0,eL = 0,p = oImg;
+	var sT = document.body.scrollTop,sL = document.body.scrollLeft;
+	var eH = oImg.height,eW = oImg.width;
+	while(p &amp;&amp; p.tagName != "BODY")
+	{
+		eT += p.offsetTop;
+		eL += p.offsetLeft;
+		p = p.offsetParent;
+	}
+	cf.style.top = (document.body.clientHeight-(eT-sT)-eH&gt;=cf.height)?eT+eH:eT-cf.height;
+	cf.style.left = (document.body.clientWidth-(eL-sL)&gt;=cf.width)?eL:eL+eW-cf.width;
+	cf.style.display = "block";
+	wcf.openbound = bOpenBound;
+	wcf.fld1 = fld1;
+	wcf.fld2 = fld2;
+	wcf.callback = sCallback;
+}
+function hideCalendar()
+{
+	var cf = $("CalFrame");
+	if(cf != null)
+	{
+		cf.style.display = "none";
+	}
+}
+
+function hideAll()
+{
+    hideCalendar();
+    hideDiv();
+}
+
+function hideDiv()
+{
+    var cf = $("CalFrame");
+    if(cf != null)
+    {
+		cf.style.display="none";
+    }
+}
+function addClassification()
+{
+    var count = $("resultForm").selectedlist.value;
+    if(count == "" || count == "null")
+    {
+        alert("请选择要添加到可深加工专题数据库的专利信息!");
+        return;
+    }else
+    {
+        $("resultForm").action="/Search/incfun/entity.jsp";
+        nowaitSubmit("resultForm");
+    }
+}
+function historyGoTo(str)//检索结果直接跳转到指定的页码
+{
+	var isNum = /^[0-9]+$/;//检验输入的值为数字
+	var currNum = "";
+	var idName = "currPage"+str;
+	currNum = $(idName).value.replace(/(^\s*)|(\s*$)/g, "");
+	$(idName).value = currNum;
+	if (currNum!=null &amp;&amp; currNum!="" &amp;&amp; isNum.test(currNum))
+	{
+		if(currNum &lt;= 0)//如果页面输入的值小于等于0,自动设置成1
+		{
+			currNum=1;
+		}
+		$("resultForm").action="searchservlet?currPage="+currNum;
+		nowaitSubmit("resultForm");
+	}else
+	{
+		alert("请您输入一个正确页码号!");
+		$(idName).value = "";
+		$(idName).focus();
+	}
+}
+function titleDownloadDigest()
+{
+	var cont = $("selectedlist").value;
+	if(cont == "" || cont == "null")
+	{
+		alert('请您选择要下载的专利信息!');
+		return;
+	}
+	else
+	{
+		cont = encry(cont);//添加转码
+		parent.parent.setFieldVal(cont);
+		parent.parent.msg("823",contentstr,"#999999");
+	}
+}
+function AllSelHidShw(str)
+{
+	var subSelect = document.getElementsByTagName("select");
+	for (i = 0; i &lt; subSelect.length; i++)
+	{
+		subSelect[i].style.display = str;
+	}
+}
+function RelatSearch(str1,str2)
+{
+	var strQuery = "";
+	var sArry = str2.split(" ");
+	for(var i = 0 ; i &lt; sArry.length;i++)
+	{
+		if(trim(sArry[i]) == "invention_view")
+		{
+			continue;
+		}else if(trim(sArry[i]) == "utiltymodel_view")
+		{
+			continue;
+		}else if(trim(sArry[i]) == "face_view")
+		{
+			continue;
+		}else if(trim(sArry[i]) == "granted_view")
+		{
+			continue;
+		}else
+		{
+			if(strQuery.indexOf(" " + trim(sArry[i])) &lt; 0)
+			{
+				strQuery = strQuery + " " + trim(sArry[i]);
+			}
+		}
+	}
+	strQuery = trim(strQuery);
+	if(str1 == "google")
+	{
+		window.open('http://www.google.com/search?hl=zh-CN&amp;ie=GB2312&amp;q=' + strQuery);
+	}
+	if(str1 == "baidu")
+	{
+		window.open('http://www.baidu.com/baidu?tn=kkchat&amp;word=' + strQuery);
+	}
+	if(str1 == "scholargoogle")
+	{
+		window.open('http://www.scholar.google.com/scholar?hl=zh-CN&amp;q=' + encodeURIComponent(strQuery) + "&amp;btnG=%E6%90%9C%E7%B4%A2&amp;lr=");
+	}
+}
+var contentstr="&lt;div id=\"cont\"&gt;&lt;table width=\"823\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"blackframe3\"&gt; &lt;tr bgcolor=\"#EEEEEE\"&gt; &lt;td width=\"98\" height=\"27\" align=\"left\" valign=\"middle\"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;题录文摘下载：&lt;/td&gt; &lt;td width=\"725\" align=\"right\" valign=\"middle\" msg_canmove='true' msg_forid='msg_div_main' id='msg_div_main_title'&gt;&lt;IMG SRC=\"images/null.gif\" class=\"hand close_gif\"  WIDTH=\"16\" HEIGHT=\"16\" BORDER=\"0\" ALT=\"关闭\" onclick=msg_close();&gt;&lt;/A&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td height=\"35\" align=\"left\" valign=\"middle\"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;下载格式设置：&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;input type=\"radio\" id=\"radTxt\" name=\"fileformat\" value=\"txt\" checked=\"checked\" /&gt;TXT 格式&lt;input type=\"radio\" id=\"radHtml\" name=\"fileformat\" value=\"html\" /&gt;HTML 格式&lt;input type=\"radio\" id=\"radAccess\" name=\"fileformat\" value=\"access\" /&gt;ACCESSS 格式&lt;/td&gt; &lt;/tr&gt; &lt;tr &gt; &lt;td height=\"24\" align=\"left\" valign=\"top\"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;下载字段设置：&lt;/td&gt; &lt;td rowspan=\"2\" valign=\"top\"&gt; &lt;table width=\"97%\" border=\"0\" cellpadding=\"2\" cellspacing=\"0\" class=\"grayframe1\"&gt; &lt;tr&gt; &lt;td width=\"84\" height=\"24\" align=\"left\" valign=\"middle\"&gt; &lt;INPUT NAME=\"DField\" value=\"PA\" TYPE=\"checkbox\" checked=\"checked\" disabled=\"disabled\"&gt; 申请人&lt;/td&gt; &lt;td width=\"108\" align=\"left\" valign=\"middle\"&gt;&lt;INPUT NAME=\"DField\" value=\"TI\" TYPE=\"checkbox\" checked=\"checked\" disabled=\"disabled\"&gt; 发明名称&lt;/td&gt; &lt;td width=\"101\" align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"ANC\"&gt; 申请国家&lt;/td&gt; &lt;td width=\"113\" align=\"left\" valign=\"middle\"&gt;&lt;INPUT NAME=\"DField\" value=\"PN\" TYPE=\"checkbox\" checked=\"checked\" disabled=\"disabled\"&gt; 专利公开号&lt;/td&gt; &lt;td width=\"120\" align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"PAN\"&gt; PCT国际申请号&lt;/td&gt; &lt;td width=\"146\" align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"PCD\"&gt; PCT进入国家阶段日&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td height=\"24\" align=\"left\" valign=\"middle\"&gt;&lt;INPUT NAME=\"DField\" value=\"AU\" TYPE=\"checkbox\" checked=\"checked\" disabled=\"disabled\"&gt; 发明人&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"ECL\"&gt; 欧洲分类&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"AGT\"&gt; 代理机构&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"PD\"&gt; 公开/公告日&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"PAD\"&gt; PCT国际申请日&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"CT\"&gt; 被引证专利号&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td height=\"24\" align=\"left\" valign=\"middle\"&gt;&lt;INPUT NAME=\"DField\" value=\"AN\" TYPE=\"checkbox\" checked=\"checked\" disabled=\"disabled\"&gt; 申请号&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"UCL\"&gt; 美国分类&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"CODE\"&gt; 邮&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;编&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"CLM\"&gt; 主权利要求&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"PPN\"&gt; PCT国际公布号&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"CTNP\"&gt; 被引证非专利文献&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td height=\"24\" align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"AD\"&gt; 申请日&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"PR\"&gt; 优先权项&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"ADDR\"&gt; 联系地址&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"IC1\"&gt; 主分类号&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"PPD\"&gt; PCT国际公布日&lt;/td&gt; &lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td height=\"24\" align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"AGC\"&gt; 代理人&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"PHC\"&gt; 范畴分类&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"PC\"&gt; 国家/省市 &lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"IC2\"&gt; 分类号&lt;/td&gt; &lt;td&gt;&amp;nbsp; &amp;nbsp;&lt;/td&gt; &lt;td&gt;&amp;nbsp;&amp;nbsp;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td height=\"24\" align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"AB\"&gt; 文&amp;nbsp;&amp;nbsp;&amp;nbsp;摘&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"PH\"&gt; 审批历史&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"PFN\"&gt; 同族专利&lt;/td&gt; &lt;td align=\"left\" valign=\"middle\"&gt;&lt;INPUT TYPE=\"checkbox\" NAME=\"DField\" value=\"FLZD\"&gt; 法律状态 &lt;/td&gt;&lt;td align=\"right\" valign=\"middle\"&gt;&amp;nbsp;&lt;/td&gt;&lt;td align=\"center\" valign=\"middle\"&gt;&lt;IMG SRC=\"images/null.gif\" class=\"hand button_checkAllField_gif\"  WIDTH=\"48\" HEIGHT=\"19\" BORDER=\"0\" ALT=\"全选\" onclick=\"checkAllField('DField');\"&gt;&amp;nbsp;&amp;nbsp;&lt;IMG SRC=\"images/null.gif\" class=\"hand button_uncheckAllField_gif\"  WIDTH=\"48\" HEIGHT=\"19\" BORDER=\"0\" ALT=\"全不选\" onclick=\"uncheckAllField('DField');\"&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td height=\"134\"&gt;&amp;nbsp;&lt;/td&gt; &lt;/tr&gt; &lt;tr align=\"center\" valign=\"middle\"&gt; &lt;td height=\"60\" colspan=\"2\" align=\"center\" valign=\"middle\"&gt;&lt;IMG SRC=\"images/null.gif\" class=\"hand button_enter_gif\"  WIDTH=\"48\" HEIGHT=\"19\" BORDER=\"0\" ALT=\"确定\" onclick=ajaxSub_downTitFld();&gt;&lt;/td&gt; &lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;";
+//--&gt;
+</script></head><body><iframe id="CalFrame" name="CalFrame" frameborder="0" src="result/inputNode.htm" style="width:276px;height:77px;display:none;position:absolute;z-index:100"></iframe>
+	
+
+<form method="post" action="searchservlet" name="resultForm" id="resultForm">
+<textarea class="hide" id="isShowQuery" name="isShowQuery">null</textarea><textarea class="hide" id="sWriteDBQuery" name="sWriteDBQuery">(docType=invention_view OR docType=utiltymodel_view OR docType=face_view) AND AD=[19950101-19951231]</textarea><textarea class="hide" id="query" name="query">(docType=invention_view OR docType=utiltymodel_view OR docType=face_view) AND AD=[19950101-19951231]</textarea><textarea class="hide" id="hightLightQuery" name="hightLightQuery">invention_view~docType$utiltymodel_view~docType$face_view~docType</textarea><table width="98%" border="0" cellpadding="0" cellspacing="0" class="grayframe1">
+	<tbody><tr>
+		<td class="titlebg">
+			<table width="98%" border="0" cellspacing="0" cellpadding="0">
+				<tbody><tr>
+					<td><img src="images/null.gif" class="arrow02_gif" width="17" height="17" hspace="8" /></td>
+					<td width="100%" class="whiteB">检索结果:</td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+
+
+
+
+<input type="hidden" id="db" name="db" value="cn" />
+<input type="hidden" id="fieldlist" name="fieldlist" value="PN;TI;PA;AU;AN;PA;TI;PN;AD;ADDR;CODE;AN;PC;IC1;AU;ANC;PD;FLZD" />
+<input type="hidden" id="querydate" name="querydate" value="" />
+<input type="hidden" id="thesaurus" name="thesaurus" value="0" />
+<input type="hidden" id="dictionary" name="dictionary" value="0" />
+<input type="hidden" id="fuzzyipc" name="fuzzyipc" value="null" />
+<input type="hidden" id="singledb" name="singledb" value="cn" />
+<input type="hidden" id="recordtotal" name="recordtotal" value="74674" />
+<input type="hidden" id="selectedlist" name="selectedlist" value="" />
+<input type="hidden" id="sortField" name="sortField" value="Default" />
+<input type="hidden" id="conceptdic" name="conceptdic" value="null" />
+	<tr>
+		<td height="80" class="searchresultBgcolor1">
+			<table width="98%" border="0" cellpadding="0" cellspacing="0" class="searchresultBgcolor1">
+				<tbody><tr>
+					<td>
+						<input type="hidden" name="VarNum" id="VarNum" value="1" />
+						<input type="hidden" name="postSearchInput" id="postSearchInput" value="" /> 
+							<span class="orangebold">二次检索: </span>
+							<div id="div1" align="left">
+							<table id="TPI_Advance_Search_Table" cellspacing="0" cellpadding="0" border="0">
+								<tbody><tr>
+									<td align="left" width="60">
+										   
+										<a href="javascript:changeDiv(1);">
+										<img src="images/11.gif" width="9" heigth="9" border="0" />
+										</a> 
+										<a href="javascript:changeDiv(0);">
+										<img src="images/22.gif" width="9" heigth="9" border="0" />
+										</a>
+									</td>
+									<td> 
+										<select name="advancedfield1" class="f1" id="Select1">
+										<option value="PN">公告号</option>
+										<option value="AN">申请号</option>
+										<option value="TI">专利名称</option>
+										<option value="AB">专利文摘</option>
+										<option value="PA">申请人</option>
+										<option value="AU">发明人</option>
+										<option value="PFN">同族专利</option>
+										<option value="PR">优先权项</option>
+										<option value="AD">申请日期</option>
+										<option value="PD">公告日期</option>
+										<option value="IC1">主分类号</option>
+										<option value="IC2">分类号</option>
+										<option value="PNC">国家代码</option>
+										</select>
+									</td>
+									<td align="left">  
+										<input type="text" name="advancedvalue1" size="35" maxlength="120" id="Text1" class="input8" />
+									</td>
+								</tr>
+								<tr>
+								</tr>
+							</tbody></table>
+						</div>
+
+						<table>
+							<tbody><tr>
+								<td width="430" height="22" align="right">
+									<span class="bold">与上次检索之间的逻辑运算</span>
+									<select name="postSearchLogic">
+										<option value="AND">并且</option>
+										<option value="OR">或者</option>
+										<option value="NOT">不包含</option>
+									</select>
+								</td>
+								<td align="left">
+									<img src="images/null.gif" class="hand button_research_gif" width="80" height="22" onclick="formSubmit()" />
+								</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr><td height="22" class="bold"> 检索表达式:  (docType=invention_view OR docType=utiltymodel_view OR docType=face_view) AND AD=[19950101-19951231]
+</td></tr>
+
+				<tr class="bgF9F9F9">
+					<td height="21">
+						<span class="orangebold"> 检索结果: </span><a href="#" onclick="resultForm.action=&quot;searchservlet?docType=invention_view&quot;;nowaitSubmit(&quot;resultForm&quot;);" title="命中结果27215">发明专利(27215)</a>  <a href="#" onclick="resultForm.action=&quot;searchservlet?docType=utiltymodel_view&quot;;nowaitSubmit(&quot;resultForm&quot;);" title="命中结果33125">实用新型(33125)</a>  <a href="#" onclick="resultForm.action=&quot;searchservlet?docType=face_view&quot;;nowaitSubmit(&quot;resultForm&quot;);" title="命中结果14324">外观设计(14324)</a>  
+						 ——
+						<font color="blue">共74674条</font>  <a href="#" onclick="resultForm.action=&quot;searchservlet?sglcurrpage=1&amp;alldb=1&quot;;nowaitSubmit(&quot;resultForm&quot;);">浏览所有数据库命中结果</a>
+						 <a href="#" onclick="resultForm.action=&quot;searchservlet?sIPC=all&quot;;nowaitSubmit(&quot;resultForm&quot;);"><b>IPC统计</b></a>
+						 
+						<a href="JavaScript:RelatSearch('scholargoogle','invention_view utiltymodel_view face_view ');"><b>科技文献</b>
+						</a>
+					</td>
+				</tr>
+				
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<br />
+				
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+	<tbody><tr valign="bottom" class="middletitlebg">
+		<td height="26" colspan="6" nowrap="">
+		<img src="images/null.gif" class="hand button_detail_gif" width="70" height="19" hspace="4" border="0" onclick="ViewDetail()" /> 
+		<img src="images/null.gif" class="hand button_check_gif" width="70" height="19" hspace="4" onclick="SelectPageAll()" /> 
+		<img src="images/null.gif" class="hand button_checkcancel_gif" width="70" height="19" hspace="4" onclick="CanclePageAll()" />
+		<img src="images/null.gif" class="hand button_downTLWZ_gif" width="92" height="19" hspace="4" border="0" onclick="titleDownloadDigest()" />
+
+		<img src="images/null.gif" class="hand button_fulltext_gif" width="70" height="19" border="0" hspace="4" onclick="downFullText()" />
+		<img src="images/null.gif" class="hand button_print_gif" width="48" height="19" hspace="4" onclick="confirmprint()" />
+			
+		<img id="stat" name="stat" src="images/null.gif" class="hand button_stat_gif" width="48" height="19" hspace="4" onclick="showStatDiv('stat',74674)" />
+		
+		
+		</td>
+	</tr>
+
+	<tr id="notStat">
+		<td width="25%" height="33">
+		<input id="selpageSize" type="hidden" name="pageSize" value="100" />
+		<select name="pageSizeTop" onchange="setPageSize(pageSizeTop.options[pageSizeTop.selectedIndex].value,1)">
+		<option value="20">20</option>
+		<option value="50">50</option>
+		<option value="100" selected="">100</option>
+		</select>条/页
+		<select id="sortFieldTop" name="sortFieldTop" onchange="reSort(this.value)">
+		<option value="Default">默认排序</option>
+		<option value="AD">申请日期</option>
+		<option value="PD">公告日期</option>
+		<option value="PAS">申请人</option>
+		<option value="IC2S">主分类号</option>
+		</select>
+		</td>
+		<td width="4%"> </td>
+		<td width="58%" align="right">
+			[首页]　　[上一页]　　<a href="#" onclick="resultForm.action=&quot;searchservlet?currPage=2&quot;;nowaitSubmit(&quot;resultForm&quot;);">[下一页]</a>　　<a href="#" onclick="resultForm.action=&quot;searchservlet?currPage=747&quot;;nowaitSubmit(&quot;resultForm&quot;);">[尾页]</a> 当前第<span align="right" class="orangebold" name="PageScore">1/747</span>页<input type="hidden" name="currPage" value="1" />
+			 跳到第
+			<input type="text" name="currPage" id="currPage1" value="" size="2" onkeydown="if(event.keyCode==13){historyGoTo(1);}" />
+			页
+			<img src="images/null.gif" class="hand button_go_gif" width="25" height="25" onclick="historyGoTo(1)" />
+		</td>
+	</tr>
+</tbody></table>
+
+<div id="notStat2">
+	<div id="content" style="margin-bottom: 2px; margin-top: 2px;">
+		<table width="98%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td align="center" valign="top" class="bgFFFFFF">
+					<table style="border-collapse:collapse;table-layout: fixed;" cellpadding="5" cellspacing="0" bordercolor="#CCCCCC" border="1" width="100%" id="tab">
+<tbody><tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,454105" name="ResultList" type="checkbox" />1		申请号：	</td><td><a href="JavaScript:linkDetail('7,454105')">CN95300398 </a>	    公开号：   CN3033857 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_454105">电话机(2) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_454105">深圳万德莱电子实业有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_454105">徐杰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_454105">518031广东省深圳市爱华宿舍区长城俱乐部401-405 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_454105">19950802 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_454105">19950110 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_454105">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_454105">14-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_454105">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_454105">518031 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_454105">20010214   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,454106" name="ResultList" type="checkbox" />2		申请号：	</td><td><a href="JavaScript:linkDetail('7,454106')">CN95300498 </a>	    公开号：   CN3033858 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_454106">电话机(4) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_454106">深圳万德莱电子实业有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_454106">徐杰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_454106">518031广东省深圳市爱华宿舍区长城俱乐部401-405 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_454106">19950802 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_454106">19950110 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_454106">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_454106">14-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_454106">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_454106">518031 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_454106">20010214   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,454129" name="ResultList" type="checkbox" />3		申请号：	</td><td><a href="JavaScript:linkDetail('7,454129')">CN95300568 </a>	    公开号：   CN3033881 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_454129">电脑学习机(带显示屏101健) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_454129">深圳市宝安科达实业有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_454129">赵海忠 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_454129">518133广东省深圳市宝安28区华利工业区3楼 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_454129">19950802 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_454129">19950110 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_454129">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_454129">21-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_454129">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_454129">518133 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_454129">19950802   授权</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,454532" name="ResultList" type="checkbox" />4		申请号：	</td><td><a href="JavaScript:linkDetail('7,454532')">CN95310509 </a>	    公开号：   CN3034284 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_454532">洗发护发用品包装瓶 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_454532">上海华银日用化学品总厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_454532">顾锦文 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_454532">201111上海市闵行区北松路686号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_454532">19950823 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_454532">19950112 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_454532">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_454532">09-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_454532">31 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_454532">201111 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_454532">20020227   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,454541" name="ResultList" type="checkbox" />5		申请号：	</td><td><a href="JavaScript:linkDetail('7,454541')">CN95300508 </a>	    公开号：   CN3034293 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_454541">汽车轮圈(1) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_454541">昆山六丰机械工业有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_454541">孙照临 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_454541">215300江苏省昆山市昆山经济技术开发区长江南路 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_454541">19950823 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_454541">19950220 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_454541">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_454541">12-16 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_454541">32 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_454541">215300 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_454541">19990310   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,454542" name="ResultList" type="checkbox" />6		申请号：	</td><td><a href="JavaScript:linkDetail('7,454542')">CN95300578 </a>	    公开号：   CN3034294 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_454542">汽车轮圈(2) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_454542">昆山六丰机械工业有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_454542">孙照临 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_454542">215300江苏省昆山市昆山经济技术开发区长江南路 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_454542">19950823 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_454542">19950220 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_454542">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_454542">12-16 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_454542">32 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_454542">215300 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_454542">19990310   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,454777" name="ResultList" type="checkbox" />7		申请号：	</td><td><a href="JavaScript:linkDetail('7,454777')">CN95301288 </a>	    公开号：   CN3034529 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_454777">服装招贴 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_454777">积奇贸易公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_454777">王金生 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_454777">510060广东省广州市环市东路371-375号世界贸易中心大厦三楼331室 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_454777">19950830 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_454777">19950210 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_454777">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_454777">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_454777">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_454777">510060 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_454777">20040324   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455221" name="ResultList" type="checkbox" />8		申请号：	</td><td><a href="JavaScript:linkDetail('7,455221')">CN95301881 </a>	    公开号：   CN3035085 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455221">趣味音乐罐电动玩具 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455221">晋江美斯达电子玩具有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455221">陆恒毅 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455221">362200福建省晋江市安海安平开发区八区1号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455221">19950913 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455221">19950320 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455221">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455221">21-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455221">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455221">362200 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455221">19980422   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455260" name="ResultList" type="checkbox" />9		申请号：	</td><td><a href="JavaScript:linkDetail('7,455260')">CN95300528 </a>	    公开号：   CN3035141 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455260">钥匙圈 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455260">张宇顺 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455260">张宇顺 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455260">台湾省台北市宝清街105巷1F </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455260">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455260">19950116 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455260">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455260">03-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455260">71 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455260">20000202   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455261" name="ResultList" type="checkbox" />10		申请号：	</td><td><a href="JavaScript:linkDetail('7,455261')">CN95300538 </a>	    公开号：   CN3035142 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455261">钥匙圈(小猪) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455261">张宇顺 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455261">张宇顺 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455261">台湾省台北市宝清街105巷1F </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455261">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455261">19950116 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455261">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455261">03-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455261">71 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455261">20000202   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455308" name="ResultList" type="checkbox" />11		申请号：	</td><td><a href="JavaScript:linkDetail('7,455308')">CN95300990 </a>	    公开号：   CN3035207 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455308">茶叶包装物贴(6) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455308">英记(厦门)纸品有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455308">王培泰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455308">361009福建省厦门市开元区屿后 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455308">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455308">19950125 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455308">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455308">09-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455308">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455308">361009 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455308">20010307   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455315" name="ResultList" type="checkbox" />12		申请号：	</td><td><a href="JavaScript:linkDetail('7,455315')">CN95300603 </a>	    公开号：   CN3035205 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455315">玩具包装招贴(百兽王五合体A) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455315">甘宝恒 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455315">甘宝恒 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455315">528400广东省中山市三乡镇白石管理区三合村 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455315">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455315">19950127 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455315">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455315">09-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455315">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455315">528400 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455315">19980304   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455337" name="ResultList" type="checkbox" />13		申请号：	</td><td><a href="JavaScript:linkDetail('7,455337')">CN95300615 </a>	    公开号：   CN3035242 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455337">食品包装袋-2 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455337">潮州市庵埠梅溪梅江食品厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455337">陈兴荣 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455337">515638广东省潮州市庵埠梅溪沙美工业区 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455337">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455337">19950210 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455337">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455337">09-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455337">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455337">515638 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455337">19980318   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455352" name="ResultList" type="checkbox" />14		申请号：	</td><td><a href="JavaScript:linkDetail('7,455352')">CN95300700 </a>	    公开号：   CN3035264 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455352">景泰蓝宝瓶 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455352">狄玉明 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455352">狄玉明 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455352">510030广东省广州市文德北路170号文化街大楼3号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455352">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455352">19950221 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455352">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455352">11-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455352">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455352">510030 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455352">19990310   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455354" name="ResultList" type="checkbox" />15		申请号：	</td><td><a href="JavaScript:linkDetail('7,455354')">CN95301268 </a>	    公开号：   CN3035265 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455354">点平衡摆设鸟 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455354">陈兆霖 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455354">陈兆霖 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455354">510410广东省广州市新市棠涌庙口直巷1号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455354">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455354">19950208 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455354">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455354">11-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455354">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455354">510410 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455354">19980318   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455358" name="ResultList" type="checkbox" />16		申请号：	</td><td><a href="JavaScript:linkDetail('7,455358')">CN95300626 </a>	    公开号：   CN3035268 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455358">计时匙牌 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455358">潘耀昌 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455358">潘耀昌 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455358">香港北角英皇道413-421号侨辉大厦13/F1305室 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455358">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455358">19950207 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455358">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455358">11-99 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455358">HK </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455358">20040324   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455388" name="ResultList" type="checkbox" />17		申请号：	</td><td><a href="JavaScript:linkDetail('7,455388')">CN95300558 </a>	    公开号：   CN3035310 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455388">镇纸 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455388">张宇顺 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455388">张宇顺 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455388">台湾省台北市宝清街105巷1F </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455388">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455388">19950116 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455388">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455388">19-06 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455388">71 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455388">20000202   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455399" name="ResultList" type="checkbox" />18		申请号：	</td><td><a href="JavaScript:linkDetail('7,455399')">CN95300598 </a>	    公开号：   CN3035312 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455399">镇纸 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455399">张宇顺 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455399">张宇顺 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455399">台湾省台北市宝清街105巷1F </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455399">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455399">19950116 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455399">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455399">19-06 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455399">71 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455399">19980225   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455406" name="ResultList" type="checkbox" />19		申请号：	</td><td><a href="JavaScript:linkDetail('7,455406')">CN95300605 </a>	    公开号：   CN3035333 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455406">玩具包装招贴(孙悟空) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455406">杨水源 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455406">杨水源 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455406">510040广东省广州市应元路继元东2号应元大厦325室 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455406">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455406">19950127 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455406">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455406">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455406">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455406">510040 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455406">19980304   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455407" name="ResultList" type="checkbox" />20		申请号：	</td><td><a href="JavaScript:linkDetail('7,455407')">CN95300616 </a>	    公开号：   CN3035206 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455407">食品包装袋-1 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455407">潮州市庵埠梅溪梅江食品厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455407">陈兴荣 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455407">515638广东省潮州市庵埠梅溪沙美工业区 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455407">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455407">19950210 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455407">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455407">09-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455407">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455407">515638 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455407">19980318   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455408" name="ResultList" type="checkbox" />21		申请号：	</td><td><a href="JavaScript:linkDetail('7,455408')">CN95301310 </a>	    公开号：   CN3035338 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455408">茶叶包装物贴(8) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455408">英记(厦门)纸品有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455408">王培泰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455408">361009福建省厦门市开元区屿后 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455408">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455408">19950125 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455408">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455408">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455408">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455408">361009 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455408">20000209   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455410" name="ResultList" type="checkbox" />22		申请号：	</td><td><a href="JavaScript:linkDetail('7,455410')">CN95301299 </a>	    公开号：   CN3035335 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455410">茶叶包装物贴(4) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455410">英记(厦门)纸品有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455410">王培泰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455410">361009福建省厦门市开元区屿后 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455410">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455410">19950125 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455410">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455410">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455410">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455410">361009 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455410">20020313   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455411" name="ResultList" type="checkbox" />23		申请号：	</td><td><a href="JavaScript:linkDetail('7,455411')">CN95301406 </a>	    公开号：   CN3035339 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455411">平面图(华夏春秋公园) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455411">吴卓荣; 凌锋 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455411">凌锋; 吴卓荣 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455411">香港铜锣湾大坑道光明台1座38A </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455411">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455411">19950222 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455411">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455411">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455411">HK </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455411">19990310   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455412" name="ResultList" type="checkbox" />24		申请号：	</td><td><a href="JavaScript:linkDetail('7,455412')">CN95301300 </a>	    公开号：   CN3035336 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455412">茶叶包装物贴(15) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455412">英记(厦门)纸品有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455412">王培泰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455412">361009福建省厦门市开元区屿后 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455412">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455412">19950125 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455412">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455412">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455412">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455412">361009 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455412">20010307   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455413" name="ResultList" type="checkbox" />25		申请号：	</td><td><a href="JavaScript:linkDetail('7,455413')">CN95300602 </a>	    公开号：   CN3035342 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455413">玩具包装招贴(百兽王五合体B) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455413">甘宝恒 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455413">甘宝恒 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455413">528400广东省中山市三乡镇白石管理区三合村 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455413">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455413">19950127 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455413">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455413">20-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455413">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455413">528400 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455413">19980304   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455422" name="ResultList" type="checkbox" />26		申请号：	</td><td><a href="JavaScript:linkDetail('7,455422')">CN95301416 </a>	    公开号：   CN3035340 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455422">平面图(华夏春秋公园景点) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455422">吴卓荣; 凌锋 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455422">凌锋; 吴卓荣 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455422">香港铜锣湾大坑道光明台1座38A </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455422">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455422">19950222 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455422">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455422">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455422">HK </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455422">19990310   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455424" name="ResultList" type="checkbox" />27		申请号：	</td><td><a href="JavaScript:linkDetail('7,455424')">CN95300066 </a>	    公开号：   CN3035349 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455424">玩具人像(新星龙神丸) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455424">杨水源 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455424">杨水源 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455424">510040广东省广州市应元路继元东2号应元大厦325室 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455424">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455424">19950127 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455424">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455424">21-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455424">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455424">510040 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455424">19970312   专利权的终止(①未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455429" name="ResultList" type="checkbox" />28		申请号：	</td><td><a href="JavaScript:linkDetail('7,455429')">CN95300649 </a>	    公开号：   CN3035350 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455429">玩具手表 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455429">潘耀昌 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455429">潘耀昌 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455429">香港北角英皇道413-421号侨辉大厦13/F1305室 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455429">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455429">19950207 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455429">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455429">21-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455429">HK </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455429">20040324   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455431" name="ResultList" type="checkbox" />29		申请号：	</td><td><a href="JavaScript:linkDetail('7,455431')">CN95301309 </a>	    公开号：   CN3035337 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455431">茶叶包装物贴(9) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455431">英记(厦门)纸品有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455431">王培泰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455431">361009福建省厦门市开元区屿后 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455431">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455431">19950125 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455431">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455431">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455431">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455431">361009 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455431">20010307   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455490" name="ResultList" type="checkbox" />30		申请号：	</td><td><a href="JavaScript:linkDetail('7,455490')">CN95300888 </a>	    公开号：   CN3035440 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455490">瓷盘 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455490">陈健燕 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455490">陈健燕 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455490">410001湖南省长沙市五一东路4号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455490">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455490">19950125 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455490">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455490">07-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455490">43 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455490">410001 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455490">20010307   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455497" name="ResultList" type="checkbox" />31		申请号：	</td><td><a href="JavaScript:linkDetail('7,455497')">CN95301791 </a>	    公开号：   CN3035447 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455497">洗脸池支架 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455497">崔大镇 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455497">崔大镇 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455497">265323山东省烟台市栖霞县中桥镇水道观村 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455497">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455497">19950309 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455497">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455497">08-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455497">37 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455497">265323 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455497">19980415   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455508" name="ResultList" type="checkbox" />32		申请号：	</td><td><a href="JavaScript:linkDetail('7,455508')">CN95301280 </a>	    公开号：   CN3035462 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455508">化妆品包装瓶(1) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455508">乌力吉 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455508">乌力吉 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455508">010010内蒙古自治区呼和浩特市新城区兴安南路驰誉商厦驰誉科工贸(集团有限总公司) </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455508">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455508">19950211 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455508">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455508">09-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455508">15 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455508">010010 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455508">20010321   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455514" name="ResultList" type="checkbox" />33		申请号：	</td><td><a href="JavaScript:linkDetail('7,455514')">CN95301277 </a>	    公开号：   CN3035461 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455514">化妆品包装瓶(3) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455514">乌力吉 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455514">乌力吉 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455514">010010内蒙古自治区呼和浩特市新城区兴安南路驰誉商厦驰誉科工贸(集团有限总公司) </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455514">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455514">19950211 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455514">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455514">09-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455514">15 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455514">010010 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455514">20010321   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455542" name="ResultList" type="checkbox" />34		申请号：	</td><td><a href="JavaScript:linkDetail('7,455542')">CN95302151 </a>	    公开号：   CN3035497 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455542">香烟盒(大-B2) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455542">国营青岛卷烟厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455542">刘恩春 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455542">266021山东省青岛市华阳路20号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455542">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455542">19950316 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455542">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455542">09-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455542">37 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455542">266021 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455542">20040421   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455581" name="ResultList" type="checkbox" />35		申请号：	</td><td><a href="JavaScript:linkDetail('7,455581')">CN95300810 </a>	    公开号：   CN3035334 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455581">茶叶包装物贴(18) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455581">英记(厦门)纸品有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455581">王培泰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455581">361009福建省厦门市开元区屿后 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455581">19950920 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455581">19950125 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455581">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455581">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455581">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455581">361009 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455581">20000209   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455652" name="ResultList" type="checkbox" />36		申请号：	</td><td><a href="JavaScript:linkDetail('7,455652')">CN95302148 </a>	    公开号：   CN3035650 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455652">香烟盒(大-A1) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455652">国营青岛卷烟厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455652">刘恩春 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455652">266021山东省青岛市华阳路20号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455652">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455652">19950316 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455652">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455652">27-06 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455652">37 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455652">266021 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455652">20040421   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455657" name="ResultList" type="checkbox" />37		申请号：	</td><td><a href="JavaScript:linkDetail('7,455657')">CN95301279 </a>	    公开号：   CN3035659 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455657">化妆品包装瓶(2) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455657">乌力吉 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455657">乌力吉 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455657">010010内蒙古自治区呼和浩特市新城区兴安南路驰誉商厦驰誉科工贸(集团有限总公司) </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455657">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455657">19950211 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455657">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455657">28-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455657">15 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455657">010010 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455657">20000301   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455659" name="ResultList" type="checkbox" />38		申请号：	</td><td><a href="JavaScript:linkDetail('7,455659')">CN95302155 </a>	    公开号：   CN3035655 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455659">香烟盒(小-C) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455659">国营青岛卷烟厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455659">刘恩春 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455659">266021山东省青岛市华阳路20号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455659">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455659">19950316 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455659">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455659">27-06 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455659">37 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455659">266021 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455659">20040421   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455662" name="ResultList" type="checkbox" />39		申请号：	</td><td><a href="JavaScript:linkDetail('7,455662')">CN95302153 </a>	    公开号：   CN3035653 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455662">香烟盒(小-A2) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455662">国营青岛卷烟厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455662">刘恩春 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455662">266021山东省青岛市华阳路20号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455662">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455662">19950116 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455662">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455662">27-06 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455662">37 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455662">266021 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455662">20040421   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455663" name="ResultList" type="checkbox" />40		申请号：	</td><td><a href="JavaScript:linkDetail('7,455663')">CN95302149 </a>	    公开号：   CN3035651 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455663">香烟盒(大-A2) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455663">国营青岛卷烟厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455663">刘恩春 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455663">266021山东省青岛市华阳路20号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455663">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455663">19950316 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455663">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455663">27-06 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455663">37 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455663">266021 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455663">20020424   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455666" name="ResultList" type="checkbox" />41		申请号：	</td><td><a href="JavaScript:linkDetail('7,455666')">CN95300818 </a>	    公开号：   CN3035433 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455666">瓷杯 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455666">陈健燕 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455666">陈健燕 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455666">410001湖南省长沙市五一东路4号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455666">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455666">19950125 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455666">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455666">07-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455666">43 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455666">410001 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455666">20010307   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455693" name="ResultList" type="checkbox" />42		申请号：	</td><td><a href="JavaScript:linkDetail('7,455693')">CN95301110 </a>	    公开号：   CN3035707 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455693">电饭锅(二) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455693">广东容声电器股份有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455693">罗伟业; 梁坚煌; 麦俭峰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455693">528303广东省顺德市容奇镇桥东路8号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455693">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455693">19950222 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455693">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455693">07-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455693">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455693">528303 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455693">20010328   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455697" name="ResultList" type="checkbox" />43		申请号：	</td><td><a href="JavaScript:linkDetail('7,455697')">CN95301109 </a>	    公开号：   CN3035711 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455697">消毒柜(六) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455697">广东容声电器股份有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455697">郑启坚; 黄允成; 胡健强 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455697">528303广东省顺德市容奇镇桥东路8号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455697">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455697">19950222 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455697">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455697">07-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455697">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455697">528303 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455697">20010328   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455701" name="ResultList" type="checkbox" />44		申请号：	</td><td><a href="JavaScript:linkDetail('7,455701')">CN95302268 </a>	    公开号：   CN3035724 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455701">按键式双控门锁 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455701">水敬勤 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455701">水敬勤 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455701">100011北京市安外东河沿7号楼中单元805室 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455701">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455701">19950405 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455701">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455701">08-07 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455701">11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455701">100011 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455701">19990428   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455706" name="ResultList" type="checkbox" />45		申请号：	</td><td><a href="JavaScript:linkDetail('7,455706')">CN95303058 </a>	    公开号：   CN3035726 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455706">按键式门锁 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455706">水敬勤 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455706">水敬勤 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455706">100011北京市安外东河沿7号楼中单元805室 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455706">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455706">19950405 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455706">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455706">08-07 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455706">11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455706">100011 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455706">19990428   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455734" name="ResultList" type="checkbox" />46		申请号：	</td><td><a href="JavaScript:linkDetail('7,455734')">CN95301108 </a>	    公开号：   CN3035710 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455734">消毒柜(五) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455734">广东容声电器股份有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455734">张宏杰; 刘建华; 鲁志民 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455734">528303广东省顺德市容奇镇桥东路8号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455734">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455734">19950222 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455734">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455734">07-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455734">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455734">528303 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455734">20010328   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455739" name="ResultList" type="checkbox" />47		申请号：	</td><td><a href="JavaScript:linkDetail('7,455739')">CN95303546 </a>	    公开号：   CN3035776 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455739">绿宝方形罐 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455739">中国汕头特区绿宝食品实业公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455739">陈大安 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455739">515061广东省汕头经济特区潮汕路湖头工业区 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455739">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455739">19950324 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455739">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455739">09-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455739">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455739">515061 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455739">20000329   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455740" name="ResultList" type="checkbox" />48		申请号：	</td><td><a href="JavaScript:linkDetail('7,455740')">CN95301930 </a>	    公开号：   CN3035775 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455740">妇女卫生巾包装盒片材(安尔乐1) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455740">福建恒安集团有限公司; 恒安(福建)妇幼用品有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455740">张时跑 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455740">362261福建省晋江市安海镇桥头工业区 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455740">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455740">19950414 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455740">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455740">09-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455740">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455740">362261 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455740">20010516   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455755" name="ResultList" type="checkbox" />49		申请号：	</td><td><a href="JavaScript:linkDetail('7,455755')">CN95302150 </a>	    公开号：   CN3035652 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455755">香烟盒(大-B1) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455755">国营青岛卷烟厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455755">刘恩春 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455755">266021山东省青岛市华阳路20号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455755">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455755">19950316 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455755">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455755">27-06 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455755">37 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455755">266021 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455755">20000329   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455757" name="ResultList" type="checkbox" />50		申请号：	</td><td><a href="JavaScript:linkDetail('7,455757')">CN95301931 </a>	    公开号：   CN3035799 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455757">妇女卫生巾包装盒片材(安尔乐2) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455757">福建恒安集团有限公司; 恒安(福建)妇幼用品有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455757">张时跑 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455757">362261福建省晋江市安海镇桥头工业区 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455757">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455757">19950414 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455757">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455757">09-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455757">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455757">362261 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455757">20010516   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455767" name="ResultList" type="checkbox" />51		申请号：	</td><td><a href="JavaScript:linkDetail('7,455767')">CN95301932 </a>	    公开号：   CN3035800 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455767">妇女卫生巾包装袋(安尔乐1) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455767">福建恒安集团有限公司; 恒安(福建)妇幼用品有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455767">张时跑 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455767">362261福建省晋江市安海镇桥头工业区 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455767">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455767">19950414 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455767">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455767">09-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455767">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455767">362261 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455767">20010516   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455780" name="ResultList" type="checkbox" />52		申请号：	</td><td><a href="JavaScript:linkDetail('7,455780')">CN95302496 </a>	    公开号：   CN3035823 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455780">景泰蓝佛瓶 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455780">李德祥 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455780">李德祥 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455780">100009北京市东城区地安门外大街帽儿胡同45号5号楼103号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455780">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455780">19950406 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455780">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455780">11-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455780">11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455780">100009 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455780">19990428   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455781" name="ResultList" type="checkbox" />53		申请号：	</td><td><a href="JavaScript:linkDetail('7,455781')">CN95302495 </a>	    公开号：   CN3035822 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455781">景泰蓝乾隆壶 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455781">李德祥 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455781">李德祥 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455781">100009北京市东城区地安门外大街帽儿胡同45号5号楼103号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455781">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455781">19950406 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455781">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455781">11-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455781">11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455781">100009 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455781">19990428   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455798" name="ResultList" type="checkbox" />54		申请号：	</td><td><a href="JavaScript:linkDetail('7,455798')">CN95300948 </a>	    公开号：   CN3035856 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455798">电话机(5) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455798">深圳万德莱电子实业有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455798">徐杰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455798">518031广东省深圳市爱华宿舍长城俱乐部402 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455798">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455798">19950210 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455798">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455798">14-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455798">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455798">518031 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455798">20000301   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455808" name="ResultList" type="checkbox" />55		申请号：	</td><td><a href="JavaScript:linkDetail('7,455808')">CN95302860 </a>	    公开号：   CN3035870 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455808">一体化条码磁卡阅读器 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455808">北京市高立开元控制工程公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455808">贺宇新 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455808">100081北京市海淀区高梁桥斜街13号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455808">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455808">19950328 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455808">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455808">19-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455808">11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455808">100081 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455808">20050706   专利权的终止(专利权有效期届满)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455809" name="ResultList" type="checkbox" />56		申请号：	</td><td><a href="JavaScript:linkDetail('7,455809')">CN95302870 </a>	    公开号：   CN3035871 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455809">电脑刷卡钟 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455809">北京市高立开元控制工程公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455809">叶兆春 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455809">100081北京市海淀区高梁桥斜街13号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455809">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455809">19950328 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455809">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455809">19-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455809">11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455809">100081 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455809">20020508   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455810" name="ResultList" type="checkbox" />57		申请号：	</td><td><a href="JavaScript:linkDetail('7,455810')">CN95302850 </a>	    公开号：   CN3035869 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455810">插卡槽 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455810">北京市高立开元控制工程公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455810">叶兆春 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455810">100081北京市海淀区高梁桥斜街13号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455810">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455810">19950328 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455810">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455810">19-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455810">11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455810">100081 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455810">20020508   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455812" name="ResultList" type="checkbox" />58		申请号：	</td><td><a href="JavaScript:linkDetail('7,455812')">CN95302838 </a>	    公开号：   CN3035867 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455812">磁卡读写器 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455812">北京市高立开元控制工程公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455812">贺宇新 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455812">100081北京市海淀区高梁桥斜街13号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455812">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455812">19950328 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455812">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455812">19-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455812">11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455812">100081 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455812">20050706   专利权的终止(专利权有效期届满)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455815" name="ResultList" type="checkbox" />59		申请号：	</td><td><a href="JavaScript:linkDetail('7,455815')">CN95302880 </a>	    公开号：   CN3035872 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455815">三合一条码磁卡阅读器 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455815">北京市高立开元控制工程公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455815">贺宇新 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455815">100081北京市海淀区高梁桥斜街13号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455815">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455815">19950328 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455815">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455815">19-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455815">11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455815">100081 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455815">19991117   专利权的无效宣告(专利权全部无效)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455840" name="ResultList" type="checkbox" />60		申请号：	</td><td><a href="JavaScript:linkDetail('7,455840')">CN95301414 </a>	    公开号：   CN3035912 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455840">平面图(华夏春秋公园恐龙世纪景点) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455840">吴卓荣; 凌锋 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455840">凌锋; 吴卓荣 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455840">香港铜锣湾大坑道光明台1座38A </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455840">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455840">19950222 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455840">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455840">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455840">HK </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455840">19990310   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455841" name="ResultList" type="checkbox" />61		申请号：	</td><td><a href="JavaScript:linkDetail('7,455841')">CN95301404 </a>	    公开号：   CN3035911 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455841">示意图(江南北国风光景点) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455841">吴卓荣; 凌锋 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455841">凌锋; 吴卓荣 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455841">香港铜锣湾大坑道光明台1座38A </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455841">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455841">19950222 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455841">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455841">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455841">HK </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455841">19990310   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455899" name="ResultList" type="checkbox" />62		申请号：	</td><td><a href="JavaScript:linkDetail('7,455899')">CN95302682 </a>	    公开号：   CN3035989 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455899">美伊香皂包装纸(1) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455899">普宁市工业品供应站力伊香皂厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455899">杜光波 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455899">515300广东省普宁市流沙光明路22号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455899">19951011 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455899">19950327 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455899">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455899">05-06 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455899">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455899">515300 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455899">19980429   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455910" name="ResultList" type="checkbox" />63		申请号：	</td><td><a href="JavaScript:linkDetail('7,455910')">CN95302840 </a>	    公开号：   CN3035868 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455910">条码磁卡卡槽 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455910">北京市高立开元控制工程公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455910">叶兆春 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455910">100081北京市海淀区高梁桥斜街13号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455910">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455910">19950328 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455910">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455910">19-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455910">11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455910">100081 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455910">20020508   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455923" name="ResultList" type="checkbox" />64		申请号：	</td><td><a href="JavaScript:linkDetail('7,455923')">CN95303096 </a>	    公开号：   CN3036015 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455923">冲洗器 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455923">广东天霸科技发展有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455923">何智彪; 钟坤荣; 陈斌 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455923">510600广东省广州市五羊邨粤康阁二十六楼 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455923">19951011 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455923">19950220 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455923">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455923">09-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455923">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455923">510600 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455923">19980325   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455948" name="ResultList" type="checkbox" />65		申请号：	</td><td><a href="JavaScript:linkDetail('7,455948')">CN95302156 </a>	    公开号：   CN3035656 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455948">香烟盒(小-B2) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455948">国营青岛卷烟厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455948">刘恩春 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455948">266021山东省青岛市华阳路20号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455948">19950927 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455948">19950316 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455948">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455948">27-06 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455948">37 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455948">266021 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455948">20040421   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455952" name="ResultList" type="checkbox" />66		申请号：	</td><td><a href="JavaScript:linkDetail('7,455952')">CN95301969 </a>	    公开号：   CN3035801 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455952">妇女卫生巾包装袋片材(安尔乐3) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455952">福建恒安集团有限公司; 恒安(福建)妇幼用品有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455952">张时跑 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455952">362261福建省晋江市安海镇桥头工业区 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455952">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455952">19950420 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455952">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455952">09-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455952">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455952">362261 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455952">20010523   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455954" name="ResultList" type="checkbox" />67		申请号：	</td><td><a href="JavaScript:linkDetail('7,455954')">CN95302406 </a>	    公开号：   CN3036050 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455954">豆粉包装袋(Ⅲ) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455954">佳木斯市牛奶公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455954">李桂林; 王广禄; 扬振国; 董良杰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455954">154004黑龙江省佳木斯市长安路858号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455954">19951011 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455954">19950323 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455954">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455954">09-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455954">23 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455954">154004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455954">19970430   专利权的终止(①未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455955" name="ResultList" type="checkbox" />68		申请号：	</td><td><a href="JavaScript:linkDetail('7,455955')">CN95303858 </a>	    公开号：   CN3036051 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455955">食品包装袋 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455955">李国斌 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455955">李国斌 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455955">612160四川省眉山县修文镇富民街77号151号四川省眉山县川菜调味厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455955">19951011 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455955">19950424 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455955">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455955">09-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455955">51 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455955">612160 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455955">20050810   专利权的终止(专利权有效期届满)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,455979" name="ResultList" type="checkbox" />69		申请号：	</td><td><a href="JavaScript:linkDetail('7,455979')">CN95301025 </a>	    公开号：   CN3036048 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_455979">食品包装袋(加州营养面) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_455979">东莞蓝宝食品厂有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_455979">苏莹轩 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_455979">511700广东省东莞市莞城镇兴隆街152号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_455979">19951011 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_455979">19950302 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_455979">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_455979">09-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_455979">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_455979">511700 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_455979">19970409   专利权的终止(①未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456031" name="ResultList" type="checkbox" />70		申请号：	</td><td><a href="JavaScript:linkDetail('7,456031')">CN95300968 </a>	    公开号：   CN3036151 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456031">热水器(1) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456031">中山市爱利特燃气具厂有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456031">卢远声 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456031">528425广东省中山市东风镇第三工业区广珠公路边 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456031">19951011 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456031">19950118 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456031">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456031">23-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456031">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456031">528425 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456031">19980225   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456046" name="ResultList" type="checkbox" />71		申请号：	</td><td><a href="JavaScript:linkDetail('7,456046')">CN95302405 </a>	    公开号：   CN3036049 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456046">豆粉包装袋(Ⅱ) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456046">佳木斯市牛奶公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456046">李桂林; 王广禄; 扬振国; 董良杰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456046">154004黑龙江省佳木斯市长安路858号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456046">19951011 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456046">19950323 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456046">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456046">09-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456046">23 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456046">154004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456046">19970430   专利权的终止(①未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456172" name="ResultList" type="checkbox" />72		申请号：	</td><td><a href="JavaScript:linkDetail('7,456172')">CN95300200 </a>	    公开号：   CN3035908 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456172">减害灵包装罐招贴 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456172">福建省晋江罗山张前日用化工厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456172">何健康 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456172">362200福建省晋江罗山张前 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456172">19951004 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456172">19950114 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456172">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456172">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456172">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456172">362200 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456172">20000202   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456325" name="ResultList" type="checkbox" />73		申请号：	</td><td><a href="JavaScript:linkDetail('7,456325')">CN95302437 </a>	    公开号：   CN3036554 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456325">简便套鞋 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456325">李瑞雪 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456325">李瑞雪 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456325">100007北京市东城区南小街南竹杆胡同74号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456325">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456325">19950331 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456325">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456325">02-04 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456325">11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456325">100007 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456325">19980506   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456328" name="ResultList" type="checkbox" />74		申请号：	</td><td><a href="JavaScript:linkDetail('7,456328')">CN95300938 </a>	    公开号：   CN3036558 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456328">双组合超滤纯水机 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456328">深圳新世纪饮水科技有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456328">蒋鼎山 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456328">518031广东省深圳市振华路8号兰光大厦16层 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456328">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456328">19950210 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456328">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456328">03-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456328">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456328">518031 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456328">20000301   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456329" name="ResultList" type="checkbox" />75		申请号：	</td><td><a href="JavaScript:linkDetail('7,456329')">CN95300527 </a>	    公开号：   CN3036557 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456329">鸡钥匙圈 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456329">张宇顺 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456329">张宇顺 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456329">台湾省台北市宝清街105巷1F </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456329">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456329">19950116 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456329">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456329">03-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456329">71 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456329">20000202   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456356" name="ResultList" type="checkbox" />76		申请号：	</td><td><a href="JavaScript:linkDetail('7,456356')">CN95302704 </a>	    公开号：   CN3036592 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456356">饮料罐 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456356">广东省惠州市饮料厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456356">李优庆 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456356">516001广东省惠州市江北乌石 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456356">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456356">19950316 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456356">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456356">09-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456356">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456356">516001 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456356">20030430   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456357" name="ResultList" type="checkbox" />77		申请号：	</td><td><a href="JavaScript:linkDetail('7,456357')">CN95302891 </a>	    公开号：   CN3036593 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456357">包装罐片材(一) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456357">柯建全 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456357">柯建全 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456357">362200福建省晋江市东环路东区238号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456357">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456357">19950310 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456357">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456357">09-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456357">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456357">362200 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456357">19990331   专利权的终止(①未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456358" name="ResultList" type="checkbox" />78		申请号：	</td><td><a href="JavaScript:linkDetail('7,456358')">CN95303101 </a>	    公开号：   CN3036594 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456358">包装罐片材(二) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456358">柯建全 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456358">柯建全 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456358">362200福建省晋江市东环路东区238号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456358">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456358">19950310 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456358">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456358">09-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456358">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456358">362200 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456358">19990331   专利权的终止(①未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456359" name="ResultList" type="checkbox" />79		申请号：	</td><td><a href="JavaScript:linkDetail('7,456359')">CN95301102 </a>	    公开号：   CN3036597 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456359">包装袋(泡泡瓜子) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456359">肖金霖 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456359">肖金霖 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456359">410001湖南省长沙市东屯渡三分场(樟木坝) </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456359">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456359">19950221 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456359">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456359">09-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456359">43 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456359">410001 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456359">19990310   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456363" name="ResultList" type="checkbox" />80		申请号：	</td><td><a href="JavaScript:linkDetail('7,456363')">CN95300095 </a>	    公开号：   CN3036590 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456363">化妆瓶 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456363">广州市白云区丹芭比化妆品厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456363">蒋盛晓 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456363">510425广东省广州市黄石路口马务工业区 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456363">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456363">19950123 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456363">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456363">09-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456363">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456363">510425 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456363">19990210   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456373" name="ResultList" type="checkbox" />81		申请号：	</td><td><a href="JavaScript:linkDetail('7,456373')">CN95301103 </a>	    公开号：   CN3036614 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456373">包装袋(达味瓜子) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456373">肖金霖 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456373">肖金霖 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456373">410001湖南省长沙市东屯渡三分场(樟木坝) </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456373">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456373">19950221 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456373">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456373">09-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456373">43 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456373">410001 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456373">19990310   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456374" name="ResultList" type="checkbox" />82		申请号：	</td><td><a href="JavaScript:linkDetail('7,456374')">CN95310109 </a>	    公开号：   CN3036616 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456374">包装袋(Ⅱ) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456374">四川省丰都榨菜集团公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456374">李万炳 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456374">648200四川省丰都县名山镇商业路135号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456374">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456374">19950406 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456374">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456374">09-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456374">51 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456374">648200 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456374">19980513   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456376" name="ResultList" type="checkbox" />83		申请号：	</td><td><a href="JavaScript:linkDetail('7,456376')">CN95314014 </a>	    公开号：   CN3036617 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456376">密码邮政信箱 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456376">魏康宁 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456376">魏康宁 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456376">211600江苏省金湖县跃进路九号(县委党校) </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456376">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456376">19950125 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456376">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456376">09-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456376">32 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456376">211600 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456376">19980304   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456381" name="ResultList" type="checkbox" />84		申请号：	</td><td><a href="JavaScript:linkDetail('7,456381')">CN95303111 </a>	    公开号：   CN3036595 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456381">包装罐片材(三) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456381">柯建全 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456381">柯建全 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456381">362200福建省晋江市东环路东区238号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456381">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456381">19950310 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456381">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456381">09-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456381">35 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456381">362200 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456381">20000322   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456392" name="ResultList" type="checkbox" />85		申请号：	</td><td><a href="JavaScript:linkDetail('7,456392')">CN95301104 </a>	    公开号：   CN3036633 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456392">包装袋(九制瓜子王) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456392">肖金霖 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456392">肖金霖 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456392">410001湖南省长沙市东屯渡三分场(樟木坝) </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456392">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456392">19950221 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456392">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456392">09-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456392">43 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456392">410001 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456392">19990310   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456396" name="ResultList" type="checkbox" />86		申请号：	</td><td><a href="JavaScript:linkDetail('7,456396')">CN95313045 </a>	    公开号：   CN3036638 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456396">手表(2) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456396">珠海格力中瑞表业有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456396">马碧珍; 王永宁; 黄志雄 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456396">519015广东省珠海市吉大景乐路 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456396">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456396">19950127 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456396">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456396">10-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456396">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456396">519015 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456396">20000216   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456398" name="ResultList" type="checkbox" />87		申请号：	</td><td><a href="JavaScript:linkDetail('7,456398')">CN95301236 </a>	    公开号：   CN3036646 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456398">摩托车(AX100-3) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456398">大长江摩托车实业总公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456398">凌懿 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456398">529000广东省江门市郊区双龙工业区 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456398">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456398">19950118 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456398">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456398">12-11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456398">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456398">529000 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456398">19990203   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456402" name="ResultList" type="checkbox" />88		申请号：	</td><td><a href="JavaScript:linkDetail('7,456402')">CN95300497 </a>	    公开号：   CN3036643 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456402">摩托车(AX100-4) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456402">大长江摩托车实业总公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456402">凌懿 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456402">529000广东省江门市郊区双龙工业区 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456402">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456402">19950117 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456402">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456402">12-11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456402">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456402">529000 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456402">20020306   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456405" name="ResultList" type="checkbox" />89		申请号：	</td><td><a href="JavaScript:linkDetail('7,456405')">CN95301235 </a>	    公开号：   CN3036645 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456405">摩托车(AX100-1) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456405">大长江摩托车实业总公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456405">凌懿 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456405">529000广东省江门市郊区双龙工业区 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456405">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456405">19950118 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456405">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456405">12-11 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456405">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456405">529000 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456405">19990203   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456414" name="ResultList" type="checkbox" />90		申请号：	</td><td><a href="JavaScript:linkDetail('7,456414')">CN95300828 </a>	    公开号：   CN3036664 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456414">多媒体机箱 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456414">深圳亿银电子有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456414">张秀祥; 丁亚非 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456414">518111广东省深圳市滨河大道机械大厦1204室 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456414">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456414">19950228 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456414">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456414">14-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456414">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456414">518111 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456414">19990317   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456435" name="ResultList" type="checkbox" />91		申请号：	</td><td><a href="JavaScript:linkDetail('7,456435')">CN95300226 </a>	    公开号：   CN3036685 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456435">瓶贴 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456435">深圳宝泉饮料食品实业公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456435">彭汉松 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456435">广东省深圳市罗湖区东晓路8号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456435">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456435">19950109 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456435">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456435">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456435">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456435">20000126   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456443" name="ResultList" type="checkbox" />92		申请号：	</td><td><a href="JavaScript:linkDetail('7,456443')">CN95313058 </a>	    公开号：   CN3036686 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456443">包装纸板 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456443">珠海市恒佳塑胶五金玩具有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456443">黄来生 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456443">519060广东省珠海市南屏镇西大街 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456443">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456443">19950218 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456443">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456443">19-08 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456443">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456443">519060 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456443">19990310   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456445" name="ResultList" type="checkbox" />93		申请号：	</td><td><a href="JavaScript:linkDetail('7,456445')">CN95313059 </a>	    公开号：   CN3036693 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456445">六兽合体玩具 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456445">珠海市恒佳塑胶五金玩具有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456445">黄来生 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456445">519060广东省珠海市南屏镇西大街 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456445">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456445">19950218 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456445">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456445">21-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456445">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456445">519060 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456445">19980318   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456461" name="ResultList" type="checkbox" />94		申请号：	</td><td><a href="JavaScript:linkDetail('7,456461')">CN95302706 </a>	    公开号：   CN3036615 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456461">包装箱片材 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456461">广东省惠州市饮料厂 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456461">李优庆 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456461">516001广东省惠州市江北乌石 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456461">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456461">19950316 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456461">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456461">09-03 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456461">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456461">516001 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456461">19980422   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456466" name="ResultList" type="checkbox" />95		申请号：	</td><td><a href="JavaScript:linkDetail('7,456466')">CN95310108 </a>	    公开号：   CN3036634 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456466">包装袋(Ⅰ) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456466">四川省丰都榨菜集团公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456466">李万炳 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456466">648200四川省丰都县名山镇商业路135号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456466">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456466">19950406 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456466">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456466">09-05 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456466">51 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456466">648200 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456466">19980513   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456469" name="ResultList" type="checkbox" />96		申请号：	</td><td><a href="JavaScript:linkDetail('7,456469')">CN95300903 </a>	    公开号：   CN3036716 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456469">灭害灵包装罐 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456469">中山市中山精细化工实业有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456469">徐树荣; 梁文杰 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456469">528402广东省中山市清溪路100号 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456469">19951025 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456469">19950129 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456469">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456469">30-02 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456469">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456469">528402 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456469">20050511   专利权的终止(专利权有效期届满)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456478" name="ResultList" type="checkbox" />97		申请号：	</td><td><a href="JavaScript:linkDetail('7,456478')">CN95301052 </a>	    公开号：   CN3036728 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456478">包装盒(长形) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456478">东莞艺爵包装盒有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456478">区浩澄; 肖坚强 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456478">511700广东省东莞市大岭山马蹄岗工业区东莞艺爵包装盒有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456478">19951101 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456478">19950306 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456478">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456478">03-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456478">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456478">511700 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456478">20040414   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456481" name="ResultList" type="checkbox" />98		申请号：	</td><td><a href="JavaScript:linkDetail('7,456481')">CN95301082 </a>	    公开号：   CN3036730 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456481">切角珠宝盒(矩形) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456481">东莞艺爵包装盒有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456481">区浩澄; 肖坚强 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456481">511700广东省东莞市大岭山马蹄岗工业区东莞艺爵包装盒有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456481">19951101 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456481">19950306 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456481">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456481">03-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456481">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456481">511700 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456481">20040414   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="background-color:#f9f9f9;">
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456482" name="ResultList" type="checkbox" />99		申请号：	</td><td><a href="JavaScript:linkDetail('7,456482')">CN95301062 </a>	    公开号：   CN3036729 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456482">开门珠宝盒(方形) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456482">东莞艺爵包装盒有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456482">区浩澄; 肖坚强 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456482">511700广东省东莞市大岭山马蹄岗工业区东莞艺爵包装盒有限公司肖坚强 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456482">19951101 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456482">19950306 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456482">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456482">03-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456482">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456482">511700 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456482">20040414   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100%">
+<table cellspacing="0" cellpadding="2" border="0" width="100%">
+<tbody><tr>
+<td align="right" valign="top" width="12%"><input onclick="addtohidden(this)" onfocus="this.blur()" value="7,456484" name="ResultList" type="checkbox" />100		申请号：	</td><td><a href="JavaScript:linkDetail('7,456484')">CN95301042 </a>	    公开号：   CN3036726 </td>
+</tr>
+<tr>
+<td align="right" valign="top">专利名称：</td><td id="TI_456484">包装盒(心形) </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请人：</td><td id="PA_456484">东莞艺爵包装盒有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">发明人：</td><td id="AU_456484">区浩澄; 肖坚强 </td>
+</tr>
+<tr>
+<td align="right" valign="top">联系地址：</td><td id="ADDR_456484">511700广东省东莞市大岭山马蹄岗工业区东莞艺爵包装盒有限公司 </td>
+</tr>
+<tr>
+<td align="right" valign="top">公开/公告日期：</td><td id="PD_456484">19951101 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请日：</td><td id="AD_456484">19950306 </td>
+</tr>
+<tr>
+<td align="right" valign="top">申请国家：</td><td id="ANC_456484">CN </td>
+</tr>
+<tr>
+<td align="right" valign="top">主分类号：</td><td id="IC1_456484">03-01 </td>
+</tr>
+<tr>
+<td align="right" valign="top">国家/省市：</td><td id="PC_456484">44 </td>
+</tr>
+<tr>
+<td align="right" valign="top">邮编：</td><td id="CODE_456484">511700 </td>
+</tr>
+<tr>
+<td align="right" valign="top">法律状态：</td><td id="FLZD_456484">20040414   专利权的终止(未缴年费专利权终止)</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+	<tbody><tr valign="bottom" class="middletitlebg">
+		<td height="26" colspan="3" nowrap="">
+		<img src="images/null.gif" class="hand button_detail_gif" width="70" height="19" hspace="4" border="0" onclick="ViewDetail()" /> 
+		<img src="images/null.gif" class="hand button_check_gif" width="70" height="19" hspace="4" onclick="SelectPageAll()" />
+		<img src="images/null.gif" class="hand button_checkcancel_gif" width="70" height="19" hspace="4" onclick="CanclePageAll()" />
+		<img src="images/null.gif" class="hand button_downTLWZ_gif" width="92" height="19" hspace="4" border="0" onclick="titleDownloadDigest()" />
+
+		<img src="images/null.gif" class="hand button_fulltext_gif" width="70" height="19" border="0" hspace="4" onclick="downFullText()" />
+		<img src="images/null.gif" class="hand button_print_gif" width="48" height="19" hspace="4" onclick="confirmprint()" />
+		</td>
+	</tr>
+	<tr>
+		<td width="25%" height="33">
+		<select name="pageSizeBtm" onchange="setPageSize(pageSizeBtm.options[pageSizeBtm.selectedIndex].value,1)">
+		<option value="20">20</option>
+		<option value="50">50</option>
+		<option value="100" selected="">100</option></select>条/页
+		<select id="sortFieldBtm" name="sortFieldBtm" onchange="reSort(this.value)">
+		<option value="Default">默认排序</option>
+		<option value="AD">申请日期</option>
+		<option value="PD">公告日期</option>
+		<option value="PAS">申请人</option>
+		<option value="IC2S">主分类号</option>
+		</select>
+		</td>
+		<td width="4%"> </td>
+		<td width="58%" align="right">
+			[首页]　　[上一页]　　<a href="#" onclick="resultForm.action=&quot;searchservlet?currPage=2&quot;;nowaitSubmit(&quot;resultForm&quot;);">[下一页]</a>　　<a href="#" onclick="resultForm.action=&quot;searchservlet?currPage=747&quot;;nowaitSubmit(&quot;resultForm&quot;);">[尾页]</a> 当前第<span align="right" class="orangebold" name="PageScore">1/747</span>页<input type="hidden" name="currPage" value="1" />
+			 跳到第
+			<input type="text" name="currPage" id="currPage2" value="" size="2" onkeydown="if(event.keyCode==13){historyGoTo(2);}" />
+			页
+			<img src="images/null.gif" class="hand button_go_gif" width="25" height="25" onclick="historyGoTo(2)" />
+	</td></tr>
+</tbody></table>
+					
+<table width="98%" cellpadding="2" cellspacing="0" bgcolor="#f5f5f5" class="grayframe1">
+	<tbody><tr height="19">
+		<td height="19" width="65">字段列表：</td>
+		<td width="74"><input name="showField" type="checkbox" value="PA" checked="" disabled="" /> 申请人</td>
+		<td width="90"><input name="showField" type="checkbox" value="TI" checkeddisabled="" /> 发明名称</td>
+		<td width="87"><input name="showField" type="checkbox" value="AB" /> 文    摘</td>
+		<td width="89"><input name="showField" type="checkbox" value="PH" /> 审批历史</td>
+		<td width="110"><input name="showField" type="checkbox" value="PN" checked="" disabled="" /> 专利公开号</td>
+		<td width="133"><input name="showField" type="checkbox" value="PAD" /> PCT国际申请日</td>
+		<td width="130"><input name="showField" type="checkbox" value="PCD" /> PCT进入国家阶段日</td>
+	</tr>
+	<tr height="19">
+		<td height="19"></td>
+		<td><input name="showField" type="checkbox" value="AD" /> 申请日</td>
+		<td><input name="showField" type="checkbox" value="ADDR" /> 联系地址</td>
+		<td><input name="showField" type="checkbox" value="CODE" /> 邮    编</td>
+		<td><input name="showField" type="checkbox" value="PFN" /> 同族专利</td>
+		<td><input name="showField" type="checkbox" value="CLM" /> 主权利要求</td>
+		<td><input name="showField" type="checkbox" value="PAN" /> PCT国际申请号</td>
+		<td><input name="showField" type="checkbox" value="CT" /> 被引证专利号</td>
+	</tr>
+	<tr height="19">
+		<td height="19"></td>
+		<td><input name="showField" type="checkbox" value="AN" checked="" disabled="" /> 申请号</td>
+		<td><input name="showField" type="checkbox" value="PC" /> 国家/省市</td>
+		<td><input name="showField" type="checkbox" value="PR" /> 优先权项</td>
+		<td><input name="showField" type="checkbox" value="IC1" /> 主分类号</td>
+		<td><input name="showField" type="checkbox" value="IC2" /> 分类号</td>
+		<td><input name="showField" type="checkbox" value="PPD" /> PCT国际公布日</td>
+		<td><input name="showField" type="checkbox" value="CTNP" /> 被引证非专利文献</td>
+	</tr>
+	<tr height="19">
+		<td height="24"></td>
+		<td><input name="showField" type="checkbox" value="AU" checked="" disabled="" /> 发明人</td>
+		<td><input name="showField" type="checkbox" value="ECL" /> 欧洲分类</td>
+		<td><input name="showField" type="checkbox" value="AGT" /> 代理机构</td>
+		<td><input name="showField" type="checkbox" value="ANC" /> 申请国家</td>
+		<td><input name="showField" type="checkbox" value="PD" /> 公开/公告日</td>
+		<td><input name="showField" type="checkbox" value="PPN" /> PCT国际公布号</td>
+		<td> </td>
+	</tr>
+	<tr height="19">
+		<td height="24"> </td>
+		<td><input name="showField" type="checkbox" value="AGC" /> 代理人</td>
+		<td><input name="showField" type="checkbox" value="UCL" /> 美国分类</td>
+		<td><input name="showField" type="checkbox" value="PHC" /> 范畴分类</td>
+		<td><input name="showField" type="checkbox" value="FLZD" /> 法律状态</td>
+		<td><input name="showField" type="checkbox" value="ABIMG" /> 文摘附图</td>
+		<td colspan="2" align="right" valign="middle">
+		<img src="images/null.gif" class="hand button_checkAllField_gif" width="48" height="19" border="0" alt="选择所有字段" onclick="checkAllField()" /> 
+		<img src="images/null.gif" class="hand button_uncheckAllField_gif" width="48" height="19" border="0" alt="取消所有选中字段" onclick="uncheckAllField()" /> 
+		<img src="images/null.gif" class="hand button_reflash_gif" alt="刷新" width="48" height="19" hspace="6" onclick="formSubmit()" />  
+		</td>
+	</tr>
+</tbody></table>
+</div>
+</form>
+		<!-- zhangjiyong   弹出统计页面  start-->
+		<div class="dtree" id="stadiv" name="stadiv" style="position: absolute; display: none; width: 400px;">
+			<table width="50%" border="1" cellpadding="0" cellspacing="1" class="bgFFFFFF">
+				<tbody><tr>
+					<td class="bgE1EDFC" align="right">
+						<img alt="关闭" style="width: 15px; height: 15px; border: 0px; cursor: pointer" src="/Search/images/null.gif" class="close_gif" onclick="closeStatDiv();" />
+					</td>
+				</tr>
+				<tr>
+					<td class="bgE1EDFC">
+						<!-- 背景条 -->
+						<table width="98%" border="0" cellpadding="0" cellspacing="1" class="bgCCCCCC">
+							<tbody><tr>
+								<td class="linebg01_gif">
+									<table width="98%" border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<td>
+												<img src="/Search/images/null.gif" class="arrow02_gif" width="17" height="17" hspace="8" />
+											</td>
+											<td width="100%">
+												<span class="white12bold">筛选条件</span>
+											</td>
+										</tr>
+
+									</tbody></table>
+								</td>
+							</tr>
+						</tbody></table>
+						<form id="statForm">
+							<!-- 提交表单包含筛选条件 -->
+							<input type="hidden" id="STATAREA" name="STATAREA" value="SCH" />
+							<input type="hidden" id="STATDATA" name="STATDATA" value="" />
+							<input type="hidden" id="STATTYPE" name="STATTYPE" value="" />
+							<input type="hidden" id="USER_DEFINED1" name="USER_DEFINED1" value="" />
+							<input type="hidden" id="USER_DEFINED2" name="USER_DEFINED2" value="" />
+							<input type="hidden" name="querys" />
+							<input type="hidden" name="dbs" />
+							<input type="hidden" name="querydates" />
+							<input type="hidden" name="thesauruss" />
+							<input type="hidden" name="dictionarys" />
+							<input type="hidden" name="fuzzyipcs" />
+							<input type="hidden" name="singledbs" />
+							<input type="hidden" name="conceptdics" />
+							<table class="tablecss">
+								<tbody><tr>
+									<td>显示结果数量:	</td>
+									<td>
+									<select id="DATANUM" name="DATANUM">
+									<option value="10">前十条</option>
+									<option value="20">前二十条</option>
+									<option value="50">前五十条</option>
+									<option value="ALL">全部</option>
+									</select>
+									</td>
+									<td>IPC分类:</td>
+									<td>
+										<select id="" name="ICSORT">
+											<option value="PAT">部</option>
+											<option value="BC">大类</option>
+											<option value="SC">小类</option>
+											<option value="BG">大组</option>
+											<option value="SG">小组</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										合并申请人:
+									</td>
+									<td>
+										<label for="PAUNITE1">
+											否
+										</label>
+										<input id="PAUNITE1" type="radio" checked="" name="PAUNITE" value="0" />
+										 
+										<label for="PAUNITE2">
+											是
+										</label>
+										<input id="PAUNITE2" type="radio" name="PAUNITE" value="1" />
+									</td>
+									<td>
+										   区域:
+										<label for="AREASORT1">
+											中国省市
+										</label>
+										<input id="AREASORT1" type="radio" checked="" name="AREASORT" value="C" />
+										
+										<label for="AREASORT2">
+											中国国别
+										</label>
+										<input id="AREASORT2" type="radio" name="AREASORT" value="S" />
+										
+										<label for="AREASORT3">
+											国际
+										</label>
+										<input id="AREASORT3" type="radio" name="AREASORT" value="F" />
+										
+										
+									</td>
+									<td>
+										
+									</td>
+								</tr>
+							</tbody></table>
+						</form>
+						
+						<table width="98%" border="0" cellpadding="0" cellspacing="1" class="bgCCCCCC">
+							<tbody><tr>
+								<td class="linebg01_gif">
+									<table width="98%" border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<td>
+												<img src="/Search/images/null.gif" class="arrow02_gif" width="17" height="17" hspace="8" />
+											</td>
+											<td width="100%">
+												<span class="white12bold">统计选项</span>
+											</td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+						</tbody></table>
+
+						
+
+						
+
+
+
+
+
+<script type="text/javascript">&lt;!--
+tyTree = new dTree('tyTree');tyTree.add(0,-1,'');tyTree.add(1,0,'专利类型','');tyTree.add(2,0,'趋势分析','');tyTree.add(3,0,'申请人','');tyTree.add(4,0,'技术领域分析','');tyTree.add(5,0,'区域分析','');tyTree.add(25,1,'专利申请类型分析','javascript:getStatType(\'APTY\',\'S\')');tyTree.add(26,1,'权利要求类型分析(对可深加工数据库已标引数据有效)','javascript:getStatType(\'Index1\',\'S\')');tyTree.add(8,2,'申请日','javascript:getStatType(\'AD\',\'S\')');tyTree.add(9,2,'公开日','javascript:getStatType(\'PD\',\'S\')');tyTree.add(24,2,'生命周期','javascript:getStatType(\'LFCL\',\'F\')');tyTree.add(10,3,'申请人分析','javascript:getStatType(\'PA\',\'S\')');tyTree.add(11,3,'申请人趋势分析','javascript:getStatType(\'PAAD\',\'D\')');tyTree.add(12,3,'申请人技术构成','javascript:getStatType(\'PAIC\',\'D\')');tyTree.add(13,3,'申请人类型(对可深加工数据库已标引数据有效)','javascript:getStatType(\'PATY\',\'S\')');tyTree.add(14,3,'申请人组合分析','javascript:getStatType(\'PACO\',\'D\')');tyTree.add(15,4,'技术趋势分析','javascript:getStatType(\'ICAD\',\'D\')');tyTree.add(16,4,'技术构成分布分析','javascript:getStatType(\'ICPA\',\'D\')');tyTree.add(17,4,'技术构成发明人分析','javascript:getStatType(\'ICAU\',\'D\')');tyTree.add(18,4,'技术构成区域分析','javascript:getStatType(\'ICPC\',\'D\')');tyTree.add(19,4,'技术组合分析','javascript:getStatType(\'ICCO\',\'D\')');tyTree.add(20,5,'区域排名','javascript:getStatType(\'PC\',\'S\')');tyTree.add(21,5,'区域趋势','javascript:getStatType(\'PCAD\',\'D\')');tyTree.add(22,5,'区域技术构成分析','javascript:getStatType(\'PCIC\',\'D\')');tyTree.add(23,5,'区域专利权人','javascript:getStatType(\'PCPA\',\'D\')');document.write(tyTree)//--&gt;</script><div class="dtree">
+<div class="dTreeNode"></div><div id="dtyTree0" class="clip" style="display:block;"><div class="dTreeNode"><a href="javascript: tyTree.o(1);"><img id="jtyTree1" src="images/plus.gif" alt="" /></a><a href="javascript: tyTree.o(1);" class="node">专利类型</a></div><div id="dtyTree1" class="clip" style="display:none;"><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree6" class="node" href="javascript:getStatType('APTY','S')" onclick="javascript: tyTree.s(6);">专利申请类型分析</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/joinbottom.gif" alt="" /><a id="styTree7" class="node" href="javascript:getStatType('Index1','S')" onclick="javascript: tyTree.s(7);">权利要求类型分析(对可深加工数据库已标引数据有效)</a></div></div><div class="dTreeNode"><a href="javascript: tyTree.o(2);"><img id="jtyTree2" src="images/plus.gif" alt="" /></a><a href="javascript: tyTree.o(2);" class="node">趋势分析</a></div><div id="dtyTree2" class="clip" style="display:none;"><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree8" class="node" href="javascript:getStatType('AD','S')" onclick="javascript: tyTree.s(8);">申请日</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree9" class="node" href="javascript:getStatType('PD','S')" onclick="javascript: tyTree.s(9);">公开日</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/joinbottom.gif" alt="" /><a id="styTree10" class="node" href="javascript:getStatType('LFCL','F')" onclick="javascript: tyTree.s(10);">生命周期</a></div></div><div class="dTreeNode"><a href="javascript: tyTree.o(3);"><img id="jtyTree3" src="images/plus.gif" alt="" /></a><a href="javascript: tyTree.o(3);" class="node">申请人</a></div><div id="dtyTree3" class="clip" style="display:none;"><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree11" class="node" href="javascript:getStatType('PA','S')" onclick="javascript: tyTree.s(11);">申请人分析</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree12" class="node" href="javascript:getStatType('PAAD','D')" onclick="javascript: tyTree.s(12);">申请人趋势分析</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree13" class="node" href="javascript:getStatType('PAIC','D')" onclick="javascript: tyTree.s(13);">申请人技术构成</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree14" class="node" href="javascript:getStatType('PATY','S')" onclick="javascript: tyTree.s(14);">申请人类型(对可深加工数据库已标引数据有效)</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/joinbottom.gif" alt="" /><a id="styTree15" class="node" href="javascript:getStatType('PACO','D')" onclick="javascript: tyTree.s(15);">申请人组合分析</a></div></div><div class="dTreeNode"><a href="javascript: tyTree.o(4);"><img id="jtyTree4" src="images/plus.gif" alt="" /></a><a href="javascript: tyTree.o(4);" class="node">技术领域分析</a></div><div id="dtyTree4" class="clip" style="display:none;"><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree16" class="node" href="javascript:getStatType('ICAD','D')" onclick="javascript: tyTree.s(16);">技术趋势分析</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree17" class="node" href="javascript:getStatType('ICPA','D')" onclick="javascript: tyTree.s(17);">技术构成分布分析</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree18" class="node" href="javascript:getStatType('ICAU','D')" onclick="javascript: tyTree.s(18);">技术构成发明人分析</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree19" class="node" href="javascript:getStatType('ICPC','D')" onclick="javascript: tyTree.s(19);">技术构成区域分析</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/joinbottom.gif" alt="" /><a id="styTree20" class="node" href="javascript:getStatType('ICCO','D')" onclick="javascript: tyTree.s(20);">技术组合分析</a></div></div><div class="dTreeNode"><a href="javascript: tyTree.o(5);"><img id="jtyTree5" src="images/plusbottom.gif" alt="" /></a><a href="javascript: tyTree.o(5);" class="node">区域分析</a></div><div id="dtyTree5" class="clip" style="display:none;"><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree21" class="node" href="javascript:getStatType('PC','S')" onclick="javascript: tyTree.s(21);">区域排名</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree22" class="node" href="javascript:getStatType('PCAD','D')" onclick="javascript: tyTree.s(22);">区域趋势</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/join.gif" alt="" /><a id="styTree23" class="node" href="javascript:getStatType('PCIC','D')" onclick="javascript: tyTree.s(23);">区域技术构成分析</a></div><div class="dTreeNode"><img src="images/line.gif" alt="" /><img src="images/joinbottom.gif" alt="" /><a id="styTree24" class="node" href="javascript:getStatType('PCPA','D')" onclick="javascript: tyTree.s(24);">区域专利权人</a></div></div></div></div>
+
+
+
+						
+						<table width="98%" border="0" cellpadding="0" cellspacing="1" class="bgCCCCCC">
+							<tbody><tr>
+								<td class="linebg01_gif">
+									<table width="98%" border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<td>
+												<img src="/Search/images/null.gif" class="arrow02_gif" width="17" height="17" hspace="8" />
+											</td>
+											<td width="100%">
+												<span class="white12bold">自定义统计</span>
+											</td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+						</tbody></table>
+
+						
+						<table width="500">
+							<tbody><tr>
+								<td>
+								 字段一：
+								<select name="USER_DEFINED11">
+								<option value="PA">申请人</option>
+								<option value="AU">发明人</option>
+								<option value="IC1">主分类号</option>
+								<option value="IC2">分类号</option>
+								<option value="ADY">申请日</option>
+								<option value="PDY">公告日</option>
+								<option value="PC">区域</option>
+								<option value="AGT">代理机构</option>
+								</select>
+								</td>
+								<td>
+									字段二:
+								<select name="USER_DEFINED22">
+								<option value="EMPTY"> </option>
+								<option value="PA">申请人</option>
+								<option value="AU">发明人</option>
+								<option value="IC1">主分类号</option>
+								<option value="IC2">分类号</option>
+								<option value="ADY">申请日</option>
+								<option value="PDY">公告日</option>
+								<option value="PC">区域</option>
+								<option value="AGT">代理机构</option>
+								</select>
+								</td>
+								<td width="167">
+									<img src="/Search/images/null.gif" class="button_stat_gif" onclick="StaSelf()" width="48" height="19" hspace="4" border="0" />
+								</td>
+							</tr>
+						</tbody></table>
+
+					</td>
+				</tr>
+			</tbody></table>
+		</div>
+		<div id="Layer1" onclick="nihao();"></div>
+		<!-- zhangjiyong   弹出统计页面  end-->
+	
+
+<script type="text/javascript" src="/Search/js/hightLight.js"></script>
+<script language="JavaScript">
+&lt;!--
+	chkSelect(document.getElementsByName("showField"),$("resultForm").fieldlist.value);
+	chkSelect(document.getElementsByName("ResultList"),$("resultForm").selectedlist.value);
+//--&gt;
+</script>
+</body></html>
