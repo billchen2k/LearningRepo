@@ -116,32 +116,6 @@ def searcher(startDate, endDate, pattern, startPage):
         i = i + 1
     print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ": 本次处理完成，已处理 " + startDate + ' 到 ' + endDate + ' 的全部专利号为 ' + pattern + ' 的数据。')
 
-def solver():
-    starttime = time.time()
-    import os
-    pickleList = []
-    pickleList = os.listdir(sys.path[0] + '/output')
-    for a in pickleList:
-        if a[0] == '.':
-            pickleList.remove(a)
-    totalPickles = 0
-    totalCount = 0
-    totalPickles = len(pickleList)
-    pickleList.sort()
-    print("即将解析数据。")
-    print("output 文件夹下共有 %d 条 pickle 待解析。" % totalPickles)
-    startIndex = int(input('请输入开始 index'))
-    endIndex = int(input('请输入结束解析 index'))
-    for onePickle in pickleList[startIndex:endIndex]:
-        print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ": 正在解析 " + onePickle + " ...(%d/%d)" % (pickleList.index(onePickle) + 1, totalPickles))
-        with open(sys.path[0] + '/output/' + onePickle, 'rb') as f:
-            source = pickle.load(f)
-        thisCount = toCSV(source)
-        totalCount = thisCount + totalCount
-    endtime = time.time()
-    print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ": %d 条 pickles 解析完成，耗时 %.2fmin" % (totalPickles, (endtime - starttime) / 60.0))
-
-
 def counter():
     timestart = time.time()
     print("正在统计 pickle 中的数据条数...")
@@ -198,8 +172,6 @@ def main():
 if __name__ == '__main__':
     if len(sys.argv) == 1:
         main()
-    elif (sys.argv[1] == '-s' or sys.argv[1] == '-s'):
-        solver()
     elif (sys.argv[1] == '-c' or sys.argv[1] == '-c'):
         main()
     elif (sys.argv[1] == '-n' or sys.argv[1] == '-n'):
