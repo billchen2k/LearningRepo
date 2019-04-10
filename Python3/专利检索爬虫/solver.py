@@ -19,12 +19,11 @@ head = ['分类号', '申请人', '发明人', '申请号', '申请日', '发明
 csvDst = []
 year = 1995
 while year<= 2018:
-    f = open('/Users/billchen/OneDrive/Workspace/LearningRepo/Python3/专利检索爬虫/result/%d.csv' % year, 'a+', newline='')
+    f = open(sys.path[0] + '/result/%d.csv' % year, 'a+', newline='', encoding='utf_8_sig')
     tempwriter = csv.writer(f, dialect='excel')
     if firstRun == True:
         tempwriter.writerow(head)
     csvDst.append(tempwriter)
-
     year = year + 1
 
 def toCSV(out_txt):
@@ -60,7 +59,7 @@ def toCSV(out_txt):
         temphh = xcontent.xpath('//*[@id="tab"]/tbody/tr[' + strnum + ']/td/table/tbody/tr[12]/td[2]/text()')
         # 舍弃垃圾数据
         if (len(temph) == 0 or len(temphh) == 0) and len(tempa) != 0:
-            print('警告：数据异常，已舍弃当前异常数据。')
+            print('警告：数据异常，已舍弃当前异常数据。目前已累计异常数据 %d 条。' % errorCount)
             num1 = num1 + 1
             errorCount = errorCount + 1
             continue
@@ -111,14 +110,14 @@ totalPickles = 0
 totalCount = 0
 totalPickles = len(pickleList)
 pickleList.sort()
-print("即将解析数据。")
+print("即将开始解析数据...")
 print("output 文件夹下共有 %d 条 pickle 待解析。" % totalPickles)
 startIndex = int(input('请输入开始 index：'))
 endIndex = int(input('请输入结束 index：'))
 for onePickle in pickleList[startIndex:endIndex]:
     timepicklestart = time.time()
-    print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ": 正在解析 [%d]" % pickleList.index(onePickle) +
-            onePickle + " ...(%d/%d)" % (pickleList.index(onePickle) - startIndex + 1, endIndex - startIndex))
+    print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ": 正在解析 [%d]: " % pickleList.index(onePickle) +
+            onePickle + "...(%d/%d)" % (pickleList.index(onePickle) - startIndex + 1, endIndex - startIndex))
     with open(sys.path[0] + '/output/' + onePickle, 'rb') as f:
         source = pickle.load(f)
     thisCount = toCSV(source)
