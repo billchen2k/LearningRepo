@@ -17,6 +17,7 @@
                 "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
                 "-g"
             ],
+            "isBackground": false,
             "group": "build",
             "presentation": {
                 "echo": true,

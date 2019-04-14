@@ -53,8 +53,9 @@
         
 
         {
-            "preLaunchTask": "build c++",
+            
             "name": "Launch C++",
+            "preLaunchTask": "build c++",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
@@ -63,6 +64,7 @@
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
+            
             "MIMode": "lldb",
             "logging": {
             //   "engineLogging": true,
