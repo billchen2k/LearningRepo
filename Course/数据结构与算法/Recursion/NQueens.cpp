@@ -1,4 +1,4 @@
-// 记住改算法不要留坑！！！！
+// 改算法不要留坑！！！！
 // 4.14 03:02
 #include <iostream>
 #include <string.h>
@@ -65,17 +65,18 @@ void Queen::remove(int col) {
 }
 
 void Queen::print() {
-	cout << "Solution #" << ++solCount << ":" << endl;
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
-			if (columnFlag[j] == i)
-				cout << CHESS_SIGN << " ";
-			else
-				cout << NO_CHESS_SIGN << " ";
-		}
-		cout << endl;
-	}
-	cout << endl;
+	solCount++;
+	// cout << "Solution #" << ++solCount << ":" << endl;
+	// for (int i = 0; i < size; i++) {
+	// 	for (int j = 0; j < size; j++) {
+	// 		if (columnFlag[j] == i)
+	// 			cout << CHESS_SIGN << " ";
+	// 		else
+	// 			cout << NO_CHESS_SIGN << " ";
+	// 	}
+	// 	cout << endl;
+	// }
+	// cout << endl;
 }
 
 int Queen::solve() {
@@ -112,5 +113,5 @@ int main() {
 	if (ChessBoard.solCount == 0){
 		cout << "No solution found." << endl;
 	}
-	cout << "Solved in " << double(end - start)/CLOCKS_PER_SEC<< " s." << endl;
+	cout << "Solved out " << ChessBoard.solCount << " solutions in " << double(end - start) / CLOCKS_PER_SEC << " s." << endl;
 }
