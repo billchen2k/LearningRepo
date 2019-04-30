@@ -65,18 +65,17 @@ void Queen::remove(int col) {
 }
 
 void Queen::print() {
-	solCount++;
-	// cout << "Solution #" << ++solCount << ":" << endl;
-	// for (int i = 0; i < size; i++) {
-	// 	for (int j = 0; j < size; j++) {
-	// 		if (columnFlag[j] == i)
-	// 			cout << CHESS_SIGN << " ";
-	// 		else
-	// 			cout << NO_CHESS_SIGN << " ";
-	// 	}
-	// 	cout << endl;
-	// }
-	// cout << endl;
+	cout << "Solution #" << ++solCount << ":" << endl;
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++) {
+			if (columnFlag[j] == i)
+				cout << CHESS_SIGN << " ";
+			else
+				cout << NO_CHESS_SIGN << " ";
+		}
+		cout << endl;
+	}
+	cout << endl;
 }
 
 int Queen::solve() {
@@ -101,7 +100,7 @@ int main() {
 	cout << "How big is the chessboard please?" << endl;
 	cin >> size;
 	while (!(size > 0 && size <= MAX_SIZE)) {
-		cout << "Chess board too large, please try again." << endl;
+		cout << "Invalid value, please try again." << endl;
 		while (cin.get() != '\n')
 			continue;
 		cin >> size;
