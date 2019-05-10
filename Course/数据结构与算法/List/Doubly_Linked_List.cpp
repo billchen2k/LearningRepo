@@ -94,7 +94,7 @@ class DList {
 	}
 	Error_code insert(int position, const List_entry &x) {
 		Node<List_entry> *new_node, *following, *preceding;
-		if (position < 0 || position > count - 1)
+		if (position < 0 || position > count)
 			return rangeerror;
 		if (count == MAXL)
 			return overflow;

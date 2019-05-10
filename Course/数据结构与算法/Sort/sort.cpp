@@ -1,5 +1,10 @@
 #include <iostream>
+#include <vector>
 using namespace std;
+
+int dataset[10] = {1, 3, 6, 9, 2, 7, 4, 8, 5, 0};
+vector<int> dataVec(dataset, dataset + 10);
+
 void bubble_sort(int entry[], int count) {
 	int isShifted = 0, pos = 0;
 	do {
@@ -15,11 +20,13 @@ void bubble_sort(int entry[], int count) {
 	} while (isShifted);
 }
 
+
+
 int main(){
-	int a[10] = {1, 3, 6, 9, 2, 7, 4, 8, 5, 0};
-	bubble_sort(a, 10);
+	
+	bubble_sort(dataset, 10);
 	for (int i = 0; i < 10;i++){
-		cout << a[i] << " ";
+		cout << dataset[i] << " ";
 	}
 	return 0;
 }
