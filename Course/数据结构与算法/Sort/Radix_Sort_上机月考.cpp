@@ -39,7 +39,7 @@ void radix_sort(vector<string> &data,vector<string> *queues) {
 				queues[MAX_CHARS - 1].push_back(data[j]);
 			}
 		}
-		cout << "第 " << i + 1 << " 次排序：";
+		cout << "第 " << data[0].size() - i << " 次排序：";
 		printer(data);
 		connect(data, queues);
     }

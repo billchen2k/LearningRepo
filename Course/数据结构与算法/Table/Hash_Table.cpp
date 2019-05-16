@@ -1,19 +1,28 @@
+// Bill's Hash Table.
+// Used to store numbers.
+// Collision Resolution with Open Addressing.
+
 #include <cstdlib>
 #include <iostream>
 using namespace std;
-const int hash_size = 1000;
+
+const int HASH_SIZE = 1000;
+const int SUCCESS = 0;
+const int ERROR_OVERFLOW = -1;
+const int WARNING_OVERWRITTEN = -2;
+const int WARNING_NOT_FOUND = -3;
 
 class Hash_table {
       public:
 	Hash_table() {
-		for (int i = 0; i < hash_size; i++) {
+		for (int i = 0; i < HASH_SIZE; i++) {
 			vals[i] = -1;
 			keys[i] = -1;
 		}
 		stored = 0;
 	}
 	void clear() {
-		for (int i = 0; i < hash_size; i++) {
+		for (int i = 0; i < HASH_SIZE; i++) {
 			vals[i] = -1;
 			keys[i] = -1;
 		}
@@ -21,7 +30,7 @@ class Hash_table {
 	}
 
 	int hash(int key) {
-		return key % 1000;
+		return key % HASH_SIZE;
 	}
 
 	int insert(const int &key, const int &value) {
@@ -30,16 +39,16 @@ class Hash_table {
 		if (keys[pos] != -1 && keys[pos] == key) {
 			vals[pos] = value;
 			cout << "Previous value has been overwritten." << endl;
-			return -1;
+			return WARNING_OVERWRITTEN;
 		}
 		for (pos = hash(key); vals[pos] != -1; pos++) {
-			if (pos == hash_size) {
+			if (pos == HASH_SIZE) {
 				pos = 0;
 				cycled = true;
 			}
 			if (pos == hash(key) && cycled == true) {
 				cout << "Overflow." << endl;
-				return -1;
+				return ERROR_OVERFLOW;
 			}
 		}
 
@@ -53,13 +62,13 @@ class Hash_table {
 		int pos;
 		bool cycled = false;
 		for (pos = hash(key); keys[pos] != key; pos++) {
-			if (pos == hash_size) {
+			if (pos == HASH_SIZE) {
 				pos = 0;
 				cycled = true;
 			}
 			if (cycled == true && pos == hash(key)) {
 				cout << "Overflow." << endl;
-				return -1;
+				return ERROR_OVERFLOW;
 			}
 			if (vals[pos] == -1)
 				break;
@@ -67,7 +76,7 @@ class Hash_table {
 
 		if (vals[pos] == -1) {
 			cout << "Value not found." << endl;
-			return -1;
+			return WARNING_NOT_FOUND;
 		} else {
 			return vals[pos];
 		}
@@ -77,20 +86,20 @@ class Hash_table {
 		int pos;
 		bool cycled = false;
 		for (pos = hash(key);keys[pos] != key; pos++) {
-			if (pos == hash_size) {
+			if (pos == HASH_SIZE) {
 				pos = 0;
 				cycled = true;
 			}
 			if (cycled == true && pos == hash(key)) {
 				cout << "Overflow." << endl;
-				return -1;
+				return ERROR_OVERFLOW;
 			}
 			if (vals[pos] == -1)
 				break;
 		}
 		if (vals[pos] == -1) {
 			cout << "This key haven't store any values." << endl;
-			return -1;
+			return WARNING_NOT_FOUND;
 		} else {
 			vals[pos] = -1;
 			keys[pos] = -1;
@@ -111,13 +120,13 @@ class Hash_table {
 	}
 
       private:
-	int vals[hash_size];
-	int keys[hash_size];
+	int vals[HASH_SIZE];
+	int keys[HASH_SIZE];
 	int stored;
 };
 
 void instruct() {
-	cout << "This is a demostration program of the hash table. Here're the available commands:" << endl;
+	cout << "This is a demostration program of the hash table.\nHere're the available commands:" << endl;
 	cout << "[i] insert" << endl
 	     << "[r] remove" << endl
 	     << "[g] get" << endl
@@ -177,7 +186,7 @@ int main() {
 			break;
 		default:
 			cout << "Unknown command." << endl;
-		}
+		} 
 	}
 	cout << "Bye.<3" << endl;
 	return 0;
