@@ -4,6 +4,8 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+        
         
         
 
@@ -39,7 +41,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
-            "args": [],
+            "args": ["-s", "4", "-E", "1", "-b", "4", "-t", "/Users/billchen/OneDrive/Workspace/LearningRepo/Course/CSAPP/LAB4/traces/yi.trace", "-v"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
