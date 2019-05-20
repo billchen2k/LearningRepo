@@ -1,8 +1,9 @@
+// Written By @BillChen
+// 2019.5.20
 #include "cachelab.h"
 #include <getopt.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <time.h>
 #include <unistd.h>
 
@@ -17,9 +18,11 @@
 int totalMissCount = 0;
 int totalHitCount = 0;
 int totalEvictCount = 0;
+
 typedef unsigned long ulong;
 typedef unsigned char *bytept;
 const char *optString = "s:E:b:t:hv";
+
 struct globalOptions {
 	int setIndexBits;
 	int associativity;
@@ -33,15 +36,6 @@ struct result {
 	int miss;
 	int evict;
 };
-void usage() {
-	printf("Usage: ./csim [-hv] -s <s> -E <E> -b <b> -t <tracefile>\n");
-	printf("-h get help info\n");
-	printf("-v Optional verbose flag that displays trace info\n");
-	printf("-s <s> Number of set index bits\n");
-	printf("-E <E> Associativity (number of lines per set)\n");
-	printf("-b <b> Number of block bits\n");
-	printf("-t <tracefile>: Name of the valgrind trace to replay\n");
-}
 typedef struct {
 	int valid;
 	ulong tag;
@@ -51,17 +45,27 @@ typedef struct {
 typedef CacheLine *CacheSet;
 typedef CacheSet *CacheHead;
 
+void usage() {
+	printf("Usage: ./csim [-hv] -s <s> -E <E> -b <b> -t <tracefile>\n");
+	printf("-h get help info\n");
+	printf("-v Optional verbose flag that displays trace info\n");
+	printf("-s <s> Number of set index bits\n");
+	printf("-E <E> Associativity (number of lines per set)\n");
+	printf("-b <b> Number of block bits\n");
+	printf("-t <tracefile>: Name of the valgrind trace to replay\n");
+}
+
 CacheHead CacheInit(int S, int E) {
 	CacheHead cache;
 	cache = calloc(1 << S, sizeof(CacheSet));
 	if (cache == NULL) {
-		printf("Fail to allocate memory for cache.");
+		printf("Fail to allocate memory for cache.\n");
 		exit(EXIT_FAILURE);
 	}
 	int i = 0;
 	for (i = 0; i < 1 << S; i++) {
 		if ((cache[i] = calloc(E, sizeof(CacheLine))) == NULL) {
-			printf("Fail to allocate memory for cache.");
+			printf("Fail to allocate memory for cache.\n");
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -101,13 +105,10 @@ void CacheInsert(CacheHead cache, ulong index, ulong tag) {
 			break;
 		freeLine++;
 	}
-	// CacheLine *target = cache[index] + freeLine;
-	// target->tag = tag;
-	// target->valid = 1;
-	// target->time = clock();
-	cache[index][freeLine].tag = tag;
-	cache[index][freeLine].valid = 1;
-	cache[index][freeLine].time = clock();
+	CacheLine *target = cache[index] + freeLine;
+	target->tag = tag;
+	target->valid = 1;
+	target->time = clock();
 }
 
 void CacheEvict(CacheHead cache, ulong index, ulong tag) {
@@ -123,6 +124,13 @@ void CacheEvict(CacheHead cache, ulong index, ulong tag) {
 	target->tag = 0;
 	target->time = 0;
 	target->valid = 0;
+}
+
+void CacheTouch(CacheHead cache, ulong index, ulong tag) {
+	int touchLine = 0;
+	while (cache[index][touchLine].tag != tag)
+		touchLine++;
+	cache[index][touchLine].time = clock();
 }
 
 void Adder(int type, int num) {
@@ -144,12 +152,14 @@ void Adder(int type, int num) {
 			printf("miss ");
 	}
 }
-void printByte(bytept h, int len){
+
+void printByte(bytept h, int len) {
 	int i;
 	for (i = 0; i < len; i++)
 		printf("%.2x ", h[i]);
 	printf("\n");
 }
+
 void Execute(CacheHead cache, char type, ulong address, int len) {
 	//ulong index = (address >> globalOptions.blockBits) & ((1 << globalOptions.setIndexBits) - 1);
 	ulong index = (address << globalOptions.tagBits) >> (MACHINE_BITS - globalOptions.setIndexBits);
@@ -162,12 +172,14 @@ void Execute(CacheHead cache, char type, ulong address, int len) {
 		printByte((bytept)&index, sizeof(long));
 		printf("[tag:] ");
 		printByte((bytept)&tag, sizeof(long));
-		printf("(Decimal)[index: %ld, tag: %ld] \n", index, tag);
+		printf("(Decimal)[index: %ld, tag: %ld] \n------------------------------------- ", index, tag);
 	}
 	switch (status) {
 	case CACHED:
+		CacheTouch(cache, index, tag);
 		if (type == 'M') {
-			Adder(ADD_HIT, 2 * len);
+			Adder(ADD_HIT, 1);
+			Adder(ADD_HIT, 1);
 		} else {
 			Adder(ADD_HIT, 1);
 		}
@@ -176,10 +188,9 @@ void Execute(CacheHead cache, char type, ulong address, int len) {
 		CacheInsert(cache, index, tag);
 		if (type == 'M') {
 			Adder(ADD_MISS, 1);
-			Adder(ADD_HIT, 2 * len - 1);
+			Adder(ADD_HIT, 1);
 		} else {
 			Adder(ADD_MISS, 1);
-			Adder(ADD_HIT, len - 1);
 		}
 		break;
 	case NEED_EVICT:
@@ -188,13 +199,11 @@ void Execute(CacheHead cache, char type, ulong address, int len) {
 		if (type == 'M') {
 			Adder(ADD_MISS, 1);
 			Adder(ADD_EVICT, 1);
-			Adder(ADD_HIT, 2 * len - 1);
-			
-		}
-		else {
+			Adder(ADD_HIT, 1);
+
+		} else {
 			Adder(ADD_MISS, 1);
 			Adder(ADD_EVICT, 1);
-			Adder(ADD_HIT, len - 1);
 		}
 		break;
 	default:
@@ -212,21 +221,21 @@ int main(int argc, char *args[]) {
 		switch (ch) {
 		case 's':
 			if (atoi(optarg) < 0) {
-				printf("Unvalid input. Try Again.");
+				printf("Unvalid input for <s>. Try Again.\n");
 				exit(EXIT_FAILURE);
 			}
 			globalOptions.setIndexBits = atoi(optarg);
 			break;
 		case 'E':
 			if (atoi(optarg) < 0) {
-				printf("Unvalid input. Try Again.");
+				printf("Unvalid input for <E>. Try Again.\n");
 				exit(EXIT_FAILURE);
 			}
 			globalOptions.associativity = atoi(optarg);
 			break;
 		case 'b':
 			if (atoi(optarg) < 0) {
-				printf("Unvalid input. Try Again.");
+				printf("Unvalid input for <b>. Try Again.\n");
 				exit(EXIT_FAILURE);
 			}
 			globalOptions.blockBits = atoi(optarg);
@@ -247,32 +256,28 @@ int main(int argc, char *args[]) {
 		}
 	}
 	globalOptions.tagBits = MACHINE_BITS - globalOptions.blockBits - globalOptions.setIndexBits;
+
 	FILE *traceFile = fopen(globalOptions.traceDir, "r");
 	if (traceFile == NULL) {
 		printf("Fail to open file: %s\n", globalOptions.traceDir);
 		exit(EXIT_FAILURE);
 	}
-
 	CacheHead cache = CacheInit(globalOptions.setIndexBits, globalOptions.associativity);
 	char traceLine[32];
 	while (fgets(traceLine, 32, traceFile) != NULL) {
-		if (globalOptions.verboseFlag == 1) {
-			char *p = traceLine;
-			while(*p != '\n'){
-				putchar(*p);
-				p++;
-			}
-			putchar(' ');
-		}
 		char mode;
 		ulong address;
 		int len;
 		sscanf(traceLine, " %c %lx,%d", &mode, &address, &len);
 		if (mode == 'I')
 			continue;
+		if (globalOptions.verboseFlag == 1) {
+			printf("%c %lx,%d ", mode, address, len);
+		}
 		Execute(cache, mode, address, len);
 	}
 	//printf("hits:%d misses:%d evictions:%d\n", totalHitCount, totalMissCount, totalEvictCount);
 	printSummary(totalHitCount, totalMissCount, totalEvictCount);
+	free(cache);
 	return 0;
 }
