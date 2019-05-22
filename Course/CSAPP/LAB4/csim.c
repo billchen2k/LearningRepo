@@ -21,7 +21,7 @@ int totalEvictCount = 0;
 
 typedef unsigned long ulong;
 typedef unsigned char *bytept;
-const char *optString = "s:E:b:t:hv";
+const char *optString = "s:E:b:t:hVv";
 
 struct globalOptions {
 	int setIndexBits;
@@ -29,6 +29,7 @@ struct globalOptions {
 	int blockBits;
 	int verboseFlag;
 	int tagBits;
+	int superVerboseFlag;
 	char *traceDir;
 } globalOptions;
 struct result {
@@ -49,6 +50,7 @@ void usage() {
 	printf("Usage: ./csim [-hv] -s <s> -E <E> -b <b> -t <tracefile>\n");
 	printf("-h get help info\n");
 	printf("-v Optional verbose flag that displays trace info\n");
+	printf("-V Optional super verbose flag that displays very detailed trace info\n");
 	printf("-s <s> Number of set index bits\n");
 	printf("-E <E> Associativity (number of lines per set)\n");
 	printf("-b <b> Number of block bits\n");
@@ -166,13 +168,18 @@ void Execute(CacheHead cache, char type, ulong address, int len) {
 	ulong tag = address >> (globalOptions.blockBits + globalOptions.setIndexBits);
 	int status = CacheJudge(cache, index, tag);
 	if (globalOptions.verboseFlag == 1) {
-		printf("\n[address:] ");
-		printByte((bytept)&address, sizeof(long));
-		printf("[index:] ");
-		printByte((bytept)&index, sizeof(long));
-		printf("[tag:] ");
-		printByte((bytept)&tag, sizeof(long));
-		printf("(Decimal)[index: %ld, tag: %ld] \n------------------------------------- ", index, tag);
+		if(globalOptions.superVerboseFlag == 1){
+			printf("\n[address:] ");
+			printByte((bytept)&address, sizeof(long));
+			printf("[index:] ");
+			printByte((bytept)&index, sizeof(long));
+			printf("[tag:] ");
+			printByte((bytept)&tag, sizeof(long));
+			printf("(Decimal)[index: %ld, tag: %ld]\n------------------------------------------- ", index, tag);
+		} 
+		else{
+			printf("(Decimal)[index: %ld, tag: %ld] ------ ", index, tag);
+		}
 	}
 	switch (status) {
 	case CACHED:
@@ -249,6 +256,10 @@ int main(int argc, char *args[]) {
 		case 'h':
 			usage();
 			exit(EXIT_FAILURE);
+		case 'V':
+			globalOptions.verboseFlag = 1;
+			globalOptions.superVerboseFlag = 1;
+			break;
 		default:
 			usage();
 			exit(EXIT_FAILURE);

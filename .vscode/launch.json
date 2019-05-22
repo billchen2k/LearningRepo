@@ -41,7 +41,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
-            "args": ["-s", "2", "-E", "2", "-b", "3", "-t", "/Users/billchen/OneDrive/Workspace/LearningRepo/Course/CSAPP/LAB4/traces/trans.trace", "-v"],
+            "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
