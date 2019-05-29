@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 using namespace std;
 template <class type>
 struct bNode{
@@ -16,7 +17,7 @@ struct bNode{
     }
 };
 
-template <class type>
+template <typename T>
 class Binary_Tree {
       public:
       private:
