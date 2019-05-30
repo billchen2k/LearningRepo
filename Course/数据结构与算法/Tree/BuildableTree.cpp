@@ -8,6 +8,7 @@ class BuildableTree: public BinaryTree<T>{
     public:
       feedback insert(T key);
       feedback insert(T key, Node<T> *&root);
+
 };
 
 void instruct() {
