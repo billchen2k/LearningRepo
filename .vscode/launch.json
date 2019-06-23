@@ -4,6 +4,7 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
 
         
         
@@ -89,15 +90,15 @@
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": true,
-            
+            "internalConsoleOptions": "openOnSessionStart",
             "MIMode": "lldb",
-            "logging": {
-            //   "engineLogging": true,
-               "trace": true,
-               "traceResponse": true,
-            }
+            // "logging": {
+            // //   "engineLogging": true,
+            //    "trace": true,
+            //    "traceResponse": true,
+            // }
 
-        }
+        },
 
 
         {

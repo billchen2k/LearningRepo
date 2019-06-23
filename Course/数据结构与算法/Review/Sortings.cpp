@@ -233,6 +233,38 @@ clock_t QuickSort(vector<int> entry, vector<int> &newdata, int &moves) {
 	return clock() - start;
 }
 
+void _Heapify(vector<int> &data, int begin, int end, int &moves) {
+	int dad = begin;
+	int son = dad * 2 + 1;
+	while (son <= end) {
+		if (son + 1 <= end && data[son + 1] > data[son])
+			son++;
+		if (data[dad] > data[son])
+			return;
+		else {
+			swap(data[dad], data[son]);
+			moves++;
+			dad = son;
+			son = son * 2 + 1;
+		}
+	}
+}
+
+clock_t HeapSort(vector<int> entry, vector<int> &newdata, int &moves) {
+	moves = 0;
+	clock_t start = clock();
+	newdata = entry;
+	for (int i = newdata.size() / 2 - 1; i >= 0; i--) {
+		_Heapify(newdata, i, newdata.size() - 1, moves);
+	}
+	for (int i = newdata.size() - 1; i >= 0; i--) {
+		swap(newdata[0], newdata[i]);
+		moves++;
+		_Heapify(newdata, 0, i - 1, moves);
+	}
+	return clock() - start;
+}
+
 clock_t xSort(vector<int> entry, vector<int> &newdata, int &moves) {
 	moves = 0;
 	clock_t start = clock();
@@ -293,14 +325,15 @@ begin:
 	cout << "Generated " << data.size() << " Numbers." << endl;
 	cout << "SORTING          |TIME USAGE (s)  |Moves         |Correctness" << endl;
 	cout << "-----------------|----------------|--------------|--------------" << endl;
-	//printf("%-17s|%-16f|%-14d|%s\n", "Bubble Sort", BubbleSort(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
-	//printf("%-17s|%-16f|%-14d|%s\n", "Selection Sort", SelectionSort(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
-	//printf("%-17s|%-16f|%-14d|%s\n", "Insertion Sort", InsertionSort(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
+	printf("%-17s|%-16f|%-14d|%s\n", "Bubble Sort", BubbleSort(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
+	printf("%-17s|%-16f|%-14d|%s\n", "Selection Sort", SelectionSort(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
+	printf("%-17s|%-16f|%-14d|%s\n", "Insertion Sort", InsertionSort(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
 	printf("%-17s|%-16f|%-14d|%s\n", "Shell Sort (/3)", ShellSort(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
-	//printf("%-17s|%-16f|%-14d|%s\n", "Shell Sort (7321)", ShellSort7321(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
+	printf("%-17s|%-16f|%-14d|%s\n", "Shell Sort (7321)", ShellSort7321(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
 	printf("%-17s|%-16f|%-14d|%s\n", "Bucket Sort", BucketSort(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
-	//printf("%-17s|%-16f|%-14d|%s\n", "Merge Sort", MergeSort(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
+	printf("%-17s|%-16f|%-14d|%s\n", "Merge Sort", MergeSort(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
 	printf("%-17s|%-16f|%-14d|%s\n", "Quick Sort", QuickSort(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
+	printf("%-17s|%-16f|%-14d|%s\n", "Heap Sort", HeapSort(data, out, moves) / double(CLOCKS_PER_SEC), moves, isSorted(data, out) ? "\033[42mCorrect\033[0m" : "\033[41mIncorrect\033[0m");
 
 	clock_t start = clock();
 	vector<int> sorted = data;
