@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:micro",
+    "port": "COM4",
+    "sketch": "Course\\创客实践\\Blink.ino",
+    "programmer": "AVR ISP"
+}

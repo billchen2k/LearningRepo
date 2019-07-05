@@ -13,6 +13,16 @@
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "clang-x64"
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "C:\\Program Files (x86)\\Arduino IDE for Microduino-1.8.4-V6.0\\tools\\**",
+                "C:\\Program Files (x86)\\Arduino IDE for Microduino-1.8.4-V6.0\\hardware\\arduino\\avr\\**"
+            ],
+            "forcedInclude": [
+                "C:\\Program Files (x86)\\Arduino IDE for Microduino-1.8.4-V6.0\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
+            ]
         }
     ],
     "version": 4
