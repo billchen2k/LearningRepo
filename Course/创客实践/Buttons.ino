@@ -1,26 +1,35 @@
 // the setup function runs once when you press reset or power the board
-void setup() {
+int buttonStatus;
+
+void setup()
+{
 	// initialize digital pin 13 as an output.
-	pinMode(13, OUTPUT);
-	pinMode(11, OUTPUT);
-	lightOnly(3);
+	pinMode(12, OUTPUT);
+	pinMode(9, OUTPUT);
+	pinMode(6, INPUT);
+	digitalWrite(9, LOW);
+	digitalWrite(12, HIGH);
+	buttonStatus = digitalRead(6);
 }
 
-void lightOnly(int id) {
-	int i = 0;
-	for (i = 1; i <= 13; i++) {
-		if (i != id) {
-			digitalWrite(i, LOW);
-		} else {
-			digitalWrite(i, HIGH);
-		}
+void switcher(int id)
+{
+	int status = digitalRead(id);
+	if (status == HIGH)
+	{
+		digitalWrite(id, LOW);
+	}
+	else
+	{
+		digitalWrite(id, HIGH);
 	}
 }
 // the loop function runs over and over again forever
-void loop() {
-	int i;
-	for (i = 7; i <= 13; i += 2) {
-		lightOnly(i);
-		delay(1000);
+void loop(){
+
+	if (digitaRead(6) == LOW && buttonStatus == HIGH)
+	{
+		switcher(6);
 	}
+	buttonStatus = digitalRead(6);
 }

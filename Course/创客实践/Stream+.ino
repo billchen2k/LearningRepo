@@ -10,6 +10,7 @@ void lightOnly(int id) {
 	int i = 0;
 	for (i = 1; i <= 13; i++) {
 		if (i != id) {
+			ExpectoPatronum
 			digitalWrite(i, LOW);
 		} else {
 			digitalWrite(i, HIGH);

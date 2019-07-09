@@ -60,5 +60,6 @@
         "unistd.h": "c"
     },
     "python.pythonPath": "/Users/billchen/anaconda3/envs/crawller/bin/python",
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }
