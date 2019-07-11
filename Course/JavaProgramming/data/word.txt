@@ -1,0 +1,4 @@
+Work,工作
+Question,问题
+Substitution,替换
+Pension,养老金

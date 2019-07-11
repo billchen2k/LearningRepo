@@ -7,6 +7,7 @@ import java.util.*;
 public class CH11Q1 {
 	static TreeMap<String, Integer> wordsData = new TreeMap<String, Integer>();
 	static LinkedList<Map.Entry<String, Integer>> wordsDataList;
+
 	private static void readFile() {
 		Path p = Paths.get("data/a.txt");
 		if(!Files.exists(p)){

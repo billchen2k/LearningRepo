@@ -34,6 +34,7 @@ public class CH11Q2 {
 			for(int i = 0;i < 100;i++){
 				tmp = reader.readInt();
 				sum = sum.add(new BigInteger(Integer.toString(tmp)));
+
 			}
 		}
 		catch(IOException e){

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Chapter10Homework/Chapter10Homework.iml" filepath="$PROJECT_DIR$/Chapter10Homework/Chapter10Homework.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter11Homework/Chapter11Homework.iml" filepath="$PROJECT_DIR$/Chapter11Homework/Chapter11Homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FinalExam/FinalExam.iml" filepath="$PROJECT_DIR$/FinalExam/FinalExam.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaProgramming.iml" filepath="$PROJECT_DIR$/JavaProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MOOC/MOOC12-01/MOOC12-01.iml" filepath="$PROJECT_DIR$/MOOC/MOOC12-01/MOOC12-01.iml" />
     </modules>
   </component>
 </project>

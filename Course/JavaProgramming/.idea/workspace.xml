@@ -2,116 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="540ce0c1-5d98-4120-b6c0-1fe063cca943" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Chapter11Homework/Chapter11Homework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter11Homework/data/a.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/a.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/a.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/b.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.vscode/arduino.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vscode/arduino.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter10Homework/Chapter10Homework.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter10Homework/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FinalExam/FinalExam.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FinalExam/src/Replace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FinalExam/src/WordReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/MOOC12-01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/word.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ls.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-01/bin/ArgumentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-01/bin/ArgumentTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-01/bin/IntegerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-01/bin/MemberShow.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-01/bin/MemberShow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/BooleanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/BooleanTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/ByteTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/ByteTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/CharTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/CharTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/FloatDoubleMaxMinTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/FloatDoubleMaxMinTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/FloatingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/FloatingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/IntegerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/IntegerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/OperatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-02/bin/OperatorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-03/bin/ForTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-03/bin/ForTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-03/bin/IfElseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-03/bin/IfElseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-03/bin/SwitchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-03/bin/SwitchTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-03/bin/WhileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-03/bin/WhileTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-04/bin/FactorialTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-04/bin/FactorialTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-04/bin/FunctionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-04/bin/FunctionTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC03-04/bin/OverloadTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC03-04/bin/OverloadTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-01/bin/Father.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-01/bin/Father.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-01/bin/OOExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-01/bin/OOExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-01/bin/OPExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-01/bin/OPExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-01/bin/Son.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-01/bin/Son.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-02/bin/ArgumentPassingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-02/bin/ArgumentPassingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-02/bin/Initialization.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-02/bin/Initialization.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-02/bin/MyNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-02/bin/MyNumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-02/bin/ReferenceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-02/bin/ReferenceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-03/bin/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-03/bin/A.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-03/bin/ConstructorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-03/bin/ConstructorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-03/bin/LifeCycleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-03/bin/LifeCycleTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-03/bin/MyPairNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-04/bin/InfoHiding.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-04/bin/InfoHiding.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-04/bin/InfoHiding2.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-04/bin/InfoHiding2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-04/bin/InfoHidingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-04/bin/InfoHidingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-04/bin/MyPairNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-04/bin/MyPairNumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-04/bin/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-04/bin/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC04-04/bin/ThisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC04-04/bin/ThisTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/A.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/B.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/B.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Base.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Base.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Derived.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Derived.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Father.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Father.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Human.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Man.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Man.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Son.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Son.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Woman.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-01/bin/Woman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/Cat.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/Cat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/CatFamily.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/CatFamily.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/ClimbTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/ClimbTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/LandAnimal.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/LandAnimal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/Rabbit.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/Rabbit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/Rectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/Shape.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/Tiger.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-02/bin/Tiger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/AnimalTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/AnimalTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/AnimalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/AnimalTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/Cat.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/Cat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/Dog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/Human.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/Man.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC05-03/bin/Man.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-01/bin/Potato.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-01/bin/Potato.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-01/bin/StaticBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-01/bin/StaticBlock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-01/bin/StaticBlockTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-01/bin/StaticBlockTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-01/bin/StaticMethodTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-01/bin/StaticMethodTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-02/bin/Singleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-02/bin/Singleton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-02/bin/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-02/bin/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/FinalFather.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/FinalFather.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/FinalMethodFather.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/FinalMethodFather.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/FinalMethodSon.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/FinalMethodSon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/FinalObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/FinalObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/FinalObjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/FinalObjectTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/FinalPrimitiveType.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/FinalPrimitiveType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/Son1.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-03/bin/Son1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/A.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/B.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/B.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/BoxClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/BoxClassTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/CacheTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/CacheTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/Cat.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/Cat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/IntegerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/IntegerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/SpecialAnimal.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/SpecialAnimal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/StringConstantTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/StringConstantTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/StringNewTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-04/bin/StringNewTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/A.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/ArgumentPassing.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/ArgumentPassing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/ImmutableObjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/ImmutableObjectTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/ObjectPassingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/ObjectPassingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/PrimitiveTypePassingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/PrimitiveTypePassingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/StringAppendTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/StringAppendTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/StringPassingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC06-05/bin/StringPassingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/a.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/Homework/CH11Q1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/Homework/CH11Q1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/Homework/CH11Q2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/META-INF/JavaProgramming.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProgramming/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/syop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProgramming/syop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/syop2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProgramming/syop2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProgramming/Student.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../创客实践/Blink/Blink.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../创客实践/Buttons.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Buttons.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../创客实践/Stream+.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Stream+.ino" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,7 +34,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="221" />
+    <option name="myElementSize" value="236" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -146,28 +59,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Chapter11Homework/data/a.txt">
+        <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" selection-start-line="2" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Chapter11Homework/data/b.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="709">
+              <caret line="36" selection-start-line="36" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,10 +71,101 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="84">
+              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="class#Student#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FinalExam/src/Replace.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" selection-start-line="7" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FinalExam/src/WordReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/word.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/FileInputStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="242" column="23" selection-start-line="242" selection-start-column="23" selection-end-line="242" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Object.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="351" column="29" selection-start-line="351" selection-start-column="29" selection-end-line="351" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1042">
+              <caret line="2130" column="28" selection-start-line="2130" selection-start-column="28" selection-end-line="2130" selection-end-column="28" />
+              <folding>
+                <element signature="e#9043#9044#0" expanded="true" />
+                <element signature="e#9093#9094#0" expanded="true" />
+                <element signature="e#9994#9995#0" expanded="true" />
+                <element signature="e#10070#10071#0" expanded="true" />
+                <element signature="e#67926#67927#0" expanded="true" />
+                <element signature="e#67998#67999#0" expanded="true" />
+                <element signature="e#94325#94326#0" expanded="true" />
+                <element signature="e#94363#94364#0" expanded="true" />
+                <element signature="e#121999#122000#0" expanded="true" />
+                <element signature="e#122041#122042#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Comparable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1477">
+              <caret line="136" column="15" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -201,8 +187,12 @@
     <findStrings>
       <find>main</find>
       <find>writer.append(&quot;\nIsn't that great?&quot;);</find>
+      <find />
+      <find>&quot;.*&quot;</find>
     </findStrings>
     <replaceStrings>
+      <replace />
+      <replace />
       <replace />
     </replaceStrings>
   </component>
@@ -211,6 +201,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/MOOC/MOOC04-04/src/ThisTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FinalExam/src/WordReader.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -245,12 +236,20 @@
         <option value="$PROJECT_DIR$/MOOC/MOOC06-04/src/StringNewTest.java" />
         <option value="$PROJECT_DIR$/src/syop.java" />
         <option value="$PROJECT_DIR$/src/Boy.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/data/a.txt" />
         <option value="$PROJECT_DIR$/src/Homework/CH11Q1.java" />
         <option value="$PROJECT_DIR$/src/Homework/CH11Q2.java" />
+        <option value="$PROJECT_DIR$/MOOC/MOOC12-01/src/net/word/count/WordCounter.java" />
+        <option value="$PROJECT_DIR$/MOOC/MOOC12-01/src/net/word/count/FileAnalyzer.java" />
         <option value="$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java" />
+        <option value="$PROJECT_DIR$/src/ls.java" />
+        <option value="$PROJECT_DIR$/src/tester.java" />
         <option value="$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java" />
+        <option value="$PROJECT_DIR$/Chapter10Homework/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/data/word.txt" />
+        <option value="$PROJECT_DIR$/FinalExam/src/Replace.java" />
+        <option value="$PROJECT_DIR$/FinalExam/src/WordReader.java" />
       </list>
     </option>
   </component>
@@ -260,7 +259,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
@@ -272,7 +271,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -302,15 +300,44 @@
               <item name="Chapter11Homework" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JavaProgramming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaProgramming" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaProgramming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaProgramming" type="462c0819:PsiDirectoryNode" />
+              <item name="FinalExam" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaProgramming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaProgramming" type="462c0819:PsiDirectoryNode" />
+              <item name="FinalExam" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaProgramming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaProgramming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaProgramming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaProgramming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
@@ -321,10 +348,10 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -334,9 +361,9 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MOOC" />
       <recent name="$PROJECT_DIR$/Chapter11Homework" />
       <recent name="$PROJECT_DIR$/Chapter11Homework/src" />
-      <recent name="$PROJECT_DIR$/MOOC" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -353,44 +380,56 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CH11Q2">
-    <configuration name="CH11Q1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Homework.CH11Q1" />
+  <component name="RunManager" selected="Application.WordReader">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Chapter10Homework" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaProgramming" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Homework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CH11Q1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CH11Q1" />
-      <module name="Chapter11Homework" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Chapter11Homework" />
+    <configuration name="Miner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Miner" />
+      <module name="JavaProgramming" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CH11Q2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CH11Q2" />
-      <module name="Chapter11Homework" />
+    <configuration name="Replace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Replace" />
+      <module name="FinalExam" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WordReader" />
+      <module name="FinalExam" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.CH11Q1" />
-      <item itemvalue="Application.CH11Q2" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Miner" />
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Replace" />
+      <item itemvalue="Application.WordReader" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CH11Q2" />
-        <item itemvalue="Application.CH11Q1" />
-        <item itemvalue="Application.CH11Q1" />
+        <item itemvalue="Application.WordReader" />
+        <item itemvalue="Application.Replace" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Miner" />
       </list>
     </recent_temporary>
   </component>
@@ -422,11 +461,26 @@
       <workItem from="1562667740245" duration="4678000" />
       <workItem from="1562689149477" duration="696000" />
       <workItem from="1562690329417" duration="320000" />
+      <workItem from="1562690684006" duration="1000000" />
+      <workItem from="1562691793365" duration="1973000" />
+      <workItem from="1562735706565" duration="204000" />
+      <workItem from="1562735966465" duration="749000" />
+      <workItem from="1562736977124" duration="249000" />
+      <workItem from="1562737956455" duration="91000" />
+      <workItem from="1562738172497" duration="65000" />
+      <workItem from="1562738261540" duration="4431000" />
+      <workItem from="1562743358786" duration="46000" />
+      <workItem from="1562743493435" duration="25000" />
+      <workItem from="1562744812730" duration="57000" />
+      <workItem from="1562745164906" duration="44000" />
+      <workItem from="1562745342827" duration="37000" />
+      <workItem from="1562745460710" duration="3244000" />
+      <workItem from="1562759419794" duration="8402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48639000" />
+    <option name="totallyTimeSpent" value="69256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,6 +493,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Image Layers" order="1" />
@@ -446,30 +501,31 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Structure" order="4" sideWeight="0.4106113" side_tool="true" weight="0.2096577" />
       <window_info id="Favorites" order="5" sideWeight="0.40143004" side_tool="true" weight="0.19498777" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.58938867" visible="true" weight="0.18520783" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.58938867" visible="true" weight="0.19376528" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.29009193" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5482156" side_tool="true" weight="0.25127682" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32890704" />
-      <window_info anchor="bottom" id="Messages" order="5" weight="0.37793666" />
+      <window_info anchor="bottom" id="Messages" order="5" weight="0.37691522" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32947975" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.32947975" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32890704" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Debug" order="11" sideWeight="0.41379312" visible="true" weight="0.37793666" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.32947975" />
+      <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.45178437" weight="0.33503574" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.32890704" />
       <window_info anchor="right" id="Maven" order="0" weight="0.3294621" />
       <window_info anchor="right" id="Palette" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="right" id="Database" order="3" weight="0.27811736" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.3294621" />
+      <window_info active="true" anchor="right" id="Coverage" order="6" side_tool="true" visible="true" weight="0.3294621" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="10" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="0" />
@@ -517,17 +573,80 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JavaProgramming$CH3Q1.ic" NAME="CH3Q1 Coverage Results" MODIFIED="1562049626403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Works.*</FILTER>
-    </SUITE>
+    <SUITE FILE_PATH="coverage/JavaProgramming$WordReader.ic" NAME="WordReader Coverage Results" MODIFIED="1562830994901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>wordData</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>words</expression-string>
         <language-id>JAVA</language-id>
@@ -541,195 +660,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/MC/server的副本.jar/vf.class" />
-    <entry file="file://$USER_HOME$/Downloads/MC/server的副本.jar/aaz.class" />
-    <entry file="file://$USER_HOME$/Downloads/MC/server的副本.jar/awb.class" />
-    <entry file="file://$USER_HOME$/Downloads/MC/server的副本.jar/bop.class" />
-    <entry file="file://$PROJECT_DIR$/src/Main$1.class" />
-    <entry file="file://$PROJECT_DIR$/src/Main.class" />
-    <entry file="file://$PROJECT_DIR$/src/syop2.class" />
-    <entry file="file://$PROJECT_DIR$/src/syop3.class" />
-    <entry file="file://$PROJECT_DIR$/src/syop.class" />
-    <entry file="file://$PROJECT_DIR$/src/Boy.class" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/math/BigInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="4814" column="12" selection-start-line="4814" selection-start-column="12" selection-end-line="4814" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MOOC/MOOC09-03/src/MyExceptionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MOOC/MOOC09-02/src/MyException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Iterable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-938">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Collection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="220" column="41" lean-forward="true" selection-start-line="220" selection-start-column="41" selection-end-line="220" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="137" column="39" selection-start-line="137" selection-start-column="39" selection-end-line="137" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cat.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1701">
-          <caret line="107" column="36" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/AbstractList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="72" column="82" selection-start-line="72" selection-start-column="82" selection-end-line="72" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MOOC/MOOC09-03/src/MyException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MOOC/MOOC10-04/src/Cat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/jdk.compiler/com/sun/source/util/DocTrees.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2869">
-          <caret line="46" selection-start-line="46" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/jdk.compiler/com/sun/source/doctree/AttributeTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="66" column="39" lean-forward="true" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/FileSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="174" column="34" lean-forward="true" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/jdk.compiler/com/sun/source/doctree/SeeTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="40" selection-start-line="40" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Human.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Boy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" selection-start-line="12" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="380" column="18" selection-start-line="380" selection-start-column="18" selection-end-line="380" selection-end-column="18" />
-          <folding>
-            <element signature="e#15782#15783#0" expanded="true" />
-            <element signature="e#15818#15819#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="1355" column="24" selection-start-line="1355" selection-start-column="24" selection-end-line="1355" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/nio/file/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="739" column="9" selection-start-line="739" selection-start-column="9" selection-end-line="739" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.desktop/com/apple/eawt/_AppMenuBarHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="42" selection-start-line="42" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="2362" column="20" selection-start-line="2362" selection-start-column="20" selection-end-line="2362" selection-end-column="20" />
-          <folding>
-            <element signature="e#9043#9044#0" expanded="true" />
-            <element signature="e#9093#9094#0" expanded="true" />
-            <element signature="e#9994#9995#0" expanded="true" />
-            <element signature="e#10070#10071#0" expanded="true" />
-            <element signature="e#94325#94326#0" expanded="true" />
-            <element signature="e#94363#94364#0" expanded="true" />
-            <element signature="e#121999#122000#0" expanded="true" />
-            <element signature="e#122041#122042#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1533">
-          <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/TreeMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20463">
-          <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12327">
@@ -819,20 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter11Homework/data/a.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter11Homework/data/b.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Chapter11Homework/.classpath">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -847,20 +763,329 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java">
+    <entry file="file://$PROJECT_DIR$/Chapter11Homework/data/a.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter11Homework/data/b.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MOOC/MOOC06-03/src/FinalPrimitiveType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MOOC/MOOC06-01/src/StaticBlockTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MOOC/MOOC12-01/src/net/word/count/Searcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MOOC/MOOC12-01/src/com/coin/concept/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MOOC/MOOC12-01/src/com/coin/concept/Workable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MOOC/MOOC12-01/src/com/coin/part/imp/AMDCPU.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MOOC/MOOC12-01/src/com/coin/part/imp/Seagate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MOOC/MOOC12-01/src/com/coin/product/ComputerStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Boy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" selection-start-line="12" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/EnumSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/nio/file/FileVisitOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-563">
+          <caret line="180" column="7" lean-forward="true" selection-start-line="180" selection-start-column="7" selection-end-line="180" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/nio/file/FileTreeWalker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-576">
+          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/nio/file/Files.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="2729" column="30" lean-forward="true" selection-start-line="2729" selection-start-column="30" selection-end-line="2729" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter11Homework/Chapter11Homework.eml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Objects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="220" column="18" selection-start-line="220" selection-start-column="18" selection-end-line="220" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/nio/file/FileVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="142" column="19" selection-start-line="142" selection-start-column="19" selection-end-line="142" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/nio/file/SimpleFileVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MOOC/MOOC12-01/src/net/word/count/WordCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MOOC/MOOC12-01/src/net/word/count/FileAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MOOC/MOOC08-04/src/InstantExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ls.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#534#901#0" expanded="true" />
+            <element signature="e#900#901#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MOOC/MOOC12-01/src/net/word/count/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter10Homework/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-568">
+          <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#394#411#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
+            <element signature="e#1401#1402#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1682#1683#0" expanded="true" />
+            <element signature="e#1753#1754#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="36" selection-start-line="36" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Comparable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1477">
+          <caret line="136" column="15" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="349">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#Student#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="351" column="29" selection-start-line="351" selection-start-column="29" selection-end-line="351" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="242" column="23" selection-start-line="242" selection-start-column="23" selection-end-line="242" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/word.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1042">
+          <caret line="2130" column="28" selection-start-line="2130" selection-start-column="28" selection-end-line="2130" selection-end-column="28" />
+          <folding>
+            <element signature="e#9043#9044#0" expanded="true" />
+            <element signature="e#9093#9094#0" expanded="true" />
+            <element signature="e#9994#9995#0" expanded="true" />
+            <element signature="e#10070#10071#0" expanded="true" />
+            <element signature="e#67926#67927#0" expanded="true" />
+            <element signature="e#67998#67999#0" expanded="true" />
+            <element signature="e#94325#94326#0" expanded="true" />
+            <element signature="e#94363#94364#0" expanded="true" />
+            <element signature="e#121999#122000#0" expanded="true" />
+            <element signature="e#122041#122042#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalExam/src/Replace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FinalExam/src/WordReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -907,6 +1132,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -918,7 +1144,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Chapter11Homework</last-edited>
+          <last-edited>FinalExam</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -930,6 +1156,17 @@
         </settings>
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
         <settings>
           <splitter-proportions>
             <option name="proportions">
