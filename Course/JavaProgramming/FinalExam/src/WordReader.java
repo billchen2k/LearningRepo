@@ -7,8 +7,13 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Scanner;
 
+
 public class WordReader {
+
 	public static void main(String[] args){
+
+		int i = (byte)525;
+		System.out.println(i);
 		Path p = Paths.get("data/word.txt");
 		HashMap<String, String> wordData = new HashMap<>();
 		try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(p.toString())))) {
@@ -44,5 +49,7 @@ public class WordReader {
 				}
 			}
 		}
+
+
 	}
 }

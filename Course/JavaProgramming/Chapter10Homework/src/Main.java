@@ -108,7 +108,6 @@ public class Main {
 			c = sc.nextInt();
 			cs[2] = new EUR(c);
 		}
-
 		Arrays.sort(cs);
 		for (int i = 0; i < 3; i++) {
 			System.out.println(cs[i].getName() + cs[i].getOriginalValue());

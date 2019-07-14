@@ -33,7 +33,7 @@ class Student {
 }
 
 public class Main {
-	final String T   EXT = "HELLOWORLD";
+	final String TEXT = "HELLOWORLD";
 
 	public static void main(String[] args) {
 		/*

@@ -2,29 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="540ce0c1-5d98-4120-b6c0-1fe063cca943" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter10Homework/Chapter10Homework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Chapter10Homework/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalExam/FinalExam.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalExam/src/Replace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinalExam/src/WordReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/MOOC12-01.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/word.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ls.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MessageFormateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vscode/launch.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/a.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/Homework/CH11Q1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/Homework/CH11Q1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/Homework/CH11Q2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/META-INF/JavaProgramming.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProgramming/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProgramming/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter10Homework/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter10Homework/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FinalExam/src/WordReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/FinalExam/src/WordReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC08-04/bin/CalendarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC08-04/bin/CalendarTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/concept/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/concept/Component.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/concept/Workable.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/concept/Workable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/part/imp/AMDCPU.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/part/imp/AMDCPU.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/part/imp/IntelCPU.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/part/imp/IntelCPU.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/part/imp/Seagate.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/part/imp/Seagate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/part/imp/WestDigital.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/part/imp/WestDigital.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/part/type/CPU.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/part/type/CPU.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/part/type/Disk.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/part/type/Disk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/product/Computer.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/product/Computer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/product/ComputerStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/com/coin/product/ComputerStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/net/word/count/FileAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/net/word/count/FileAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/net/word/count/Searcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/net/word/count/Searcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/net/word/count/Word.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/net/word/count/Word.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/net/word/count/WordCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/MOOC/MOOC12-01/bin/net/word/count/WordCounter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter10Homework/Currency.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chapter10Homework/Currency.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter10Homework/EUR.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chapter10Homework/EUR.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter10Homework/HKD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chapter10Homework/HKD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter10Homework/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chapter10Homework/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chapter10Homework/USD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chapter10Homework/USD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FinalExam/WordReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FinalExam/WordReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProgramming/tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProgramming/tester.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Buzzer_Recorder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Buzzer_Recorder.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/mmh20190706.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/mmh20190706.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +42,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="236" />
+    <option name="myElementSize" value="263" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -61,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="36" selection-start-line="36" selection-end-line="37" />
+            <state relative-caret-position="798">
+              <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,11 +81,60 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="21">
+              <caret line="44" selection-start-line="44" selection-end-line="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#Student#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MessageFormateTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+              <folding>
+                <element signature="e#55#56#0" expanded="true" />
+                <element signature="e#82#83#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chapter10Homework/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="446">
+              <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#634#635#0" expanded="true" />
+                <element signature="e#668#669#0" expanded="true" />
+                <element signature="e#695#696#0" expanded="true" />
+                <element signature="e#747#748#0" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
+                <element signature="e#814#815#0" expanded="true" />
+                <element signature="e#833#834#0" expanded="true" />
+                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#1120#1121#0" expanded="true" />
+                <element signature="e#1191#1192#0" expanded="true" />
+                <element signature="e#1401#1402#0" expanded="true" />
+                <element signature="e#1472#1473#0" expanded="true" />
+                <element signature="e#1682#1683#0" expanded="true" />
+                <element signature="e#1753#1754#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,17 +143,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FinalExam/src/Replace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" selection-start-line="7" selection-end-line="8" />
+            <state relative-caret-position="231">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FinalExam/src/WordReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+            <state relative-caret-position="420">
+              <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,66 +162,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/word.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/FileInputStream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="242" column="23" selection-start-line="242" selection-start-column="23" selection-end-line="242" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Object.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="351" column="29" selection-start-line="351" selection-start-column="29" selection-end-line="351" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1042">
-              <caret line="2130" column="28" selection-start-line="2130" selection-start-column="28" selection-end-line="2130" selection-end-column="28" />
-              <folding>
-                <element signature="e#9043#9044#0" expanded="true" />
-                <element signature="e#9093#9094#0" expanded="true" />
-                <element signature="e#9994#9995#0" expanded="true" />
-                <element signature="e#10070#10071#0" expanded="true" />
-                <element signature="e#67926#67927#0" expanded="true" />
-                <element signature="e#67998#67999#0" expanded="true" />
-                <element signature="e#94325#94326#0" expanded="true" />
-                <element signature="e#94363#94364#0" expanded="true" />
-                <element signature="e#121999#122000#0" expanded="true" />
-                <element signature="e#122041#122042#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Comparable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1477">
-              <caret line="136" column="15" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
+            <state relative-caret-position="378">
               <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -243,13 +243,14 @@
         <option value="$PROJECT_DIR$/MOOC/MOOC12-01/src/net/word/count/FileAnalyzer.java" />
         <option value="$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java" />
         <option value="$PROJECT_DIR$/src/ls.java" />
-        <option value="$PROJECT_DIR$/src/tester.java" />
         <option value="$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java" />
-        <option value="$PROJECT_DIR$/Chapter10Homework/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/data/word.txt" />
         <option value="$PROJECT_DIR$/FinalExam/src/Replace.java" />
         <option value="$PROJECT_DIR$/FinalExam/src/WordReader.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/Chapter10Homework/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/MessageFormateTest.java" />
+        <option value="$PROJECT_DIR$/src/tester.java" />
       </list>
     </option>
   </component>
@@ -260,8 +261,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="width" value="2048" />
+    <option name="height" value="1152" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -271,6 +272,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -292,18 +294,12 @@
             <path>
               <item name="JavaProgramming" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaProgramming" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter11Homework" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter10Homework" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JavaProgramming" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaProgramming" type="462c0819:PsiDirectoryNode" />
               <item name="Chapter11Homework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaProgramming" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaProgramming" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JavaProgramming" type="b2602c69:ProjectViewProjectNode" />
@@ -320,18 +316,11 @@
               <item name="JavaProgramming" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaProgramming" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaProgramming" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaProgramming" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Main.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -351,7 +340,8 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -380,7 +370,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.WordReader">
+  <component name="RunManager" selected="Application.tester">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Chapter10Homework" />
@@ -388,15 +378,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="JavaProgramming" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Miner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Miner" />
+    <configuration name="MessageFormateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MessageFormateTest" />
       <module name="JavaProgramming" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -416,20 +399,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tester" />
+      <module name="JavaProgramming" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Miner" />
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Replace" />
       <item itemvalue="Application.WordReader" />
+      <item itemvalue="Application.MessageFormateTest" />
+      <item itemvalue="Application.tester" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.tester" />
+        <item itemvalue="Application.MessageFormateTest" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.WordReader" />
         <item itemvalue="Application.Replace" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Miner" />
       </list>
     </recent_temporary>
   </component>
@@ -475,12 +465,13 @@
       <workItem from="1562745164906" duration="44000" />
       <workItem from="1562745342827" duration="37000" />
       <workItem from="1562745460710" duration="3244000" />
-      <workItem from="1562759419794" duration="8402000" />
+      <workItem from="1562759419794" duration="11131000" />
+      <workItem from="1562903142086" duration="3875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69256000" />
+    <option name="totallyTimeSpent" value="75860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -493,7 +484,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Image Layers" order="1" />
@@ -501,27 +491,27 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Structure" order="4" sideWeight="0.4106113" side_tool="true" weight="0.2096577" />
       <window_info id="Favorites" order="5" sideWeight="0.40143004" side_tool="true" weight="0.19498777" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.58938867" visible="true" weight="0.19376528" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.58938867" visible="true" weight="0.19559902" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.29009193" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5482156" side_tool="true" weight="0.25127682" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32890704" />
-      <window_info anchor="bottom" id="Messages" order="5" weight="0.37691522" />
+      <window_info anchor="bottom" id="Messages" order="5" weight="0.37650323" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32947975" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32890704" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.32890704" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.45178437" weight="0.33503574" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.32890704" />
+      <window_info anchor="bottom" id="TODO" order="12" visible="true" weight="0.32890704" />
       <window_info anchor="right" id="Maven" order="0" weight="0.3294621" />
       <window_info anchor="right" id="Palette" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="right" id="Database" order="3" weight="0.27811736" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info active="true" anchor="right" id="Coverage" order="6" side_tool="true" visible="true" weight="0.3294621" />
+      <window_info anchor="right" id="Coverage" order="6" side_tool="true" weight="0.3294621" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
@@ -638,7 +628,8 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JavaProgramming$WordReader.ic" NAME="WordReader Coverage Results" MODIFIED="1562830994901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/JavaProgramming$Main__1_.ic" NAME="Main (1) Coverage Results" MODIFIED="1562831095793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/JavaProgramming$WordReader.ic" NAME="WordReader Coverage Results" MODIFIED="1562831073360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -660,17 +651,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12327">
-          <caret line="622" selection-start-line="622" selection-end-line="622" />
-          <folding>
-            <element signature="e#27472#27473#0" expanded="true" />
-            <element signature="e#27497#27498#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/jdk.compiler/com/sun/source/doctree/UnknownBlockTagTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -945,13 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Human.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -967,92 +940,6 @@
             <element signature="e#547#548#0" expanded="true" />
             <element signature="e#600#601#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter10Homework/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-568">
-          <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#394#411#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1191#1192#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
-            <element signature="e#1682#1683#0" expanded="true" />
-            <element signature="e#1753#1754#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="36" selection-start-line="36" selection-end-line="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Comparable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1477">
-          <caret line="136" column="15" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#Student#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="351" column="29" selection-start-line="351" selection-start-column="29" selection-end-line="351" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/FileInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="242" column="23" selection-start-line="242" selection-start-column="23" selection-end-line="242" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/word.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1075,19 +962,121 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2453">
+          <caret line="242" column="23" selection-start-line="242" selection-start-column="23" selection-end-line="242" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="351" column="29" selection-start-line="351" selection-start-column="29" selection-end-line="351" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Comparable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="136" column="15" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/word.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FinalExam/src/Replace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" selection-start-line="7" selection-end-line="8" />
+        <state relative-caret-position="231">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FinalExam/src/WordReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        <state relative-caret-position="420">
+          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter11Homework/src/CH11Q1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter10Homework/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
+            <element signature="e#1401#1402#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1682#1683#0" expanded="true" />
+            <element signature="e#1753#1754#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="44" selection-start-line="44" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MessageFormateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding>
+            <element signature="e#55#56#0" expanded="true" />
+            <element signature="e#82#83#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1144,7 +1133,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>FinalExam</last-edited>
+          <last-edited>Chapter11Homework</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

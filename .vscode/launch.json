@@ -6,21 +6,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DateFormatterTest",
+            "request": "launch",
+            "mainClass": "DateFormatterTest"
+        },
+        {
+            "type": "java",
             "name": "Launnch Java",
             "request": "launch",
             "mainClass": "${file}"
         },
-        
-
-        
-        
-        
-
-
-        
-        
-        
-
         {
             "type": "chrome",
             "request": "launch",
@@ -28,12 +23,6 @@
             "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}/html"
         },
-
-
-
-        
-        
-        
         {
             "name": "Python: Terminal (integrated)",
             "type": "python",
@@ -41,7 +30,6 @@
             "program": "${file}",
             "console": "integratedTerminal"
         },
-
         {
             "name": "Launch C",
             "preLaunchTask": "build c",
@@ -55,15 +43,10 @@
             "externalConsole": true,
             "MIMode": "lldb",
             "logging": {
-                //   "engineLogging": true,
                 "trace": true,
-                "traceResponse": true,
+                "traceResponse": true
             }
-            
         },
-        
-
-
         {
             "name": "Launch C (Linux)",
             "preLaunchTask": "build c",
@@ -77,15 +60,11 @@
             "externalConsole": true,
             "MIMode": "gdb",
             "logging": {
-                //   "engineLogging": true,
                 "trace": true,
-                "traceResponse": true,
+                "traceResponse": true
             }
-            
         },
-
         {
-            
             "name": "Launch C++",
             "preLaunchTask": "build c++",
             "type": "cppdbg",
@@ -97,17 +76,8 @@
             "environment": [],
             "externalConsole": true,
             "internalConsoleOptions": "openOnSessionStart",
-            
-            "MIMode": "lldb",
-            // "logging": {
-            // //   "engineLogging": true,
-            //    "trace": true,
-            //    "traceResponse": true,
-            // }
-
+            "MIMode": "lldb"
         },
-
-
         {
             "preLaunchTask": "build c++",
             "name": "Launch C++ (Windows)",
@@ -120,13 +90,9 @@
             "environment": [],
             "externalConsole": true,
             "logging": {
-            //   "engineLogging": true,
-               "trace": true,
-               "traceResponse": true,
+                "trace": true,
+                "traceResponse": true
             }
-
         }
-
-
     ]
 }
