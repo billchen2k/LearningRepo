@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML5</title>
+    <meta charset="utf-8">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+    </script>
+    <![endif]-->
+
+    <style>
+        p{
+            font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        }
+        body {font-family: Verdana, sans-serif; font-size:0.8em;}
+        header, nav, section, article, footer
+        {border:0px solid grey; margin:5px; padding:8px;}
+        nav ul {margin:0; padding:0;}
+        nav ul li {display:inline; margin:5px;}
+        .abutton{
+            text-decoration: none;
+            padding: 12px;
+            color: #FFFFFF;
+            background-color: #4cb0f9;
+            font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-weight: bold;
+            font-size: 120%;
+            border-radius: 50px;
+            margin: 10px;
+        }
+        button{
+            background-color: #a1d243;
+            border: none;
+            padding: 15px;
+            text-decoration: none;
+            font-family: ".AppleSystemUIFont";
+            font-weight: bold;
+            font-size: 120%;
+            font-weight: bold;
+            display: inline-block;
+            color: #FFFFFF;
+            border-radius: 50px;
+            transition-duration: 0.4s;
+            width: 250px
+
+        }
+        .buttonMv span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .buttonMv span:after {
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        .buttonMv:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        .buttonMv:hover span {
+            padding-right: 25px;
+        }
+
+        .buttonMv:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Button tests</h1>
+<nav>
+    <a class="abutton" href="/html/" style="text-decoration: none">HTML</a> |
+    <a class="abutton"href="/css/">CSS</a> |
+    <a class="abutton"href="/js/">JavaScript</a> |
+    <a class="abutton"href="/jquery/">jQuery</a><br />
+    <p style="margin-top: 30px">
+        <a href="https://billc.io"><button class="buttonMv"><span>Visit billc.io Now.</span></button></a>
+    </p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,190"
+                 style="fill:blanchedalmond;stroke:blue;stroke-width:3;fill-rule:evenodd;" />
+    </svg>
+    <object width="420" height="360"
+            classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
+            codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+        <param name="src" value="bird.wav" />
+        <param name="controller" value="true" />
+    </object>
+    <section>
+        <audio controls="controls" style="width: 200px">
+            <source src="Assets/Stars%20As%20Lights%20-%20Don't%20Let%20Go.mp3" type="audio/mp3">
+            Your browser might not spport audio hero.
+        </audio>
+    </section>
+    <p>DRAG TEST...</p>
+
+</nav>
+
+</body>
+</html>
+

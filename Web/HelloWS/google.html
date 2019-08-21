@@ -34,8 +34,20 @@
 
 </div>
 <div align="center">
-    <input class = "searchbar" type="text" name="input" width="500" height="200">
-    <button class="button button-rounded button-large" type="button">搜索</button>
+    <form action="https://www.google.com/search" method="get">
+        <input name="q" class = "searchbar" type="text" width="500" height="200" >
+        <input type="submit" name="submit" class="button button-rounded button-large" value="搜索">
+
+    </form>
+    <button id="b1">TEST!</button>
+    <script>
+        let body = document.querySelector('body');
+        btn = document.getElementById("b1");
+        btn.onclick = function(){
+            alert("Hello, World!")
+        }
+    </script>
+<!--    <button class="button button-rounded button-large" type="button">搜索</button>-->
 </div>
 
 </body>

@@ -5,18 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
-            "name": "CodeLens (Launch) - DateFormatterTest",
-            "request": "launch",
-            "mainClass": "DateFormatterTest"
-        },
-        {
-            "type": "java",
-            "name": "Launnch Java",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome",
