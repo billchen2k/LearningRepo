@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aeemo</string>
+    <string name="text_introduction">Please press the button to connect your device.</string>
+    <string name="text_status">Now playing: %s.</string>
+    <string name="text_Volume">Volume:</string>
+    <string name="action_about">About</string>
+    <string name="text_about_title">About Aeemo</string>
+    <string name="text_about_content">"A music game based on Microduino and Bluetooth.\nI named it Aeemo to show my most
+        sincere respect to the great Deemo.\n\nDeveloped by Bill Chen, 2019.8\nGitHub: @Flento\n "
+    </string>
+    <string name="action_OK">OK</string>
+    <string name="action_set_mac_address">Set MAC Address</string>
+    <string name="text_mac_title">Please input your MAC address:</string>
+    <string name="toast_invalid_mac_address">Invalid MAC Address, won\'t be saved.</string>
+</resources>

@@ -6,7 +6,7 @@
 #define STATE_MENU 2
 #define STATE_GAMING 3
 #define STATE_SCORE 4
-#define SPEED_CONTROLLER 102.3
+#define SPEED_CONTROLLER 101.05
 #define KEY_A 1
 #define KEY_B 2
 #define KEY_C 3
@@ -172,8 +172,8 @@ static const unsigned char RATING_C[] PROGMEM = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 
-static const unsigned char RATING_D[] PROGMEM =
-{ 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+static const unsigned char RATING_D[] PROGMEM = {
+ 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -198,6 +198,7 @@ static const unsigned char RATING_D[] PROGMEM =
  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 
+
 unsigned long clock = 0;
 unsigned long clock_start = millis();
 unsigned long clock_song_start = 0;
@@ -219,8 +220,12 @@ float rating;
 
 char last_judge[] = "GET READY";
 
+//SoftwareSerial mySerial(4, 5);
+
 void setup(void) {
+
 	Serial.begin(9600);
+//	mySerial.begin(9600);
 	u8g2.begin(/*Select=*/PIN_D, /*Right/Next=*/PIN_B, /*Left/Prev=*/PIN_A,
 		/*Up=*/PIN_A,
 		/*Down=*/PIN_B, /*Home/Cancel=*/PIN_C);
@@ -490,7 +495,7 @@ void draw() {
 	case STATE_MENU:
 		u8g2.setFont(u8g2_font_profont11_tr);
 		selection = u8g2.userInterfaceSelectionList(
-			"Select Song", 1, "1. Arknights\n2. Wings of Piano\n3. Without Me");
+			"Select Song", 1, "1. Arknights\n2. Evolution Era\n3. Without Me");
 		if (selection == 0) {
 			clock_start = millis();
 		}
@@ -575,6 +580,9 @@ void stateShifter() {
 			playingPos = 0;
 			rawPlayingPos = 0;
 			calTotalScore();
+			char msg[] = "PLAY-";
+			msg[4] = '0' + selectedSong;
+			Serial.println(msg);
 			//Serial.println(total_score);
 			clock_song_start = millis();
 			u8g2.clear();
@@ -586,7 +594,7 @@ void stateShifter() {
 void loop(void) {
 	// Serial.println(sizeof(SCOREDATA_1)/4/sizeof(bool));
 	clock = millis() - clock_start;
-	// Serial.println(clock);
+	//Serial.println(clock);
 	u8g2.firstPage();
 	do {
 		stateShifter();

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aeemo</string>
+    <string name="text_introduction">请点击按钮连接设备。</string>
+    <string name="text_status">正在播放：%s。</string>
+    <string name="text_Volume">音量：</string>
+    <string name="action_about">关于</string>
+    <string name="text_about_title">关于 Aeemo</string>
+    <string name="text_about_content">"这个一个基于 Microduino 和蓝牙的音乐游戏。需要蓝牙连接单片机使用。\n名字致敬于最经典的 Deemo.\n\nDeveloped by Bill Chen, 2019.8.\nGitHub: @Flento"
+    </string>
+    <string name="action_OK">OK</string>
+    <string name="action_set_mac_address">设置 MAC 地址</string>
+    <string name="text_mac_title">请输入 MAC 地址（格式XX:XX:XX:XX:XX:XX）：</string>
+    <string name="toast_invalid_mac_address">无效的 MAC 地址，更改将不会保存</string>
+</resources>
