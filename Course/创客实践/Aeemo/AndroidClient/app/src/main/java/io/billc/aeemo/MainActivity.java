@@ -24,7 +24,7 @@ import java.util.UUID;
 import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
-	private int songDelayTime[] = {0, 1000, 0};
+	private int songDelayTime[] = {0, 1000, 100};
 
 	private BluetoothGatt bluetoothGatt;
 	private BluetoothDevice device;
