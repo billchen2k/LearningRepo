@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cf375ed0-d7ce-4742-8881-34af7f47d345" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assignment0916/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vscode/sftp.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vscode/sftp.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/androidTest/java/io/billc/myapplication/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/java/io/billc/myapplication/ScrollingActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/layout/activity_scrolling.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/layout/content_scrolling.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/menu/menu_scrolling.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/app/src/test/java/io/billc/myapplication/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AeemoClient0/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter2Work/Chapter2.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter2Work/Chapter2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter2Work/Chapter2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter2Work/Chapter2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter2Work/E2.62.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter2Work/E2.62.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter2Work/E2.67.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter2Work/E2.67.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter2Work/E2.75.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter2Work/E2.75.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter2Work/E2.82.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter2Work/E2.82.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter2Work/bytepointer.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter2Work/bytepointer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter3Work/2019-04-17-16-06-04.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter3Work/2019-04-17-16-06-04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter3Work/2019-04-17-16-57-09.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter3Work/2019-04-17-16-57-09.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter3Work/2019-04-17-16-58-16.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter3Work/2019-04-17-16-58-16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter3Work/2019-04-17-16-59-50.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter3Work/2019-04-17-16-59-50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter3Work/2019-04-17-17-00-24.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter3Work/2019-04-17-17-00-24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter3Work/2019-04-17-17-09-14.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter3Work/2019-04-17-17-09-14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter3Work/Chapter3Work+.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter3Work/Chapter3Work+.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter3Work/Chapter3Work.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter3Work/Chapter3Work.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter6Work/2019-05-15-23-05-32.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter6Work/2019-05-15-23-05-32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter6Work/2019-05-16-19-16-24.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter6Work/2019-05-16-19-16-24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter6Work/2019-05-16-19-16-40.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter6Work/2019-05-16-19-16-40.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter6Work/2019-05-16-19-27-33.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter6Work/2019-05-16-19-27-33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter6Work/Lesson10.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter6Work/Lesson10.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter6Work/Lesson10.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter6Work/Lesson10.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter6Work/Lesson9.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter6Work/Lesson9.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter6Work/Lesson9.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter6Work/Lesson9.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter7Work/Lesson11.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter7Work/Lesson11.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter7Work/Lesson11.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter7Work/Lesson11.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter8Work/Lesson12.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter8Work/Lesson12.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter8Work/Lesson12.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter8Work/Lesson12.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter8Work/Lesson13.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter8Work/Lesson13.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter8Work/Lesson13.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter8Work/Lesson13.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter8Work/draft.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter8Work/draft.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter9Work/9.14.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter9Work/9.14.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter9Work/Lesson13&amp;17.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter9Work/Lesson13&amp;17.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter9Work/csapp.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter9Work/csapp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Chapter9Work/hello.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Chapter9Work/hello.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/Driverhdrs.pm" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/Driverhdrs.pm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/Driverlib.pm" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/Driverlib.pm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/README" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/bddcheck/README" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/bddcheck/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/bddcheck/all-functions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/bddcheck/all-functions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/bddcheck/cbit/README" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/bddcheck/cbit/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/bits.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/bits.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/bits.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/bits.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/btest.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/btest.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/btest.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/btest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/datalab.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/datalab.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/decl.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/decl.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/fshow.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/fshow.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/ishow.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/ishow.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/tests.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB1/计算机系统实验一.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB1/计算机系统实验一.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/README" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-17-50-51.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-17-50-51.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-17-58-14.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-17-58-14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-18-04-29.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-18-04-29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-18-08-03.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-18-08-03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-18-10-38.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-18-10-38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-18-31-15.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-18-31-15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-18-42-23.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-17-18-42-23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-18-01-43-58.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-18-01-43-58.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-18-02-05-23.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/Report/2019-04-18-02-05-23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/Report/LAB2 实验分析.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/Report/LAB2 实验分析.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/Report/LAB2 实验分析.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/Report/LAB2 实验分析.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/bomb.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/bomb.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/bomb.s" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/bomb.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/bomb.tar" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/bomb.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/bomblab.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/bomblab.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/gdbnotes-x86-64.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/gdbnotes-x86-64.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB2/key" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB2/key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-16-59-12.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-16-59-12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-17-00-36.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-17-00-36.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-17-08-57.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-17-08-57.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-17-41-54.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-17-41-54.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-20-16-55.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-20-16-55.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-20-25-49.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-20-25-49.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-20-40-41.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-20-40-41.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-20-41-29.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-20-41-29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-20-45-04.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-20-45-04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-21-59-24.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-21-59-24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-22-49-05.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-22-49-05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-23-08-20.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-06-23-08-20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-07-01-00-11.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-07-01-00-11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-07-01-12-44.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-07-01-12-44.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-07-01-41-30.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-07-01-41-30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-07-02-50-39.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/2019-05-07-02-50-39.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/LAB3 实验分析.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/LAB3 实验分析.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/Report/LAB3 实验分析.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/Report/LAB3 实验分析.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/exploit-raw.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/exploit-raw.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/exploit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/exploit.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/level.o" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/level.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/level.s" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/level.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB3/levels.s" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB3/levels.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/.csim_results" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/.csim_results" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/.marker" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/.marker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-21-17-03-59.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-21-17-03-59.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-21-17-15-25.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-21-17-15-25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-21-17-29-04.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-21-17-29-04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-21-17-35-18.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-21-17-35-18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-21-22-52-12.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-21-22-52-12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-21-22-52-33.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-21-22-52-33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-22-00-16-38.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-22-00-16-38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-22-00-56-46.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-22-00-56-46.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-22-01-02-24.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-22-01-02-24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-22-01-02-58.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/Report/2019-05-22-01-02-58.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/LAB4 实验分析.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/Report/LAB4 实验分析.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/LAB4 实验分析.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/Report/LAB4 实验分析.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/Report/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/billchen-handin.tar" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/billchen-handin.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/csim.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/csim.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/csim.dSYM/Contents/Resources/DWARF/csim" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/csim.dSYM/Contents/Resources/DWARF/csim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/out.b" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/out.b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/trace.f0" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/trace.f0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/trace.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB4/trans.o" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB4/trans.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/README" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/Report/2019-06-30-12-13-22.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/Report/2019-06-30-12-13-22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/Report/2019-06-30-12-18-58.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/Report/2019-06-30-12-18-58.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/Report/2019-06-30-12-19-21.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/Report/2019-06-30-12-19-21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/Report/2019-06-30-12-19-38.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/Report/2019-06-30-12-19-38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/Report/2019-06-30-12-38-43.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/Report/2019-06-30-12-38-43.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/Report/LAB5 实验分析.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/Report/LAB5 实验分析.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/Report/LAB5 实验分析.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/Report/LAB5 实验分析.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/clock.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/clock.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/clock.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/clock.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/clock.o" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/clock.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/fcyc.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/fcyc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/fcyc.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/fcyc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/fcyc.o" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/fcyc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/fsecs.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/fsecs.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/fsecs.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/fsecs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/fsecs.o" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/fsecs.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/ftimer.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/ftimer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/ftimer.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/ftimer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/ftimer.o" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/ftimer.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/malloclab.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/malloclab.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/mdriver.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/mdriver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/mdriver.o" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/mdriver.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/memlib.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/memlib.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/memlib.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/memlib.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/memlib.o" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/memlib.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/mm.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/mm.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/mm.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/mm.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/mm.o" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/mm.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/short1-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/short1-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/short2-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/short2-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/README" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/amptjp-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/amptjp-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/amptjp.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/amptjp.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/binary-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/binary-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/binary.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/binary.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/binary2-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/binary2-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/binary2.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/binary2.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/cccp-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/cccp-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/cccp.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/cccp.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/checktrace.pl" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/checktrace.pl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/coalescing-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/coalescing-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/coalescing.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/coalescing.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/cp-decl-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/cp-decl-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/cp-decl.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/cp-decl.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/expr-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/expr-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/expr.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/expr.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/gen_binary.pl" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/gen_binary.pl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/gen_binary2.pl" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/gen_binary2.pl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/gen_coalescing.pl" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/gen_coalescing.pl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/gen_random.pl" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/gen_random.pl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/gen_realloc.pl" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/gen_realloc.pl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/gen_realloc2.pl" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/gen_realloc2.pl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/random-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/random-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/random.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/random.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/random2-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/random2-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/random2.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/random2.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/realloc-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/realloc-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/realloc.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/realloc.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/realloc2-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/realloc2-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/realloc2.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/realloc2.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/short1-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/short1-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/short1.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/short1.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/short2-bal.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/short2-bal.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/LAB5/traces/short2.rep" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/LAB5/traces/short2.rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/Review/Dr.evel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/Review/Dr.evel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CSAPP/temp.c" beforeDir="false" afterPath="$PROJECT_DIR$/../CSAPP/temp.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/.idea/description.html" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/.idea/description.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter10Homework/Chapter10Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter10Homework/Chapter10Homework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter10Homework/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter10Homework/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/Chapter11Homework.eml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/Chapter11Homework.eml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/Chapter11Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/Chapter11Homework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/bin/CH11Q1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/bin/CH11Q1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/bin/CH11Q1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/bin/CH11Q1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/bin/CH11Q2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/bin/CH11Q2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/data/a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/data/a.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/data/a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/data/a.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/data/b.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/data/b.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/src/CH11Q1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/src/CH11Q1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/src/CH11Q2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/Chapter11Homework/src/CH11Q2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/FinalExam/FinalExam.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/FinalExam/FinalExam.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/FinalExam/src/Replace.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/FinalExam/src/Replace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/FinalExam/src/WordReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/FinalExam/src/WordReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/JavaProgramming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/JavaProgramming.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/JavaProgramming.userlibraries" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/JavaProgramming.userlibraries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-01/bin/ArgumentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-01/bin/ArgumentTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-01/bin/IntegerTest0.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-01/bin/IntegerTest0.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-01/bin/MemberShow.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-01/bin/MemberShow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/BooleanTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/BooleanTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/ByteTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/ByteTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/CharTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/CharTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/FloatDoubleMaxMinTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/FloatDoubleMaxMinTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/FloatingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/FloatingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/IntegerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/IntegerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/OperatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-02/bin/OperatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-03/bin/ForTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-03/bin/ForTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-03/bin/IfElseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-03/bin/IfElseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-03/bin/SwitchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-03/bin/SwitchTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-03/bin/WhileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-03/bin/WhileTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-04/bin/FactorialTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-04/bin/FactorialTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-04/bin/FunctionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-04/bin/FunctionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-04/bin/OverloadTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC03-04/bin/OverloadTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-01/bin/Father.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-01/bin/Father.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-01/bin/OOExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-01/bin/OOExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-01/bin/OPExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-01/bin/OPExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-01/bin/Son.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-01/bin/Son.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-02/bin/ArgumentPassingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-02/bin/ArgumentPassingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-02/bin/Initialization.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-02/bin/Initialization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-02/bin/MyNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-02/bin/MyNumber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-02/bin/ReferenceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-02/bin/ReferenceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-03/bin/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-03/bin/A.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-03/bin/ConstructorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-03/bin/ConstructorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-03/bin/LifeCycleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-03/bin/LifeCycleTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-03/bin/MyPairNumber0.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-03/bin/MyPairNumber0.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-04/bin/InfoHiding.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-04/bin/InfoHiding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-04/bin/InfoHiding2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-04/bin/InfoHiding2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-04/bin/InfoHidingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-04/bin/InfoHidingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-04/bin/MyPairNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-04/bin/MyPairNumber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-04/bin/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-04/bin/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-04/bin/ThisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC04-04/bin/ThisTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/A.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/B.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/B.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Base.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Base.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Derived.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Derived.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Father.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Father.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Human.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Man.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Man.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Son.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Son.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Woman.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-01/bin/Woman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/Animal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/Cat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/Cat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/CatFamily.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/CatFamily.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/ClimbTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/ClimbTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/LandAnimal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/LandAnimal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/Rabbit.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/Rabbit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/Rectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/Shape.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/Tiger.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-02/bin/Tiger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/Animal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/AnimalTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/AnimalTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/AnimalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/AnimalTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/Cat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/Cat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/Dog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/Human.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/Man.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC05-03/bin/Man.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-01/bin/Potato.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-01/bin/Potato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-01/bin/StaticBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-01/bin/StaticBlock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-01/bin/StaticBlockTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-01/bin/StaticBlockTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-01/bin/StaticMethodTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-01/bin/StaticMethodTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-02/bin/Singleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-02/bin/Singleton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-02/bin/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-02/bin/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/FinalFather.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/FinalFather.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/FinalMethodFather.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/FinalMethodFather.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/FinalMethodSon.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/FinalMethodSon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/FinalObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/FinalObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/FinalObjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/FinalObjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/FinalPrimitiveType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/FinalPrimitiveType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/Son1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-03/bin/Son1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/A.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/B.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/B.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/BoxClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/BoxClassTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/CacheTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/CacheTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/Cat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/Cat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/IntegerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/IntegerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/SpecialAnimal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/SpecialAnimal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/StringConstantTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/StringConstantTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/StringNewTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-04/bin/StringNewTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/A.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/ArgumentPassing.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/ArgumentPassing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/ImmutableObjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/ImmutableObjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/ObjectPassingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/ObjectPassingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/PrimitiveTypePassingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/PrimitiveTypePassingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/StringAppendTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/StringAppendTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/StringPassingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC06-05/bin/StringPassingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/CalendarClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/CalendarClassTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/CalendarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/CalendarTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/DateTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/DateTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/DateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/DateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/InstantExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/InstantExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/LocalDateExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/LocalDateExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/LocalDateTimeExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/LocalDateTimeExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/LocalTimeExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/bin/LocalTimeExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/CalendarClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/CalendarClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/CalendarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/CalendarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/DateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/DateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/DateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/DateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/InstantExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/InstantExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/LocalDateExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/LocalDateExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/LocalDateTimeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/LocalDateTimeExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/LocalTimeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-04/src/LocalTimeExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/DateFormatterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/DateFormatterTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/DecimalFormatTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/DecimalFormatTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/DecimalFormaterRuleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/DecimalFormaterRuleTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/MessageFormatTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/MessageFormatTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/SimpleDateTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/SimpleDateTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/TwoDigitsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC08-05/bin/TwoDigitsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/Father.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/Father.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/MultipleCatchDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/MultipleCatchDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/MyException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/MyException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/MyExceptionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/MyExceptionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/Son.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/Son.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/ThrowsDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/ThrowsDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/TryDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/bin/TryDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/Father.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/Father.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/MultipleCatchDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/MultipleCatchDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/MyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/MyException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/MyExceptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/MyExceptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/Son.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/Son.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/ThrowsDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/ThrowsDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/TryDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-02/src/TryDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/bin/DivideByMinusException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/bin/DivideByMinusException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/bin/MyException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/bin/MyException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/bin/MyExceptionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/bin/MyExceptionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/bin/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/bin/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/src/DivideByMinusException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/src/DivideByMinusException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/src/MyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/src/MyException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/src/MyExceptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/src/MyExceptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC09-03/src/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/Cat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/Cat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/Dog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/HashSetJudgeRuleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/HashSetJudgeRuleTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/HashSetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/HashSetTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/LinkedHashSetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/LinkedHashSetTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/ObjectHashSetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/ObjectHashSetTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/ObjectTreeSetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/ObjectTreeSetTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/Tiger.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/Tiger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/TreeSetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/bin/TreeSetTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/HashSetJudgeRuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/HashSetJudgeRuleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/HashSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/HashSetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/LinkedHashSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/LinkedHashSetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/ObjectHashSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/ObjectHashSetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/ObjectTreeSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/ObjectTreeSetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/Tiger.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/Tiger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/TreeSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-04/src/TreeSetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/Test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/Test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/bin/HashMapTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/bin/HashMapTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/bin/HashtableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/bin/HashtableTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/bin/LinkedHashMapTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/bin/LinkedHashMapTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/bin/MapCompareTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/bin/MapCompareTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/bin/PropertiesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/bin/PropertiesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/bin/TreeMapTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/bin/TreeMapTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/src/HashMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/src/HashMapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/src/HashtableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/src/HashtableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/src/LinkedHashMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/src/LinkedHashMapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/src/MapCompareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/src/MapCompareTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/src/PropertiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/src/PropertiesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/src/TreeMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC10-05/src/TreeMapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/MOOC11-01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/MOOC11-01.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/bin/FileAttributeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/bin/FileAttributeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/bin/FilesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/bin/FilesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/bin/PathTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/bin/PathTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/bin/Search.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/bin/Search.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/bin/SearchJPGFiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/bin/SearchJPGFiles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/src/FileAttributeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/src/FileAttributeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/src/FilesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/src/FilesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/src/PathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/src/PathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/src/SearchJPGFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC11-01/src/SearchJPGFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/MOOC12-01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/MOOC12-01.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/concept/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/concept/Component.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/concept/Workable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/concept/Workable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/part/imp/AMDCPU.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/part/imp/AMDCPU.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/part/imp/IntelCPU.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/part/imp/IntelCPU.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/part/imp/Seagate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/part/imp/Seagate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/part/imp/WestDigital.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/part/imp/WestDigital.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/part/type/CPU.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/part/type/CPU.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/part/type/Disk.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/part/type/Disk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/product/Computer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/product/Computer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/product/ComputerStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/com/coin/product/ComputerStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/net/word/count/FileAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/net/word/count/FileAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/net/word/count/Searcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/net/word/count/Searcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/net/word/count/Word.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/net/word/count/Word.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/net/word/count/WordCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/bin/net/word/count/WordCounter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/concept/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/concept/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/concept/Workable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/concept/Workable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/part/imp/AMDCPU.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/part/imp/AMDCPU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/part/imp/IntelCPU.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/part/imp/IntelCPU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/part/imp/Seagate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/part/imp/Seagate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/part/imp/WestDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/part/imp/WestDigital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/part/type/CPU.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/part/type/CPU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/part/type/Disk.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/part/type/Disk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/product/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/product/Computer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/product/ComputerStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/com/coin/product/ComputerStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/net/word/count/FileAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/net/word/count/FileAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/net/word/count/Searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/net/word/count/Searcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/net/word/count/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/net/word/count/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/net/word/count/WordCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/MOOC/MOOC12-01/src/net/word/count/WordCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/data/a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/data/a.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/data/a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/data/a.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/data/b.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/data/b.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/data/word.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/data/word.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter10Homework/Currency.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter10Homework/Currency.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter10Homework/EUR.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter10Homework/EUR.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter10Homework/HKD.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter10Homework/HKD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter10Homework/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter10Homework/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter10Homework/USD.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter10Homework/USD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter11Homework/CH11Q1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter11Homework/CH11Q1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter11Homework/CH11Q1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter11Homework/CH11Q1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter11Homework/CH11Q2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/Chapter11Homework/CH11Q2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/FinalExam/Replace.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/FinalExam/Replace.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/FinalExam/WordReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/FinalExam/WordReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/Boy.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/Boy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/Homework/CH3Q1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/Homework/CH3Q1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/Homework/CH3Q2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/Homework/CH3Q2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/Human.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/MessageFormateTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/MessageFormateTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/ls$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/ls$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/ls.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/ls.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/syop.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/syop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/syop2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/syop2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/syop3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/syop3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/out/production/JavaProgramming/tester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/src/Boy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/src/Boy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/src/Homework/CH3Q1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/src/Homework/CH3Q1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/src/Homework/CH3Q2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/src/Homework/CH3Q2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/src/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/src/MessageFormateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/src/MessageFormateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/src/ls.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/src/ls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/src/syop.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/src/syop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaProgramming/src/tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaProgramming/src/tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/.idea/render.experimental.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/.idea/render.experimental.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/libs/usbserial.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/libs/usbserial.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/androidTest/java/io/billc/aeemo/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/androidTest/java/io/billc/aeemo/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/aeemo_logo-web.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/aeemo_logo-web.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/java/io/billc/aeemo/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/java/io/billc/aeemo/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/java/io/billc/aeemo/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/java/io/billc/aeemo/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-anydpi/bluetooth_connect.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-anydpi/bluetooth_connect.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-anydpi/bluetooth_connected.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-anydpi/bluetooth_connected.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-anydpi/bluetooth_connecting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-anydpi/bluetooth_connecting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-hdpi/bluetooth_connect.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-hdpi/bluetooth_connect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-hdpi/bluetooth_connected.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-hdpi/bluetooth_connected.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-hdpi/bluetooth_connecting.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-hdpi/bluetooth_connecting.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-mdpi/bluetooth_connect.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-mdpi/bluetooth_connect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-mdpi/bluetooth_connected.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-mdpi/bluetooth_connected.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-mdpi/bluetooth_connecting.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-mdpi/bluetooth_connecting.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-xhdpi/bluetooth_connect.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-xhdpi/bluetooth_connect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-xhdpi/bluetooth_connected.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-xhdpi/bluetooth_connected.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-xhdpi/bluetooth_connecting.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-xhdpi/bluetooth_connecting.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-xxhdpi/bluetooth_connect.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-xxhdpi/bluetooth_connect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-xxhdpi/bluetooth_connected.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-xxhdpi/bluetooth_connected.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-xxhdpi/bluetooth_connecting.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable-xxhdpi/bluetooth_connecting.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable/album_evolution_era.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable/album_evolution_era.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable/album_life_stream.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable/album_life_stream.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable/album_without_me.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable/album_without_me.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/layout/activity_scrolling.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/layout/activity_scrolling.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/layout/content_scrolling.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/layout/content_scrolling.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/menu/menu_scrolling.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/menu/menu_scrolling.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-anydpi-v26/aeemo_logo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-anydpi-v26/aeemo_logo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-anydpi-v26/aeemo_logo_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-anydpi-v26/aeemo_logo_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-hdpi/aeemo_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-hdpi/aeemo_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-hdpi/aeemo_logo_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-hdpi/aeemo_logo_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-mdpi/aeemo_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-mdpi/aeemo_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-mdpi/aeemo_logo_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-mdpi/aeemo_logo_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xhdpi/aeemo_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xhdpi/aeemo_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xhdpi/aeemo_logo_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xhdpi/aeemo_logo_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxhdpi/aeemo_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxhdpi/aeemo_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxhdpi/aeemo_logo_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxhdpi/aeemo_logo_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxxhdpi/aeemo_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxxhdpi/aeemo_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxxhdpi/aeemo_logo_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxxhdpi/aeemo_logo_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/raw/evolution_era.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/raw/evolution_era.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/raw/life_stream.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/raw/life_stream.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/raw/without_me.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/raw/without_me.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values-en/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values-zh/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values-zh/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/test/java/io/billc/aeemo/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/app/src/test/java/io/billc/aeemo/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/AndroidClient/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/SongCreator/evolution_era.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/SongCreator/evolution_era.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/SongCreator/life_stream.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/SongCreator/life_stream.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Aeemo/SongCreator/without_me.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Aeemo/SongCreator/without_me.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Bluetooth_Serial.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Bluetooth_Serial.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Buzzer_Recorder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Buzzer_Recorder.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/LED_LightIndicator.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/LED_LightIndicator.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/PWM.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/PWM.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/PWM_Speaker.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/PWM_Speaker.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/PWM_colorful.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/PWM_colorful.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/PWM_rotatable.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/PWM_rotatable.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Speaker_CUBE.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Speaker_CUBE.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../创客实践/Stream+.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../创客实践/Stream+.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../学堂在线_00740123_X_JAVA程序设计/E11_字符串排序.java" beforeDir="false" afterPath="$PROJECT_DIR$/../学堂在线_00740123_X_JAVA程序设计/E11_字符串排序.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../学堂在线_00740123_X_JAVA程序设计/E12_斐波那契数列.java" beforeDir="false" afterPath="$PROJECT_DIR$/../学堂在线_00740123_X_JAVA程序设计/E12_斐波那契数列.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../学堂在线_00740123_X_JAVA程序设计/E13_数组交集.java" beforeDir="false" afterPath="$PROJECT_DIR$/../学堂在线_00740123_X_JAVA程序设计/E13_数组交集.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/List/Doubly_Linked_List.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/List/Doubly_Linked_List.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/List/Joseph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/List/Joseph.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/List/Polynomio.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/List/Polynomio.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/List/playgroud.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/List/playgroud.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Queue/Demonstration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Queue/Demonstration.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Queue/Possion.h" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Queue/Possion.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Queue/Random.h" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Queue/Random.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Queue/myQueue.h" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Queue/myQueue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Recursion/NQueens.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Recursion/NQueens.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Recursion/NQueensSlow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Recursion/NQueensSlow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Recursion/NQueensStandard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Recursion/NQueensStandard.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Recursion/Tic-Tac-Toe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Recursion/Tic-Tac-Toe.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Review/Ackermann.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Review/Ackermann.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Review/DFS_Topo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Review/DFS_Topo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Review/Generator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Review/Generator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Review/Quiz.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Review/Quiz.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Review/dataout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Review/dataout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Sort/Radix_Sort_上机月考.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Sort/Radix_Sort_上机月考.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Sort/sort.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Sort/sort.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Stack/Bracket_Matching.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Stack/Bracket_Matching.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Stack/Bracket_Matching_with_myStack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Stack/Bracket_Matching_with_myStack.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Table/Hash_Table.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Table/Hash_Table.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Table/leetcode_hash.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Table/leetcode_hash.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Table/others_hash_table.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Table/others_hash_table.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Tree/BuildableTree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Tree/BuildableTree.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Tree/SearchTree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Tree/SearchTree.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Tree/SearchTree.h" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Tree/SearchTree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Tree/binary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Tree/binary.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/Tree/try.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/Tree/try.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/上机月考3/10185101201-陈俊潼.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/上机月考3/10185101201-陈俊潼.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../数据结构与算法/上机月考3/Random.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../数据结构与算法/上机月考3/Random.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../程序设计基础/10.8上机 阶乘计算.c" beforeDir="false" afterPath="$PROJECT_DIR$/../程序设计基础/10.8上机 阶乘计算.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../程序设计基础/10.8上机 阶乘运算.c" beforeDir="false" afterPath="$PROJECT_DIR$/../程序设计基础/10.8上机 阶乘运算.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../程序设计基础/1029上机 小明的生日.c" beforeDir="false" afterPath="$PROJECT_DIR$/../程序设计基础/1029上机 小明的生日.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../程序设计基础/1119 编程月考.c" beforeDir="false" afterPath="$PROJECT_DIR$/../程序设计基础/1119 编程月考.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../程序设计基础/1126上机.c" beforeDir="false" afterPath="$PROJECT_DIR$/../程序设计基础/1126上机.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../程序设计基础/上机大考 查找重复字符串并替换（含异常处理）.c" beforeDir="false" afterPath="$PROJECT_DIR$/../程序设计基础/上机大考 查找重复字符串并替换（含异常处理）.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../程序设计基础/单位转换系统.c" beforeDir="false" afterPath="$PROJECT_DIR$/../程序设计基础/单位转换系统.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../程序设计基础/斐波那契数列.c" beforeDir="false" afterPath="$PROJECT_DIR$/../程序设计基础/斐波那契数列.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../程序设计基础/第二次月考 16进制转2进制.c" beforeDir="false" afterPath="$PROJECT_DIR$/../程序设计基础/第二次月考 16进制转2进制.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/A.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/A.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/B.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/B.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/C.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/C.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/COLOR.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/COLOR.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/CoinRoller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/CoinRoller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/LeetCode2019.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/LeetCode2019.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/LeetCode20190.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/LeetCode20190.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/Student.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/Student.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/assembly.s" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/assembly.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/grades.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/grades.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/gradesnew.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/gradesnew.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/hi.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/hi.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/howmany.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/howmany.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/jpt.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/jpt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/moe.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/moe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/moe.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/moe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/node.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/node.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/sweetie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/sweetie.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/test888.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/test888.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/zxy.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/zxy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/一个不知道是什么的数列.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/一个不知道是什么的数列.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/冰雹猜想.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/冰雹猜想.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/字符统计.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/字符统计.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/进度.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/进度.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/进度.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/进度.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ #1002 IP Address.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ #1002 IP Address.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ #1103 Zigzag.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ #1103 Zigzag.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ #2008.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ #2008.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ #2782.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ #2782.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ #2847 路由节点.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ #2847 路由节点.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ #2897 英文缩写词.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ #2897 英文缩写词.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ #3086 水仙花数.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ #3086 水仙花数.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ #3292 解密字符串.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ #3292 解密字符串.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ #3650.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ #3650.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ #3651.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ #3651.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ Monthly 2019.1 E.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ Monthly 2019.1 E.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ_#3686_回文串.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ_#3686_回文串.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ_#70_十六进制.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ_#70_十六进制.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/EOJ_#8_愚人节快乐.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/EOJ_#8_愚人节快乐.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/排序算法 抽取最大值&amp;建立新数组.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/排序算法 抽取最大值&amp;建立新数组.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/最大公约数 最小公倍数 枚举.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/最大公约数 最小公倍数 枚举.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/杨辉三角 二维数组.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/杨辉三角 二维数组.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/杨辉三角 阶乘算法.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/杨辉三角 阶乘算法.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训 #1011 统计字符及行数.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训 #1011 统计字符及行数.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训 #1027 HTTP字典排序.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训 #1027 HTTP字典排序.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训 #1033 自修室.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训 #1033 自修室.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训 #1048 随机排序.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训 #1048 随机排序.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训 #1097 加密1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训 #1097 加密1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训 #1173 数字拆分.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训 #1173 数字拆分.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1003 计算 a 的 n 次方.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1003 计算 a 的 n 次方.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1022_数组排序.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1022_数组排序.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1054_邮件地址排序.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1054_邮件地址排序.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1064_sunny的密码.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1064_sunny的密码.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1095_Soda_Surpler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1095_Soda_Surpler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1173_数字拆分.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1173_数字拆分.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1175_0-1背包问题.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1175_0-1背包问题.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1176_FJHaozi.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1176_FJHaozi.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1187_整数分解.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1187_整数分解.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1213_内存显示.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1213_内存显示.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1227_泰波拿契数列的前74项.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1227_泰波拿契数列的前74项.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1242_符号方程求解.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1242_符号方程求解.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1259_链表查询.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../EOJ/程序设计能力实训_#1259_链表查询.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/.ipynb_checkpoints/Crawller-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/.ipynb_checkpoints/Crawller-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/.ipynb_checkpoints/Notebook-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/.ipynb_checkpoints/Notebook-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/.ipynb_checkpoints/xiaoshuo-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/.ipynb_checkpoints/xiaoshuo-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/Crawller.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/Crawller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/Notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/Notebook.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/TimerCap.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/TimerCap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/mmh20190706.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/mmh20190706.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/playground.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/playground.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/savecsv.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/savecsv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/sin.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/sin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/xiaoshuo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/xiaoshuo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/crawl.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/crawl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/csvInitial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/csvInitial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/dumpxlsx.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/dumpxlsx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/out.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/out.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/patterns.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/patterns.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/rename.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/rename.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/result.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/result.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/result.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/resultAll.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/resultAll.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/solvecsvFUCKED.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/solvecsvFUCKED.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/solver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/solver2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/solver2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python3/专利检索爬虫/solverlog.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python3/专利检索爬虫/solverlog.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/HelloWS/.idea/HelloWS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/HelloWS/.idea/HelloWS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/HelloWS/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/HelloWS/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/HelloWS/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/HelloWS/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/HelloWS/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/HelloWS/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/HelloWS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/HelloWS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/HelloWS/Assets/Stars As Lights - Don't Let Go.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/HelloWS/Assets/Stars As Lights - Don't Let Go.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/HelloWS/Assets/buttons.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/HelloWS/Assets/buttons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/HelloWS/Assets/googlelogo_color_272x92dp.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/HelloWS/Assets/googlelogo_color_272x92dp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/HelloWS/FAKE GOOGLE.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/HelloWS/FAKE GOOGLE.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/HelloWS/Playground.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/HelloWS/Playground.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/HelloWS/google.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/HelloWS/google.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Ackermann.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Ackermann.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Ackermann.out.dSYM/Contents/Resources/DWARF/Ackermann.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Ackermann.out.dSYM/Contents/Resources/DWARF/Ackermann.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Airport_Simulator.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Airport_Simulator.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Airport_Simulator.out.dSYM/Contents/Resources/DWARF/Airport_Simulator.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Airport_Simulator.out.dSYM/Contents/Resources/DWARF/Airport_Simulator.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Bracket_Matching_with_myStack.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Bracket_Matching_with_myStack.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Bracket_Matching_with_myStack.out.dSYM/Contents/Resources/DWARF/Bracket_Matching_with_myStack.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Bracket_Matching_with_myStack.out.dSYM/Contents/Resources/DWARF/Bracket_Matching_with_myStack.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/BuildableTree.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/BuildableTree.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/BuildableTree.out.dSYM/Contents/Resources/DWARF/BuildableTree.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/BuildableTree.out.dSYM/Contents/Resources/DWARF/BuildableTree.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/C.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/C.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/C.out.dSYM/Contents/Resources/DWARF/C.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/C.out.dSYM/Contents/Resources/DWARF/C.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/COLOR.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/COLOR.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/COLOR.out.dSYM/Contents/Resources/DWARF/COLOR.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/COLOR.out.dSYM/Contents/Resources/DWARF/COLOR.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/CoinRoller.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/CoinRoller.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/CoinRoller.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/CoinRoller.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/CoinRoller.out.dSYM/Contents/Resources/DWARF/CoinRoller.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/CoinRoller.out.dSYM/Contents/Resources/DWARF/CoinRoller.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Demonstration.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Demonstration.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Demonstration.out.dSYM/Contents/Resources/DWARF/Demonstration.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Demonstration.out.dSYM/Contents/Resources/DWARF/Demonstration.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Doubly_Linked_List.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Doubly_Linked_List.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Doubly_Linked_List.out.dSYM/Contents/Resources/DWARF/Doubly_Linked_List.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Doubly_Linked_List.out.dSYM/Contents/Resources/DWARF/Doubly_Linked_List.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Dr.evel.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Dr.evel.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Dr.evel.out.dSYM/Contents/Resources/DWARF/Dr.evel.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Dr.evel.out.dSYM/Contents/Resources/DWARF/Dr.evel.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/E2.82.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/E2.82.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/E2.82.out.dSYM/Contents/Resources/DWARF/E2.82.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/E2.82.out.dSYM/Contents/Resources/DWARF/E2.82.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/EOJ_#3686_回文串.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/EOJ_#3686_回文串.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/EOJ_#3686_回文串.out.dSYM/Contents/Resources/DWARF/EOJ_#3686_回文串.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/EOJ_#3686_回文串.out.dSYM/Contents/Resources/DWARF/EOJ_#3686_回文串.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Generator.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Generator.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Generator.out.dSYM/Contents/Resources/DWARF/Generator.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Generator.out.dSYM/Contents/Resources/DWARF/Generator.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Hash_Table.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Hash_Table.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Hash_Table.out.dSYM/Contents/Resources/DWARF/Hash_Table.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Hash_Table.out.dSYM/Contents/Resources/DWARF/Hash_Table.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Joseph.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Joseph.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Joseph.out.dSYM/Contents/Resources/DWARF/Joseph.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Joseph.out.dSYM/Contents/Resources/DWARF/Joseph.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/NQueens.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/NQueens.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/NQueens.out.dSYM/Contents/Resources/DWARF/NQueens.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/NQueens.out.dSYM/Contents/Resources/DWARF/NQueens.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/NQueensStandard.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/NQueensStandard.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/NQueensStandard.out.dSYM/Contents/Resources/DWARF/NQueensStandard.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/NQueensStandard.out.dSYM/Contents/Resources/DWARF/NQueensStandard.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Polish_Calculator.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Polish_Calculator.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Polish_Calculator.out.dSYM/Contents/Resources/DWARF/Polish_Calculator.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Polish_Calculator.out.dSYM/Contents/Resources/DWARF/Polish_Calculator.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Polynomio.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Polynomio.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Polynomio.out.dSYM/Contents/Resources/DWARF/Polynomio.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Polynomio.out.dSYM/Contents/Resources/DWARF/Polynomio.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Quiz.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Quiz.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Quiz.out.dSYM/Contents/Resources/DWARF/Quiz.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Quiz.out.dSYM/Contents/Resources/DWARF/Quiz.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Radix_Sort.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Radix_Sort.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Radix_Sort.out.dSYM/Contents/Resources/DWARF/Radix_Sort.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Radix_Sort.out.dSYM/Contents/Resources/DWARF/Radix_Sort.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Radix_Sort_上机月考.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Radix_Sort_上机月考.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Radix_Sort_上机月考.out.dSYM/Contents/Resources/DWARF/Radix_Sort_上机月考.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Radix_Sort_上机月考.out.dSYM/Contents/Resources/DWARF/Radix_Sort_上机月考.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Random.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Random.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Random.out.dSYM/Contents/Resources/DWARF/Random.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Random.out.dSYM/Contents/Resources/DWARF/Random.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/SHORTNAME.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/SHORTNAME.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/SHORTNAME.out.dSYM/Contents/Resources/DWARF/SHORTNAME.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/SHORTNAME.out.dSYM/Contents/Resources/DWARF/SHORTNAME.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/SearchTree.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/SearchTree.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/SearchTree.out.dSYM/Contents/Resources/DWARF/SearchTree.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/SearchTree.out.dSYM/Contents/Resources/DWARF/SearchTree.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Sortings.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Sortings.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Sortings.out.dSYM/Contents/Resources/DWARF/Sortings-Bill's MacBook Pro 2018.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Sortings.out.dSYM/Contents/Resources/DWARF/Sortings-Bill's MacBook Pro 2018.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Tic-Tac-Toe.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Tic-Tac-Toe.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/Tic-Tac-Toe.out.dSYM/Contents/Resources/DWARF/Tic-Tac-Toe.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/Tic-Tac-Toe.out.dSYM/Contents/Resources/DWARF/Tic-Tac-Toe.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/a.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/a.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/a.out.dSYM/Contents/Resources/DWARF/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/a.out.dSYM/Contents/Resources/DWARF/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/bytepointer.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/bytepointer.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/csim.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/csim.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/csim.out.dSYM/Contents/Resources/DWARF/csim.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/csim.out.dSYM/Contents/Resources/DWARF/csim.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/draft.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/draft.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/draft.out.dSYM/Contents/Resources/DWARF/draft.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/draft.out.dSYM/Contents/Resources/DWARF/draft.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/hash.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/hash.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/hash.out.dSYM/Contents/Resources/DWARF/hash.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/hash.out.dSYM/Contents/Resources/DWARF/hash.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/howmany.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/howmany.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/howmany.out.dSYM/Contents/Resources/DWARF/howmany.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/howmany.out.dSYM/Contents/Resources/DWARF/howmany.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/main.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/main.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/main.out.dSYM/Contents/Resources/DWARF/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/main.out.dSYM/Contents/Resources/DWARF/main.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/others_hash_table.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/others_hash_table.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/others_hash_table.out.dSYM/Contents/Resources/DWARF/others_hash_table.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/others_hash_table.out.dSYM/Contents/Resources/DWARF/others_hash_table.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/playgroud.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/playgroud.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/playgroud.out.dSYM/Contents/Resources/DWARF/playgroud.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/playgroud.out.dSYM/Contents/Resources/DWARF/playgroud.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/sweetie.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/sweetie.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/sweetie.out.dSYM/Contents/Resources/DWARF/sweetie.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/sweetie.out.dSYM/Contents/Resources/DWARF/sweetie.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/test.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/test.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/test.out.dSYM/Contents/Resources/DWARF/test.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/test.out.dSYM/Contents/Resources/DWARF/test.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/test888.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/test888.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/test888.out.dSYM/Contents/Resources/DWARF/test888.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/test888.out.dSYM/Contents/Resources/DWARF/test888.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/try.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/try.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/try.out.dSYM/Contents/Resources/DWARF/try.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/try.out.dSYM/Contents/Resources/DWARF/try.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训 #1003 计算 a 的 n 次方.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训 #1003 计算 a 的 n 次方.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训 #1003 计算 a 的 n 次方.out.dSYM/Contents/Resources/DWARF/程序设计能力实训 #1003 计算 a 的 n 次方.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训 #1003 计算 a 的 n 次方.out.dSYM/Contents/Resources/DWARF/程序设计能力实训 #1003 计算 a 的 n 次方.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1022_数组排序.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1022_数组排序.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1022_数组排序.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1022_数组排序.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1022_数组排序.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1022_数组排序.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1054_邮件地址排序.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1054_邮件地址排序.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1054_邮件地址排序.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1054_邮件地址排序.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1054_邮件地址排序.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1054_邮件地址排序.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1064.sunny的密码.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1064.sunny的密码.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1064.sunny的密码.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1064.sunny的密码.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1064.sunny的密码.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1064.sunny的密码.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1095_Soda_Surpler.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1095_Soda_Surpler.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1095_Soda_Surpler.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1095_Soda_Surpler.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1095_Soda_Surpler.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1095_Soda_Surpler.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1173_数字拆分.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1173_数字拆分.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1173_数字拆分.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1173_数字拆分.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1173_数字拆分.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1173_数字拆分.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1175_0-1背包问题.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1175_0-1背包问题.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1175_0-1背包问题.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1175_0-1背包问题.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1175_0-1背包问题.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1175_0-1背包问题.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1176_FJHaozi.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1176_FJHaozi.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1176_FJHaozi.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1176_FJHaozi.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1176_FJHaozi.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1176_FJHaozi.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1187_整数分解.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1187_整数分解.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1187_整数分解.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1187_整数分解.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1187_整数分解.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1187_整数分解.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1213_内存显示.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1213_内存显示.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1213_内存显示.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1213_内存显示.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1213_内存显示.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1213_内存显示.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1216_斐波那契数列.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1216_斐波那契数列.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1216_斐波那契数列.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1216_斐波那契数列.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1216_斐波那契数列.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1216_斐波那契数列.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1227_泰波拿契数列的前74项.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1227_泰波拿契数列的前74项.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1227_泰波拿契数列的前74项.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1227_泰波拿契数列的前74项.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1227_泰波拿契数列的前74项.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1227_泰波拿契数列的前74项.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1242_符号方程求解.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1242_符号方程求解.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1242_符号方程求解.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1242_符号方程求解.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1242_符号方程求解.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1242_符号方程求解.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1259_链表查询.out.dSYM/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1259_链表查询.out.dSYM/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1259_链表查询.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1259_链表查询.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/程序设计能力实训_#1259_链表查询.out.dSYM/Contents/Resources/DWARF/程序设计能力实训_#1259_链表查询.out" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1QuByIEHLj5mKusnfuSmGZo356A" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf375ed0-d7ce-4742-8881-34af7f47d345" name="Default Changelist" comment="" />
+      <created>1568610853231</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568610853231</updated>
+      <workItem from="1568610854529" duration="1256000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
