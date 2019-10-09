@@ -1,0 +1,43 @@
+.html, body{
+    font-family: Helvetica Neue;
+    font-size: 14px;
+}
+h1{
+    font-size: 160%;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+.my-input{
+    background: white;
+    border-radius: 6px;
+    margin: 3px;
+    font-size: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 250px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #AAAAAA;
+    outline: none;
+    height: 30px
+
+}
+.my-button{
+    outline: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 100%;
+    margin: 3px;
+    font-weight: bold;
+    background: #448aff;
+    color: white;
+    border-style: solid;
+    border-width: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.my-button:hover{
+    background: #243973;
+}

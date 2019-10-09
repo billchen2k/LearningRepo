@@ -1,0 +1,4 @@
+# put this file in your working directory
+# csc will automatically link your application with csgl...
+
+/r:csgl.dll

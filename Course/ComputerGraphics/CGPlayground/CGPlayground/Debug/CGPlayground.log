@@ -1,2 +1,1 @@
-﻿  main.cpp
-  CGPlayground.vcxproj -> C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\CGPlayground\Debug\CGPlayground.exe
+﻿LINK : fatal error LNK1104: 无法打开文件“d3dx9d.lib”

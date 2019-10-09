@@ -1,0 +1,11 @@
+{
+    "MsgVersion": 1.0,
+    "Result": "OK",
+    "Details": {
+        "Info:": "上传成功",
+        "AudioID": "3CDF39AB1234",
+        "ErrorCode": 0,
+        "Time": "2019-10-03, 22:02:07",
+        "SenderUID": "123456789"
+    }
+}

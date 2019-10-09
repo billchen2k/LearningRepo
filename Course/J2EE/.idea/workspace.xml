@@ -2,9 +2,145 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf375ed0-d7ce-4742-8881-34af7f47d345" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ComputerNetwork/Chapter1Homework/Chapter1Homework.md" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerNetwork/Chapter1Homework/Chapter1Homework.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0923.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/.vs/CG/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/.vs/CG/v16/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/CG.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/CG.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/CG.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/CG.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/CG.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/CG.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/CG.vcxproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.tlog/CG.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.tlog/rc.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.tlog/rc.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/CG.tlog/rc.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/demo.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/vc142.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Debug/vc142.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/Resource.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/demo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/framework.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/packages.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/small.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/targetver.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.Build.CppClean.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/CG.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/link-cvtres.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/link-cvtres.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/link-rc.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/link-rc.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/rc.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/rc.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/rc.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.tlog/unsuccessfulbuild" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/CG.vcxproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/demo.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/vc142.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/CG/x64/Debug/vc142.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/Debug/CG.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/Debug/CG.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/Debug/CG.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/Debug/freeglut.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/Debug/glew32.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/Debug/glewinfo.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/Debug/glfw3.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/Debug/visualinfo.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/configurations.autopkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/default-propertiesui.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/docs/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/include/GL/freeglut.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/include/GL/freeglut_ext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/include/GL/freeglut_std.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/include/GL/glew.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/include/GL/glut.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/include/GL/glxew.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/include/GL/wglew.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/include/GLFW/glfw3.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/include/GLFW/glfw3native.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/lib/Win32/freeglut.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/lib/Win32/glew32.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/lib/Win32/glfw3dll.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/lib/x64/freeglut.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/lib/x64/glew32.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/lib/x64/glfw3dll.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/native/nupengl.core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/build/publisher-info.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.0.1.0.1/nupengl.core.0.1.0.1.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/configurations.autopkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/native/bin/Win32/freeglut.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/native/bin/Win32/glew32.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/native/bin/Win32/glewinfo.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/native/bin/Win32/glfw3.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/native/bin/Win32/visualinfo.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/native/bin/x64/freeglut.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/native/bin/x64/glew32.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/native/bin/x64/glewinfo.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/native/bin/x64/glfw3.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/native/bin/x64/visualinfo.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/native/default-propertiesui.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/native/nupengl.core.redist.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/build/publisher-info.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/packages/nupengl.core.redist.0.1.0.1/nupengl.core.redist.0.1.0.1.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CG/x64/Debug/CG.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/.vs/CGPlayground/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/.vs/CGPlayground/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/CGPlayground.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/CGPlayground.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/CGPlayground.log" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/CGPlayground.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/CGPlayground.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/CGPlayground.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/CGPlayground.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/CGPlayground.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/CGPlayground.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/CGPlayground.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/CGPlayground.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/CGPlayground.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/vc142.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/Debug/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/CGPlayground.log" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/CGPlayground.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/CGPlayground.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/CGPlayground.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/CGPlayground.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/CGPlayground.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/CGPlayground.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/CGPlayground.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/CGPlayground.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/CGPlayground.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/vc142.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/CGPlayground/x64/Debug/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/Debug/CGPlayground.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/Debug/CGPlayground.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/Debug/CGPlayground.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/Debug/CGPlayground.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/x64/Debug/CGPlayground.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/x64/Debug/CGPlayground.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/x64/Debug/CGPlayground.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/CGPlayground/x64/Debug/CGPlayground.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment0916/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment0916/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment0916/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment0916/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Draft/A.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/A.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/a.out.dSYM/Contents/Resources/DWARF/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/a.out.dSYM/Contents/Resources/DWARF/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/test.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/test.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temp/test.out.dSYM/Contents/Resources/DWARF/test.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../temp/test.out.dSYM/Contents/Resources/DWARF/test.out" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +163,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -35,6 +172,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -58,7 +196,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568610853231</updated>
-      <workItem from="1568610854529" duration="2412000" />
+      <workItem from="1568610854529" duration="4083000" />
+      <workItem from="1569215960481" duration="198000" />
+      <workItem from="1569216175003" duration="3580000" />
+      <workItem from="1569506813344" duration="326000" />
     </task>
     <servers />
   </component>
@@ -70,7 +211,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -62,7 +62,7 @@
         "u8g2lib.h": "c",
         "songdata.h": "c"
     },
-    "python.pythonPath": "C:\\Users\\billc\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+    "python.pythonPath": "/Users/billchen/anaconda3/envs/crawller/bin/python",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
 }

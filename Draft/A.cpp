@@ -1,15 +1,9 @@
-#include <iostream>
-#include <string>
-#include <time.h>
-
-using namespace std;
-
-int main(){
-	time_t start = clock();
-	string a = "a";
-	for (int i = 0;i<50000;i++){
-		a = a + to_string(i);
-	}
-	time_t end = clock();
-	cout << (end - start) / (double)CLOCKS_PER_SEC << " s" << endl;
+#include <stdio.h>
+int main(void) {
+	float f = 0, celsius = 0;
+	scanf("%f", &f);
+	celsius = f * 5.0 / 9.0 - (32 * 5 / 9);
+	// celsius = (f / 9 - 32 / 9) * 5;
+	printf("celsius=%d\n", (int)celsius);
+	return 0;
 }

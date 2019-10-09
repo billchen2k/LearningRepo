@@ -1,5 +1,0 @@
-﻿  CG.cpp
-  demo.cpp
-  正在生成代码...
-MSVCRTD.lib(exe_winmain.obj) : error LNK2019: 无法解析的外部符号 WinMain，该符号在函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中被引用
-C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\CG\x64\Debug\CG.exe : fatal error LNK1120: 1 个无法解析的外部命令

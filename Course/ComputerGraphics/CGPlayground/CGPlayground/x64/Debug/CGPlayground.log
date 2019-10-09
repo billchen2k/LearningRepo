@@ -1,2 +1,3 @@
-﻿  main.cpp
-  CGPlayground.vcxproj -> C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\CGPlayground\x64\Debug\CGPlayground.exe
+﻿main.obj : error LNK2019: 无法解析的外部符号 Direct3DCreate9，该符号在函数 "long __cdecl InitD3D(struct HWND__ *)" (?InitD3D@@YAJPEAUHWND__@@@Z) 中被引用
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 main，该符号在函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中被引用
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\CGPlayground\x64\Debug\CGPlayground.exe : fatal error LNK1120: 2 个无法解析的外部命令
