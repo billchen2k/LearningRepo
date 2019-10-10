@@ -8,6 +8,7 @@ namespace FPainter
 {
     class Utils
     {
+        //用于将RGB颜色转换成16进制
         public static string ToHexColor(System.Drawing.Color color)
         {
             if (color.IsEmpty)

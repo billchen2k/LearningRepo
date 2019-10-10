@@ -1,0 +1,14 @@
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\bin\Release\FPainter.exe.config
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\bin\Release\FPainter.exe
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\bin\Release\FPainter.pdb
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\bin\Release\SharpGL.dll
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\bin\Release\SharpGL.WinForms.dll
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\bin\Release\SharpGL.xml
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\bin\Release\SharpGL.WinForms.xml
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\obj\Release\FPainter.MainForm.resources
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\obj\Release\FPainter.Properties.Resources.resources
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\obj\Release\FPainter.csproj.GenerateResource.cache
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\obj\Release\FPainter.csproj.CopyComplete
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\obj\Release\FPainter.exe
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\obj\Release\FPainter.pdb
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\FPainter\FPainter\obj\Release\FPainter.csprojAssemblyReference.cache

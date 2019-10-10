@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.colorPicker = new System.Windows.Forms.ColorDialog();
             this.radPointer = new System.Windows.Forms.RadioButton();
             this.radLine = new System.Windows.Forms.RadioButton();
@@ -56,11 +57,14 @@
             this.menuWebsite = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.测试ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statColor = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusHint = new System.Windows.Forms.ToolStripStatusLabel();
             this.statLabCordinate = new System.Windows.Forms.ToolStripStatusLabel();
             this.glCanvas = new SharpGL.OpenGLControl();
+            this.文件ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkSmooth = new System.Windows.Forms.CheckBox();
             this.panelTools.SuspendLayout();
             this.grpToolSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picColorYellow)).BeginInit();
@@ -81,7 +85,7 @@
             this.radPointer.Checked = true;
             this.radPointer.Location = new System.Drawing.Point(28, 20);
             this.radPointer.Name = "radPointer";
-            this.radPointer.Size = new System.Drawing.Size(90, 24);
+            this.radPointer.Size = new System.Drawing.Size(74, 21);
             this.radPointer.TabIndex = 1;
             this.radPointer.TabStop = true;
             this.radPointer.Text = "指针工具";
@@ -93,7 +97,7 @@
             this.radLine.AutoSize = true;
             this.radLine.Location = new System.Drawing.Point(28, 110);
             this.radLine.Name = "radLine";
-            this.radLine.Size = new System.Drawing.Size(90, 24);
+            this.radLine.Size = new System.Drawing.Size(74, 21);
             this.radLine.TabIndex = 2;
             this.radLine.Text = "直线工具";
             this.radLine.UseVisualStyleBackColor = true;
@@ -105,6 +109,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelTools.BackColor = System.Drawing.SystemColors.Control;
             this.panelTools.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTools.Controls.Add(this.checkSmooth);
             this.panelTools.Controls.Add(this.grpToolSetting);
             this.panelTools.Controls.Add(this.radEraser);
             this.panelTools.Controls.Add(this.radPolygon);
@@ -173,7 +178,7 @@
             this.labWidth.AutoSize = true;
             this.labWidth.Location = new System.Drawing.Point(24, 166);
             this.labWidth.Name = "labWidth";
-            this.labWidth.Size = new System.Drawing.Size(96, 20);
+            this.labWidth.Size = new System.Drawing.Size(77, 17);
             this.labWidth.TabIndex = 1;
             this.labWidth.Text = "粗细（2px）";
             // 
@@ -195,7 +200,7 @@
             this.trackWidth.Minimum = 1;
             this.trackWidth.Name = "trackWidth";
             this.trackWidth.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackWidth.Size = new System.Drawing.Size(56, 111);
+            this.trackWidth.Size = new System.Drawing.Size(45, 111);
             this.trackWidth.TabIndex = 0;
             this.trackWidth.Value = 2;
             this.trackWidth.Scroll += new System.EventHandler(this.trackWidth_Scroll);
@@ -238,7 +243,7 @@
             this.radEraser.AutoSize = true;
             this.radEraser.Location = new System.Drawing.Point(28, 80);
             this.radEraser.Name = "radEraser";
-            this.radEraser.Size = new System.Drawing.Size(105, 24);
+            this.radEraser.Size = new System.Drawing.Size(86, 21);
             this.radEraser.TabIndex = 7;
             this.radEraser.Text = "橡皮擦工具";
             this.radEraser.UseVisualStyleBackColor = true;
@@ -249,7 +254,7 @@
             this.radPolygon.AutoSize = true;
             this.radPolygon.Location = new System.Drawing.Point(28, 200);
             this.radPolygon.Name = "radPolygon";
-            this.radPolygon.Size = new System.Drawing.Size(105, 24);
+            this.radPolygon.Size = new System.Drawing.Size(86, 21);
             this.radPolygon.TabIndex = 6;
             this.radPolygon.Text = "多边形工具";
             this.radPolygon.UseVisualStyleBackColor = true;
@@ -260,7 +265,7 @@
             this.radPencil.AutoSize = true;
             this.radPencil.Location = new System.Drawing.Point(28, 50);
             this.radPencil.Name = "radPencil";
-            this.radPencil.Size = new System.Drawing.Size(90, 24);
+            this.radPencil.Size = new System.Drawing.Size(74, 21);
             this.radPencil.TabIndex = 5;
             this.radPencil.Text = "铅笔工具";
             this.radPencil.UseVisualStyleBackColor = true;
@@ -271,7 +276,7 @@
             this.radRectangle.AutoSize = true;
             this.radRectangle.Location = new System.Drawing.Point(28, 170);
             this.radRectangle.Name = "radRectangle";
-            this.radRectangle.Size = new System.Drawing.Size(90, 24);
+            this.radRectangle.Size = new System.Drawing.Size(74, 21);
             this.radRectangle.TabIndex = 4;
             this.radRectangle.Text = "矩形工具";
             this.radRectangle.UseVisualStyleBackColor = true;
@@ -282,7 +287,7 @@
             this.radCircle.AutoSize = true;
             this.radCircle.Location = new System.Drawing.Point(28, 140);
             this.radCircle.Name = "radCircle";
-            this.radCircle.Size = new System.Drawing.Size(90, 24);
+            this.radCircle.Size = new System.Drawing.Size(74, 21);
             this.radCircle.TabIndex = 3;
             this.radCircle.Text = "椭圆工具";
             this.radCircle.UseVisualStyleBackColor = true;
@@ -298,7 +303,7 @@
             this.menuStrip1.Margin = new System.Windows.Forms.Padding(3);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(978, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(978, 25);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -309,25 +314,25 @@
             this.toolStripMenuItem3,
             this.menuClose});
             this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
-            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(58, 21);
             this.文件ToolStripMenuItem.Text = "文件(&F)";
             // 
             // menuNew
             // 
             this.menuNew.Name = "menuNew";
-            this.menuNew.Size = new System.Drawing.Size(144, 26);
+            this.menuNew.Size = new System.Drawing.Size(118, 22);
             this.menuNew.Text = "新建(&N)";
             this.menuNew.Click += new System.EventHandler(this.menuNew_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(141, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(115, 6);
             // 
             // menuClose
             // 
             this.menuClose.Name = "menuClose";
-            this.menuClose.Size = new System.Drawing.Size(144, 26);
+            this.menuClose.Size = new System.Drawing.Size(118, 22);
             this.menuClose.Text = "关闭(&C)";
             this.menuClose.Click += new System.EventHandler(this.MenuClose_Click);
             // 
@@ -338,39 +343,44 @@
             this.toolStripMenuItem1,
             this.menuAbout});
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(60, 21);
             this.关于ToolStripMenuItem.Text = "关于(&A)";
             // 
             // menuWebsite
             // 
             this.menuWebsite.Name = "menuWebsite";
-            this.menuWebsite.Size = new System.Drawing.Size(177, 26);
+            this.menuWebsite.Size = new System.Drawing.Size(144, 22);
             this.menuWebsite.Text = "作者网站(&W)";
             this.menuWebsite.Click += new System.EventHandler(this.MenuWebsite_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(174, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(141, 6);
             // 
             // menuAbout
             // 
             this.menuAbout.Name = "menuAbout";
-            this.menuAbout.Size = new System.Drawing.Size(177, 26);
+            this.menuAbout.Size = new System.Drawing.Size(144, 22);
             this.menuAbout.Text = "关于...(&A)";
             this.menuAbout.Click += new System.EventHandler(this.MenuAbout_Click);
+            // 
+            // 测试ToolStripMenuItem1
+            // 
+            this.测试ToolStripMenuItem1.Name = "测试ToolStripMenuItem1";
+            this.测试ToolStripMenuItem1.Size = new System.Drawing.Size(12, 21);
             // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statColor,
-            this.toolStripStatusLabel1,
+            this.statusHint,
             this.statLabCordinate});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 724);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 728);
             this.statusStrip1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(978, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(978, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -378,19 +388,21 @@
             // 
             this.statColor.ForeColor = System.Drawing.Color.Black;
             this.statColor.Name = "statColor";
-            this.statColor.Size = new System.Drawing.Size(148, 20);
+            this.statColor.Size = new System.Drawing.Size(118, 17);
             this.statColor.Text = "当前颜色：#000000";
             // 
-            // toolStripStatusLabel1
+            // statusHint
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(702, 20);
-            this.toolStripStatusLabel1.Spring = true;
+            this.statusHint.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.statusHint.Name = "statusHint";
+            this.statusHint.Size = new System.Drawing.Size(753, 17);
+            this.statusHint.Spring = true;
+            this.statusHint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // statLabCordinate
             // 
             this.statLabCordinate.Name = "statLabCordinate";
-            this.statLabCordinate.Size = new System.Drawing.Size(113, 20);
+            this.statLabCordinate.Size = new System.Drawing.Size(92, 17);
             this.statLabCordinate.Text = "当前坐标: (0, 0)";
             // 
             // glCanvas
@@ -406,13 +418,31 @@
             this.glCanvas.Size = new System.Drawing.Size(800, 700);
             this.glCanvas.TabIndex = 6;
             this.glCanvas.OpenGLInitialized += new System.EventHandler(this.GlCanvas_OpenGLInitialized);
+            this.glCanvas.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.glCanvas_MouseDoubleClick);
             this.glCanvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.glCanvas_MouseDown);
             this.glCanvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.glCanvas_MouseMove);
             this.glCanvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.glCanvas_MouseUp);
             // 
+            // 文件ToolStripMenuItem1
+            // 
+            this.文件ToolStripMenuItem1.Name = "文件ToolStripMenuItem1";
+            this.文件ToolStripMenuItem1.Size = new System.Drawing.Size(44, 21);
+            this.文件ToolStripMenuItem1.Text = "文件";
+            // 
+            // checkSmooth
+            // 
+            this.checkSmooth.AutoSize = true;
+            this.checkSmooth.Location = new System.Drawing.Point(28, 603);
+            this.checkSmooth.Name = "checkSmooth";
+            this.checkSmooth.Size = new System.Drawing.Size(123, 21);
+            this.checkSmooth.TabIndex = 9;
+            this.checkSmooth.Text = "抗锯齿（实验性）";
+            this.checkSmooth.UseVisualStyleBackColor = true;
+            this.checkSmooth.CheckedChanged += new System.EventHandler(this.checkSmooth_CheckedChanged);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 750);
             this.Controls.Add(this.glCanvas);
@@ -420,6 +450,7 @@
             this.Controls.Add(this.panelTools);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
@@ -466,7 +497,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.GroupBox grpToolSetting;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel statusHint;
         private System.Windows.Forms.ToolStripStatusLabel statLabCordinate;
         private System.Windows.Forms.Button btnColorPicker;
         private System.Windows.Forms.PictureBox picColorCustom;
@@ -479,6 +510,9 @@
         private System.Windows.Forms.PictureBox picColorYellow;
         private System.Windows.Forms.PictureBox picColorGreen;
         private SharpGL.OpenGLControl glCanvas;
+        private System.Windows.Forms.ToolStripMenuItem 测试ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem1;
+        private System.Windows.Forms.CheckBox checkSmooth;
     }
 }
 
