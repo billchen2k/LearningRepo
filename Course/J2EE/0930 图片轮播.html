@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallary Player</title>
+    <link href="css/style.css" rel="stylesheet">
+    <style type="text/css">
+        .container-imgs{
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            display: block;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: #999999 2px 2px 20px;
+        }
+        .container-allimg{
+            height:300px;
+            position: relative;
+            left: 0px;
+            width: 1600px;
+            height: 300px;
+            transition-duration: 1s;
+        }
+        .oneimg{
+            width: 400px;
+            height: 300px;
+            float: left;
+            display: inline-block;
+            object-fit: cover;
+            transition-duration: 0.5s;
+            border-radius: 10px;
+        }
+        .oneimg:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+</head>
+<body>
+    <div class="container-imgs">
+        <div class="container-allimg" id="main-box">
+            <img class="oneimg" src="img/placeholder1.jpg">
+            <img class="oneimg" src="img/placeholder2.jpg">
+            <img class="oneimg" src="img/placeholder3.jpg">
+            <img class="oneimg" src="img/placeholder4.jpg">
+        </div>
+    </div>
+    <div>
+        <button id="button-last" class="my-button" value="上一张" onclick="lastPage()">上一张</button>
+        <button id="button-next" class="my-button" value="下一张" onclick="nextPage()">下一张</button>
+        <span id="text-current-page" style="padding-left: 15px">当前页面：0</span>
+    </div>
+
+<script type="text/javascript">
+    var currentPage = 0;
+    var TOTALPAGES = 4;
+    function setButtonStatus() {
+        if(currentPage == 0){
+            document.getElementById("button-last").disabled = true;
+            document.getElementById("button-last").classList.add("my-button-disabled");
+            document.getElementById("button-last").classList.remove("my-button");
+        }
+        else if(currentPage == TOTALPAGES - 1){
+            document.getElementById("button-next").disabled = true;
+            document.getElementById("button-next").classList.add("my-button-disabled");
+            document.getElementById("button-next").classList.remove("my-button");
+        }
+        else{
+            document.getElementById("button-last").disabled = false;
+            document.getElementById("button-last").classList.add("my-button");
+            document.getElementById("button-last").classList.remove("my-button-disabled");
+            document.getElementById("button-next").disabled = false;
+            document.getElementById("button-next").classList.add("my-button");
+            document.getElementById("button-next").classList.remove("my-button-disabled");
+        }
+    }
+
+    function lastPage() {
+        currentPage--;
+        document.getElementById("main-box").style.left = (-400 * currentPage).toString() + "px";
+        document.getElementById("text-current-page").innerText = "当前页面：" + currentPage;
+        setButtonStatus();
+    };
+
+    function nextPage() {
+        currentPage++;
+        document.getElementById("main-box").style.left = (-400 * currentPage).toString() + "px";
+        document.getElementById("text-current-page").innerText = "当前页面：" + currentPage;
+        setButtonStatus();
+    };
+
+    window.onload = function () {
+        setButtonStatus();
+    }
+</script>
+</body>
+</html>

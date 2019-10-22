@@ -1,7 +1,11 @@
 #include <stdio.h>
 int main(void) {
 	double tax, salary;
-	scanf("%f", &salary);
+	int x, y;
+	while(scanf("%d %d", &x, &y) != EOF){
+		...
+	}
+		scanf("%f", &salary);
 	if (salary <= 850) {
 		tax = 0;
 		printf("%.2f\n", tax);

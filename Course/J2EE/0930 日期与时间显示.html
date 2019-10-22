@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date and Time.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script type="text/javascript">
+    var date = new Date();
+    setInterval("time()",1000);
+    function displayDate(){
+        clearInterval(timer);
+        document.getElementById("displayer").value =  date.getFullYear().toString() + "年"
+            + (date.getMonth() + 1).toString() + "月" + date.getDate().toString() + "日";
+    }
+    function refreshTime(){
+        date = new Date();
+        hours = date.getHours();
+        minutes = date.getMinutes();
+        seconds = date.getSeconds();
+        ms = date.getMilliseconds();
+        document.getElementById("displayer").value = "现在是：" + hours + ":" + minutes +":" + seconds + "." + Math.floor(ms/10);
+    }
+    function displayTime(){
+        refreshTime();
+        timer = setInterval(refreshTime, 10);
+    }
+    window.onload = function () {
+        displayDate();
+    }
+</script>
+
+    <p></p> 鼠标移入文本框以显示时间。
+    <input type="text" id="displayer" class="my-input" onmouseover="displayTime()"; onmouseout="displayDate()"></input>
+
+
+</body>
+</html>
