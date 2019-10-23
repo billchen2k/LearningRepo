@@ -46,16 +46,45 @@ Therefore, Minimum frame size = x = 160bit.
 
 #### 3-7. A 3000-km-long T1 trunk is used to transmit 64-byte frames using protocol 5. If the propagation speed is 6 μsec/km, how many bits should the sequence numbers be?
 
+Protocol 5 here refers to the Go-Back-N Protocol.
 
+The propagation time = 6 * 3000 = 18 ms, the transmission speed for T1 Trunk is 1.544Mbps = 1544 bits/ms
 
-3-8. In protocol 6, when a data frame arrives, a check is made to see if the sequence number differs from the one expected and no nak is true. If both conditions hold, aNAK is sent. Otherwise, the auxiliary timer is started. Suppose that the else clause were omitted. Would this change affect the protocol’s correctness?
+Transmission time for a frame is
+64byte * 8 / 1.544 * 10 ^ 6  * 1000 + PROPAGATION TIME = 0.3ms + 36ms = 36.2
 
-3-9. Suppose that the three-statement while loop near the end of protocol 6 was removed from the code. Would this affect the correctness of the protocol or just the performance? Explain your answer.
+During the 0.3 ms, frames to be sent: 
+1544 * 36.3 / (64 * 8) = 109. Because 2 ^ 7 = 128 > 109, so 7 bits are needed for the sequence number. 
 
-3-10. Frames of 1000 bits are sent over a 1-Mbps channel using a geostationary satellite whose propagation time from the earth is 270 msec. Acknowledgements are always piggybacked onto data frames. The headers are very short. Three-bit sequence numbers are used. What is the maximum achievable channel utilization for
+#### 3-8. In protocol 6, when a data frame arrives, a check is made to see if the sequence number differs from the one expected and no_nak is true. If both conditions hold, a NAK is sent. Otherwise, the auxiliary timer is started. Suppose that the else clause were omitted. Would this change affect the protocol’s correctness?
+
+Protocol 6 here refers to the Selective Repeat Protocol.
+
+Yes, if there isn't an auxiliary timer， when a batch of frames arrives and all acknoledgements were lost, the sender will just repeatedly send the first frame again and again because it doesn't know it's already sent and have no time limit, thus there will be a deadlock.
+
+#### 3-9. Suppose that the three-statement while loop near the end of protocol 6 was removed from the code. Would this affect the correctness of the protocol or just the performance? Explain your answer.
+
+Protocol 6 here refers to the Selective Repeat Protocol.
+
+Yes. These code were used for placing the incoming acknowledgements. If there's not this, the sender would keep timing out and no further frame will be sent.
+
+#### 3-10. Frames of 1000 bits are sent over a 1-Mbps channel using a geostationary satellite whose propagation time from the earth is 270 msec. Acknowledgements are always piggybacked onto data frames. The headers are very short. Three-bit sequence numbers are used. What is the maximum achievable channel utilization for
 
 (a) Stop-and-wait?
 
 (b) Protocol 5?
 
 (c) Protocol 6?
+
+The time needed for trasmitting a frame: 1000 bits / 1Mbps = 1 ms
+The time needed for the first frame to arrive: 270 ms
+The time neede for the acknowlegement to send: 1ms
+The time needed for the feedback acknowlement to arrive: 270ms
+
+During this time cycle, 542 ms is needed in total.
+
+If there were k frames are sent in the 542 ms, the efficiency is k/542.
+
+a) k = 1, efficiency = 1/542;
+b) Protocol 5 refers to Go-Back-N Protocol, as three-bit sequence number is used, there can be 7 frames be sending, efficiency = 7/542;
+c) In the Selective Repeat Protocol, the size of window should be no larger than half of the sequence number, so k = 4, efficiency = 4/542.
