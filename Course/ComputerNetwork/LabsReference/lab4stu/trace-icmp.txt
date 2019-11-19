@@ -1,0 +1,36 @@
+David-Wetheralls-MacBook-Air:~ djw$ ping www.cs.vu.nl
+PING soling-public.few.vu.nl (130.37.20.20): 56 data bytes
+64 bytes from 130.37.20.20: icmp_seq=0 ttl=238 time=171.478 ms
+64 bytes from 130.37.20.20: icmp_seq=1 ttl=238 time=171.017 ms
+64 bytes from 130.37.20.20: icmp_seq=2 ttl=238 time=170.128 ms
+64 bytes from 130.37.20.20: icmp_seq=3 ttl=238 time=175.914 ms
+64 bytes from 130.37.20.20: icmp_seq=4 ttl=238 time=190.598 ms
+^C
+--- soling-public.few.vu.nl ping statistics ---
+6 packets transmitted, 5 packets received, 16.7% packet loss
+round-trip min/avg/max/stddev = 170.128/175.827/190.598/7.651 ms
+David-Wetheralls-MacBook-Air:~ djw$ traceroute -I www.cs.vu.nl
+traceroute to soling-public.few.vu.nl (130.37.20.20), 64 hops max, 72 byte packets
+ 1  192.168.1.1 (192.168.1.1)  2.430 ms  1.288 ms  1.275 ms
+ 2  73.97.114.1 (73.97.114.1)  7.859 ms  9.592 ms  7.876 ms
+ 3  te-4-1-ur05.seattle.wa.seattle.comcast.net (68.87.207.97)  8.641 ms  11.759 ms  12.100 ms
+ 4  te-9-1-ur06.seattle.wa.seattle.comcast.net (68.86.177.202)  11.499 ms  9.945 ms  9.228 ms
+ 5  ae-10-0-ar03.seattle.wa.seattle.comcast.net (69.139.164.49)  7.889 ms  13.839 ms  13.662 ms
+ 6  pos-1-10-0-0-cr01.seattle.wa.ibone.comcast.net (68.86.93.97)  13.093 ms
+    pos-1-12-0-0-cr01.seattle.wa.ibone.comcast.net (68.86.93.93)  11.853 ms
+    pos-1-4-0-0-cr01.seattle.wa.ibone.comcast.net (68.86.90.209)  10.908 ms
+ 7  pos-0-1-0-0-pe01.seattle.wa.ibone.comcast.net (68.86.85.38)  8.918 ms  17.554 ms  11.194 ms
+ 8  ix-0-2-2-0.tcore1.00s-seattle.as6453.net (64.86.123.9)  9.902 ms  10.421 ms  10.289 ms
+ 9  if-0-0-0-2.core1.00s-seattle.as6453.net (64.86.123.2)  171.623 ms  119.927 ms  121.150 ms
+10  if-4-1-0-4.tcore2.ct8-chicago.as6453.net (64.86.124.10)  165.193 ms  165.646 ms  167.533 ms
+11  64.86.79.2 (64.86.79.2)  170.647 ms  172.208 ms  167.237 ms
+12  if-12-6.tcore2.nyy-newyork.as6453.net (216.6.99.45)  168.756 ms  176.348 ms  168.536 ms
+13  if-20-2.tcore2.l78-london.as6453.net (216.6.99.14)  168.601 ms  165.184 ms  166.439 ms
+14  if-5-2.tcore2.av2-amsterdam.as6453.net (80.231.131.14)  165.198 ms  176.190 ms  249.706 ms
+15  vlan3215.icore1.ad1-amsterdam.as6453.net (80.231.152.10)  180.210 ms  178.525 ms  179.692 ms
+16  vlan951.icore1.ad1-amsterdam.as6453.net (195.219.150.70)  188.730 ms  168.259 ms  172.226 ms
+17  ae1.500.jnr01.asd002a.surf.net (145.145.80.74)  169.720 ms  169.726 ms  168.358 ms
+18  vu-router.customer.surf.net (145.145.20.58)  169.488 ms  169.006 ms  171.516 ms
+19  hkae16-1-d01.backbone.vu.nl (130.37.5.1)  172.703 ms  169.422 ms  169.679 ms
+20  soling-public.few.vu.nl (130.37.20.20)  169.392 ms  168.210 ms  171.527 ms
+David-Wetheralls-MacBook-Air:~ djw$ 

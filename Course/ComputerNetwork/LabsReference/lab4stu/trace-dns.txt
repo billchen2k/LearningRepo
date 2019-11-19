@@ -1,0 +1,175 @@
+C:\Users\djw\Desktop\bind>dig @198.41.0.4 www.uwa.edu.au
+
+; <<>> DiG 9.9.1-P1 <<>> @198.41.0.4 www.uwa.edu.au
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 23915
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 12, ADDITIONAL: 17
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;www.uwa.edu.au.                        IN      A
+
+;; AUTHORITY SECTION:
+au.                     172800  IN      NS      s.au.
+au.                     172800  IN      NS      m.au.
+au.                     172800  IN      NS      l.au.
+au.                     172800  IN      NS      b.au.
+au.                     172800  IN      NS      v.au.
+au.                     172800  IN      NS      a.au.
+au.                     172800  IN      NS      p.au.
+au.                     172800  IN      NS      o.au.
+au.                     172800  IN      NS      n.au.
+au.                     172800  IN      NS      h.au.
+au.                     172800  IN      NS      r.au.
+au.                     172800  IN      NS      u.au.
+
+;; ADDITIONAL SECTION:
+a.au.                   172800  IN      A       58.65.254.73
+b.au.                   172800  IN      A       58.65.253.73
+h.au.                   172800  IN      A       202.65.13.73
+l.au.                   172800  IN      A       209.112.113.34
+l.au.                   172800  IN      AAAA    2001:500:856e::6:34
+m.au.                   172800  IN      A       209.112.114.34
+n.au.                   172800  IN      A       69.36.145.34
+o.au.                   172800  IN      A       69.36.146.34
+p.au.                   172800  IN      A       72.13.46.34
+r.au.                   172800  IN      A       128.32.136.3
+r.au.                   172800  IN      AAAA    2607:f140:ffff:fffe::3
+s.au.                   172800  IN      A       128.32.136.14
+s.au.                   172800  IN      AAAA    2607:f140:ffff:fffe::e
+u.au.                   172800  IN      A       211.29.133.32
+v.au.                   172800  IN      A       202.12.31.141
+v.au.                   172800  IN      AAAA    2001:dc0:4001:1:0:1836:0:141
+
+;; Query time: 80 msec
+;; SERVER: 198.41.0.4#53(198.41.0.4)
+;; WHEN: Fri Jul 27 09:56:55 2012
+;; MSG SIZE  rcvd: 539
+
+
+C:\Users\djw\Desktop\bind>dig @58.65.254.73 www.uwa.edu.au
+
+; <<>> DiG 9.9.1-P1 <<>> @58.65.254.73 www.uwa.edu.au
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 9664
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 11, ADDITIONAL: 13
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;www.uwa.edu.au.                        IN      A
+
+;; AUTHORITY SECTION:
+edu.au.                 172800  IN      NS      h.au.
+edu.au.                 172800  IN      NS      k.au.
+edu.au.                 172800  IN      NS      n.au.
+edu.au.                 172800  IN      NS      l.au.
+edu.au.                 172800  IN      NS      j.au.
+edu.au.                 172800  IN      NS      i.au.
+edu.au.                 172800  IN      NS      g.au.
+edu.au.                 172800  IN      NS      q.au.
+edu.au.                 172800  IN      NS      m.au.
+edu.au.                 172800  IN      NS      p.au.
+edu.au.                 172800  IN      NS      o.au.
+
+;; ADDITIONAL SECTION:
+g.au.                   172800  IN      A       202.65.12.73
+h.au.                   172800  IN      A       202.65.13.73
+i.au.                   172800  IN      A       202.65.12.72
+j.au.                   172800  IN      A       202.65.13.72
+k.au.                   172800  IN      A       202.65.12.71
+l.au.                   172800  IN      A       209.112.113.34
+l.au.                   172800  IN      AAAA    2001:500:856e::6:34
+m.au.                   172800  IN      A       209.112.114.34
+n.au.                   172800  IN      A       69.36.145.34
+o.au.                   172800  IN      A       69.36.146.34
+p.au.                   172800  IN      A       72.13.46.34
+q.au.                   172800  IN      A       72.13.47.34
+
+;; Query time: 194 msec
+;; SERVER: 58.65.254.73#53(58.65.254.73)
+;; WHEN: Fri Jul 27 09:57:26 2012
+;; MSG SIZE  rcvd: 423
+
+
+C:\Users\djw\Desktop\bind>dig @202.65.12.73 www.uwa.edu.au
+
+; <<>> DiG 9.9.1-P1 <<>> @202.65.12.73 www.uwa.edu.au
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 31634
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 3, ADDITIONAL: 4
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;www.uwa.edu.au.                        IN      A
+
+;; AUTHORITY SECTION:
+uwa.edu.au.             14400   IN      NS      dns.uwa.edu.au.
+uwa.edu.au.             14400   IN      NS      dns-external.uwa.edu.au.
+uwa.edu.au.             14400   IN      NS      dns1.uwa.edu.au.
+
+;; ADDITIONAL SECTION:
+dns.uwa.edu.au.         14400   IN      A       130.95.128.2
+dns1.uwa.edu.au.        14400   IN      A       130.95.128.1
+dns-external.uwa.edu.au. 14400  IN      A       80.68.93.114
+
+;; Query time: 191 msec
+;; SERVER: 202.65.12.73#53(202.65.12.73)
+;; WHEN: Fri Jul 27 09:58:15 2012
+;; MSG SIZE  rcvd: 155
+
+
+C:\Users\djw\Desktop\bind>dig @130.95.128.2 www.uwa.edu.au
+
+; <<>> DiG 9.9.1-P1 <<>> @130.95.128.2 www.uwa.edu.au
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 29343
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 6, ADDITIONAL: 10
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;www.uwa.edu.au.                        IN      A
+
+;; ANSWER SECTION:
+www.uwa.edu.au.         3600    IN      A       130.95.128.140
+
+;; AUTHORITY SECTION:
+uwa.edu.au.             3600    IN      NS      ns2.aarnet.net.au.
+uwa.edu.au.             3600    IN      NS      ns3.uwa.edu.au.
+uwa.edu.au.             3600    IN      NS      ns3.aarnet.net.au.
+uwa.edu.au.             3600    IN      NS      ns1.uwa.edu.au.
+uwa.edu.au.             3600    IN      NS      ns1.aarnet.net.au.
+uwa.edu.au.             3600    IN      NS      ns2.uwa.edu.au.
+
+;; ADDITIONAL SECTION:
+ns1.uwa.edu.au.         3600    IN      A       130.95.5.6
+ns1.aarnet.net.au.      35777   IN      A       202.158.196.136
+ns1.aarnet.net.au.      35621   IN      AAAA    2001:388:1:5001::100
+ns2.uwa.edu.au.         3600    IN      A       130.95.5.7
+ns2.aarnet.net.au.      35621   IN      A       202.158.195.8
+ns2.aarnet.net.au.      35621   IN      AAAA    2001:388:1:1001::100
+ns3.uwa.edu.au.         3600    IN      A       130.95.5.8
+ns3.aarnet.net.au.      37191   IN      A       202.158.196.69
+ns3.aarnet.net.au.      35621   IN      AAAA    2001:388:1:a001::100
+
+;; Query time: 200 msec
+;; SERVER: 130.95.128.2#53(130.95.128.2)
+;; WHEN: Fri Jul 27 09:59:22 2012
+;; MSG SIZE  rcvd: 358
+
+
+C:\Users\djw\Desktop\bind>

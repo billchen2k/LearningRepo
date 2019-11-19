@@ -1,0 +1,110 @@
+List of Users
+--------------------------------------------------------------------------------------
+USERNAME                       | GROUP NAME                     | SHELL PATH          
+-------------------------------+--------------------------------+---------------------
+nobody                         | nobody                         | /usr/bin/false      
+root                           | wheel                          | /bin/sh             
+daemon                         | daemon                         | /usr/bin/false      
+_uucp                          | tty                            | /usr/sbin/uucico    
+_taskgated                     | _taskgated                     | /usr/bin/false      
+_networkd                      | _networkd                      | /usr/bin/false      
+_installassistant              | _installassistant              | /usr/bin/false      
+_lp                            | _lp                            | /usr/bin/false      
+_postfix                       | _postfix                       | /usr/bin/false      
+_scsd                          | _scsd                          | /usr/bin/false      
+_ces                           | _ces                           | /usr/bin/false      
+_appstore                      | _appstore                      | /usr/bin/false      
+_mcxalr                        | _mcxalr                        | /usr/bin/false      
+_appleevents                   | _appleevents                   | /usr/bin/false      
+_geod                          | _geod                          | /usr/bin/false      
+_devdocs                       | _devdocs                       | /usr/bin/false      
+_sandbox                       | _sandbox                       | /usr/bin/false      
+_mdnsresponder                 | _mdnsresponder                 | /usr/bin/false      
+_ard                           | _ard                           | /usr/bin/false      
+_www                           | _www                           | /usr/bin/false      
+_eppc                          | _eppc                          | /usr/bin/false      
+_cvs                           | _cvs                           | /usr/bin/false      
+_svn                           | _svn                           | /usr/bin/false      
+_mysql                         | _mysql                         | /usr/bin/false      
+_sshd                          | _sshd                          | /usr/bin/false      
+_qtss                          | _qtss                          | /usr/bin/false      
+_cyrus                         | mail                           | /usr/bin/false      
+_mailman                       | _mailman                       | /usr/bin/false      
+_appserver                     | _appserverusr                  | /usr/bin/false      
+_clamav                        | _clamav                        | /usr/bin/false      
+_amavisd                       | _amavisd                       | /usr/bin/false      
+_jabber                        | _jabber                        | /usr/bin/false      
+_appowner                      | _appowner                      | /usr/bin/false      
+_windowserver                  | _windowserver                  | /usr/bin/false      
+_spotlight                     | _spotlight                     | /usr/bin/false      
+_tokend                        | _tokend                        | /usr/bin/false      
+_securityagent                 | _securityagent                 | /usr/bin/false      
+_calendar                      | _calendar                      | /usr/bin/false      
+_teamsserver                   | _teamsserver                   | /usr/bin/false      
+_update_sharing                | nobody                         | /usr/bin/false      
+_installer                     | nobody                         | /usr/bin/false      
+_atsserver                     | _atsserver                     | /usr/bin/false      
+_ftp                           | nobody                         | /usr/bin/false      
+_unknown                       | _unknown                       | /usr/bin/false      
+_softwareupdate                | _softwareupdate                | /usr/bin/false      
+_coreaudiod                    | _coreaudiod                    | /usr/bin/false      
+_screensaver                   | _screensaver                   | /usr/bin/false      
+_locationd                     | _locationd                     | /usr/bin/false      
+_trustevaluationagent          | _trustevaluationagent          | /usr/bin/false      
+_timezone                      | _timezone                      | /usr/bin/false      
+_lda                           | _lda                           | /usr/bin/false      
+_cvmsroot                      | _cvms                          | /usr/bin/false      
+_usbmuxd                       | _usbmuxd                       | /usr/bin/false      
+_dovecot                       | mail                           | /usr/bin/false      
+_dpaudio                       |                                | /usr/bin/false      
+_postgres                      | _postgres                      | /usr/bin/false      
+_krbtgt                        | nobody                         | /usr/bin/false      
+_kadmin_admin                  | nobody                         | /usr/bin/false      
+_kadmin_changepw               | nobody                         | /usr/bin/false      
+_devicemgr                     | _devicemgr                     | /usr/bin/false      
+_webauthserver                 | _webauthserver                 | /usr/bin/false      
+_netbios                       | _netbios                       | /usr/bin/false      
+_warmd                         | _warmd                         | /usr/bin/false      
+_dovenull                      | _dovenull                      | /usr/bin/false      
+_netstatistics                 | _netstatistics                 | /usr/bin/false      
+_avbdeviced                    | nobody                         | /usr/bin/false      
+_krb_krbtgt                    | nobody                         | /usr/bin/false      
+_krb_kadmin                    | nobody                         | /usr/bin/false      
+_krb_changepw                  | nobody                         | /usr/bin/false      
+_krb_kerberos                  | nobody                         | /usr/bin/false      
+_krb_anonymous                 | nobody                         | /usr/bin/false      
+_assetcache                    | _assetcache                    | /usr/bin/false      
+_coremediaiod                  | _coremediaiod                  | /usr/bin/false      
+_launchservicesd               | _launchservicesd               | /usr/bin/false      
+_iconservices                  | _iconservices                  | /usr/bin/false      
+_distnote                      | _distnote                      | /usr/bin/false      
+_nsurlsessiond                 | _nsurlsessiond                 | /usr/bin/false      
+_nsurlstoraged                 | _nsurlstoraged                 | /usr/bin/false      
+_displaypolicyd                | _displaypolicyd                | /usr/bin/false      
+_astris                        | _astris                        | /usr/bin/false      
+_krbfast                       | nobody                         | /usr/bin/false      
+_gamecontrollerd               | _gamecontrollerd               | /usr/bin/false      
+_mbsetupuser                   | _mbsetupuser                   | /bin/bash           
+_ondemand                      | _ondemand                      | /usr/bin/false      
+_xserverdocs                   | _xserverdocs                   | /usr/bin/false      
+_wwwproxy                      | _wwwproxy                      | /usr/bin/false      
+_mobileasset                   | _mobileasset                   | /usr/bin/false      
+_findmydevice                  | _findmydevice                  | /usr/bin/false      
+_datadetectors                 | _datadetectors                 | /usr/bin/false      
+_captiveagent                  | _captiveagent                  | /usr/bin/false      
+_ctkd                          | _ctkd                          | /usr/bin/false      
+_applepay                      | _applepay                      | /usr/bin/false      
+_hidd                          | _hidd                          | /usr/bin/false      
+_cmiodalassistants             | _cmiodalassistants             | /usr/bin/false      
+_analyticsd                    | _analyticsd                    | /usr/bin/false      
+_fpsd                          | _fpsd                          | /usr/bin/false      
+_timed                         | _timed                         | /usr/bin/false      
+_nearbyd                       | _nearbyd                       | /usr/bin/false      
+_reportmemoryexception         | _reportmemoryexception         | /usr/bin/false      
+_driverkit                     | _driverkit                     | /usr/bin/false      
+--------------------------------------------------------------------------------------
+Shell Counter:
+The shell [/usr/bin/false] appeared 97 times.
+The shell [/usr/sbin/uucico] appeared 1 times.
+The shell [/bin/bash] appeared 1 times.
+The shell [/bin/sh] appeared 1 times.

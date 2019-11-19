@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf375ed0-d7ce-4742-8881-34af7f47d345" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/0930 日期与时间显示.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/FPainter/.vs/FPainter/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/FPainter/.vs/FPainter/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ComputerGraphics/FPainter/FPainter/obj/Release/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputerGraphics/FPainter/FPainter/obj/Release/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0923.html" beforeDir="false" afterPath="$PROJECT_DIR$/0923 阶层与斐波那契数列.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment0916/10185101210 陈俊潼.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment0916/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/0923 表单元素.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment0916/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asd.html" beforeDir="false" afterPath="$PROJECT_DIR$/0930 图片轮播.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Draft/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Draft/test.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +34,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -80,6 +70,8 @@
       <workItem from="1570767246046" duration="7839000" />
       <workItem from="1570962940317" duration="1967000" />
       <workItem from="1571636918460" duration="896000" />
+      <workItem from="1572193775154" duration="1511000" />
+      <workItem from="1574058189970" duration="62000" />
     </task>
     <servers />
   </component>

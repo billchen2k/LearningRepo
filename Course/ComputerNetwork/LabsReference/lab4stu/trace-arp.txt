@@ -1,0 +1,4 @@
+Ethernet address of computer == 00:25:64:d5:10:8b
+
+IP address of default gateway == 128.208.2.100
+
