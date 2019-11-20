@@ -62,7 +62,7 @@
         "u8g2lib.h": "c",
         "songdata.h": "c"
     },
-    "python.pythonPath": "/Users/billchen/anaconda3/envs/crawller/bin/python",
+    "python.pythonPath": "/usr/bin/python3",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
 }
