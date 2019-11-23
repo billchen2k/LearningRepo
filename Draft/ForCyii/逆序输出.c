@@ -12,4 +12,7 @@ void recursion() {
 
 int main() {
 	recursion();
+	getchar();
+	getchar();
+	getchar();
 }
