@@ -1,0 +1,172 @@
+// PLEASE NOTE: This file is a modified version of bezierPatches.mel
+//
+// bicubicBezierPatches()
+//
+//
+// To run: Select surfaces.  Type bicubicBezierPatches();
+//
+// Get Bezier patch Bezier mesh forced to cubic.
+//
+// To make things cleaner, construction history and "keep originals"
+// options are forced to false.  If you search for "BEHAVIOUR" in this
+// file, you can edit a couple of variables in that section and change
+// this.
+
+proc rebuildIntoCubics( int $v2 )
+{
+	// Save the values that we're changing:
+	int $oldType = `optionVar -q rebuildSurfaceType`;
+	int $degU = `optionVar -q rebuildSurfaceTypUniformDegreeU`;
+	int $degV = `optionVar -q rebuildSurfaceTypUniformDegreeV`;
+	int $kcv = `optionVar -q rebuildSurfaceKeepControlPoints`;
+
+	// Force uniform rebuild into bi-quadratic, same # cvs:
+	optionVar -iv rebuildSurfaceType 0;
+	optionVar -iv rebuildSurfaceTypUniformDegreeU 3;
+	optionVar -iv rebuildSurfaceTypUniformDegreeV 3;
+	optionVar -iv rebuildSurfaceKeepControlPoints 1;
+
+	string $cmd;
+	if( $v2 ) {
+		$cmd = "performRebuildSurface( 0 )";
+	}
+	else {
+		$cmd = "rebuildSurfaceToolScript( 0 )";
+	}
+	eval($cmd);
+
+	// Restore the values we changed:
+	optionVar -iv rebuildSurfaceType $oldType;
+	optionVar -iv rebuildSurfaceTypUniformDegreeU $degU;
+	optionVar -iv rebuildSurfaceTypUniformDegreeV $degV;
+	optionVar -iv rebuildSurfaceKeepControlPoints $kcv;
+}
+
+proc extractbPatches( int $v2, int $dir, int $mesh )
+{
+	global int $gSelectNurbsSurfacesBit;
+
+	string $surfaces[] = `filterExpand -ex true -sm $gSelectNurbsSurfacesBit`;
+	string $tmpSurf[];
+	string $isos[];
+	string $cmd;
+	int $openIt;
+
+	int $i, $n = size($surfaces);
+	if( $n > 0 ) {
+
+		// If some are periodic, make them open first:
+		for( $i=0; $i<$n; $i+=1 ) {
+			$tmpSurf[0] = $surfaces[$i];
+			$openIt = false;
+			if( 0 == $dir ) {
+				if( 2 == `getAttr ($tmpSurf[0] + ".fu")` ) {
+					$openIt = true;
+				}
+			}
+			else {
+				if( 2 == `getAttr ($tmpSurf[0] + ".fv")` ) {
+					$openIt = true;
+				}
+			}
+
+			if( $openIt ) {
+				selectVisibleIsoparms( $tmpSurf, $isos, 0, $dir, true );
+				if( size($isos) > 0 ) {
+					select -r $isos[0];
+					if( $v2 ) {
+						$cmd = "performDetach( 0, \"Surface\" )";
+					}
+					else {
+						$cmd = "detachSurfaceToolScript( 0 )";
+					}
+					eval( $cmd );
+				}
+			}
+		}
+
+		int $ignoredTrims = selectVisibleIsoparms( $surfaces, $isos,
+												   0, $dir, false );
+
+		if( $ignoredTrims > 0 ) {
+			warning( "Ignored trim information of " +
+					 $ignoredTrims + " surfaces." );
+		}
+
+		$cmd = "select -r ";
+		$n = size($isos);
+		for( $i=0; $i<$n; $i+=1 ) {
+			$cmd += $isos[$i] + " ";
+		}
+		eval($cmd);
+
+		if( $mesh ) {
+			if( $v2 ) {
+				$cmd = "performInsertKnot( 0, \"Surface\" )";
+			}
+			else {
+				$cmd = "insertSurfaceToolScript( 0 )";
+			}
+		}
+		else {
+			if( $v2 ) {
+				$cmd = "performDetach( 0, \"Surface\" )";
+			}
+			else {
+				$cmd = "detachSurfaceToolScript( 0 )";
+			}
+		}
+		eval($cmd);
+		deleteInvalidNurbs 1;
+	}
+}
+
+global proc bicubicBezierPatches()
+{
+	// BEHAVIOUR:
+	// You can change the value here if you want a different behaviour.
+	int $forceConstructionHistoryTo = false;
+	int $forceKeepOriginalsTo = false;
+
+	// Remember the original values for history and keep originals:
+	int $origConstructionHistory = `constructionHistory -q -tgl`;
+	int $origKeepOriginalsRebuild = `optionVar -q rebuildSurfaceKeepOriginal`;
+	int $origKeepOriginalsDetach = `optionVar -q detachKeepOriginal`;
+	int $origKeepOriginalsInsert = `optionVar -q insertKnotKeepOriginal`;
+	int $origInsertKnotNumber = `optionVar -q insertKnotNumberOfKnotsToInsert`;
+	int $origInsertKnotAdd = `optionVar -q insertKnotAddOrComplement`;
+	int $origInsertBetween = `optionVar -q insertKnotBetween`;
+
+
+	// Force the new values:
+	constructionHistory -tgl $forceConstructionHistoryTo;
+	optionVar -iv rebuildSurfaceKeepOriginal $forceKeepOriginalsTo;
+	optionVar -iv detachKeepOriginal $forceKeepOriginalsTo;
+	optionVar -iv insertKnotKeepOriginal $forceKeepOriginalsTo;
+	optionVar -iv insertKnotAddOrComplement 0;
+	optionVar -iv insertKnotBetween 0;
+	optionVar -iv insertKnotNumberOfKnotsToInsert 3;
+
+	int $v2 = false;
+	string $v = `about -v`;
+	if( "2.0" == $v ) {
+		$v2 = true;
+	}
+
+	rebuildIntoCubics( $v2 );
+
+	extractbPatches( $v2, 0, 1 );
+	extractbPatches( $v2, 1, 1 );
+
+	ls -sl;
+
+	// Reset the original values:
+	constructionHistory -tgl $origConstructionHistory;
+	optionVar -iv rebuildSurfaceKeepOriginal $origKeepOriginalsRebuild;
+	optionVar -iv detachKeepOriginal $origKeepOriginalsDetach;
+	optionVar -iv insertKnotKeepOriginal $origKeepOriginalsInsert;
+	optionVar -iv insertKnotNumberOfKnotsToInsert $origInsertKnotNumber;
+	optionVar -iv insertKnotAddOrComplement $origInsertKnotAdd;
+	optionVar -iv insertKnotBetween $origInsertBetween;
+}
+

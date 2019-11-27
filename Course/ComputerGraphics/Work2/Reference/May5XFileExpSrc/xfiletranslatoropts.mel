@@ -1,0 +1,377 @@
+
+global proc int xfileTranslatorOpts (string $parent,
+								     string $action,
+									 string $initialSettings,
+									 string $resultCallback)
+//
+//	Description:
+//		This script posts the xfile file translator options.
+//		The optionsString is of the form:
+//			varName1=value1;varName2=value2;...
+//
+//	Parameters:
+//		$parent	- the elf parent layout for this options layout. It is
+//					always a scrollLayout.
+//		$action	- the action that is to be performed with this invokation
+//					of this proc. Valid options are:
+//						"query" - construct the options string and pass it
+//									to the resultCallback.
+//						"post"	- post all the elf controls.
+//		$initialSettings - the current options string in effect at the
+//						   time this script is invoked.
+//		$resultCallback	-
+//				This is the proc to be called with the result string. 
+//				resultCallback ( string $optionsString )
+//
+//	Returns:
+//		1 if successfull.
+//		0 otherwise.
+//
+{
+	int		$intVal;
+	float	$floatVal;
+	int		$bResult;
+	string	$currentOptions;
+	string	$optionList[];
+	string	$optionBreakDown[];
+	int		$index;
+
+
+    if ($action == "post") {
+		setParent $parent;
+
+        setUITemplate -pushTemplate DefaultTemplate;
+
+		formLayout -e -vis true optionsBoxForm;
+		
+	    columnLayout -adj true;
+
+
+            frameLayout
+                    -cll true
+                    -cl false
+                    -bv true
+                    -bs "out"
+                    -l "File Options"
+                    frmFileOptions;
+
+                columnLayout -adj true;
+
+            		radioButtonGrp
+                	        -l "File Format"
+                	        -nrb 3
+                	        -la3 "ascii" "binary" "compressed" 
+                            optFileFormat;
+                    radioButtonGrp -e -sl 1 optFileFormat;
+
+                setParent ..;   // columnLayout
+
+            setParent ..;   // frameLayout
+
+            frameLayout
+                    -cll true
+                    -cl false
+                    -bv true
+                    -bs "out"
+                    -l "Tesselation Options"
+                frmTessOptions;
+
+                columnLayout -adj true;
+
+                    radioButtonGrp
+                   	        -l      "NURBS Surfaces"
+//                   	        -nrb    4
+//                       	  -la4    "untesselated" "bezier patch" "uniform" "none"
+                   	        -nrb    2
+                       	    	  -la2    "uniform" "none"
+                        optNURBSTess;
+                    radioButtonGrp -e -sl 1 optNURBSTess;
+
+                    radioButtonGrp
+                   	        -l      "SubDiv Surfaces"
+//                   	        -nrb    4
+//                       	   -la4    "untesselated" "adaptive" "uniform" "none"
+                    	        -nrb    3
+                       	        -la3    "adaptive" "uniform" "none"
+                       optSubDTess;
+                    radioButtonGrp -e -sl 1 optSubDTess;
+
+                setParent ..;   // columnLayout
+
+            setParent ..;   // frameLayout
+
+            frameLayout
+                    -cll true
+                    -cl false
+                    -bv true
+                    -bs "out"
+                    -l "Material Options"
+                frmMaterialOptions;
+
+                columnLayout -adj true;
+
+            		checkBox
+                	        -l  "Export Materials"
+                            -al left
+                            -cc xfileSetExportMaterials
+                        chkExportMaterials;
+                    checkBox -e -v 1 chkExportMaterials;
+
+            		checkBoxGrp
+                	        -l "Texture Coordinates"
+                	        -ncb 2
+                	        -la2 "flip U" "flip V"
+                        chkFlipTextureCoordinates;
+                    checkBoxGrp -e -v1 0 -v2 0 chkFlipTextureCoordinates;
+
+                    radioButtonGrp
+                   	        -l      "Texture Filepath"
+                   	        -nrb    2
+                       	    -la2    "fully qualified" "unqualified"
+                        optRelativeTextureFilename;
+                    radioButtonGrp -e -sl 1 optRelativeTextureFilename;
+
+                setParent ..;   // columnLayout
+  
+            setParent..;    // frameLayout
+
+
+            frameLayout
+                    -cll true
+                    -cl false
+                    -bv true
+                    -bs "out"
+                    -l "Animation Options"
+                frmAnimOptions;
+
+                columnLayout -adj true;
+
+            		checkBox
+                	        -l  "Export Animation"
+                            -al left
+                            -cc xfileSetExportAnim
+                        chkExportAnim;
+                    checkBox -e -v 1 chkExportAnim;
+
+                    
+                	radioButtonGrp
+                   	        -l      "Animation Mode"
+                   	        -nrb    2
+                       	    -la2    "key-frame" "per-frame"
+                            -cc     xfileSetAnimMode
+                        optAnimMode;
+                    radioButtonGrp -e -sl 1 optAnimMode;
+
+
+                    radioButtonGrp
+                       	    -l "Export Animation For"
+                       	    -nrb 2
+                       	    -la2 "keyframed objects only" "all objects" 
+                        optAnimObjects;
+
+                    radioButtonGrp -e -sl 2 optAnimObjects;
+                    radioButtonGrp -e -en 0 optAnimObjects;
+
+
+                    intSliderGrp 
+                            -l "Frame Step" 
+                            -f true 
+							-min 1 
+                            -max 500 
+                        sldFrameStep;
+
+                    intSliderGrp -e -v 1    sldFrameStep;
+                    intSliderGrp -e -en 0   sldFrameStep;
+
+
+                setParent ..;   // rowLayout
+  
+            setParent..;    // frameLayout
+
+            frameLayout
+                    -cll true
+                    -cl false
+                    -bv true
+                    -bs "out"
+                    -l "Skinning Options"
+                frmSkinOptions;
+
+                columnLayout -adj true;
+
+					checkBox
+                	        -l  "Export Skinning"
+							-al left
+                        chkExportSkin;
+                    checkBox -e -v 1 chkExportSkin;
+
+					checkBox
+							-l	"Export Pose"
+							-al left
+						chkExportPose;
+					checkBox -e -v 0 chkExportPose; 
+
+                setParent ..;   // columnLayout
+
+            setParent ..;   // frameLayout
+
+        setParent ..;    // columnLayout
+
+
+		formLayout -e -vis true optionsBoxForm;
+
+        setUITemplate -popTemplate;
+
+
+
+		// ---------------------------------------------------
+		//
+		// End of the UI generation portion
+		//
+		// ---------------------------------------------------
+
+		
+		// Now set to current settings.
+
+        return 1;
+    }
+    else if ($action == "query") {
+
+        if (`radioButtonGrp -q -sl optFileFormat` == 1) {
+            $currentOptions = $currentOptions + "fileFormat=text;";
+        } 
+        else if (`radioButtonGrp -q -sl optFileFormat` == 2) {
+            $currentOptions = $currentOptions + "fileFormat=binary;";
+        }
+        else if (`radioButtonGrp -q -sl optFileFormat` == 3) {
+            $currentOptions = $currentOptions + "fileFormat=compressed;";
+        } 
+
+		if (`checkBox -q -v chkExportAnim` == 0) {
+			$currentOptions = $currentOptions + "exportAnimation=false;";
+		}
+		else { 
+			$currentOptions = $currentOptions + "exportAnimation=true;";
+
+			if (`radioButtonGrp -q -sl optAnimMode` == 1) {
+				$currentOptions = $currentOptions + "keyframeAnimation=true;";
+			}
+			else if (`radioButtonGrp -q -sl optAnimMode` == 2) {
+				$currentOptions = $currentOptions + "keyframeAnimation=false;";
+
+				if (`radioButtonGrp -q -sl optAnimObjects` == 1) {
+					$currentOptions = $currentOptions + "animateEverything=false;";
+				}
+				else if (`radioButtonGrp -q -sl optAnimObjects` == 2) {
+					$currentOptions = $currentOptions + "animateEverything=true;";
+				}
+
+				$currentOptions = $currentOptions + "frameStep=" + `intSliderGrp -q -v sldFrameStep` + ";";
+			}
+		}
+
+
+        if (`checkBox -q -v chkExportMaterials` == 0) {
+            $currentOptions = $currentOptions + "exportMaterials=false;";
+        }
+        else { 
+            $currentOptions = $currentOptions + "exportMaterials=true;";
+
+			if (`checkBoxGrp -q -v1 chkFlipTextureCoordinates` == 1) {
+				$currentOptions = $currentOptions + "flipU=true;";
+			} 
+			else {
+				$currentOptions = $currentOptions + "flipU=false;";
+			}
+
+			if (`checkBoxGrp -q -v2 chkFlipTextureCoordinates` == 1) {
+				$currentOptions = $currentOptions + "flipV=true;";
+			} 
+			else {
+				$currentOptions = $currentOptions + "flipV=false;";
+			}
+        
+			if (`radioButtonGrp -q -sl optRelativeTextureFilename` == 1) {
+				$currentOptions = $currentOptions + "relTexFilename=false;";
+			} 
+			else if (`radioButtonGrp -q -sl optRelativeTextureFilename` == 2) {
+				$currentOptions = $currentOptions + "relTexFilename=true;";
+			} 
+		}
+
+        if (`radioButtonGrp -q -sl optNURBSTess` == 1) {
+            $currentOptions = $currentOptions + "NURBSTess=uniform;";
+        } 
+        else if (`radioButtonGrp -q -sl optNURBSTess` == 2) {
+            $currentOptions = $currentOptions + "NURBSTess=none;";
+        } 
+            
+        if (`radioButtonGrp -q -sl optSubDTess` == 1) {
+            $currentOptions = $currentOptions + "SubDTess=adaptive;";
+        } 
+        else if (`radioButtonGrp -q -sl optSubDTess` == 2) {
+            $currentOptions = $currentOptions + "SubDTess=uniform;";
+        } 
+        else if (`radioButtonGrp -q -sl optSubDTess` == 3) {
+            $currentOptions = $currentOptions + "SubDTess=none;";
+        } 
+
+
+        if (`checkBox -q -v chkExportSkin` == 0) {
+            $currentOptions = $currentOptions + "exportSkin=false;";
+        }
+        else { 
+            $currentOptions = $currentOptions + "exportSkin=true;";
+		}
+
+        if (`checkBox -q -v chkExportPose` == 0) {
+            $currentOptions = $currentOptions + "exportPose=false;";
+        }
+        else { 
+            $currentOptions = $currentOptions + "exportPose=true;";
+		}
+
+		eval($resultCallback+" \""+$currentOptions+"\"");
+
+        return 1;
+    }
+
+    return 0;
+}
+
+
+
+
+global proc xfileSetAnimMode() {
+    if (`radioButtonGrp -q -sl optAnimMode` == 1)   {
+        radioButtonGrp  -e -en 0 optAnimObjects;
+        intSliderGrp    -e -en 0 sldFrameStep;
+    }
+    else if (`radioButtonGrp -q -sl optAnimMode` == 2) {
+        radioButtonGrp  -e -en 1 optAnimObjects;
+        intSliderGrp    -e -en 1 sldFrameStep;
+    }
+}
+
+global proc xfileSetExportAnim() {
+    if (`checkBox -q -v chkExportAnim` == 0) {
+        radioButtonGrp  -e -en 0 optAnimMode;
+        radioButtonGrp  -e -en 0 optAnimObjects;
+        intSliderGrp    -e -en 0 sldFrameStep;
+    }
+    else if (`checkBox -q -v chkExportAnim` == 1) {
+        radioButtonGrp  -e -en 1 optAnimMode;
+        xfileSetAnimMode();
+    }
+}
+
+global proc xfileSetExportMaterials() {
+    if (`checkBox -q -v chkExportMaterials` == 0) {
+        checkBoxGrp		-e -en 0 chkFlipTextureCoordinates;
+        radioButtonGrp  -e -en 0 optRelativeTextureFilename;
+    }
+    else if (`checkBox -q -v chkExportMaterials` == 1) {
+        checkBoxGrp		-e -en 1 chkFlipTextureCoordinates;
+        radioButtonGrp  -e -en 1 optRelativeTextureFilename;
+    }
+}
+

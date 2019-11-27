@@ -1,0 +1,6 @@
+<template>
+    <input-field default="3.0">WEB_XML_VERSION</input-field>
+    <input-field>IJ_APPLICATION_SERVER</input-field>
+    <icon-path>/javaee/webModule.png</icon-path>
+    <framework>app-server</framework>	
+</template>

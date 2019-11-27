@@ -1,0 +1,2 @@
+xExport.mll 放到C:\Program Files\AliasWavefront\Maya5.0\bin\plug-ins
+其它两个放到:C:\Program Files\AliasWavefront\Maya5.0\scripts\others
