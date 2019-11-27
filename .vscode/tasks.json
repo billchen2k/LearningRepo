@@ -4,20 +4,23 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build c++",
+            "label": "build with g++",
             "type": "shell",
             "command": "g++",
             "args": [
                 "-g",
+                "-std=c++17",
+                "-stdlib=libc++",
                 "${file}",
-                "-std=c++11",
                 // Ask msbuild to generate full paths for file names.
                 "-o",
                 //"${fileDirname}/${fileBasenameNoExtension}.out",
                 "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
             ],
-            "isBackground": false,
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "presentation": {
                 "echo": true,
                 "focus": false,

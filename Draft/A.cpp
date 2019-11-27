@@ -7,7 +7,6 @@ int main(void) {
 	// // celsius = (f / 9 - 32 / 9) * 5;
 	// printf("celsius=%d\n", (int)celsius);
 	// return 0;
-	time_t *temp;
-	time(temp);
-	printf("Current time:%l\n", *temp);
+	printf("Current time:%ld\n", time(NULL));
+	
 }
