@@ -1,0 +1,56 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: QuadTreeLOD - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP39.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/Portal.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"G:\Project\3DPrj\Load3DSDemo\3ds.cpp"
+"G:\Project\3DPrj\Load3DSDemo\Camera.cpp"
+"G:\Project\3DPrj\Load3DSDemo\Frustum.cpp"
+"G:\Project\3DPrj\Load3DSDemo\GameWnd.cpp"
+"G:\Project\3DPrj\Load3DSDemo\main.cpp"
+"G:\Project\3DPrj\Load3DSDemo\Math.cpp"
+"G:\Project\3DPrj\Load3DSDemo\Scene.cpp"
+"G:\Project\3DPrj\Load3DSDemo\Texture.cpp"
+"G:\Project\3DPrj\Load3DSDemo\vector.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP39.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3A.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Portal.pdb" /debug /machine:I386 /out:"Debug/Portal.exe" /pdbtype:sept 
+.\Debug\3ds.obj
+.\Debug\Camera.obj
+.\Debug\Frustum.obj
+.\Debug\GameWnd.obj
+.\Debug\main.obj
+.\Debug\Math.obj
+.\Debug\Scene.obj
+.\Debug\Texture.obj
+.\Debug\vector.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3A.tmp"
+<h3>Output Window</h3>
+Compiling...
+3ds.cpp
+Camera.cpp
+Frustum.cpp
+GameWnd.cpp
+main.cpp
+Math.cpp
+Scene.cpp
+Texture.cpp
+vector.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Portal.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

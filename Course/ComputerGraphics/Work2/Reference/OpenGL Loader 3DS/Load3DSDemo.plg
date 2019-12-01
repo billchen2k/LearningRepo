@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: QuadTreeLOD - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ecnu\LOCALS~1\Temp\RSPC1.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/Load3DSDemo.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\ecnu\×ÀÃæ\235235343\3ds.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ecnu\LOCALS~1\Temp\RSPC1.tmp" 
+Creating temporary file "C:\DOCUME~1\ecnu\LOCALS~1\Temp\RSPC2.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Load3DSDemo.pdb" /debug /machine:I386 /out:"Debug/Load3DSDemo.exe" /pdbtype:sept 
+".\Debug\3ds.obj"
+".\Debug\Camera.obj"
+".\Debug\GameWnd.obj"
+".\Debug\main.obj"
+".\Debug\Math.obj"
+".\Debug\Scene.obj"
+".\Debug\Texture.obj"
+".\Debug\vector.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ecnu\LOCALS~1\Temp\RSPC2.tmp"
+<h3>Output Window</h3>
+Compiling...
+3ds.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/Load3DSDemo.bsc"  ".\Debug\3ds.sbr" ".\Debug\Camera.sbr" ".\Debug\GameWnd.sbr" ".\Debug\main.sbr" ".\Debug\Math.sbr" ".\Debug\Scene.sbr" ".\Debug\Texture.sbr" ".\Debug\vector.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Load3DSDemo.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

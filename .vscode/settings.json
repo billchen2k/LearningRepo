@@ -60,7 +60,8 @@
         "vector": "cpp",
         "unistd.h": "c",
         "u8g2lib.h": "c",
-        "songdata.h": "c"
+        "songdata.h": "c",
+        "string.h": "c"
     },
     "python.pythonPath": "/usr/bin/python3",
     "python.linting.pylintEnabled": true,

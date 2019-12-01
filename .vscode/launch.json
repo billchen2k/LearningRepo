@@ -30,8 +30,8 @@
         //     }
         // },
         {
-            "name": "Launch C/C++ (lldb)",
-            "preLaunchTask": "build with g++",
+            "name": "Launch C++ (lldb)",
+            "preLaunchTask": "build with clang++",
             "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
@@ -42,6 +42,19 @@
             // "externalConsole": true,
             // "MIMode": "lldb"
         },
+                {
+                    "name": "Launch C (lldb)",
+                    "preLaunchTask": "build with gcc",
+                    "type": "lldb",
+                    "request": "launch",
+                    "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
+                    "args": [],
+                    "cwd": "${workspaceFolder}"
+                    // "stopAtEntry": true,
+                    // "environment": [],
+                    // "externalConsole": true,
+                    // "MIMode": "lldb"
+                },
         {
             "name": "Launch C++ (Windows)",
             "preLaunchTask": "build c++",

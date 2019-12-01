@@ -87,7 +87,7 @@ HRESULT InitGeometry()
     CLoad3DS loader;
 
     loader.Import3DS(&temp,"hua.3DS");
-
+	//loader.Import3DS(&temp,"1.dat");
     g_dwNumMaterials=temp.numOfObjects;
     // We need to extract the material properties and texture names from the 
     // pD3DXMtrlBuffer

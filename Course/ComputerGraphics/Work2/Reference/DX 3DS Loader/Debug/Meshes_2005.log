@@ -1,0 +1,9 @@
+﻿  Meshes.cpp
+cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\Work2\Reference\DX 3DS Loader\3DS.h(171,1): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\stdio.h(208): message : 参见“fopen”的声明
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\Work2\Reference\DX 3DS Loader\3DS.h(176,1): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\stdio.h(1774): message : 参见“sprintf”的声明
+C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\Work2\Reference\DX 3DS Loader\3DS.h(190,1): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\stdio.h(1774): message : 参见“sprintf”的声明
+  Meshes_2005.vcxproj -> C:\Users\billc\OneDrive\Workspace\LearningRepo\Course\ComputerGraphics\Work2\Reference\DX 3DS Loader\Debug\Meshes.exe
