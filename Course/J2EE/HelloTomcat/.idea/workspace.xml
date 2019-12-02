@@ -7,8 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b4e529a-456b-449a-b334-d8fe084a40cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../ComputerNetwork/LAB3/10185101210_陈俊潼_LAB3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputerNetwork/LAB3/10185101210_陈俊潼_LAB3.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ComputerNetwork/LAB3/10185101210_陈俊潼_LAB3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputerNetwork/LAB3/10185101210_陈俊潼_LAB3.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/.vs/ModuleLoader/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/.vs/ModuleLoader/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/MainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/MainForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/bin/Release/ModuleLoader.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/bin/Release/ModuleLoader.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/bin/Release/ModuleLoader.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/bin/Release/ModuleLoader.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/obj/Release/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/obj/Release/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/obj/Release/ModuleLoader.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/obj/Release/ModuleLoader.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/obj/Release/ModuleLoader.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/obj/Release/ModuleLoader.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/obj/Release/ModuleLoader.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../ComputerGraphics/Work2/第二次作业/ModuleLoader/ModuleLoader/obj/Release/ModuleLoader.pdb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="336">
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -177,8 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,9 +217,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -335,16 +342,18 @@
       <workItem from="1574226450102" duration="1360000" />
       <workItem from="1574661353478" duration="2184000" />
       <workItem from="1574676089473" duration="4360000" />
+      <workItem from="1575262558932" duration="855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11014000" />
+    <option name="totallyTimeSpent" value="11869000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="967" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="972" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20232274" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20476772" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -354,8 +363,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36727688" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39702517" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36727688" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39590445" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -400,6 +409,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/jsp/lib/jsp-impl.jar!/standardSchemas/jspdirectives2_1.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3255">
@@ -414,20 +430,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/web/login5.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
+        <state relative-caret-position="273">
+          <caret line="13" selection-start-line="13" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HelloTomcat.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" selection-start-line="1" selection-end-line="2" />
+        <state>
+          <caret selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -438,17 +454,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/login5.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" selection-start-line="13" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="336">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
         </state>
       </provider>
     </entry>

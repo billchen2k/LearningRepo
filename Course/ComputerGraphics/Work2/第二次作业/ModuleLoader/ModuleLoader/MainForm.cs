@@ -338,6 +338,12 @@ namespace ModuleLoader
             }
             Log("Done. Time used: " + sw.ElapsedMilliseconds + " ms");
             sw.Stop();
+            gl.Enable(OpenGL.GL_FOG);
+            gl.Fog(OpenGL.GL_FOG_COLOR, new float[] { 1f, 1f, 1f });
+            gl.Fog(OpenGL.GL_FOG_DENSITY, 0.35f);
+            gl.Fog(OpenGL.GL_FOG_START, 1.0f);
+            gl.Fog(OpenGL.GL_FOG_END, 5.0f);
+            gl.Hint(OpenGL.GL_FOG_HINT, OpenGL.GL_DONT_CARE);
         }
         private void openGLControl1_Load(object sender, EventArgs e)
         {
