@@ -1,20 +1,12 @@
 #include <iostream>
-#include <string>
-#include <vector>
+#include <unistd.h>
+#include <stdlib.h>
+
 using namespace std;
+
 int main() {
-	unsigned long long int input;
-	cin >> input;
-	int data[100000] = {0};
-	int len = 0;
-	while (input > 0) {
-		input--;
-		data[len] = input % 26;
-		input /= 26;
-		len++;
-	}
-	for (int i = len - 1; i >= 0; i--) {
-		cout << char('A' + data[i]);
-	}
-	cout << endl;
+	pid_t pid = getpid();
+	cout << pid;
+	execl("/bin/cat", "cat", "/etc/passwd", (char *) 0);
+	printf("EXECL ERROR");
 }

@@ -18,7 +18,7 @@ int main(int argc, char *args[]) {
 	}
 	else if (top >= real) {
 		printf("参考志愿值：0\n");
-	} else {
+	} else { 
 		double score = (5 * (2 * real - top) * log(real - top)) / (double)top;
 		if (score >= 100) {
 			printf("参考志愿值：100 (%.2f)。\n", score);

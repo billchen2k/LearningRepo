@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf375ed0-d7ce-4742-8881-34af7f47d345" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HelloTomcat/src/api.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelloTomcat/src/upload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelloTomcat/web/WEB-INF/lib/commons-fileupload-1.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelloTomcat/web/WEB-INF/lib/commons-io-2.6.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloTomcat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HelloTomcat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloTomcat/HelloTomcat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HelloTomcat/HelloTomcat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloTomcat/out/artifacts/web_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HelloTomcat/out/artifacts/web_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloTomcat/out/artifacts/web_war_exploded/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloTomcat/out/artifacts/web_war_exploded/hello.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloTomcat/out/artifacts/web_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloTomcat/out/artifacts/web_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloTomcat/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HelloTomcat/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloTomcat/web/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloTomcat/web/hello.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloTomcat/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HelloTomcat/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OSConcepts/LAB1/1.上机实践报告(1).doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OSConcepts/LABReference/3. Project1介绍及忙等问题(1).ppt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OSConcepts/LABReference/Pintos优先级调度问题(1).ppt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +49,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -72,6 +87,8 @@
       <workItem from="1571636918460" duration="896000" />
       <workItem from="1572193775154" duration="1511000" />
       <workItem from="1574058189970" duration="62000" />
+      <workItem from="1575620673870" duration="18000" />
+      <workItem from="1575621265784" duration="8000" />
     </task>
     <servers />
   </component>

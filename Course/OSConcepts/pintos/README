@@ -1,0 +1,63 @@
+### Pintos on Mac###
+Pintos Mac - Pintos on Mac
+
+Release Version: 0.1
+Release Data: 2012/9/17
+Contact: Jeremy Mao(maojie@me.com or yujie.mao@intel.com)
+Homepage: https://github.com/maojie/pintos_mac
+
+Content
+1. Overview
+2. Getting Started
+3. Building Pintos
+4. Running Pintos
+
+* 1 OVERVIEW
+Welcome to Pintos. Pintos is a simple operating system framework for the 80x86 architecture. It supports kernel threads, loading and running user programs, and a file system, but it implements all of these in a very simple way. In the Pintos projects, you and your project team will strengthen its support in all three of these areas. You will also add a virtual memory implementation.
+
+The orignal experimental environment of Pintos is on *nix (Unix and Linux), since MacOSX comes from Unix, I am curious to make Pintos workable on MacOSX. The following instructions can help you setup your experimental environment.
+
+* 2 Getting Started
+
+2.0 Prerequisites
+Before next step, you at least need
+  1. Hardware: Macbook, Macbook Pro, Macbook Air, Mac Mini or iMac
+  2. Software: OS X Mountaion Lion (My environment), maybe workable on Lion and Snow Leopard
+
+2.0.1 Setup cross build environment
+To set up the pintos working environment on mac, you should
+  1. Download pintos source code from github
+     git clone https://github.com/maojie/pintos_mac.git
+  2. Download MacPorts from
+     http://www.macports.org
+  3. Install cross build tools
+     sudo port install i386-elf-binutils
+     sudo port install i386-elf-gcc
+  4. Create gcc link
+     cd /opt/local/bin
+     sudo ln -s i386-elf-gcc i386-elf-gcc-4.3.2
+  5. Install bochs
+     sudo port install bochs
+  6. Install X on Mac from
+     http://xquartz.macosforge.org
+
+* 3 Building Pintos
+As the next step, build the source code supplied for the first project. First, cd into the "threads" directory. Then, issue the "make" command. This will create a "build" directory under "theads", populate it with a "Makefile" and a few subdirectories, and then build the kernel inside. The entire build should take less than 30 second.
+
+Watch the commands executed during the build. On the Linux machines, the ordinary system tools are used.
+Following the build, the following are the interesting files in the "build" directory:
+"Makefile"
+    A copy of "pintos/src/Makefile.build". It describes how to build the kernel.
+"kernel.o"
+    Object file for the entire kernel. This is the result of linking object files compiled from each individual kernel source file into a single object file. It contains debug infomation, so you can run GDB or backtrace on it.
+"kernel.bin"
+    Memory image of the kernel, that is, the exact bytes loaded into memory to run the Pintos kernel. This is just "kernel.o" with debug information stripped out, which saves a lot of space, which in turn keeps the kernel from bumping up against a 512KB size limit imposed by the kernel loader's design.
+"loader.bin"
+    Memory image for the kernel loader, a small chunk of code written in assembly language that reads the kernel from disk into memory and starts it up. It is exactly 512 bytes long, a size fixed by the PC BIOS.
+
+Subdirectories of "build" contain object files (".o") and dependency files (".d"), both produced by the compiler. The dependency file tell make which source files need to be recompiled when other source or header files are changed.
+
+* 4 Running Pintos
+cd threads/build
+pintos -- run alarm-single
+(TO BE CONTINUED)

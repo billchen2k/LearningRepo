@@ -8,7 +8,9 @@
 </head>
 <body>
 
-hello, There!<p style="font-weight: bold;font-family: Helvetica;font-size: 150%"><%=request.getParameter("user") %> </p><br><br>
+hello, There!
+
+<p style="font-weight: bold;font-family: Helvetica;font-size: 150%"><%=request.getParameter("user") %> </p><br><br>
 YourPassword IS:<%=request.getParameter("password") %>
 
 </body>
