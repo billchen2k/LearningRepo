@@ -7,26 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b4e529a-456b-449a-b334-d8fe084a40cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/upload.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-io-2.6.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloTomcat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HelloTomcat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/hello.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/web_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/hello.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/hello.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OSConcepts/LAB1/1.上机实践报告(1).doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OSConcepts/LABReference/3. Project1介绍及忙等问题(1).ppt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OSConcepts/LABReference/Pintos优先级调度问题(1).ppt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../数据结构与算法/Review/datain.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../数据结构与算法/Review/datain.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Draft/C.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Draft/C.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Draft/howmany.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Draft/howmany.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../temp/C.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../../temp/C.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../temp/C.out.dSYM/Contents/Resources/DWARF/C.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../../temp/C.out.dSYM/Contents/Resources/DWARF/C.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../temp/sweetie.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../../temp/sweetie.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../temp/sweetie.out.dSYM/Contents/Resources/DWARF/sweetie.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../../temp/sweetie.out.dSYM/Contents/Resources/DWARF/sweetie.out" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -176,7 +163,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="227" />
+    <option name="x" value="79" />
+    <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="965" />
   </component>
@@ -186,7 +174,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,7 +214,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,11 +358,15 @@
       <workItem from="1576077523335" duration="1619000" />
       <workItem from="1576129384319" duration="548000" />
       <workItem from="1576235944449" duration="597000" />
+      <workItem from="1576330972440" duration="569000" />
+      <workItem from="1576339586038" duration="598000" />
+      <workItem from="1576396565625" duration="599000" />
+      <workItem from="1576473090001" duration="600000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35951000" />
+    <option name="totallyTimeSpent" value="38317000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -386,17 +378,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="227" width="1680" height="965" extended-state="0" />
-    <editor active="true" />
+    <frame x="79" y="23" width="1680" height="965" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48509175" visible="true" weight="0.28300732" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48050457" visible="true" weight="0.297066" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5194954" side_tool="true" visible="true" weight="0.297066" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.51490825" side_tool="true" visible="true" weight="0.28300732" />
+      <window_info id="Web" order="7" sideWeight="0.5194954" side_tool="true" weight="0.29767725" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.5159301" />

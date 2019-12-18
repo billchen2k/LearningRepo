@@ -88,8 +88,7 @@ void
 thread_init (void) 
 {
   ASSERT (intr_get_level () == INTR_OFF);
-
-  lock_init (&tid_lock);
+  lock_init(&tid_lock);
   list_init (&ready_list);
   list_init (&all_list);
 
@@ -98,6 +97,7 @@ thread_init (void)
   init_thread (initial_thread, "main", PRI_DEFAULT);
   initial_thread->status = THREAD_RUNNING;
   initial_thread->tid = allocate_tid ();
+
 }
 
 /* Starts preemptive thread scheduling by enabling interrupts.
@@ -183,6 +183,9 @@ thread_create (const char *name, int priority,
   /* Initialize thread. */
   init_thread (t, name, priority);
   tid = t->tid = allocate_tid ();
+  
+  /* ++ Set blocked ticks to 0 */
+  t->blocked_ticks = 0;
 
   /* Prepare thread for first run by initializing its stack.
      Do this atomically so intermediate values for the 'stack' 
@@ -311,8 +314,8 @@ thread_yield (void)
 {
   struct thread *cur = thread_current ();
   enum intr_level old_level;
-  
-  ASSERT (!intr_context ());
+
+  ASSERT(!intr_context());
 
   old_level = intr_disable ();
   if (cur != idle_thread) 
@@ -585,3 +588,15 @@ allocate_tid (void)
 /* Offset of `stack' member within `struct thread'.
    Used by switch.S, which can't figure it out on its own. */
 uint32_t thread_stack_ofs = offsetof (struct thread, stack);
+
+
+/* ++ Check if the thread should be unblocked as it's 
+    blocked ticks reached to 0. */
+void thread_check_blocked (struct thread *t, void *aux UNUSED){
+  if (t->status == THREAD_BLOCKED && t->blocked_ticks > 0){
+	  t->blocked_ticks--;
+	  if (t->blocked_ticks == 0) {
+		  thread_unblock(t);
+    }
+  }
+}

@@ -71,7 +71,12 @@
         "fstream": "cpp",
         "optional": "cpp",
         "thread": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "process.h": "c",
+        "filesys.h": "c",
+        "stdio.h": "c",
+        "timer.h": "c",
+        "stdint.h": "c"
     },
     "python.pythonPath": "/usr/bin/python3",
     "python.linting.pylintEnabled": true,

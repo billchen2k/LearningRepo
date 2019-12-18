@@ -1,0 +1,12 @@
+romimage: file=$BXSHARE/BIOS-bochs-latest
+vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
+boot: disk
+cpu: ips=1000000
+megs: 4
+log: bochsout.txt
+panic: action=fatal
+user_shortcut: keys=ctrlaltdel
+clock: sync=none, time0=0
+ata0-master: type=disk, path=/var/folders/x7/zv4cxl5d5xgcc1hyj_hl1n3r0000gn/T/HMLkDrqRj6.dsk, mode=flat, cylinders=1, heads=16, spt=63, translation=none
+com1: enabled=1, mode=file, dev=/dev/stdout
+display_library: nogui
