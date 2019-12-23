@@ -4,6 +4,8 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+    
         {
             "name": "Python: Terminal (integrated)",
             "type": "python",
@@ -31,7 +33,7 @@
         // },
         {
             "name": "Launch C++ (lldb)",
-            "preLaunchTask": "build with clang++",
+            "preLaunchTask": "build with gcc",
             "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",

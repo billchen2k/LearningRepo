@@ -375,3 +375,65 @@ duration 和 iteration 的乘积已经是不减排序了，修改完成。运行
 #### Requirements
 
 这一部分要求在 Pintos 中实现优先级调度。
+
+在 thread  的 PCB 中已经具有了 `priority`项，优先级最低从`PRI_MIN`到最高`PRI_MAX`。当 ready list 中出现了一个比当前正在运行的进程优先级更高的进程的时候，当前的进程将会立即让出 CPU。同时，当进程在等待一个信号量的时候，最高优先级的进程将会被第一个唤醒。
+
+除此之外，实验还要求每一个进程可以在任意时候提高或降优先级，并且在降低优先级后如果不是当前系统中优先级最高的进程，立即让出 CPU。
+
+需要考虑的问题有优先级倒置、优先级捐赠。并且完成`thread.c`中的`void thread_set_priority (int new_priority)`函数和`int thread_get_priority (void)`函数。
+
+#### Analysis
+
+操作系统目前的调度函数为`schedule()`，代码如下：
+
+```c
+/* Schedules a new process.  At entry, interrupts must be off and
+   the running process's state must have been changed from
+   running to some other state.  This function finds another
+   thread to run and switches to it.
+
+   It's not safe to call printf() until thread_schedule_tail()
+   has completed. */
+static void
+schedule (void) 
+{
+  struct thread *cur = running_thread ();
+  struct thread *next = next_thread_to_run ();
+  struct thread *prev = NULL;
+
+  ASSERT (intr_get_level () == INTR_OFF);
+  ASSERT (cur->status != THREAD_RUNNING);
+  ASSERT (is_thread (next));
+
+  if (cur != next)
+    prev = switch_threads (cur, next);
+  thread_schedule_tail (prev);
+}
+```
+
+可以看到在第 12 行，函数通过调用`next_thread_to_run()`获取要调度的下一个进程，然后在第 20 行调用 `switch_threads(cur, next)`把当前进程和要调度的下一个进程进行交换。
+
+观察目前`next_thread_to_run()`的代码：
+
+```c
+/* Chooses and returns the next thread to be scheduled.  Should
+   return a thread from the run queue, unless the run queue is
+   empty.  (If the running thread can continue running, then it
+   will be in the run queue.)  If the run queue is empty, return
+   idle_thread. */
+static struct thread *
+next_thread_to_run (void) 
+{
+  if (list_empty (&ready_list))
+    return idle_thread;
+  else
+    return list_entry (list_pop_front (&ready_list), struct thread, elem);
+}
+```
+
+可以看到这个函数只是简单的返回 `ready_list` 中最前面的进程。如果队列为空，则返回一`idle_thread`空进程。
+
+而观察`thread.c`中添加进程方式，发现有三个函数在向 `ready_list`中添加进程，分别是`thread_list()`、`init_thread()`、和`thread_yield()`。而这三个函数都使用了`list_push_back (&ready_list, &cur->elem);`来添加。因此，pintos 目前使用的算法是 FIFO 调度。
+
+为了实现优先级调度，首先应当使**进程进入队列的时候按照优先级的大小插入**，而不是简单	
+

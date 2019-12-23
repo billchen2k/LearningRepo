@@ -76,7 +76,12 @@
         "filesys.h": "c",
         "stdio.h": "c",
         "timer.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "socket.h": "c",
+        "types.h": "c",
+        "tcp.h": "c",
+        "stdlib.h": "c",
+        "pthread.h": "c"
     },
     "python.pythonPath": "/usr/bin/python3",
     "python.linting.pylintEnabled": true,
