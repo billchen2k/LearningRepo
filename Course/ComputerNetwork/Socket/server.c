@@ -9,18 +9,24 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/socket.h>
+
 #include <sys/types.h>
 #include <time.h>
 
-#define SERVER_PORT 5696
 #define MAX_PENDING 5
 #define MAX_LINE 4096
-#define MAX_CLIENT 4
+#define MAX_CLIENT 15
 
+#define CLIENT_CONNECTED 1
+#define CLIENT_CLOSED -1
 int father_pid;
 int localfd;
 
-int connectfd[MAX_CLIENT];
+struct client{
+	int fd;
+	int status;
+};
+struct client connectfd[MAX_CLIENT];
 /* Client count */
 int cc = 0;
 char now[64];
@@ -29,9 +35,11 @@ void closeConnect(int signum) {
 	printf("Closing connection...\n");
 	int i;
 	for (int i = 0; i < cc;i ++){
-		if(close(connectfd[i]) == -1){
-			("Error occured in close(): %s(erro: %d)", strerror(errno), errno);
-			return;
+		if(connectfd[i].status == CLIENT_CONNECTED){
+			if (close(connectfd[i].fd) == -1) {
+				("Error occured in close(): %s(erro: %d)", strerror(errno), errno);
+				return;
+			}
 		}
 	}
 	if (close(localfd) == -1) {
@@ -58,8 +66,15 @@ void connectionHandler(int clientfd, struct sockaddr_in client) {
 	char inbuffer[MAX_LINE];
 	memset(outbuffer, 0, 4096 * sizeof(char));
 	memset(inbuffer, 0, 4096 * sizeof(char));
-	
-	if (!fork()) {
+	int recvpid = fork();
+
+	// /* 建立进程通信管道 */	
+	// int pipefd[2];
+	// pipe(pipefd);
+	// int *write_fd = &pipefd[1];
+	// int *read_fd = &pipefd[0];
+
+	if (recvpid == 0) {
 		/* 子进程，接受客户端的数据并显示 */
 		while (1) {
 			int msglen;
@@ -72,12 +87,12 @@ void connectionHandler(int clientfd, struct sockaddr_in client) {
 			memset(inbuffer, 0, 4096 * sizeof(char));
 		}
 		printf("Client %s:%d disconnected\n", inet_ntoa(client.sin_addr), ntohs(client.sin_port));
+		//write(*write_fd, itoa(clientfd), strlen(itoa(clientfd)));
 		close(clientfd);
 		exit(0);
 	} else {
 		/* 父进程，向客户端发送数据 */
 		while (1) {
-			
 			fgets(outbuffer, MAX_LINE * sizeof(char), stdin);
 			if (strcmp(outbuffer, "exit\n") == 0) {
 				kill(father_pid, SIGUSR1);
@@ -85,10 +100,18 @@ void connectionHandler(int clientfd, struct sockaddr_in client) {
 			}
 			//printf("Writing %s (pid=%d, clientfd=%d, connnected[cc]=%d)", outbuffer, getpid(), clientfd, connectfd[0]);
 			int i = 0;
-			for (i = 0; i < cc; i++){
-				if (send(connectfd[i], outbuffer, strlen(outbuffer), 0) < 0) {
-					outbuffer[strlen(outbuffer) - 1] = '\0';
-					printf("Fail to send message: %s(erro: %d)", strerror(errno), errno);
+			for (i = 0; i < cc; i++) {
+				int len = 0;
+				/* 只向活跃的连接发送 */
+				if (connectfd[i].status == CLIENT_CONNECTED) {
+					if ((len = send(connectfd[i].fd, outbuffer, strlen(outbuffer), 0)) < 0) {
+						outbuffer[strlen(outbuffer) - 1] = '\0';
+						printf("Fail to send message: %s(erro: %d)", strerror(errno), errno);
+					}
+					if (len == 0) {
+						connectfd[i].status = CLIENT_CLOSED;
+						printf("CONNECTIO_CLOSED\n");
+					}
 				}
 			}
 			memset(outbuffer, 0, 4096 * sizeof(char));
@@ -99,6 +122,12 @@ void connectionHandler(int clientfd, struct sockaddr_in client) {
 
 int main(int argc, char *argv[]) {
 	printf("A simple TCP duplex communication program. Press [Ctrl] + [C] to exit.\n\n");
+	char *serverport;
+	if (argc == 2) {
+		serverport = argv[1];
+	} else {
+		printf("Invalid arguments. Usage: server.o port\n");
+	}
 	struct sockaddr_in local;
 	int sendpid = -1;
 	/* 捕捉中断 */
@@ -111,7 +140,7 @@ int main(int argc, char *argv[]) {
 	memset(&local, 0, sizeof(local));
 	local.sin_addr.s_addr = htons(INADDR_ANY);
 	local.sin_family = AF_INET;
-	local.sin_port = htons(SERVER_PORT);
+	local.sin_port = htons(atoi(serverport));
 
 	/* 创建 Socket */
 	if ((localfd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) == -1) {
@@ -138,15 +167,14 @@ int main(int argc, char *argv[]) {
 		int sin_size = sizeof(struct sockaddr_in);
 		memset(&client, 0, sizeof(client));
 		if (cc < MAX_CLIENT){
-			if ((connectfd[cc++] = accept(localfd, (struct sockaddr *)&client, &sin_size)) == -1) {
+			if ((connectfd[cc].fd = accept(localfd, (struct sockaddr *)&client, &sin_size)) == -1) {
 				printf("Error occured in accept(): %s(errno: %d)", strerror(errno), errno);
 				exit(-1);
 			}
-		}
-		else{
+			connectfd[cc++].status = CLIENT_CONNECTED;
+		} else {
 			printf("Max client count reached.");
-			while(1)
-				;
+			break;
 		}
 
 		/* 杀死旧的输出进程 */
@@ -162,7 +190,7 @@ int main(int argc, char *argv[]) {
 			signal(SIGINT, NULL);
 			/* 子进程处理消息 */
 			close(localfd);
-			int clientfd = connectfd[cc - 1];
+			int clientfd = connectfd[cc - 1].fd;
 			printf("Client %s:%d connected. clientfd = %d.\n", inet_ntoa(client.sin_addr), ntohs(client.sin_port), clientfd);
 			connectionHandler(clientfd, client);
 		} else {
@@ -170,4 +198,7 @@ int main(int argc, char *argv[]) {
 			continue;
 		}
 	}
+	int status;
+	wait(&status);
+	closeConnect(0);
 }

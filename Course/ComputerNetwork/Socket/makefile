@@ -1,4 +1,4 @@
-cc = gcc
+cc = gc
 all: client server
 .PHONY : all
 client : 
@@ -6,4 +6,6 @@ client :
 server :
 	cc server.c -o server.o
 kill:
-	kill -9 $(lsof -i:5696 -t)
+	kill -9 `lsof -i:5696 -t`
+clean:
+	rm *.o

@@ -3,15 +3,15 @@
 #include <netdb.h>
 #include <netinet/in.h>
 #include <pthread.h>
+#include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/socket.h>
 #include <sys/types.h>
-#include <signal.h>
 #include <time.h>
+#include <unistd.h>
 
-#define SERVER_PORT 5696
 #define MAX_LINE 4096
 
 int father_pid;
@@ -19,6 +19,7 @@ int localfd;
 int connectfd;
 char *now[64];
 
+/* 断开连接 */
 void closeConnect(){
 	printf("Closing connection...\n");
 	if (close(localfd) || close(connectfd) == -1) {
@@ -29,6 +30,7 @@ void closeConnect(){
 	}
 }
 
+/* 返回当前的日期时间 */
 char *getCurrentTime() {
 	time_t tim;
 	struct tm *at;
@@ -42,6 +44,7 @@ char *getCurrentTime() {
 int main(int argc, char * argv[]){
 	printf("A simple TCP duplex communication program. Press [Ctrl] + [C] to exit.\n\n");
 
+	char *serverport;
 	char *host;
 	struct hostent *hp;
 	struct sockaddr_in socketaddr;
@@ -55,10 +58,11 @@ int main(int argc, char * argv[]){
 	signal(SIGINT, closeConnect);
 	signal(SIGUSR1, closeConnect);
 
-	if (argc == 2) {
+	if (argc == 3) {
 		host = argv[1];
+		serverport = argv[2];
 	} else {
-		fprintf(stderr, "Invalid argument. Usage: client.o host\n");
+		fprintf(stderr, "Invalid argument. Usage: client.o host port\n");
 		exit(1);
 	}
 
@@ -75,7 +79,7 @@ int main(int argc, char * argv[]){
 	}
 	memset(&socketaddr, 0, sizeof(socketaddr));
 	socketaddr.sin_family = AF_INET;
-	socketaddr.sin_port = htons(SERVER_PORT);
+	socketaddr.sin_port = htons(atoi(serverport));
 	if (inet_pton(AF_INET, host, &socketaddr.sin_addr) < 0) {
 		printf("Error occured in inet_pton(): %s(erro: %d)", strerror(errno), errno);
 		exit(-1);
@@ -105,11 +109,18 @@ int main(int argc, char * argv[]){
 	else {
 		/* 父进程，向服务器发送数据 */
 		while (1) {
-			
-			fgets(outbuffer, MAX_LINE * sizeof(char), stdin);
-			if (strcmp(outbuffer, "exit\n") == 0) {
-				break;
-				closeConnect();
+			if (isatty(fileno(stdin))){
+				fgets(outbuffer, MAX_LINE * sizeof(char), stdin);
+				if (strcmp(outbuffer, "exit\n") == 0) {
+					break;
+				}
+			}
+			else{
+				if (fgets(outbuffer, MAX_LINE * sizeof(char), stdin) == NULL) {
+					printf("Transmission finished.");
+					break;
+				}
+				strcat(outbuffer, "\n");
 			}
 			int length = strlen(outbuffer) + 1;
 			int ret = send(localfd, outbuffer, length, 0);
@@ -120,8 +131,9 @@ int main(int argc, char * argv[]){
 				printf("Server disconnected.\n");
 				break;
 			}
+			memset(outbuffer, 0, MAX_LINE * sizeof(char));
 		}
-		
+		kill(father_pid, SIGUSR1);
 	}
 	int status;
 	waitpid(pid, &status, 0);
