@@ -161,7 +161,7 @@ int main(int argc, char *argv[]) {
 	}
 	printf("Socket established. Waiting for client...\n");
 	while (1) {
-
+		
 		/* 阻塞建立连接 */
 		struct sockaddr_in client;
 		int sin_size = sizeof(struct sockaddr_in);

@@ -436,4 +436,3 @@ next_thread_to_run (void)
 而观察`thread.c`中添加进程方式，发现有三个函数在向 `ready_list`中添加进程，分别是`thread_list()`、`init_thread()`、和`thread_yield()`。而这三个函数都使用了`list_push_back (&ready_list, &cur->elem);`来添加。因此，pintos 目前使用的算法是 FIFO 调度。
 
 为了实现优先级调度，首先应当使**进程进入队列的时候按照优先级的大小插入**，而不是简单	
-

@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
 
+
     
         {
             "name": "Python: Terminal (integrated)",
@@ -33,7 +34,7 @@
         // },
         {
             "name": "Launch C++ (lldb)",
-            "preLaunchTask": "build with gcc",
+            "preLaunchTask": "build with clang++",
             "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
