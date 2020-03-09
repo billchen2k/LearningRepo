@@ -1,0 +1,232 @@
+{
+    "ok": true,
+    "result": [
+        {
+            "update_id": 574556839,
+            "message": {
+                "message_id": 1,
+                "from": {
+                    "id": 886018984,
+                    "is_bot": false,
+                    "first_name": "Bill",
+                    "last_name": "Chen",
+                    "username": "BillChen2000",
+                    "language_code": "en"
+                },
+                "chat": {
+                    "id": 886018984,
+                    "first_name": "Bill",
+                    "last_name": "Chen",
+                    "username": "BillChen2000",
+                    "type": "private"
+                },
+                "date": 1581334843,
+                "text": "/start",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 6,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 574556840,
+            "message": {
+                "message_id": 2,
+                "from": {
+                    "id": 886018984,
+                    "is_bot": false,
+                    "first_name": "Bill",
+                    "last_name": "Chen",
+                    "username": "BillChen2000",
+                    "language_code": "en"
+                },
+                "chat": {
+                    "id": 886018984,
+                    "first_name": "Bill",
+                    "last_name": "Chen",
+                    "username": "BillChen2000",
+                    "type": "private"
+                },
+                "date": 1581335118,
+                "text": "\uff1f"
+            }
+        },
+        {
+            "update_id": 574556841,
+            "message": {
+                "message_id": 3,
+                "from": {
+                    "id": 886018984,
+                    "is_bot": false,
+                    "first_name": "Bill",
+                    "last_name": "Chen",
+                    "username": "BillChen2000",
+                    "language_code": "en"
+                },
+                "chat": {
+                    "id": 886018984,
+                    "first_name": "Bill",
+                    "last_name": "Chen",
+                    "username": "BillChen2000",
+                    "type": "private"
+                },
+                "date": 1581335136,
+                "text": "Hello, ECNUBot.\ud83d\ude0a"
+            }
+        },
+        {
+            "update_id": 574556842,
+            "message": {
+                "message_id": 8,
+                "from": {
+                    "id": 38724011,
+                    "is_bot": false,
+                    "first_name": "Homan",
+                    "last_name": "\ud83d\udc27",
+                    "username": "HomanW104"
+                },
+                "chat": {
+                    "id": 38724011,
+                    "first_name": "Homan",
+                    "last_name": "\ud83d\udc27",
+                    "username": "HomanW104",
+                    "type": "private"
+                },
+                "date": 1581336164,
+                "text": "/start",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 6,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 574556843,
+            "message": {
+                "message_id": 9,
+                "from": {
+                    "id": 38724011,
+                    "is_bot": false,
+                    "first_name": "Homan",
+                    "last_name": "\ud83d\udc27",
+                    "username": "HomanW104",
+                    "language_code": "en"
+                },
+                "chat": {
+                    "id": 38724011,
+                    "first_name": "Homan",
+                    "last_name": "\ud83d\udc27",
+                    "username": "HomanW104",
+                    "type": "private"
+                },
+                "date": 1581336185,
+                "text": "\u67e5\u8bfe\u8868\uff01"
+            }
+        },
+        {
+            "update_id": 574556844,
+            "message": {
+                "message_id": 10,
+                "from": {
+                    "id": 38724011,
+                    "is_bot": false,
+                    "first_name": "Homan",
+                    "last_name": "\ud83d\udc27",
+                    "username": "HomanW104",
+                    "language_code": "en"
+                },
+                "chat": {
+                    "id": 38724011,
+                    "first_name": "Homan",
+                    "last_name": "\ud83d\udc27",
+                    "username": "HomanW104",
+                    "type": "private"
+                },
+                "date": 1581336193,
+                "text": "\u67e5\u8bfe\u8868"
+            }
+        },
+        {
+            "update_id": 574556845,
+            "message": {
+                "message_id": 11,
+                "from": {
+                    "id": 38724011,
+                    "is_bot": false,
+                    "first_name": "Homan",
+                    "last_name": "\ud83d\udc27",
+                    "username": "HomanW104",
+                    "language_code": "en"
+                },
+                "chat": {
+                    "id": 38724011,
+                    "first_name": "Homan",
+                    "last_name": "\ud83d\udc27",
+                    "username": "HomanW104",
+                    "type": "private"
+                },
+                "date": 1581336199,
+                "text": "\u6211\u8981\u67e5\u8bfe\u8868\uff01"
+            }
+        },
+        {
+            "update_id": 574556846,
+            "message": {
+                "message_id": 13,
+                "from": {
+                    "id": 38724011,
+                    "is_bot": false,
+                    "first_name": "Homan",
+                    "last_name": "\ud83d\udc27",
+                    "username": "HomanW104",
+                    "language_code": "en"
+                },
+                "chat": {
+                    "id": 38724011,
+                    "first_name": "Homan",
+                    "last_name": "\ud83d\udc27",
+                    "username": "HomanW104",
+                    "type": "private"
+                },
+                "date": 1581336252,
+                "text": "\u9760"
+            }
+        },
+        {
+            "update_id": 574556847,
+            "message": {
+                "message_id": 14,
+                "from": {
+                    "id": 886018984,
+                    "is_bot": false,
+                    "first_name": "Bill",
+                    "last_name": "Chen",
+                    "username": "BillChen2000",
+                    "language_code": "en"
+                },
+                "chat": {
+                    "id": 886018984,
+                    "first_name": "Bill",
+                    "last_name": "Chen",
+                    "username": "BillChen2000",
+                    "type": "private"
+                },
+                "date": 1581336425,
+                "text": "/connect",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 8,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        }
+    ]
+}

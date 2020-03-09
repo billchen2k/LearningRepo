@@ -1,12 +1,22 @@
-#include <stdio.h>
-#include <time.h>
-int main(void) {
-	// float f = 0, celsius = 0;
-	// scanf("%f", &f);
-	// celsius = f * 5.0 / 9.0 - (32 * 5 / 9);
-	// // celsius = (f / 9 - 32 / 9) * 5;
-	// printf("celsius=%d\n", (int)celsius);
-	// return 0;
-	printf("Current time:%ld\n", time(NULL));
-	
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+    int T;
+    scanf("%d\n",&T);
+    
+    for (int i = 0; i < T; i++) {
+        string s,t;
+        getline(cin,s);
+        getline(cin,t);
+        int count = 0,len = t.length(),f = 0;
+        
+        while((f = s.find(t,f)) != -1){
+            f += len;
+            count++;
+        }
+        printf("case #%d:\n%d\n",i,count);
+    }
+    return 0;
 }

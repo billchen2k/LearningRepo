@@ -5,15 +5,13 @@
     "version": "0.2.0",
     "configurations": [
 
-
-    
+        
         {
-            "name": "Python: Terminal (integrated)",
+            "name": "Python",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
-
         },
         // {
         //     "name": "Launch C",
@@ -33,8 +31,21 @@
         //     }
         // },
         {
-            "name": "Launch C++ (lldb)",
+            "name": "C++ (lldb)",
             "preLaunchTask": "build with clang++",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            // "stopAtEntry": true,
+            // "environment": [],
+            // "externalConsole": true,
+            // "MIMode": "lldb"
+        },
+        {
+            "name": "C (lldb)",
+            "preLaunchTask": "build with gcc",
             "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
@@ -45,21 +56,8 @@
             // "externalConsole": true,
             // "MIMode": "lldb"
         },
-                {
-                    "name": "Launch C (lldb)",
-                    "preLaunchTask": "build with gcc",
-                    "type": "lldb",
-                    "request": "launch",
-                    "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
-                    "args": [],
-                    "cwd": "${workspaceFolder}"
-                    // "stopAtEntry": true,
-                    // "environment": [],
-                    // "externalConsole": true,
-                    // "MIMode": "lldb"
-                },
         {
-            "name": "Launch C++ (Windows)",
+            "name": "C++ (Windows)",
             "preLaunchTask": "build c++",
             "type": "cppvsdbg",
             "request": "launch",
