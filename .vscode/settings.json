@@ -81,7 +81,9 @@
         "types.h": "c",
         "tcp.h": "c",
         "stdlib.h": "c",
-        "pthread.h": "c"
+        "pthread.h": "c",
+        "filesystem": "cpp",
+        "random": "cpp"
     },
     "python.pythonPath": "/usr/bin/python3",
     "python.linting.pylintEnabled": true,

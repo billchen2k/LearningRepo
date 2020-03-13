@@ -1,0 +1,7 @@
+conda create -n aidrug2020 python=3.6
+conda activate aidrug2020
+
+# Install packages via conda
+conda install jupyter  
+conda install -c samoturk pymol  
+conda install -c conda-forge pmw rdkit scikit-learn seaborn chembl_webresource_client biopandas pypdb 
