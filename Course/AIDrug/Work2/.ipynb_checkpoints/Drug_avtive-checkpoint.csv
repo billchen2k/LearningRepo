@@ -1,0 +1,26 @@
+Name,Probabilit,Probability,SMILES
+cefmenoxime,,[0.64 0.36],CO\N=C(\C(=O)NC1C2SCC(CSc3nnnn3C)=C(N2C1=O)C(O)=O)c1csc(N)n1
+ulifloxacin,,[0.54 0.46],CC1Sc2c(C(O)=O)c(=O)c3cc(F)c(cc3n12)N1CCNCC1
+cefotiam,,[0.52 0.48],CN(C)CCn1nnnc1SCC1=C(N2[C@H](SC1)[C@H](NC(=O)Cc1csc(N)n1)C2=O)C(O)=O
+ceftriaxone,,[0.53 0.47],CO\N=C(/C(=O)N[C@H]1[C@H]2SCC(CSc3nc(=O)c(O)nn3C)=C(N2C1=O)C(O)=O)c1csc(N)n1
+balofloxacin,,[0.8 0.2],CNC1CCCN(C1)c1c(F)cc2c(c1OC)n(cc(C(O)=O)c2=O)C1CC1
+cefminox,,[0.63 0.37],CO[C@]1(NC(=O)CSC[C@@H](N)C(O)=O)[C@H]2SCC(CSc3nnnn3C)=C(N2C1=O)C(O)=O
+danofloxacin,,[0.56 0.44],CN1C[C@@H]2C[C@H]1CN2c1cc2n(cc(C(O)=O)c(=O)c2cc1F)C1CC1
+besifloxacin,,[0.71 0.29],N[C@@H]1CCCCN(C1)c1c(F)cc2c(c1Cl)n(cc(C(O)=O)c2=O)C1CC1
+cefodizime,,[0.51 0.49],CO\N=C(/C(=O)N[C@H]1[C@H]2SCC(CSc3nc(C)c(CC(O)=O)s3)=C(N2C1=O)C(O)=O)c1csc(N)n1
+trovafloxacin,,[0.56 0.44],N[C@H]1[C@@H]2CN(C[C@H]12)c1nc2n(cc(C(O)=O)c(=O)c2cc1F)-c1ccc(F)cc1F
+cefpirome,,[0.54 0.46],CO\N=C(\C(=O)N[C@H]1[C@H]2SCC(C[n+]3cccc4CCCc34)=C(N2C1=O)C(O)=O)c1csc(N)n1
+sitafloxacin,,[0.51 0.49],N[C@@H]1CN(CC11CC1)c1c(F)cc2c(c1Cl)n(cc(C(O)=O)c2=O)[C@@H]1C[C@@H]1F
+ceftizoxim,,[0.5 0.5],CO\N=C(/C(=O)N[C@H]1[C@H]2SCC=C(N2C1=O)C(O)=O)c1csc(N)n1
+cefmetazole,,[0.59 0.41],CO[C@]1(NC(=O)CSCC#N)[C@H]2SCC(CSc3nnnn3C)=C(N2C1=O)C(O)=O
+cefotaxime,,[0.53 0.47],CO\N=C(/C(=O)N[C@H]1[C@H]2SCC(COC(C)=O)=C(N2C1=O)C(O)=O)c1csc(N)n1
+ceftazidime,,[0.8 0.2],CC(C)(O\N=C(\C(=O)N[C@H]1[C@H]2SCC(C[n+]3ccccc3)=C(N2C1=O)C(O)=O)c1csc(N)n1)C(O)=O
+cefamandole,,[0.81 0.19],Cn1nnnc1SCC1=C(N2[C@H](SC1)[C@H](NC(=O)[C@H](O)c1ccccc1)C2=O)C(O)=O
+cefoxitin,,[0.56 0.44],CO[C@]1(NC(=O)Cc2cccs2)[C@H]2SCC(COC(N)=O)=C(N2C1=O)C(O)=O
+cefonicid,,[0.78 0.22],O[C@@H](C(=O)N[C@H]1[C@H]2SCC(CSc3nnnn3CS(O)(=O)=O)=C(N2C1=O)C(O)=O)c1ccccc1
+cefetamet-pivoxil,,[0.62 0.38],CO\N=C(/C(=O)N[C@H]1[C@H]2SCC(C)=C(N2C1=O)C(=O)OCOC(=O)C(C)(C)C)c1csc(N)n1
+finafloxacin,,[0.73 0.27],OC(=O)c1cn(C2CC2)c2c(C#N)c(N3C[C@@H]4NCCO[C@H]4C3)c(F)cc2c1=O
+moxalactam,,[0.59 0.41],CO[C@]1(NC(=O)C(C(O)=O)c2ccc(O)cc2)[C@H]2OCC(CSc3nnnn3C)=C(N2C1=O)C(O)=O
+piperacillin,,[0.61 0.39],CCN1CCN(C(=O)NC(C(=O)N[C@H]2[C@H]3SC(C)(C)[C@@H](N3C2=O)C(O)=O)c2ccccc2)C(=O)C1=O
+bleomycin,,[0.71 0.29],C[C@@H](O)[C@@H](NC(=O)[C@H](C)[C@@H](O)[C@H](C)NC(=O)[C@@H](NC(=O)c1nc(nc(N)c1C)[C@H](CC(N)=O)NC[C@@H](N)C(N)=O)C(O[C@H]1O[C@H](CO)[C@H](O)[C@@H](O)[C@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@H](OC(N)=O)[C@@H]1O)c1c[nH]cn1)C(=O)NCCc1nc(cs1)-c1nc(cs1)C(=O)NCCC[S+](C)C
+bleomycetin,,[0.72 0.28],C[C@@H](O)[C@H](NC(=O)[C@@H](C)[C@H](O)[C@@H](C)NC(=O)C(NC(=O)c1nc(nc(N)c1C)[C@H](CC(N)=O)NC[C@H](N)C(N)=O)[C@@H](O[C@H]1O[C@H](CO)[C@H](O)[C@@H](O)[C@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@@H](OC(N)=O)[C@@H]1O)c1c[nH]cn1)C(=O)NCCc1nc(cs1)-c1nc(cs1)C(=O)NCCCNCCCCN
