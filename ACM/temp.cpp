@@ -1,16 +1,28 @@
+#include <cstdio>
 #include <iostream>
-#include <map>
-#include <string>
 using namespace std;
-
 int main() {
-	map<string, int> mymap;
-	mymap.insert(make_pair("abc", 2));
-	mymap.insert(make_pair("rcd", 3));
-	mymap["tester"] = 4;
-	mymap["tester"] = 5;
-	for (map<string, int>::iterator it = mymap.begin(); it != mymap.end(); it++) {
-		cout << it->first << ":" << it->second << endl;
-		cout << mymap.count("abc");
+	int a, b;
+	int mon[30];
+	for (int k = 0; k < 30; k++) {
+		mon[k] = 1;
 	}
+	scanf("%d", &a);
+	for (int i = 0; i < a; i++) {
+		while (1)
+		{
+			scanf("%d", &b);
+			if (b == -1) {
+				break;
+			}
+			mon[b - 1] = 0;
+		}
+	}
+	for (int l = 0; l < 30; l++) {
+		if (mon[l] == 1) {
+			printf("no");
+			return 0;
+		}
+	}
+	printf("yes");
 }
