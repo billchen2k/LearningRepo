@@ -1,12 +1,7 @@
-lenth = input()
-grades = []
-ave = 0
-for i in range(int(lenth)):
-    info = input()
-    grades.append(int(info.split(' ')[1]))
-ave = sum(grades) / len(grades)
-s = 0
-for one in grades:
-    s = s + ((ave - one) ** 2)
-s = s / (len(grades)-1)
-print('%.2f %.2f\n' % (ave, s ** 0.5))
+import sys
+import re
+rule = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"
+for line in sys.stdin:
+    if(re.match(rule, line)):
+        print(line, end='')
+        
