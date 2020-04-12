@@ -1,55 +1,67 @@
 #include <algorithm>
-#include <climits>
 #include <iostream>
+#include <set>
 #include <string>
+#include <string.h>
 #include <vector>
+#define MAXL 100000
 using namespace std;
 
+int arr[MAXL];
+int s = 0;
+int n;
+int sum;
+set<vector<int>> ans;
+bool used[MAXL];
+
+void dfs(int i, int j, int cnt) {
+	// printf("dfs(%d, %d)\n", i, j);
+	if (i > n || j > sum) {
+		return;
+	}
+	if (sum == j) {
+		// Output result
+		vector<int> res;
+		int r = 0;
+		for (int r = 0; r < n; r++) {
+			if (used[r] == true) {
+				res.push_back(arr[r]);
+			}
+		}
+		if (ans.find(res) == ans.end()) {
+			ans.insert(res);
+			for (int k = 0; k < res.size(); k++) {
+				if (k == 0) {
+					cout << res[k];
+				} else {
+					cout << "+" << res[k];
+				}
+			}
+			cout << endl;
+		}
+		return;
+	}
+	used[i] = true;
+	dfs(i + 1, j + arr[i], cnt + 1);
+	used[i] = false;
+	dfs(i + 1, j, cnt);
+	return;
+}
+
 int main() {
-	int n;
-	cin >> n;
-	for (int i = 0; i < n; i++) {
-		int nu, np, nup, nk, sum = 0, c = 0;
-		vector<int> ku, kp;
-		cin >> nu >> np >> nup;
-		cin >> nk;
-		while (nk--) {
-			int p;
-			string tmp;
-			cin >> p >> tmp;
-			if (tmp == "USB") {
-				ku.push_back(p);
-			} else {
-				kp.push_back(p);
-			}
+	cin >> sum >> n;
+	while (sum != 0) {
+		ans.clear();
+		s = 0;
+		memset(used, 0, MAXL * sizeof(bool));
+		for (int i = 0; i < n; i++) {
+			cin >> arr[i];
 		}
-		sort(ku.begin(), ku.end());
-		sort(kp.begin(), kp.end());
-		for (; nu > 0 && ku.size() > 0; nu--) {
-			sum += ku.front();
-			c++;
-			if (ku.size() != 0)
-				ku.erase(ku.begin());
+		cout << "Sums of " << sum << ":" << endl;
+		dfs(0, 0, 0);
+		if (ans.size() == 0) {
+			cout << "NONE" << endl;
 		}
-		for (; np > 0 && kp.size() > 0; np--) {
-			sum += kp.front();
-			c++;
-			if (kp.size() != 0)
-				kp.erase(kp.begin());
-		}
-		for (; nup > 0 && (ku.size() > 0 || kp.size() > 0); nup--) {
-			int a = ku.size() != 0 ? ku.front() : INT_MAX;
-			int b = kp.size() != 0 ? kp.front() : INT_MAX;
-			if (a < b) {
-				sum += a;
-				ku.erase(ku.begin());
-			} else {
-				sum += b;
-				kp.erase(kp.begin());
-			}
-			c++;
-		}
-		cout << "case #" << i << ":" << endl;
-		cout << c << " " << sum << endl;
+		cin >> sum >> n;
 	}
 }

@@ -83,10 +83,14 @@
         "stdlib.h": "c",
         "pthread.h": "c",
         "filesystem": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "unordered_set": "cpp",
+        "*.inc": "cpp"
     },
-    "python.pythonPath": "/Users/billchen/opt/anaconda3/bin/python",
+    "python.pythonPath": "/Users/billchen/opt/anaconda3/envs/crawler/bin/python",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Enabled"
 }
