@@ -87,7 +87,8 @@
         "map": "cpp",
         "set": "cpp",
         "unordered_set": "cpp",
-        "*.inc": "cpp"
+        "*.inc": "cpp",
+        "__tree": "cpp"
     },
     "python.pythonPath": "/Users/billchen/opt/anaconda3/envs/crawler/bin/python",
     "python.linting.pylintEnabled": true,
