@@ -32,7 +32,3 @@ int main() {
 		}
 	}
 }
-
-int main(){
-	mems
-}
