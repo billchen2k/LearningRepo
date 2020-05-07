@@ -9,6 +9,7 @@ int a[10000];
 int pos[10000];
 int k;
 int main() {
+	string::npos
 	while (cin >> k && k) {
 		memset(dp, 0, sizeof(dp));
 		memset(a, 0, sizeof(a));

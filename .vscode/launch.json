@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
 
+
         
         {
             "name": "Python",
@@ -38,7 +39,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            // "cwd": "${workspaceFolder}",
             // "stopAtEntry": true,
             // "environment": [],
             // "externalConsole": true,
