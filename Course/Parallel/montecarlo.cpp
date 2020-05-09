@@ -18,9 +18,9 @@
 #include <sys/time.h>
 using namespace std;
 
-long DEGREE = 100000000;	 	// Times to calculate.
-long THREAD_COUNT = 15; 	// Thread count.
-long countIn = 0;	 		// Times the dot falls into the circle.
+long DEGREE = 100000000; // Times to calculate.
+long THREAD_COUNT = 15;	 // Thread count.
+long countIn = 0;	 // Times the dot falls into the circle.
 long runningThreads = 0;
 
 pthread_mutex_t m = PTHREAD_MUTEX_INITIALIZER;
@@ -63,7 +63,7 @@ void *montecarlo(void *c) {
 		}
 	}
 	pthread_mutex_lock(&m);
-	countIn+=myCount;
+	countIn += myCount;
 	runningThreads--;
 	pthread_mutex_unlock(&m);
 }
@@ -80,7 +80,6 @@ long mtime() {
 	return ms;
 }
 
-
 int main() {
 start:
 	countIn = 0;
@@ -91,7 +90,7 @@ start:
 		cin >> THREAD_COUNT;
 		cin.get();
 	}
-	cout << "Specify degree (leave empty to use default value " << DEGREE<< "): ";
+	cout << "Specify degree (leave empty to use default value " << DEGREE << "): ";
 	if ((ch = cin.get()) != '\n') {
 		cin.putback(ch);
 		cin >> DEGREE;
@@ -112,7 +111,6 @@ start:
 	// }
 	while (runningThreads) {
 		if (p != runningThreads) {
-			//cout << runningThreads << endl;
 			p = runningThreads;
 		}
 		continue;
