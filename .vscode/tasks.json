@@ -5,7 +5,7 @@
     "tasks": [
         {
             "label": "build with clang++",
-            "type": "shell",
+          //  "type": "shell",
             "command": "clang++",
             "args": [
                 "-g",
@@ -36,7 +36,7 @@
 
         {
             "label": "build with gcc",
-            "type": "shell",
+       //     "type": "shell",
             "command": "gcc",
             "args": [
                 "-g",

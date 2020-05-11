@@ -1,5 +1,7 @@
 ## Digital Image Homework 2
 
+[toc]
+
 > 10185101210 陈俊潼
 
 原矩阵为：
@@ -120,3 +122,12 @@ Rx = filter2(rx, t);
 Ry = filter2(ry, t);
 R = sqrt(Rx.^2 + Ry.^2)
 ```
+
+$$
+
+$$
+
+- a
+- b
+- c
+- d
