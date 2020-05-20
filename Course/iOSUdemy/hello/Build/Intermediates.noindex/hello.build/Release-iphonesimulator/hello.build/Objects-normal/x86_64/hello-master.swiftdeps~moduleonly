@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+options: "eb9de426d3919b2ab8b99fc76a34dd91"
+build_time: [1589691227, 926561000]
+inputs:
+  "/Users/billchen/OneDrive/Workspace/LearningRepo/Course/iOSUdemy/hello/hello/ViewController.swift": [9223372036, 854775807]
+  "/Users/billchen/OneDrive/Workspace/LearningRepo/Course/iOSUdemy/hello/hello/AppDelegate.swift": [9223372036, 854775807]
+  "/Users/billchen/OneDrive/Workspace/LearningRepo/Course/iOSUdemy/hello/hello/SceneDelegate.swift": [9223372036, 854775807]

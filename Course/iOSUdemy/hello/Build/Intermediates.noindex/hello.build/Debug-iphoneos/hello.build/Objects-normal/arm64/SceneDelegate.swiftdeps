@@ -1,0 +1,294 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SceneDelegate"
+provides-nominal:
+- "5hello13SceneDelegateC"
+provides-member:
+- ["5hello13SceneDelegateC", ""]
+provides-dynamic-lookup:
+- "scene"
+- "sceneDidBecomeActive"
+- "sceneDidDisconnect"
+- "sceneDidEnterBackground"
+- "sceneWillEnterForeground"
+- "sceneWillResignActive"
+- "window"
+depends-top-level:
+- "CastingPrecedence"
+- "SceneDelegate"
+- "UIResponder"
+- "UIScene"
+- "UISceneSession"
+- "UIWindow"
+- !private "UIWindowScene"
+- "UIWindowSceneDelegate"
+depends-member:
+- ["s7CVarArgP", "ConnectionOptions"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "scene"]
+- ["s7CVarArgP", "sceneDidBecomeActive"]
+- ["s7CVarArgP", "sceneDidDisconnect"]
+- ["s7CVarArgP", "sceneDidEnterBackground"]
+- ["s7CVarArgP", "sceneWillEnterForeground"]
+- ["s7CVarArgP", "sceneWillResignActive"]
+- ["s7CVarArgP", "stateRestorationActivity"]
+- ["s7CVarArgP", "stateRestorationActivityForScene"]
+- ["s7CVarArgP", "window"]
+- ["s7CVarArgP", "windowScene"]
+- ["s28CustomDebugStringConvertibleP", "ConnectionOptions"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "scene"]
+- ["s28CustomDebugStringConvertibleP", "sceneDidBecomeActive"]
+- ["s28CustomDebugStringConvertibleP", "sceneDidDisconnect"]
+- ["s28CustomDebugStringConvertibleP", "sceneDidEnterBackground"]
+- ["s28CustomDebugStringConvertibleP", "sceneWillEnterForeground"]
+- ["s28CustomDebugStringConvertibleP", "sceneWillResignActive"]
+- ["s28CustomDebugStringConvertibleP", "stateRestorationActivity"]
+- ["s28CustomDebugStringConvertibleP", "stateRestorationActivityForScene"]
+- ["s28CustomDebugStringConvertibleP", "window"]
+- ["s28CustomDebugStringConvertibleP", "windowScene"]
+- ["s23CustomStringConvertibleP", "ConnectionOptions"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "scene"]
+- ["s23CustomStringConvertibleP", "sceneDidBecomeActive"]
+- ["s23CustomStringConvertibleP", "sceneDidDisconnect"]
+- ["s23CustomStringConvertibleP", "sceneDidEnterBackground"]
+- ["s23CustomStringConvertibleP", "sceneWillEnterForeground"]
+- ["s23CustomStringConvertibleP", "sceneWillResignActive"]
+- ["s23CustomStringConvertibleP", "stateRestorationActivity"]
+- ["s23CustomStringConvertibleP", "stateRestorationActivityForScene"]
+- ["s23CustomStringConvertibleP", "window"]
+- ["s23CustomStringConvertibleP", "windowScene"]
+- ["SQ", "ConnectionOptions"]
+- ["SQ", ""]
+- !private ["SQ", "init"]
+- ["SQ", "scene"]
+- ["SQ", "sceneDidBecomeActive"]
+- ["SQ", "sceneDidDisconnect"]
+- ["SQ", "sceneDidEnterBackground"]
+- ["SQ", "sceneWillEnterForeground"]
+- ["SQ", "sceneWillResignActive"]
+- ["SQ", "stateRestorationActivity"]
+- ["SQ", "stateRestorationActivityForScene"]
+- ["SQ", "window"]
+- ["SQ", "windowScene"]
+- ["SH", "ConnectionOptions"]
+- ["SH", ""]
+- !private ["SH", "init"]
+- ["SH", "scene"]
+- ["SH", "sceneDidBecomeActive"]
+- ["SH", "sceneDidDisconnect"]
+- ["SH", "sceneDidEnterBackground"]
+- ["SH", "sceneWillEnterForeground"]
+- ["SH", "sceneWillResignActive"]
+- ["SH", "stateRestorationActivity"]
+- ["SH", "stateRestorationActivityForScene"]
+- ["SH", "window"]
+- ["SH", "windowScene"]
+- ["So8NSObjectC", "ConnectionOptions"]
+- ["So8NSObjectC", "UIScene"]
+- ["So8NSObjectC", "UISceneSession"]
+- ["So8NSObjectC", "UIWindow"]
+- !private ["So8NSObjectC", "UIWindowScene"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "scene"]
+- ["So8NSObjectC", "sceneDidBecomeActive"]
+- ["So8NSObjectC", "sceneDidDisconnect"]
+- ["So8NSObjectC", "sceneDidEnterBackground"]
+- ["So8NSObjectC", "sceneWillEnterForeground"]
+- ["So8NSObjectC", "sceneWillResignActive"]
+- ["So8NSObjectC", "stateRestorationActivity"]
+- ["So8NSObjectC", "stateRestorationActivityForScene"]
+- ["So8NSObjectC", "window"]
+- ["So8NSObjectC", "windowScene"]
+- ["So8NSObjectP", "ConnectionOptions"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "scene"]
+- ["So8NSObjectP", "sceneDidBecomeActive"]
+- ["So8NSObjectP", "sceneDidDisconnect"]
+- ["So8NSObjectP", "sceneDidEnterBackground"]
+- ["So8NSObjectP", "sceneWillEnterForeground"]
+- ["So8NSObjectP", "sceneWillResignActive"]
+- ["So8NSObjectP", "stateRestorationActivity"]
+- ["So8NSObjectP", "stateRestorationActivityForScene"]
+- ["So8NSObjectP", "window"]
+- ["So8NSObjectP", "windowScene"]
+- ["5hello13SceneDelegateC", "UIScene"]
+- ["5hello13SceneDelegateC", "UISceneSession"]
+- ["5hello13SceneDelegateC", "UIWindow"]
+- !private ["5hello13SceneDelegateC", "UIWindowScene"]
+- ["5hello13SceneDelegateC", "deinit"]
+- ["5hello13SceneDelegateC", "init"]
+- ["5hello13SceneDelegateC", "scene"]
+- ["5hello13SceneDelegateC", "sceneDidBecomeActive"]
+- ["5hello13SceneDelegateC", "sceneDidDisconnect"]
+- ["5hello13SceneDelegateC", "sceneDidEnterBackground"]
+- ["5hello13SceneDelegateC", "sceneWillEnterForeground"]
+- ["5hello13SceneDelegateC", "sceneWillResignActive"]
+- ["5hello13SceneDelegateC", "stateRestorationActivity"]
+- ["5hello13SceneDelegateC", "stateRestorationActivityForScene"]
+- ["5hello13SceneDelegateC", "window"]
+- ["5hello13SceneDelegateC", "windowScene"]
+- ["So30UIPasteConfigurationSupportingP", "ConnectionOptions"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So30UIPasteConfigurationSupportingP", "scene"]
+- ["So30UIPasteConfigurationSupportingP", "sceneDidBecomeActive"]
+- ["So30UIPasteConfigurationSupportingP", "sceneDidDisconnect"]
+- ["So30UIPasteConfigurationSupportingP", "sceneDidEnterBackground"]
+- ["So30UIPasteConfigurationSupportingP", "sceneWillEnterForeground"]
+- ["So30UIPasteConfigurationSupportingP", "sceneWillResignActive"]
+- ["So30UIPasteConfigurationSupportingP", "stateRestorationActivity"]
+- ["So30UIPasteConfigurationSupportingP", "stateRestorationActivityForScene"]
+- ["So30UIPasteConfigurationSupportingP", "window"]
+- ["So30UIPasteConfigurationSupportingP", "windowScene"]
+- ["So11UIResponderC", "ConnectionOptions"]
+- ["So11UIResponderC", "UIScene"]
+- ["So11UIResponderC", "UISceneSession"]
+- ["So11UIResponderC", "UIWindow"]
+- !private ["So11UIResponderC", "UIWindowScene"]
+- ["So11UIResponderC", ""]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "scene"]
+- ["So11UIResponderC", "sceneDidBecomeActive"]
+- ["So11UIResponderC", "sceneDidDisconnect"]
+- ["So11UIResponderC", "sceneDidEnterBackground"]
+- ["So11UIResponderC", "sceneWillEnterForeground"]
+- ["So11UIResponderC", "sceneWillResignActive"]
+- ["So11UIResponderC", "stateRestorationActivity"]
+- ["So11UIResponderC", "stateRestorationActivityForScene"]
+- ["So11UIResponderC", "window"]
+- ["So11UIResponderC", "windowScene"]
+- ["So30UIResponderStandardEditActionsP", "ConnectionOptions"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- ["So30UIResponderStandardEditActionsP", "scene"]
+- ["So30UIResponderStandardEditActionsP", "sceneDidBecomeActive"]
+- ["So30UIResponderStandardEditActionsP", "sceneDidDisconnect"]
+- ["So30UIResponderStandardEditActionsP", "sceneDidEnterBackground"]
+- ["So30UIResponderStandardEditActionsP", "sceneWillEnterForeground"]
+- ["So30UIResponderStandardEditActionsP", "sceneWillResignActive"]
+- ["So30UIResponderStandardEditActionsP", "stateRestorationActivity"]
+- ["So30UIResponderStandardEditActionsP", "stateRestorationActivityForScene"]
+- ["So30UIResponderStandardEditActionsP", "window"]
+- ["So30UIResponderStandardEditActionsP", "windowScene"]
+- ["So7UISceneC", "ConnectionOptions"]
+- ["So15UISceneDelegateP", ""]
+- ["So15UISceneDelegateP", "scene"]
+- ["So15UISceneDelegateP", "sceneDidBecomeActive"]
+- ["So15UISceneDelegateP", "sceneDidDisconnect"]
+- ["So15UISceneDelegateP", "sceneDidEnterBackground"]
+- ["So15UISceneDelegateP", "sceneWillEnterForeground"]
+- ["So15UISceneDelegateP", "sceneWillResignActive"]
+- ["So15UISceneDelegateP", "stateRestorationActivity"]
+- ["So15UISceneDelegateP", "stateRestorationActivityForScene"]
+- ["So15UISceneDelegateP", "window"]
+- ["So15UISceneDelegateP", "windowScene"]
+- ["So23UIUserActivityRestoringP", "ConnectionOptions"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- ["So23UIUserActivityRestoringP", "scene"]
+- ["So23UIUserActivityRestoringP", "sceneDidBecomeActive"]
+- ["So23UIUserActivityRestoringP", "sceneDidDisconnect"]
+- ["So23UIUserActivityRestoringP", "sceneDidEnterBackground"]
+- ["So23UIUserActivityRestoringP", "sceneWillEnterForeground"]
+- ["So23UIUserActivityRestoringP", "sceneWillResignActive"]
+- ["So23UIUserActivityRestoringP", "stateRestorationActivity"]
+- ["So23UIUserActivityRestoringP", "stateRestorationActivityForScene"]
+- ["So23UIUserActivityRestoringP", "window"]
+- ["So23UIUserActivityRestoringP", "windowScene"]
+- ["So21UIWindowSceneDelegateP", ""]
+- ["So21UIWindowSceneDelegateP", "scene"]
+- ["So21UIWindowSceneDelegateP", "sceneDidBecomeActive"]
+- ["So21UIWindowSceneDelegateP", "sceneDidDisconnect"]
+- ["So21UIWindowSceneDelegateP", "sceneDidEnterBackground"]
+- ["So21UIWindowSceneDelegateP", "sceneWillEnterForeground"]
+- ["So21UIWindowSceneDelegateP", "sceneWillResignActive"]
+- ["So21UIWindowSceneDelegateP", "stateRestorationActivity"]
+- ["So21UIWindowSceneDelegateP", "stateRestorationActivityForScene"]
+- ["So21UIWindowSceneDelegateP", "window"]
+- ["So21UIWindowSceneDelegateP", "windowScene"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "ConnectionOptions"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "scene"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "sceneDidBecomeActive"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "sceneDidDisconnect"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "sceneDidEnterBackground"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "sceneWillEnterForeground"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "sceneWillResignActive"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "stateRestorationActivity"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "stateRestorationActivityForScene"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "window"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "windowScene"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ConnectionOptions"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "scene"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sceneDidBecomeActive"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sceneDidDisconnect"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sceneDidEnterBackground"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sceneWillEnterForeground"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sceneWillResignActive"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stateRestorationActivity"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "stateRestorationActivityForScene"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "window"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "windowScene"]
+depends-nominal:
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- "SH"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "5hello13SceneDelegateC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So7UISceneC"
+- "So15UISceneDelegateP"
+- "So23UIUserActivityRestoringP"
+- "So21UIWindowSceneDelegateP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/ObjectiveC.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/CoreImage.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/QuartzCore.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/Dispatch.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/Metal.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/Darwin.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/Foundation.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/CoreFoundation.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/CoreGraphics.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/Swift.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/UIKit.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/lib/swift/SwiftOnoneSupport.swiftmodule/arm64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/arm64-apple-ios.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/ObjectiveC.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreImage.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/QuartzCore.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Dispatch.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/Metal.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreFoundation.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/prebuilt-modules/CoreGraphics.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "127201c8c716b7030f8c10092b30daff"

@@ -1,0 +1,589 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ViewController"
+provides-nominal:
+- "5hello14ViewControllerC"
+provides-member:
+- ["5hello14ViewControllerC", ""]
+provides-dynamic-lookup:
+- "btnHi"
+- "btnMainClicked"
+- "doubleTapped"
+- "txtHi"
+- "viewDidLoad"
+depends-top-level:
+- !private "+="
+- !private "-"
+- !private "..."
+- "AVAudioPlayer"
+- "AssignmentPrecedence"
+- "FloatLiteralType"
+- !private "Int"
+- "IntegerLiteralType"
+- !private "StringLiteralType"
+- "Timer"
+- "UIImageView"
+- "UILabel"
+- !private "UITapGestureRecognizer"
+- "UIViewController"
+- "ViewController"
+- !private "_ImageLiteralType"
+- !private "print"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "random"]
+- !private ["Sa", "count"]
+- !private ["Sa", "subscript"]
+- !private ["SK", "count"]
+- !private ["SK", "subscript"]
+- !private ["Sz", "random"]
+- !private ["So15CALayerDelegateP", "image"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["s7CVarArgP", "Int"]
+- ["s7CVarArgP", "Timer"]
+- !private ["s7CVarArgP", "UITapGestureRecognizer"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "btnHi"]
+- !private ["s7CVarArgP", "clickTime"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "doubleTapped"]
+- !private ["s7CVarArgP", "image"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "numberOfTapsRequired"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "random"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "txtHi"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["Sl", "count"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "random"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- ["s28CustomDebugStringConvertibleP", "Timer"]
+- !private ["s28CustomDebugStringConvertibleP", "UITapGestureRecognizer"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "btnHi"]
+- !private ["s28CustomDebugStringConvertibleP", "clickTime"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "doubleTapped"]
+- !private ["s28CustomDebugStringConvertibleP", "image"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "numberOfTapsRequired"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "txtHi"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "image"]
+- !private ["s17CustomReflectableP", "random"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "text"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- ["s23CustomStringConvertibleP", "Timer"]
+- !private ["s23CustomStringConvertibleP", "UITapGestureRecognizer"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "btnHi"]
+- !private ["s23CustomStringConvertibleP", "clickTime"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "doubleTapped"]
+- !private ["s23CustomStringConvertibleP", "image"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "numberOfTapsRequired"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "random"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "txtHi"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "count"]
+- !private ["Se", "image"]
+- !private ["Se", "random"]
+- !private ["Se", "subscript"]
+- !private ["Se", "text"]
+- !private ["SE", "count"]
+- !private ["SE", "image"]
+- !private ["SE", "random"]
+- !private ["SE", "subscript"]
+- !private ["SE", "text"]
+- !private ["SQ", "Int"]
+- ["SQ", "Timer"]
+- !private ["SQ", "UITapGestureRecognizer"]
+- ["SQ", ""]
+- !private ["SQ", "btnHi"]
+- !private ["SQ", "clickTime"]
+- !private ["SQ", "count"]
+- !private ["SQ", "doubleTapped"]
+- !private ["SQ", "image"]
+- ["SQ", "init"]
+- !private ["SQ", "numberOfTapsRequired"]
+- !private ["SQ", "print"]
+- !private ["SQ", "random"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "text"]
+- !private ["SQ", "txtHi"]
+- !private ["SQ", "viewDidLoad"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByIntegerLiteralP", "random"]
+- !private ["s23ExpressibleByNilLiteralP", "image"]
+- !private ["s23ExpressibleByNilLiteralP", "text"]
+- !private ["s17FixedWidthIntegerP", "random"]
+- !private ["SH", "Int"]
+- ["SH", "Timer"]
+- !private ["SH", "UITapGestureRecognizer"]
+- ["SH", ""]
+- !private ["SH", "btnHi"]
+- !private ["SH", "clickTime"]
+- !private ["SH", "count"]
+- !private ["SH", "doubleTapped"]
+- !private ["SH", "image"]
+- ["SH", "init"]
+- !private ["SH", "numberOfTapsRequired"]
+- !private ["SH", "print"]
+- !private ["SH", "random"]
+- !private ["SH", "subscript"]
+- !private ["SH", "text"]
+- !private ["SH", "txtHi"]
+- !private ["SH", "viewDidLoad"]
+- !private ["Si", "random"]
+- !private ["s25LosslessStringConvertibleP", "random"]
+- !private ["s10MirrorPathP", "random"]
+- !private ["SM", "count"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- !private ["So8NSCodingP", "Int"]
+- ["So8NSCodingP", "Timer"]
+- !private ["So8NSCodingP", "UITapGestureRecognizer"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "btnHi"]
+- !private ["So8NSCodingP", "clickTime"]
+- !private ["So8NSCodingP", "doubleTapped"]
+- !private ["So8NSCodingP", "image"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "txtHi"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- !private ["So26NSExtensionRequestHandlingP", "Int"]
+- ["So26NSExtensionRequestHandlingP", "Timer"]
+- !private ["So26NSExtensionRequestHandlingP", "UITapGestureRecognizer"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "btnHi"]
+- !private ["So26NSExtensionRequestHandlingP", "clickTime"]
+- !private ["So26NSExtensionRequestHandlingP", "doubleTapped"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "print"]
+- !private ["So26NSExtensionRequestHandlingP", "txtHi"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So8NSObjectC", "AVAudioPlayer"]
+- !private ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "Timer"]
+- ["So8NSObjectC", "UIImageView"]
+- ["So8NSObjectC", "UILabel"]
+- !private ["So8NSObjectC", "UITapGestureRecognizer"]
+- ["So8NSObjectC", "btnHi"]
+- ["So8NSObjectC", "btnMainClicked"]
+- ["So8NSObjectC", "clickTime"]
+- ["So8NSObjectC", "doubleTapped"]
+- !private ["So8NSObjectC", "image"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "numberOfTapsRequired"]
+- ["So8NSObjectC", "playNote"]
+- ["So8NSObjectC", "player"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "text"]
+- ["So8NSObjectC", "timer"]
+- ["So8NSObjectC", "txtHi"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So8NSObjectP", "Int"]
+- ["So8NSObjectP", "Timer"]
+- !private ["So8NSObjectP", "UITapGestureRecognizer"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "btnHi"]
+- !private ["So8NSObjectP", "clickTime"]
+- !private ["So8NSObjectP", "doubleTapped"]
+- !private ["So8NSObjectP", "image"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "numberOfTapsRequired"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "txtHi"]
+- !private ["So8NSObjectP", "viewDidLoad"]
+- !private ["Sj", "random"]
+- !private ["Sq", "image"]
+- !private ["Sq", "text"]
+- !private ["Sk", "count"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "count"]
+- !private ["Sm", "subscript"]
+- !private ["s10SIMDScalarP", "random"]
+- !private ["ST", "count"]
+- !private ["ST", "subscript"]
+- !private ["SZ", "random"]
+- !private ["s13SignedNumericP", "random"]
+- !private ["Sx", "random"]
+- ["So7NSTimerC", "init"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
+- !private ["So29UIAccessibilityIdentificationP", "image"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "image"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "Int"]
+- ["So21UIAppearanceContainerP", "Timer"]
+- !private ["So21UIAppearanceContainerP", "UITapGestureRecognizer"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "btnHi"]
+- !private ["So21UIAppearanceContainerP", "clickTime"]
+- !private ["So21UIAppearanceContainerP", "doubleTapped"]
+- !private ["So21UIAppearanceContainerP", "image"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "txtHi"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- !private ["So18UIContentContainerP", "Int"]
+- ["So18UIContentContainerP", "Timer"]
+- !private ["So18UIContentContainerP", "UITapGestureRecognizer"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "btnHi"]
+- !private ["So18UIContentContainerP", "clickTime"]
+- !private ["So18UIContentContainerP", "doubleTapped"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "print"]
+- !private ["So18UIContentContainerP", "txtHi"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So17UICoordinateSpaceP", "image"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "image"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "Int"]
+- ["So18UIFocusEnvironmentP", "Timer"]
+- !private ["So18UIFocusEnvironmentP", "UITapGestureRecognizer"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "btnHi"]
+- !private ["So18UIFocusEnvironmentP", "clickTime"]
+- !private ["So18UIFocusEnvironmentP", "doubleTapped"]
+- !private ["So18UIFocusEnvironmentP", "image"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "txtHi"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- !private ["So11UIFocusItemP", "image"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So20UIFocusItemContainerP", "image"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So19UIGestureRecognizerC", "init"]
+- !private ["So19UIGestureRecognizerC", "numberOfTapsRequired"]
+- !private ["So11UIImageViewC", "image"]
+- !private ["So7UILabelC", "text"]
+- !private ["So24UILargeContentViewerItemP", "image"]
+- !private ["So24UILargeContentViewerItemP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "Int"]
+- ["So30UIPasteConfigurationSupportingP", "Timer"]
+- !private ["So30UIPasteConfigurationSupportingP", "UITapGestureRecognizer"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "btnHi"]
+- !private ["So30UIPasteConfigurationSupportingP", "clickTime"]
+- !private ["So30UIPasteConfigurationSupportingP", "doubleTapped"]
+- !private ["So30UIPasteConfigurationSupportingP", "image"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "txtHi"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So11UIResponderC", "AVAudioPlayer"]
+- !private ["So11UIResponderC", "Int"]
+- ["So11UIResponderC", "Timer"]
+- ["So11UIResponderC", "UIImageView"]
+- ["So11UIResponderC", "UILabel"]
+- !private ["So11UIResponderC", "UITapGestureRecognizer"]
+- ["So11UIResponderC", "btnHi"]
+- ["So11UIResponderC", "btnMainClicked"]
+- ["So11UIResponderC", "clickTime"]
+- ["So11UIResponderC", "doubleTapped"]
+- !private ["So11UIResponderC", "image"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "playNote"]
+- ["So11UIResponderC", "player"]
+- !private ["So11UIResponderC", "print"]
+- !private ["So11UIResponderC", "text"]
+- ["So11UIResponderC", "timer"]
+- ["So11UIResponderC", "txtHi"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "Int"]
+- ["So30UIResponderStandardEditActionsP", "Timer"]
+- !private ["So30UIResponderStandardEditActionsP", "UITapGestureRecognizer"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "btnHi"]
+- !private ["So30UIResponderStandardEditActionsP", "clickTime"]
+- !private ["So30UIResponderStandardEditActionsP", "doubleTapped"]
+- !private ["So30UIResponderStandardEditActionsP", "image"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "txtHi"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So16UIStateRestoringP", "Int"]
+- ["So16UIStateRestoringP", "Timer"]
+- !private ["So16UIStateRestoringP", "UITapGestureRecognizer"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "btnHi"]
+- !private ["So16UIStateRestoringP", "clickTime"]
+- !private ["So16UIStateRestoringP", "doubleTapped"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "print"]
+- !private ["So16UIStateRestoringP", "txtHi"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So22UITapGestureRecognizerC", "init"]
+- !private ["So22UITapGestureRecognizerC", "numberOfTapsRequired"]
+- !private ["So18UITraitEnvironmentP", "Int"]
+- ["So18UITraitEnvironmentP", "Timer"]
+- !private ["So18UITraitEnvironmentP", "UITapGestureRecognizer"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "btnHi"]
+- !private ["So18UITraitEnvironmentP", "clickTime"]
+- !private ["So18UITraitEnvironmentP", "doubleTapped"]
+- !private ["So18UITraitEnvironmentP", "image"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "txtHi"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- !private ["So23UIUserActivityRestoringP", "Int"]
+- ["So23UIUserActivityRestoringP", "Timer"]
+- !private ["So23UIUserActivityRestoringP", "UITapGestureRecognizer"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "btnHi"]
+- !private ["So23UIUserActivityRestoringP", "clickTime"]
+- !private ["So23UIUserActivityRestoringP", "doubleTapped"]
+- !private ["So23UIUserActivityRestoringP", "image"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "print"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "txtHi"]
+- !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
+- !private ["So6UIViewC", "image"]
+- !private ["So6UIViewC", "text"]
+- ["So16UIViewControllerC", "AVAudioPlayer"]
+- !private ["So16UIViewControllerC", "Int"]
+- ["So16UIViewControllerC", "Timer"]
+- ["So16UIViewControllerC", "UIImageView"]
+- ["So16UIViewControllerC", "UILabel"]
+- !private ["So16UIViewControllerC", "UITapGestureRecognizer"]
+- ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "btnHi"]
+- ["So16UIViewControllerC", "btnMainClicked"]
+- ["So16UIViewControllerC", "clickTime"]
+- ["So16UIViewControllerC", "doubleTapped"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "playNote"]
+- ["So16UIViewControllerC", "player"]
+- !private ["So16UIViewControllerC", "print"]
+- ["So16UIViewControllerC", "timer"]
+- ["So16UIViewControllerC", "txtHi"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- ["5hello14ViewControllerC", "AVAudioPlayer"]
+- !private ["5hello14ViewControllerC", "Int"]
+- ["5hello14ViewControllerC", "Timer"]
+- ["5hello14ViewControllerC", "UIImageView"]
+- ["5hello14ViewControllerC", "UILabel"]
+- !private ["5hello14ViewControllerC", "UITapGestureRecognizer"]
+- ["5hello14ViewControllerC", "btnHi"]
+- ["5hello14ViewControllerC", "btnMainClicked"]
+- ["5hello14ViewControllerC", "clickTime"]
+- ["5hello14ViewControllerC", "deinit"]
+- ["5hello14ViewControllerC", "doubleTapped"]
+- ["5hello14ViewControllerC", "init"]
+- ["5hello14ViewControllerC", "playNote"]
+- ["5hello14ViewControllerC", "player"]
+- !private ["5hello14ViewControllerC", "print"]
+- ["5hello14ViewControllerC", "timer"]
+- ["5hello14ViewControllerC", "txtHi"]
+- ["5hello14ViewControllerC", "viewDidLoad"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "random"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "random"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "random"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Timer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UITapGestureRecognizer"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "btnHi"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "clickTime"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "doubleTapped"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "image"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "numberOfTapsRequired"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "txtHi"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Int"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Timer"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UITapGestureRecognizer"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "btnHi"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "clickTime"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "doubleTapped"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "image"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "numberOfTapsRequired"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "text"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "txtHi"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewDidLoad"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "image"]
+- !private ["s21_ObjectiveCBridgeableP", "random"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "text"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "image"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "Sa"
+- !private "SK"
+- !private "Sz"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "SH"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So8NSCodingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "Sj"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- "So7NSTimerC"
+- !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So19UIGestureRecognizerC"
+- !private "So11UIImageViewC"
+- !private "So7UILabelC"
+- !private "So24UILargeContentViewerItemP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- !private "So22UITapGestureRecognizerC"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- "5hello14ViewControllerC"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/ObjectiveC.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreMIDI.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreMedia.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/simd.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreImage.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/QuartzCore.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Dispatch.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Metal.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Darwin.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Foundation.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/AVFoundation.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreFoundation.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreAudio.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/CoreGraphics.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/Swift.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/UIKit.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/lib/swift/SwiftOnoneSupport.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "dd5807803562a42b39033f254b777645"
