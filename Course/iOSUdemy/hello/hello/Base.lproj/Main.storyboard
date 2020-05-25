@@ -62,11 +62,20 @@
                                                     <action selector="btnMainClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CKA-8D-iWE"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How's your day?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n1w-JD-FYM">
+                                                <rect key="frame" x="87" y="133" width="200" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="t8d-DU-w2w"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="name"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="Nvd-1d-Ilu" firstAttribute="centerY" secondItem="3o9-H4-zMh" secondAttribute="centerY" constant="-30" id="5ZK-vd-f5Q"/>
                                             <constraint firstItem="Nvd-1d-Ilu" firstAttribute="centerX" secondItem="3o9-H4-zMh" secondAttribute="centerX" id="WSZ-o5-Ox1"/>
+                                            <constraint firstItem="n1w-JD-FYM" firstAttribute="centerX" secondItem="3o9-H4-zMh" secondAttribute="centerX" id="fB9-hd-0V8"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -84,11 +93,12 @@
                     <connections>
                         <outlet property="btnHi" destination="d81-zG-BEf" id="LW8-zr-2hq"/>
                         <outlet property="txtHi" destination="gTO-gH-AmT" id="fSP-3I-WDD"/>
+                        <outlet property="txtMain" destination="n1w-JD-FYM" id="RyP-hp-Bbm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.27678571428569" y="137.68115942028987"/>
+            <point key="canvasLocation" x="136.23188405797103" y="137.27678571428569"/>
         </scene>
     </scenes>
     <resources>

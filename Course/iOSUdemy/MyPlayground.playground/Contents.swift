@@ -1,31 +1,14 @@
 
 import Cocoa
 
-class William {
-
-    let favNum :[Int] = [3, 6, 9]
-
-    var greeting : String? {
-        get{
-            return "Hello, \(self.name)!"
-        }
-    }
-
-    var name: String {
-        willSet {
-            print("You wanna change my name?")
-        }
-
-    }
-
-    init() {
-        self.name = "Bill Chen"
-        print(self.greeting!)
-    }
+func handle(data: Data?, response: URLResponse?, error: Error?){
+    
 }
 
-var will = William()
-will.name = "Dolores"
-print(will.greeting!)
 
+let url = URL(string: "http://101.37.30.177/info/getDialectTypes")
+
+let session = URLSession(configuration: .default)
+
+let task = session.dataTask(with: url, completionHandler: handle(data: response: error:))
 

@@ -8,32 +8,31 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var btnHi: UIImageView!
     
     @IBOutlet weak var txtHi: UILabel!
     
-    var player: AVAudioPlayer?
-    
-    var timer = Timer()
-    
-    func playNote(){
+    @IBOutlet weak var txtMain: UITextField!
 
-        print("I'm in a dream.")
+    var locationManager = CLLocationManager()
 
-        
-    }
-    
+//MARK: - This is a section.
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         let tap = UITapGestureRecognizer(target: btnHi, action: #selector(doubleTapped))
         tap.numberOfTapsRequired = 2
-
+        
+        txtMain.delegate = self
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
     }
     
     @objc func doubleTapped() {
@@ -66,8 +65,91 @@ class ViewController: UIViewController {
         txtHi.text =  words[Int.random(in: 0...words.count - 1)]
         
         clickTime += 1
-       
+        txtMain.endEditing(true);
+        
+        
+
+        let url = URL(string: "http://101.37.30.177/info/getDialectTypes")
+
+        let session = URLSession(configuration: .default)
+
+        let task = session.dataTask(with: url!, completionHandler: {(data, response, error) in
+            if(error != nil){
+                       print(error!)
+                       return
+                   }
+            let dataString = String(data: data!, encoding: .utf8)
+//            print(dataString!)
+            
+            struct dialectData: Decodable{
+                let timestamp: String
+            }
+            
+            do{
+                let dict = try JSONSerialization.jsonObject(with: data!, options: [JSONSerialization.ReadingOptions.init(rawValue: 0)]) as? [String:AnyObject]
+                
+//                let datas = dict!["data"] as! [String:NSArray]
+//                print(datas[0])
+//
+//                for i in 0...dict["data"]!.count {
+//                    print(dict!["data"][i]["dialect_code"])
+//                }
+
+                print("pause")
+            }
+            catch {
+                print(error)
+            }
+            
+            
+            let decoder = JSONDecoder()
+            do{
+                let decodedData = try decoder.decode(dialectData.self, from: data!)
+                print(decodedData.timestamp)
+            } catch {
+                print(error)
+            }
+                
+        })
+        
+        task.resume()
         
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print(txtMain.text ?? "")
+        textField.becomeFirstResponder()
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if txtMain.text != ""{
+            textField.endEditing(true)
+            txtMain.text = ""
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }
 
+//MARK: - Location manager
+
+extension ViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.latitude
+            print(lat)
+            print(lon)
+        }
+
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("fail")
+    }
+    
+}

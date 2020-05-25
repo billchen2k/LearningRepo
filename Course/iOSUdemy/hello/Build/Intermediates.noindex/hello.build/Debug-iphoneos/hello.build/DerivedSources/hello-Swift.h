@@ -227,12 +227,22 @@ SWIFT_CLASS("_TtC5hello13SceneDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIImageView;
+@class UILabel;
+@class UITextField;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC5hello14ViewController")
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified btnHi;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified txtHi;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified txtMain;
 - (void)viewDidLoad;
+- (void)doubleTapped;
+- (IBAction)btnMainClicked:(id _Nonnull)sender;
+- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
