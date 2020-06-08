@@ -89,7 +89,13 @@
         "unordered_set": "cpp",
         "*.inc": "cpp",
         "__tree": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "clocale": "cpp",
+        "codecvt": "cpp",
+        "condition_variable": "cpp",
+        "*.tcc": "cpp",
+        "memory_resource": "cpp",
+        "cinttypes": "cpp"
     },
     "python.pythonPath": "/Users/billchen/opt/anaconda3/envs/crawler/bin/python",
     "python.linting.pylintEnabled": true,
