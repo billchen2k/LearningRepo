@@ -46,6 +46,15 @@
             // "MIMode": "lldb"
         },
         {
+            "name": "C++ (mpi)",
+            "preLaunchTask": "build with mpic++",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
+            "args": [],
+
+        },
+        {
             "name": "C (lldb)",
             "preLaunchTask": "build with gcc",
             "type": "lldb",

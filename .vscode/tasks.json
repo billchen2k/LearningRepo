@@ -37,6 +37,33 @@
             // Use the standard MS compiler pattern to detect errors, warnings and infos
            // "problemMatcher": "$msCompile"
         },
+{
+    "label": "build with mpic++",
+    //  "type": "shell",
+    "command": "mpic++",
+    "args": [
+        "${file}",
+        "-o",
+        //"${fileDirname}/${fileBasenameNoExtension}.out",
+        "${workspaceFolder}/temp/${fileBasenameNoExtension}.out",
+        "-g",
+        "-std=c++17",
+        "-stdlib=libc++"
+    ],
+    "group": {
+        "kind": "build",
+        "isDefault": true
+    },
+    "presentation": {
+        "echo": true,
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false,
+        "reveal": "silent"
+    },
+
+},
 
         {
             "label": "build with gcc",

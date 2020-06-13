@@ -357,3 +357,51 @@ A location manager. Authorization need to be requested first.
 
 
 
+## SwiftUI
+
+- An declarative UI Framework, WWDC 2019
+
+- Highly Reusable UI: Layouts can be highly reusable![image-20200611001549327](https://billc.oss-cn-shanghai.aliyuncs.com/img/2020-06-11-WnoF3P.png)
+
+  Changing stack into list… Reusing makes us creating reusable.
+
+- Cross Platform - Same app for iWatch, iOS and macOS -> Project Catalyst
+
+`ContentView.previewDevice`
+
+Finding the default value: `ENTER`
+
+```swift
+VStack // Verticle Stack
+ZStack {
+    Color(red: ..., green:..., blue:...)
+}
+
+```
+
+### Custom Styles & Advanced
+
+> [https://flatuicolors.com](https://flatuicolors.com) - used to find colors
+>
+> https://uicolor.xyz - Convert hex color to UI color
+
+- Using Custom Font: `Text(…).font(Font.custom("", size: 40))`
+
+![image-20200611003136948](https://billc.oss-cn-shanghai.aliyuncs.com/img/2020-06-11-AtDiGV.png)
+
+- Clipping the image: `Clip Shape`, add it to the Image object
+
+- Overlay: Overlay can be a circle, text:
+
+  - ```swift
+    .overlay(Text("...").foregroundColor(.black))
+    ```
+
+- Using system image: `Image(systemName: "phone.fill")`
+- **Previewing the image:**
+
+![image-20200611004323824](https://billc.oss-cn-shanghai.aliyuncs.com/img/2020-06-11-Ksat2u.png)
+
+- `@State` Allow us to change the view wherever the property changes
+
+- `DispatchQueue.main.async` {} This closure happens asyncally
