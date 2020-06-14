@@ -1,7 +1,7 @@
 /**
  * @file TSP1.cpp
  * @author Bill Chen (Bill.Chen@live.com)
- * @brief 使用 MPI 实现的一个树搜索问题。在这个实现中，使用的是一个简单的串行程序。
+ * @brief 使用 MPI 实现的一个树搜索问题。在这个实现中，使用的是一个串行程序。
  * @version 0.1
  * @date 2020-06-10 16:09
  *
@@ -34,9 +34,9 @@ int gsize = 0;
  * @brief 读取文件，初始化图。
  * 
  */
-void init() {
+void init(char *graph) {
 	fstream fin;
-	fin.open("/Users/billchen/OneDrive/Workspace/LearningRepo/Course/Parallel/Homework3/graph10.in", ios::in);
+	fin.open(graph, ios::in);
 	fill(visited, visited + MAXL, 0);
 	for (int i = 0; i < MAXL; i++) {
 		for (int j = 0; j < MAXL; j++) {
@@ -51,7 +51,6 @@ void init() {
 	}
 	gsize++;
 }
-
 /**
  * @brief 打印路径
  * 
@@ -77,21 +76,25 @@ long mtime() {
 	return ms;
 }
 
-int main() {
-	init();
+int main(int argc, char * argv[]) {
+	if(argc > 1){
+		init(argv[1]);
+	}
+	else{
+		printf("Graph file not specified, using graph12.in...\n");
+		init("graph12.in");
+	}
 	long start = mtime();
 	stack<int> s;
 	vector<int> best;
 	vector<int> current;
 	int bestcost = INF;
-	// for (int i = gsize - 1; i > 0; i--) {
-	// 	s.push(i);
-	// }
-	s.push(8);
+	for (int i = gsize - 1; i > 0; i--) {
+		s.push(i);
+	}
 	int cost = 0;
 	current.push_back(0);
-	current.push_back(3);
-	current.push_back(2);
+
 	while (!s.empty()) {
 		int root = s.top();
 		s.pop();
@@ -106,7 +109,7 @@ int main() {
 			visited[root] = 1;
 			if (current.size() == gsize) {
 				cost += G[current.back()][0];
-				print_road(current, cost);
+				// print_road(current, cost);
 				if (cost < bestcost) {
 					best = current;
 					bestcost = cost;
@@ -127,7 +130,7 @@ int main() {
 		}
 	}
 
-	printf("--------BEST-------\n");
+	printf("-------- BEST TOUR-------\n");
 	print_road(best, bestcost);
 	printf("Time elapsed: %ld ms.\n", mtime() - start);
 }
