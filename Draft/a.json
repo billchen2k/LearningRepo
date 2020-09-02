@@ -230,3 +230,11 @@
         }
     ]
 }
+
+{
+    "apiCanary": "WYSbtS0KmBjaIGSuW\/LuBOf+app74tYkUmZX619gKsAmpvjAvNswrjCBvxXmwstKZA\/ERQ9Feo37UjvM5I6CFCc5h5uJnms8MjPE2qhFyUFzBjIfHNPlaOfMJ\/GA9cvwu20mNt1dfKMrXJxokXjcP9vyytydqPPnQ\/aIHCCTluw4vCPu7g4hHXSpkc4jVACL8ZOQ2s0oiKDiObLC9I+3096rllx63Rx2qrpCNVw+mQpXgrSSgo4gsjvgCpjZyXaN:2:3c",
+    "telemetryContext": "X3RYno9hslTxA4pNgRFJTs4N4NST8gDdFFRvIL5pqWlc7h1NeA4OZ\/e8mbcru70GUU7LrMceYhbo4qn59ZWCw1pzaBm\/kl7IxXTjloUncJBjuQe6F3cEVEvaxOqQfOMKuI2Y8f+z1EQe80tx0UZnbE13K2eiO+BWsZdUFnGfGEzr+2vo2FrygW64Bj3RLDdOEdAfFyddRjr2wyGxsA4VNWRmLKZ9u0fWtRYAJFxiZl1JkSpfLMzvUZrJlKdZOvDvip94OQ15d\/XQqZIUxUrZvynNwNV53R0aehfnUXuNZMGU00F9MjLI+X2oWgibAaB2o88YawaWaM7jmi4lEf0uHVOIf\/EGsIODhmT5mFxPqodjPqb54iLc0JN9dX0JeXxwTgWEXSVcsyZ69hI09GW+DzN2YHWP7pz835mJ9\/2udy9vtD76v8rGcVKJC+a7Jaw1cBQZk2xZ81zXEzGmiJUuE+8LSvYtv2ITr3xw3hg0xQDlDAvZTQSGikeTvHtDakUCk8dsEqNT4rmdkMhBstyRyg==:2:3",
+    "isAvailable": true,
+    "nopaAllowed": false,
+    "type": "Live"
+}
