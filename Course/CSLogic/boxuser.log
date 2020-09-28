@@ -1,0 +1,80 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.27)  27 SEP 2020 14:05
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/billchen/Workspace/LearningRepo/Course/CSLogic/boxuser
+(/Users/billchen/Workspace/LearningRepo/Course/CSLogic/boxuser.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-09-24> (/usr/local/texlive/2020basic/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/local/texlive/2020basic/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count164
+\c@section=\count165
+\c@subsection=\count166
+\c@subsubsection=\count167
+\c@paragraph=\count168
+\c@subparagraph=\count169
+\c@figure=\count170
+\c@table=\count171
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (./boxproof.sty <Paul Taylor's Proof Boxes, 8 November 1993>  ****** This is an experimental version - please get an up-to-date one ******  by anonymous FTP theory.doc.ic.ac.uk /tex/contrib/Taylor/tex/boxproof.tex
+\prooflinenowidth=\dimen135
+\proofboxfullwidth=\dimen136
+\proofboxleftmargin=\dimen137
+\proofboxrightmargin=\dimen138
+\proofboxrulebreadth=\dimen139
+\proofboxseparation=\dimen140
+\proofboxbaselineskip=\dimen141
+\proofcolumns=\count172
+\prooflinetotal=\count173
+\prooflineinbox=\count174
+\proofboxproposition=\box45
+\proofboxreason=\box46
+\proofboxuse=\box47
+\proofboxvariables=\box48
+\proofboxintercol=\dimen142
+\proofboxsurround=\dimen143
+\proofboxformulawidth=\dimen144
+\proofboxmargin=\dimen145
+\proofboxlefttabskip=\skip49
+\proofboxrighttabskip=\skip50
+\pb@L=\box49
+\pb@T=\dimen146
+\pb@U=\dimen147
+\pb@M=\dimen148
+\pb@N=\dimen149
+\pb@O=\dimen150
+\pb@P=\dimen151
+\pb@Q=\dimen152
+\pb@R=\dimen153
+\pb@S=\dimen154
+)
+
+! LaTeX Error: File `a4wide.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+/Users/billchen/Workspace/LearningRepo/Course/CSLogic/boxuser.tex:7: Emergency stop.
+<read *> 
+         
+l.7 \usepackage
+               {daymonthyear}^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 374 strings out of 481198
+ 4056 string characters out of 5920626
+ 245310 words of memory out of 5000000
+ 17628 multiletter control sequences out of 15000+600000
+ 535096 words of font info for 30 fonts, out of 8000000 for 9000
+ 319 hyphenation exceptions out of 8191
+ 24i,0n,25p,197b,40s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

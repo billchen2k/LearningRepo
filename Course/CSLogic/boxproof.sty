@@ -1,0 +1,428 @@
+% mangletex (11 May 1992) run at 22:09 GMT Monday 08 November 1993
+%%\title                {\TeX\ macros for proof boxes}
+%%\author               {Paul Taylor\\
+%%                      Department of Computing,\\
+%%                      Imperial College,\\
+%%                      London SW7 2BZ\\
+%%                      +44 71 589 5111 {\em ext.} 5057\\
+%%                      {\tt<pt@doc.ic.ac.uk>}}
+%%\date{8 November 1993}
+%% % to get the provisional user documentation do
+%% % grep ^%% boxproof.tex | sed 's/^%*//' > boxproof-manual.tex
+%%\documentstyle{article}
+%%\input boxproof.tex
+%%\def\meta#1{\mbox{$\langle\hbox{#1}\rangle$}}
+%%\def\macrowitharg#1#2{{\tt\string#1\bra\meta{#2}\ket}}
+%%{\escapechar-1 \xdef\bra{\string\{}\xdef\ket{\string\}}}
+%%\let\subsection\section
+%%\begin{document}
+%%\maketitle
+%%
+%% \subsection{Introduction}
+%% The proof
+%%\begin{proofbox}
+%%  \(\"1"\:\alpha\leftrightarrow\psi(x,\top)\=\\
+%%        \:\Some\beta.\psi(x,\beta)\=\mathsf{total}\\
+%%    \[\exists\beta\kern-1em\:\psi(x,\beta)\\
+%%      \(\:\beta\=\\
+%%        \:\beta=\top\=(*)\\
+%%        \:\psi(x,\!\top)\=\mathsf{subs}\\
+%%        \:\alpha\=\elim\leftrightarrow(\ref{1})\\
+%%      \*\:\alpha\=\\
+%%        \:\psi(x,\!\top)\=\elim\leftrightarrow(\ref{1})\\
+%%        \:\beta=\top\=\mathsf{func}\\
+%%        \:\beta\=(*)\\
+%%      \)\:\alpha=\beta\=\intro\leftrightarrow\\
+%%        \:\psi(x,\alpha)\=\mathsf{subs}\\
+%%    \]  \:\psi(x,\alpha)\=\elim\exists\\
+%%    \*  \:\psi(x,\alpha)\=\\
+%%      \(\:\alpha\=\\
+%%        \:\alpha=\top\=(*)\\
+%%        \:\phi(x,\!\top)\=\mathsf{subs}\\
+%%      \*\:\psi(x,\!\top)\=\\
+%%        \:\alpha=\top\=\mathsf{func}\\
+%%        \:\alpha\=(*)\\
+%%      \)\:\alpha\leftrightarrow\psi(x,\!\top)\=\intro\leftrightarrow\\
+%%%    \)  \:\psi(x,\alpha)\leftrightarrow(\alpha\leftrightarrow\psi(x,\!\top))
+%%          \=\intro\leftrightarrow\\
+%%\end{proofbox}
+%% is produced by
+%%\begin{verbatim}
+%%\begin{proofbox}
+%%  \(\"1"\:\alpha\leftrightarrow\psi(x,\top)\\
+%%        \:\Some\beta.\psi(x,\beta)                      \=\mathsf{total}\\
+%%    \[\exists\beta\kern-1em\:\psi(x,\beta)\\
+%%      \(\:\beta\\
+%%        \:\beta=\top                                    \=(*)\\
+%%        \:\psi(x,\!\top)                                \=\mathsf{subs}\\
+%%        \:\alpha                         \=\elim\leftrightarrow(\ref{1})\\
+%%      \*\:\alpha\\
+%%        \:\psi(x,\!\top)                 \=\elim\leftrightarrow(\ref{1})\\
+%%        \:\beta=\top                                     \=\mathsf{func}\\
+%%        \:\beta\=(*)\\
+%%      \)\:\alpha=\beta                           \=\intro\leftrightarrow\\
+%%        \:\psi(x,\alpha)                                 \=\mathsf{subs}\\
+%%    \]  \:\psi(x,\alpha)                                  \=\elim\exists\\
+%%    \*  \:\psi(x,\alpha)\\
+%%      \(\:\alpha\\
+%%        \:\alpha=\top                                   \=(*)\\
+%%        \:\phi(x,\!\top)                                \=\mathsf{subs}\\
+%%      \*\:\psi(x,\!\top)\\
+%%        \:\alpha=\top                                   \=\mathsf{func}\\
+%%        \:\alpha                                        \=(*)\\
+%%      \)\:\alpha\leftrightarrow\psi(x,\!\top)   \=\intro\leftrightarrow\\
+%%    \)  \:\psi(x,\alpha)\leftrightarrow
+%%          (\alpha\leftrightarrow\psi(x,\!\top)) \=\intro\leftrightarrow\\
+%%\end{proofbox}
+%%\end{verbatim}
+%%
+%%  Syntax as follows:
+%%  each line is of the form
+%%  \begin{center}
+%%     \meta{variables}
+%%     \meta{name}
+%%     \verb/\:/ \meta{formula}
+%%     \verb/\=/ \meta{reason}
+%%     \verb/\-/ \meta{use}
+%%     \verb/\\/
+%%  \end{center}
+%%  where
+%%  \begin{itemize}
+%%  \item \meta{variables} is something like ``$x,y$'' ---
+%%    it's for variables declared at the beginning of $\intro\forall$- and
+%%    $\elim\exists$-boxes.
+%%  \item \meta{name} is a command \verb/\label{fred}/ which
+%%    defines \verb/fred/ to be the label text, which may be used anywhere
+%%    as \verb/\ref{fred}/ --- see {\em The \LaTeX book.}
+%%    Local labels are also available, using \macrowitharg\lbl{name}
+%%    or \verb/\"/\meta{name}\verb/"/; these obey the scoping rules of
+%%    the boxes.
+%%    You may also refer to the previous line as \verb/\ref{-}/.
+%%  \item \meta{formula} is the proposition being asserted.
+%%  \item \meta{reason} is \verb/\intro\land(\ref{john},\ref{mary})/
+%%         or \verb/\elim\forall(\ref{jim})/.
+%%  \item \meta{use} is provided for linear logic, to record the step
+%%%         which uses this one. How this accords with theory I don't yet know.
+%%  \end{itemize}
+%%  Note that the parts are separated by \verb/\:/, \verb/\=/ and \verb/\\/;
+%%  these correspond to
+%%  \begin{center}
+%%     {\bf let } \meta{name} = \meta{expression} : \meta{type}
+%%  \end{center}
+%%  in a declarative language.
+%%  The \verb/\:/, \verb/\=/ and \verb/\-/ fields are optional and may occur
+%%  in any order. If any of them is repeated the last is taken.
+%%  If none of them is present the \meta{variables} field is also ignored.
+%%
+%%  Proof {\em boxes\/} are ``wrapped up'' as follows:
+%%  \begin{itemize}
+%%%  \item the whole proof in \verb/\begin{proofbox}/...\verb/\end{proofbox}/;
+%%%  \item single-column boxes ($\intro\forall$, $\intro\imp$, $\elim\exists$),
+%%      in \verb/\[/...\verb/\]/.
+%%  \item multiple-column boxes are of two kinds:
+%%    \begin{itemize}
+%%%     \item separate ($\intro\land$) boxes: \verb/\(/...\verb/\*/...\verb/\)/.
+%%     \item stuck together ($\elim\lor$) boxes:
+%%        \verb/\(/...\verb/\+/...\verb/\)/.
+%%    \end{itemize}
+%%  \end{itemize}
+%%  You may put more than two columns in \verb/\(/...\verb/\)/ and even mix
+%%  the \verb/\+/ and \verb/\*/ separators.
+%%
+%%  The whole proof is enclosed in \verb/\proofbox/...\verb/\endproofbox/
+%%  or \verb/\begin{proofbox}/...\verb/\end{proofbox}/, but the \LaTeX\
+%%  environment form {\em must not\/} be used for nested boxes.
+%%
+%%  If the proof occurs in paragraph mode (ie in vertical or
+%%  unrestricted horizontal mode) then it is set as a display, using the
+%%  full width of the page. Otherwise it uses only the required width.
+%%
+%%  A lot of the internals are potentially configurable, but there is not
+%%  yet a user interface suitable for doing this. This will be provided
+%%  in the next version.
+%%
+%%  This is a {\em prototype\/} proof-box macro package;
+%%  the syntax and implementation may change.
+%%  It is {\tt boxproof.tex} in the \TeX\ system
+%%  (so just \verb/\input boxproof/).
+%%
+%%  There are some examples in
+%%  \verb+~pt/utilities/proofs/proofboxeg.tex+ and
+%%  \verb+proofboxeg1.tex+.
+%%
+%%  The prototype version was begun on 2 August 1991, the new one on
+%%  4 June 1993.
+%%
+%%
+\message{<Paul Taylor's Proof Boxes, 8 November 1993>}\edef\proofboxrestoreat
+{\noexpand\catcode`\noexpand\@\the\catcode`\@}\catcode`\@=11 \count@\year
+\multiply\count@12 \advance\count@\month\ifnum\count@> 23999 \message{ ******
+This is an experimental version - please get an up-to-date one ******}%
+\message{ by anonymous FTP theory.doc.ic.ac.uk /tex/contrib/Taylor/tex/%
+boxproof.tex}\fi\let\pb@A\+\let\+\relax\let\pb@B\(\let\pb@C\)\def\pb@D{\pb@B
+\let\)\pb@C}\def\pb@E{\pb@B\displaystyle\let\]\pb@C}%%
+%% The following are user-settable dimensions.
+%% 
+\newdimen\prooflinenowidth\prooflinenowidth1em \newdimen\proofboxfullwidth
+\newdimen\proofboxleftmargin\proofboxleftmargin3em \newdimen
+\proofboxrightmargin\newdimen\proofboxrulebreadth\proofboxrulebreadth.4pt
+\newdimen\proofboxseparation\proofboxseparation.2em \newdimen
+\proofboxbaselineskip\proofboxbaselineskip4ex %%
+%%
+%% The following are user-accessible numbers.
+%%
+\newcount\proofcolumns\newcount\prooflinetotal\newcount\prooflineinbox%%
+%%
+%% These boxes receive the fields of the proof steps.
+%% They are used in \verb/\proofboxmakeleftcolumn/ {\em etc}.
+%%
+\newbox\proofboxproposition\newbox\proofboxreason\newbox\proofboxuse\newbox
+\proofboxvariables%%
+%% The left-most switch is used by
+%%% \verb/\proofboxmakelabel/ to suppress the label in all but the first column.
+%% On the outside it is true.
+\newif\ifleftmostproofbox\leftmostproofboxtrue%%
+%%
+%% The following are obsolete: they are only included for reverse
+%% compatibility with the prototype version.
+\newdimen\proofboxintercol\newdimen\proofboxsurround\newdimen
+\proofboxformulawidth\newdimen\proofboxmargin\newskip\proofboxlefttabskip
+\newskip\proofboxrighttabskip%%
+%%
+%% \subsection{Redefinable macros}
+%% WARNING: most of these commands will be hidden and replaced with
+%% optional arguments to \verb/\proofbox/ in a future version.
+%% Do not rely on them.
+%%
+%% We provide three different ways of numbering the lines of the proof:
+%% \begin{itemize}
+%% \item \verb/\runningproofline/: a global running sequence (default),
+%% 
+\def\runningproofline{\number\prooflinetotal}%%
+%% \item \verb/\nestedproofline/: a hierarchical system with dots,
+%%
+\def\nestedproofline{\relax\ifx\enclosingproofline\empty\else
+\enclosingproofline{.}\fi\number\prooflineinbox}\def\enclosingproofline{}%%
+%% \item \verb/\nestedproofline/: a fully hierarchical system which
+%% also includes the column number
+%% (\verb/\proof@columns/) as a letter (ASCII quote plus number).
+%%
+\def\proofboxcolumn{\ifnum\proofcolumns>\z@{\count@96\advance\count@
+\proofcolumns\char\count@}\fi}\def\fullynestedproofline{\relax\ifx
+\enclosingproofline\empty\enclosingproofline\proofboxcolumn.\else
+\proofboxcolumn\fi\number\prooflineinbox}%%
+%% \end{itemize}
+%% \verb/\theproofline/ is the default.
+%%
+\let\theproofline\runningproofline%%
+%% The macro \verb/\proofboxmakelabel#1/ is used to print the line label.
+%% We only put it in the leftmost box.
+%% It is printed in small non-ranging Arabic numerals
+%% ({\the\scriptfont1 0123456789}).
+%% Right-justify it in \verb/\prooflinenowidth/ if it will fit,
+%% otherwise let it stick out on the right, {\em i.e.}~left-justify it.
+%%
+\def\proofboxmakelabel#1{{\relax\ifleftmostproofbox\setbox\z@\hbox{\hss\the
+\scriptfont\@ne#1}\ifdim\wd\z@<\prooflinenowidth\setbox\z@\hbox to%
+\prooflinenowidth{\unhbox\z@}\fi\box\z@\quad\fi}}%%
+%% Kill the numbers altogether with \verb/\proofboxnonumbers/.
+%%
+\def\proofboxnonumbers{\def\proofboxmakelabel##1{}}%%
+%% How to make the left column of the proof box:
+%% use the variables field, a space if necessary and the line label.
+%%
+\def\proofboxmakeleftcolumn{\kern\proofboxseparation\hfil\dimen@\wd
+\proofboxvariables\unhbox\proofboxvariables\ifdim\dimen@>\z@\quad\fi
+\proofboxmakelabel\@currentlabel}%%
+%% How to make the middle column of the proof box:
+%% left justify the formula field.
+%%
+\def\proofboxmakemiddlecolumn{\unhbox\proofboxproposition\hfil\quad}%%
+%% How to make the right column of the proof box:
+%% use the reason and use fields.
+%%
+\def\proofboxmakerightcolumn{\box\proofboxreason\box\proofboxuse\hfil\kern
+\proofboxseparation}%%
+%%
+%% Make the four edges of a rectangular box and the separator
+%% between \verb/\+/ columns.
+%%
+\def\proofboxleftside{\leaders\hrule width\proofboxrulebreadth\vfill}\def
+\proofboxrightside{\leaders\hrule width\proofboxrulebreadth\vfill}\def
+\proofboxorseparator{\leaders\hrule width\proofboxrulebreadth\vfill}\def
+\proofboxtopside{\leaders\vrule height\proofboxrulebreadth depth\z@\hfill}%
+\def\proofboxbottomside{\leaders\vrule height\proofboxrulebreadth depth\z@
+\hfill}%%
+%%
+%% Use dotted lines: \verb/\dottedproofbox/.
+%%
+\def\dottedproofbox{\def\proofboxleftside{\leaders\pb@F\vfill} \def
+\proofboxrightside{\leaders\pb@F\vfill} \def\proofboxorseparator{\leaders
+\pb@F\vfill} \def\proofboxtopside{\leaders\pb@F\hfill}\def\proofboxbottomside
+{\leaders\pb@F\hfill}%%
+}\def\pb@F{\vbox to 5pt{\vss\hbox to 5pt{\hss.\hss}\vss}}%%
+%% Leave the boxes open at the bottom: \verb/\openproofbox/
+%%
+\def\openproofbox{\def\proofboxbottomside{\hfill}} %%
+%% \subsection{Miscellaneous logical notations}
+%%
+%% Print the names of the introduction and elimination rules, for example:
+%%  \begin{quote}
+%%     \verb/\elim\forall/ $\elim\forall$ \qquad
+%%     \verb/\intro\land/ $\intro\land$ \qquad
+%%  \end{quote}
+\def\intro#1{{{#1}{\cal I}}}\def\elim#1{{{#1}{\cal E}}}%%
+%% Recall that in \TeX\ the logical connectives and quantifiers are called
+%%  \begin{center}
+%%    \verb/\lor/ $\lor$\quad
+%%    \verb/\land/ $\land$\quad
+%%    \verb/\lnot/ $\lnot$\quad
+%%    \verb/\forall/ $\forall$\quad
+%%    \verb/\exists/ $\exists$
+%%  \end{center}
+%% The following provide macros for the \verb/\implies/ {\em relation\/}
+%% and for the binary {\em operation\/} which yields the abstract
+%% \verb/\implic/ation between formulae.
+%% The point is that \TeX\ spaces them and breaks the lines differently:
+%%  \begin{center}
+%%    \verb/A\implies B/ $A\implies B$\quad{\em versus\/}\quad
+%%    \verb/A\implic B/ $A\implic B$
+%%  \end{center}
+%% There are forward and reverse, single and Double versions.
+%%
+\mathchardef\implies="3221 \mathchardef\impliedby="3220 \mathchardef\Implies=%
+"3229 \mathchardef\Impliedby="3228 \mathchardef\implic="2221 \mathchardef
+\implicby="2220 \mathchardef\Implic="2229 \mathchardef\Implicby="2228 \let
+\imp\to%%
+%% Handle the spacing after a variable (and optionally its type)
+%% bound by a quantifier symbol. For example
+%%  \begin{quote}
+%%    \verb/\All x:X. \phi(x)/\quad prints as\quad $\All x:X.\phi(x)$\quad
+%%     instead of\quad $\forall x:X.\phi(x)$
+%%  \end{quote}
+\def\Quantifier#1#2.{\pb@G{#1}#2::.}\def\pb@G#1#2:#3:#4.{{{#1}{#2}\def\next{#%
+3}\ifx\next\empty{.}\mkern4mu \else\mkern1mu{\colon}\mkern1mu{#3}\mkern.5mu{.%
+}\mkern6mu \fi}}%
+%% We provide some commonly used forms; \verb/\iota/ ($\iota$) is Russell's
+%% description operator and should really be inverted.
+\def\All{\Quantifier\forall}\def\Some{\Quantifier\exists}\def\Function{%
+\Quantifier\lambda}\def\Product{\Quantifier\Pi}\def\Sum{\Quantifier\Sigma}%
+\def\TheOne{\Quantifier\iota}\def\Least{\Quantifier\mu}\def\Greatest{%
+\Quantifier\nu}%%
+%% There are several notations for substitution.
+%% After writing $a[x:=b]$ throughout my book I~thought I~might change to
+%% $[b/x]^*a$.
+%% This macro reads the source in the first form and prints in the second.
+%% If you use it you can, like me, defer the decision about
+%% which notation to use until the final stages, doing
+%% \begin{quote}
+%%    \verb/\renewcommand{\Subst}{\plainsubstitution}/
+%% \end{quote}
+%% if you finally decide on making substitution act on the right.
+%% This is already an improvement on the literal text, because it
+%% automatically enlarges the brackets according to the text inside.
+%% \verb/\Subst/ itself is (following my book)
+%% defined in terms of the action of a context morphism (\verb/\CtxtMor/)
+%% on a term. Again you can do
+%% \begin{quote}
+%%    \verb/\renewcommand{\CtxtMor}{\plaincontextmorphism}/
+%% \end{quote}
+%% for something simpler.
+%% This macro interprets its argument as a comma-separated list
+%% of items in the form $x:=b$, which it switches to $b/x$.
+\def\swappingsubstitution#1[#2]{{\CtxtMor[#2]^*{#1}}}%
+%\def\swappingcontextmorphism[#1]{{\let\pb@J\empty\left[\pb@H#1,[],\/\right]}}%
+\def\swappingcontextmorphism[#1]{{\let\pb@J\empty[\pb@H#1,[],\/]}}%
+\def\pb@H#1,{\def\next{#1}\ifx\next\pb@K\else\pb@J\let\pb@J,\pb@I#1:=:=,%
+\expandafter\pb@H\fi}\def\pb@I#1:=#2:=#3,{{\def\next{#2}\ifx\next\empty\else{%
+#2}/\fi{#1} }}\def\pb@K{[]}\def\Subst{\swappingsubstitution}\def\CtxtMor{%
+\swappingcontextmorphism}%%
+%% The simple versions.
+\def\plainsubstitution#1#2{{#1}{\left[{#2}\right]}}\def\plaincontextmorphism#%
+1{{\left[#1\right]}}\newbox\pb@L\newdimen\pb@T\newdimen\pb@U\newdimen\pb@M
+\newdimen\pb@N\newdimen\pb@O\newdimen\pb@P\newdimen\pb@Q\newdimen\pb@R
+\newdimen\pb@S\def\pb@V#1#2{\relax\ifdim#1<#2\relax#1=#2\relax\fi}\count@
+\year\multiply\count@12 \advance\count@\month\ifnum\count@> 25000 \message{%
+because this one has expired and will no longer work!}\endinput\fi%%
+\def\proofbox{\relax\ifmmode\let\next\pb@a\else\let\next\pb@b\ifhmode\ifinner
+\let\next\pb@a\fi\fi\fi\next\global\prooflinetotal\@ne\boxmaxdepth\maxdimen
+\def\[{\pb@w\pb@f\pb@W}\def\({\pb@w\pb@f\pb@X}\def\proofbox{\[}\let\lbl\pb@y
+\def\"##1"{\pb@y{##1}}\def\:{\pb@v\proofboxproposition\displaystyle}\def\={%
+\pb@v\proofboxreason}\def\-{\pb@v\proofboxuse}\def\\{\pb@w\pb@u}\let\+\pb@c
+\let\*\pb@c\let\]\pb@c\pb@p\pb@s}\def\endproofbox{\pb@q\pb@IA\box\pb@L\egroup
+}\def\pb@W{\let\+\pb@d\let\*\pb@d\def\){\pb@e\[\)}\let\]\pb@Y\proofcolumns\z@
+}\def\pb@X{\proofcolumns\@ne\def\+{\pb@j\pb@l}\def\*{\pb@j\pb@m}\def\]{\pb@e
+\(\]}\let\)\pb@Y}\def\pb@Y{\pb@o\pb@u}\def\pb@a{\hbox\bgroup}\def\pb@b{$$%
+\kern-\displayindent\hbox to\hsize\bgroup\proofboxfullwidth\hsize\aftergroup$%
+\aftergroup$}\def\pb@c{\errmessage{Box proofs: \string\+, \string\*, \string
+\) and \string\] may not be used at the top level}}\def\pb@d{\errmessage{Box
+proofs: enclose \string\+ and \string\* in \string\(\string\), not \string\[%
+\string\]}}\def\pb@e#1#2{\errmessage{Box proofs: \string#1 closed by \string#%
+2}\pb@Y}\def\pb@f#1{\setbox\pb@L\hbox\bgroup#1\let\pb@g\pb@n\let
+\enclosingproofline\@currentlabel\edef\pb@h{\the\prooflinetotal}\let\pb@i
+\pb@h\pb@O\z@\pb@M\z@\pb@N-\maxdimen\pb@P\z@\pb@p\pb@t}\def\pb@j#1{\pb@q\pb@k
+\let\pb@g#1\advance\proofcolumns\@ne\global\prooflinetotal\pb@h
+\leftmostproofboxfalse\pb@p\pb@t}\def\pb@k{\pb@g\pb@V\pb@M{\wd\pb@L}\advance
+\pb@O\wd\pb@L\ifnum\pb@i<\prooflinetotal\edef\pb@i{\the\prooflinetotal}\fi
+\ifdim\pb@N<\dp\pb@L\pb@N\dp\pb@L\pb@P\pb@Q\fi\setbox\z@\hbox{%
+\proofboxtopside}\wd\z@\z@\box\z@\setbox\z@\hbox{\proofboxbottomside}\wd\z@
+\z@\box\z@\kern\pb@R\box\pb@L\kern\pb@S}\def\pb@l{\vtop{\proofboxorseparator}%
+\penalty\thr@@}\def\pb@m{\vtop{\proofboxrightside}\kern\proofboxseparation
+\vtop{\proofboxleftside}\penalty\tw@}\def\pb@n{\pb@T\pb@R\setbox\z@\vtop{%
+\proofboxleftside}\dimen@\wd\z@\advance\pb@T\dimen@\advance\pb@T
+\proofboxseparation\kern-\pb@T\kern\proofboxseparation\box\z@\penalty\@ne}%
+\def\pb@o{\pb@q\pb@k\setbox\z@\vtop{\proofboxrightside}\global\advance\pb@S
+\wd\z@\box\z@\global\advance\pb@S\proofboxseparation\kern\proofboxseparation
+\global\prooflinetotal\pb@i\global\pb@R\pb@T\global\pb@Q\pb@P\ifnum
+\proofcolumns<\@ne\proofcolumns\@ne\fi\penalty\proofcolumns\kern-\pb@M\kern
+\pb@M\kern-\pb@O\kern\pb@O\kern-\pb@S\penalty\@ne\egroup\pb@r}\def\pb@p#1{%
+\setbox\pb@L\vtop\bgroup\baselineskip\proofboxbaselineskip\prooflineinbox\@ne
+\pb@T\z@\pb@U\z@#1\pb@u}\def\pb@q{\pb@w\global\pb@R\pb@T\global\pb@S\pb@U
+\egroup}\def\pb@r{\pb@V\pb@T\pb@R\pb@V\pb@U\pb@S\box\pb@L\prevdepth\pb@Q}\def
+\pb@s{}\def\pb@t{}\def\pb@u{\edef\@currentlabel{\theproofline}\let\label@name
+\@currentlabel\setbox\proofboxproposition\box\voidb@x\setbox\proofboxreason
+\box\voidb@x\setbox\proofboxuse\box\voidb@x\setbox\proofboxvariables\hbox
+\bgroup\let\pb@z\pb@AA\let\pb@w\pb@x$}\def\pb@v#1{$\egroup\setbox#1\hbox
+\bgroup\let\pb@z\pb@AA$}\def\pb@w{$\egroup\global\advance\prooflinetotal\@ne
+\advance\prooflineinbox\@ne\setbox\pb@L\hbox{\setbox\z@\hbox{%
+\proofboxmakeleftcolumn}\global\pb@R\wd\z@\kern-\pb@R\box\z@\hbox{%
+\proofboxmakemiddlecolumn}\setbox\z@\hbox{\proofboxmakerightcolumn}\global
+\pb@S\wd\z@\box\z@\kern-\pb@S\penalty\tw@}\global\pb@Q\dp\pb@L\pb@r}\def\pb@x
+{$\egroup}\def\pb@y#1{\aftergroup\pb@z\expandafter\aftergroup\csname r@#1%
+\endcsname}\def\pb@z#1{\edef#1{{\@currentlabel}{}}\expandafter\pb@@A\string#1%
+\\}\expandafter\def\expandafter\pb@@A\string\r@#1\\{\def\label@name{#1}}\def
+\pb@AA#1{\aftergroup\pb@z\aftergroup#1}\expandafter\def\csname r@-\endcsname{%
+{\previous@label}{}}\dimendef\pb@BA=\@ne\dimendef\pb@CA=\tw@\dimendef\pb@DA=%
+\thr@@\dimendef\pb@EA=4 \dimendef\pb@FA=5 \dimendef\pb@GA=6 \chardef\pb@HA=9
+\def\pb@IA{\pb@GA\proofboxfullwidth\pb@T\proofboxleftmargin\pb@V\pb@T\pb@R
+\advance\pb@GA-\pb@T\pb@U\proofboxrightmargin\pb@V\pb@U\pb@S\advance\pb@GA-%
+\pb@U\pb@V\pb@GA{\wd\pb@L}\pb@JA}\def\pb@JA{\setbox\pb@L\vtop{\unvbox\pb@L
+\loop\skip@\lastskip\unskip\setbox\pb@HA\lastbox\ifhbox\pb@HA\pb@KA\repeat
+\unvbox\pb@L\unskip}}\def\pb@KA{\pb@DA\dp\pb@HA\pb@EA\ht\pb@HA\pb@CA\wd\pb@HA
+\setbox\pb@HA\hbox{\unhbox\pb@HA\count@\lastpenalty\unpenalty\unkern\ifodd
+\count@\pb@LA\else\setbox\thr@@\lastbox\setbox\tw@\lastbox\setbox\@ne\lastbox
+\unkern\hbox to\pb@T{\unhbox\@ne}\hbox to\pb@GA{\unhbox\tw@}\hbox to\pb@U{%
+\unhbox\thr@@}\fi}\dp\pb@HA\pb@DA\ht\pb@HA\pb@EA\setbox\pb@L\vtop{\box\pb@HA
+\nointerlineskip\vskip\skip@\unvbox\pb@L}}\def\pb@LA{\pb@O\lastkern\unkern
+\unkern\pb@M\lastkern\unkern\unkern\proofcolumns\lastpenalty\unpenalty\pb@FA
+\pb@T\ifnum\@ne=\proofcolumns\let\pb@MA\pb@NA\else\advance\pb@GA-\pb@CA\pb@BA
+\pb@GA\advance\pb@GA\pb@O\ifdim\pb@GA<\proofcolumns\pb@M\divide\pb@BA
+\proofcolumns\let\pb@MA\pb@PA\else\divide\pb@GA\proofcolumns\let\pb@MA\pb@OA
+\fi\fi\dimen@\lastkern\unkern\setbox\@ne\lastbox\pb@RA\setbox\pb@HA\hbox{\box
+\@ne\kern\dimen@}\advance\pb@U-\wd\pb@HA\unkern\loop\setbox\pb@L\lastbox\pb@T
+\lastkern\unkern\setbox\tw@\lastbox\setbox\thr@@\lastbox\count@\lastpenalty
+\unpenalty\pb@MA\pb@JA\setbox\@ne\vbox{\offinterlineskip\pb@QA\thr@@\vfil
+\pb@QA\tw@}\pb@RA\pb@TA{\box\@ne\box\pb@L}\ifnum\count@>\@ne\pb@SA\pb@U
+\lastkern\unkern\repeat\unhbox\pb@HA}\def\pb@NA{\pb@T\pb@FA\setbox\@ne
+\lastbox\advance\pb@T-\wd\@ne\dimen@\lastkern\unkern\unkern\kern\dimen@\pb@RA
+\box\@ne\advance\pb@T-\dimen@}\def\pb@OA{\ifnum\@ne=\count@\pb@NA\fi}\def
+\pb@PA{\pb@GA\wd\pb@L\advance\pb@GA\pb@BA\pb@OA}\def\pb@QA#1{\setbox#1\hbox to%
+\wd\pb@L{\unhbox#1}\wd#1\z@\box#1\relax}\def\pb@RA{\setbox\@ne\vbox to\pb@EA{%
+\offinterlineskip\vskip-\proofboxseparation\unvbox\@ne\vskip-%
+\proofboxseparation\setbox\z@\null\ht\z@-\pb@DA\dp\z@\pb@DA\box\z@}}\def
+\pb@SA{\setbox\@ne\lastbox\pb@RA\pb@TA{\box\@ne}\ifodd\count@\else\dimen@
+\lastkern\unkern\setbox\@ne\lastbox\pb@RA\pb@TA{\box\@ne\kern\dimen@}\fi}\def
+\pb@TA#1{\setbox\pb@HA\hbox{#1\unhbox\pb@HA}}\let\+\pb@A\proofboxrestoreat
+\endinput\def\x{}%%
+%% \end{document}
+% \fi

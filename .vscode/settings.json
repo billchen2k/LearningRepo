@@ -114,5 +114,6 @@
     "python.pythonPath": "/Users/billchen/opt/anaconda3/envs/crawler/bin/python",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "C_Cpp.errorSquiggles": "Enabled"
-}
+    "C_Cpp.errorSquiggles": "Enabled",
+    "editor.tokenColorCustomizations": null
+}z

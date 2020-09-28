@@ -1,0 +1,966 @@
+\title          {\TeX\ macros for proof boxes}
+\author         {Paul Taylor}
+
+\documentclass{article}
+\usepackage{boxproof}
+\usepackage{a4wide}
+\usepackage{daymonthyear}
+
+\def\meta#1{\mbox{$\langle\hbox{#1}\rangle$}}
+\def\macrowitharg#1#2{{\tt\string#1\bra\meta{#2}\ket}}
+
+{\escapechar-1 \xdef\bra{\string\{}\xdef\ket{\string\}}}
+
+\def\intro#1{{#1}{\cal I}}
+\def\elim#1{{#1}{\cal E}}
+
+\showboxbreadth 999
+\showboxdepth 999
+\tracingoutput 1
+
+
+\let\imp\to
+\def\elim#1{{{#1}{\cal E}}}
+\def\intro#1{{{#1}{\cal I}}}
+\def\lt{<}
+\def\eqdef{=}
+\def\eps{\mathrel{\epsilon}}
+\def\biimplies{\leftrightarrow}
+\def\flt#1{\mathrel{{#1}^\flat}}
+\def\setof#1{{\left\{{#1}\right\}}}
+\let\implies\to
+\def\KK{{\mathsf K}}
+\let\squashmuskip\relax
+
+%=======================================================================
+\begin{document}
+\maketitle
+
+\section{Introduction}
+The proof
+\begin{proofbox}
+  \(\"1"\:\alpha\leftrightarrow\psi(x,\top)\=\\
+        \:\Some\beta.\psi(x,\beta)\=\mathsf{total}\\
+    \[\exists\beta\kern-1em\:\psi(x,\beta)\\
+      \(\:\beta\=\\
+        \:\beta=\top\=(*)\\
+        \:\psi(x,\!\top)\=\mathsf{subs}\\
+        \:\alpha\=\elim\leftrightarrow(\ref{1})\\
+      \*\:\alpha\=\\
+        \:\psi(x,\!\top)\=\elim\leftrightarrow(\ref{1})\\
+        \:\beta=\top\=\mathsf{func}\\
+        \:\beta\=(*)\\
+      \)\:\alpha=\beta\=\intro\leftrightarrow\\
+        \:\psi(x,\alpha)\=\mathsf{subs}\\
+    \]  \:\psi(x,\alpha)\=\elim\exists\\
+    \*  \:\psi(x,\alpha)\=\\
+      \(\:\alpha\=\\
+        \:\alpha=\top\=(*)\\
+        \:\phi(x,\!\top)\=\mathsf{subs}\\
+      \*\:\psi(x,\!\top)\=\\
+        \:\alpha=\top\=\mathsf{func}\\
+        \:\alpha\=(*)\\
+      \)\:\alpha\leftrightarrow\psi(x,\!\top)\=\intro\leftrightarrow\\
+    \)  \:\psi(x,\alpha)\leftrightarrow(\alpha\leftrightarrow\psi(x,\!\top))
+          \=\intro\leftrightarrow\\
+\end{proofbox}
+ is produced by
+\begin{verbatim}
+\begin{proofbox}
+  \(\"1"\:\alpha\leftrightarrow\psi(x,\top)\\
+        \:\Some\beta.\psi(x,\beta)                      \=\mathsf{total}\\
+    \[\exists\beta\kern-1em\:\psi(x,\beta)\\
+      \(\:\beta\\
+        \:\beta=\top                                    \=(*)\\
+        \:\psi(x,\!\top)                                \=\mathsf{subs}\\
+        \:\alpha                         \=\elim\leftrightarrow(\ref{1})\\
+      \*\:\alpha\\
+        \:\psi(x,\!\top)                 \=\elim\leftrightarrow(\ref{1})\\
+        \:\beta=\top                                     \=\mathsf{func}\\
+        \:\beta\=(*)\\
+      \)\:\alpha=\beta                           \=\intro\leftrightarrow\\
+        \:\psi(x,\alpha)                                 \=\mathsf{subs}\\
+    \]  \:\psi(x,\alpha)                                  \=\elim\exists\\
+    \*  \:\psi(x,\alpha)\\
+      \(\:\alpha\\
+        \:\alpha=\top                                   \=(*)\\
+        \:\phi(x,\!\top)                                \=\mathsf{subs}\\
+      \*\:\psi(x,\!\top)\\
+        \:\alpha=\top                                   \=\mathsf{func}\\
+        \:\alpha                                        \=(*)\\
+      \)\:\alpha\leftrightarrow\psi(x,\!\top)   \=\intro\leftrightarrow\\
+    \)  \:\psi(x,\alpha)\leftrightarrow
+          (\alpha\leftrightarrow\psi(x,\!\top)) \=\intro\leftrightarrow\\
+\end{proofbox}
+\end{verbatim}
+
+  Syntax as follows:
+  each line is of the form
+  \begin{center}
+     \meta{variables}
+     \meta{name}
+     \verb/\:/ \meta{formula}
+     \verb/\=/ \meta{reason}
+     \verb/\-/ \meta{use}
+     \verb/\\/
+  \end{center}
+  where
+  \begin{itemize}
+  \item \meta{variables} is something like ``$x,y$'' ---
+    it's for variables declared at the beginning of $\intro\forall$- and
+    $\elim\exists$-boxes.
+  \item \meta{name} is a command \verb/\label{fred}/ which
+    defines \verb/fred/ to be the label text, which may be used anywhere
+    as \verb/\ref{fred}/ --- see {\em The \LaTeX book.}
+    Local labels are also available, using \macrowitharg\lbl{name}
+    or \verb/\"/\meta{name}\verb/"/; these obey the scoping rules of
+    the boxes.
+    You may also refer to the previous line as \verb/\ref{-}/.
+  \item \meta{formula} is the proposition being asserted.
+  \item \meta{reason} is \verb/\intro\land(\ref{john},\ref{mary})/
+         or \verb/\elim\forall(\ref{jim})/.
+  \item \meta{use} is provided for linear logic, to record the step
+         which uses this one. How this accords with theory I don't yet know.
+  \end{itemize}
+  Note that the parts are separated by \verb/\:/, \verb/\=/ and \verb/\\/;
+  these correspond to
+  \begin{center}
+     {\bf let } \meta{name} = \meta{expression} : \meta{type}
+  \end{center}
+  in a declarative language.
+  The \verb/\:/, \verb/\=/ and \verb/\-/ fields are optional and may occur
+  in any order. If any of them is repeated the last is taken.
+  If none of them is present the \meta{variables} field is also ignored.
+
+  Proof {\em boxes\/} are ``wrapped up'' as follows:
+  \begin{itemize}
+  \item the whole proof in \verb/\begin{proofbox}/...\verb/\end{proofbox}/;
+  \item single-column boxes ($\intro\forall$, $\intro\imp$, $\elim\exists$),
+      in \verb/\[/...\verb/\]/.
+  \item multiple-column boxes are of two kinds:
+    \begin{itemize}
+     \item separate ($\intro\land$) boxes: \verb/\(/...\verb/\*/...\verb/\)/.
+     \item stuck together ($\elim\lor$) boxes:
+        \verb/\(/...\verb/\+/...\verb/\)/.
+    \end{itemize}
+  \end{itemize}
+  You may put more than two columns in \verb/\(/...\verb/\)/ and even mix
+  the \verb/\+/ and \verb/\*/ separators.
+
+  The whole proof is enclosed in \verb/\proofbox/...\verb/\endproofbox/
+  or \verb/\begin{proofbox}/...\verb/\end{proofbox}/, but the \LaTeX\
+  environment form {\em must not\/} be used for nested boxes.
+
+  If the proof occurs in paragraph mode (ie in vertical or
+  unrestricted horizontal mode) then it is set as a display, using the
+  full width of the page. Otherwise it uses only the required width.
+
+  A lot of the internals are potentially configurable, but there is not
+  yet a user interface suitable for doing this. This will be provided
+  in the next version.
+
+
+%=======================================================================
+\section{Redefinable macros}
+ WARNING: most of these commands will be hidden and replaced with
+ optional arguments to \verb/\proofbox/ in a future version.
+ Do not rely on them.
+
+ We provide three different ways of numbering the lines of the proof:
+ \begin{itemize}
+ \item \verb/\runningproofline/: a global running sequence (default),
+ 
+ \item \verb/\nestedproofline/: a hierarchical system with dots,
+
+ \item \verb/\nestedproofline/: a fully hierarchical system which
+ also includes the column number
+ (\verb/\proof@columns/) as a letter (ASCII quote plus number).
+
+ \end{itemize}
+ \verb/\theproofline/ is the default.
+
+ The macro \verb/\proofboxmakelabel#1/ is used to print the line label.
+ We only put it in the leftmost box.
+ It is printed in small non-ranging Arabic numerals
+ ({\the\scriptfont1 0123456789}).
+ Right-justify it in \verb/\prooflinenowidth/ if it will fit,
+ otherwise let it stick out on the right, {\em i.e.}~left-justify it.
+
+ Kill the numbers altogether with \verb/\proofboxnonumbers/.
+
+ How to make the left column of the proof box:
+ use the variables field, a space if necessary and the line label.
+
+ How to make the middle column of the proof box:
+ left justify the formula field.
+
+ How to make the right column of the proof box:
+ use the reason and use fields.
+
+
+ Make the four edges of a rectangular box and the separator
+ between \verb/\+/ columns.
+
+
+ Use dotted lines: \verb/\dottedproofbox/.
+
+ Leave the boxes open at the bottom: \verb/\openproofbox/
+
+%=======================================================================
+\section{Miscellaneous logical notations}
+
+These macros are now in my \texttt{logicsym.sty}
+
+ Print the names of the introduction and elimination rules, for example:
+  \begin{quote}
+     \verb/\elim\forall/ $\elim\forall$ \qquad
+     \verb/\intro\land/ $\intro\land$ \qquad
+  \end{quote}
+ Recall that in \TeX\ the logical connectives and quantifiers are called
+  \begin{center}
+    \verb/\lor/ $\lor$\quad
+    \verb/\land/ $\land$\quad
+    \verb/\lnot/ $\lnot$\quad
+    \verb/\forall/ $\forall$\quad
+    \verb/\exists/ $\exists$
+  \end{center}
+ The following provide macros for the \verb/\implies/ {\em relation\/}
+ and for the binary {\em operation\/} which yields the abstract
+ \verb/\implic/ation between formulae.
+ The point is that \TeX\ spaces them and breaks the lines differently:
+  \begin{center}
+    \verb/A\implies B/ $A\implies B$\quad{\em versus\/}\quad
+    \verb/A\implic B/ $A\implic B$
+  \end{center}
+ There are forward and reverse, single and Double versions.
+
+ Handle the spacing after a variable (and optionally its type)
+ bound by a quantifier symbol. For example
+  \begin{quote}
+    \verb/\All x:X. \phi(x)/\quad prints as\quad $\All x:X.\phi(x)$\quad
+     instead of\quad $\forall x:X.\phi(x)$
+  \end{quote}
+ We provide some commonly used forms; \verb/\iota/ ($\iota$) is Russell's
+ description operator and should really be inverted.
+ There are several notations for substitution.
+ After writing $a[x:=b]$ throughout my book I~thought I~might change to
+ $[b/x]^*a$.
+ This macro reads the source in the first form and prints in the second.
+ If you use it you can, like me, defer the decision about
+ which notation to use until the final stages, doing
+ \begin{quote}
+    \verb/\renewcommand{\Subst}{\plainsubstitution}/
+ \end{quote}
+ if you finally decide on making substitution act on the right.
+ This is already an improvement on the literal text, because it
+ automatically enlarges the brackets according to the text inside.
+ \verb/\Subst/ itself is (following my book)
+ defined in terms of the action of a context morphism (\verb/\CtxtMor/)
+ on a term. Again you can do
+ \begin{quote}
+    \verb/\renewcommand{\CtxtMor}{\plaincontextmorphism}/
+ \end{quote}
+ for something simpler.
+ This macro interprets its argument as a comma-separated list
+ of items in the form $x:=b$, which it switches to $b/x$.
+ The simple versions.
+
+%=======================================================================
+\section{Some very easy logic exercises}
+
+The following examples are taken from Krysia Broda's
+{\em Solutions to Problems~5\/} (KB-Logic-B1-90) and took me a little
+under an hour to type in.
+
+page 1: (a)
+
+\begin{proofbox}
+   \: P\land Q \\
+   \: P         \= \elim\land\\
+\end{proofbox}
+
+\begin{proofbox}
+   \lbl{1}\: P \\
+   \[
+      \: Q \\
+      \: P \= (\ref{1}) \\
+   \]
+   \: Q\to P \= \intro\to \\
+\end{proofbox}
+
+
+page 2: (c)
+
+\begin{proofbox}
+   \lbl{2}\: P\\
+   \[
+      \lbl{3}\: Q\\
+      \: P\land Q\= \intro\land(\ref{2},\ref{3}) \\
+   \]
+   \: Q\to(P\land Q) \= \intro\to \\
+\end{proofbox}
+
+(g)
+
+\begin{proofbox}
+   \lbl{6}\: P\to(Q\to R)\\
+   \[
+      \lbl{4}\: P\to Q\\
+      \[
+         \lbl{5}\: P\\
+         \lbl{8}\: Q \= \elim\to(\ref{4},\ref{5})\\
+         \lbl{7}\: Q\to R \= \elim\to(\ref{6},\ref{5})\\
+         \: R \= \elim\to(\ref{7},\ref{8})\\
+      \]
+      \: P\to R \= \intro\to \\
+   \]
+   \: (P\to Q)\to(P\to R) \= \intro\to \\
+\end{proofbox}
+
+page 3: (h)
+
+\begin{proofbox}
+   \lbl{10}\: P\to(Q\to R)\\
+   \[
+      \lbl{9}\: P\land Q\\
+      \lbl{11}\: P \= \elim\land1(\ref{9})\\
+      \lbl{12}\: Q\to R \= \elim\to(\ref{10},\ref{11})\\
+      \lbl{13}\: Q \=\elim\land2(\ref{9})\\
+      \: R \=\elim\to(\ref{12},\ref{13})\\
+   \]
+      \: P\land Q\to R \= \intro\to \\
+\end{proofbox}
+
+(i)
+
+\begin{proofbox}
+   \lbl{16}\: P\land Q\to R \\
+   \[
+      \lbl{14}\: P \\
+      \[
+         \lbl{15}\: Q \\
+         \lbl{17}\: P\land Q \= \intro\land(\ref{14},\ref{15})\\
+         \: R \= \elim\to(\ref{16},\ref{17})
+      \]
+      \: Q\to R \= \intro\to \\
+   \]
+   \: P\to(Q\to R) \= \intro\to \\
+\end{proofbox}
+
+(j)
+
+\begin{proofbox}
+   \lbl{18}\: P\to Q\\
+   \lbl{20}\: \lnot Q\\
+   \[
+      \lbl{19}\: P \\
+      \lbl{21}\: Q \= \elim\to(\ref{18},\ref{19})\\
+      \: \bot \= \elim\lnot(\ref{20},\ref{21})\\
+   \]
+   \: \lnot P \= \intro\lnot \\
+\end{proofbox}
+
+page 5: (k)
+
+\begin{proofbox}
+   \lbl{22}\: \lnot P\\
+   \[
+      \lbl{23}\: P\\
+      \[
+         \: \lnot Q\\
+         \: \lnot P \land P \= \intro\land(\ref{22},\ref{23})\\
+         \: \bot \= \elim\lnot(\ref{22},\ref{23})\\
+      \]
+      \: \lnot\lnot Q \= \intro\lnot\\
+      \: Q \= \lnot\lnot\\
+   \]
+   \: P\to Q \= \intro\to \\
+\end{proofbox}
+
+page 8: (o)
+
+\begin{proofbox}
+   \lbl{24}\: P\to Q \\
+   \[
+      \lbl{26}\: \lnot Q \\
+      \[
+         \lbl{25}\: P \\
+         \lbl{27}\: Q \= \elim\to(\ref{24},\ref{25})\\
+         \: \bot \= \elim\lnot(\ref{26},\ref{27})\\
+      \]
+      \: \lnot P \= \intro\lnot\\
+   \]
+   \: \lnot Q\to \lnot P \= \intro\to \\
+\end{proofbox}
+
+(p) The $\lnot\lnot$ rule is unnecessary!
+
+\begin{proofbox}
+   \lbl{28}\: P\to Q \\
+   \[
+      \: \lnot\lnot P\\
+      \lbl{29}\: P \= \lnot\lnot\\
+      \[
+         \lbl{31}\: \lnot Q \\
+         \lbl{30}\: Q \= \elim\to(\ref{28},\ref{29})\\
+         \: Q\land\lnot Q \= \intro\land(\ref{30},\ref{31})\\
+         \: \bot \= \elim\lnot\\
+      \]
+      \: \lnot\lnot Q \= \intro\lnot\\
+   \]
+   \: \lnot\lnot P\to\lnot\lnot Q \= \intro\to \\
+\end{proofbox}
+
+%=======================================================================
+\section{Some more exercises}
+
+\begin{proofbox}
+   \: P\lor\lnot P \\
+   \(
+      \: P \\
+      \: Q\to P \=\hbox{by (e)}\\
+      \: (P\to Q)\lor(Q\to P) \= \intro\lor \\
+   \+
+      \: \lnot P\\
+      \: P\to Q \=\hbox{by (k)}\\
+      \: (P\to Q)\lor(P\to Q) \= \intro\lor \\
+   \)
+   \: (P\to Q)\lor(P\to Q) \= \elim\lor \\
+\end{proofbox}
+
+
+
+\begin{proofbox}
+   \lbl{35}\: P\lor Q \\
+   \[
+      \lbl{30}\: (\lnot P)\land(\lnot Q) \\
+      \(
+         \lbl{31} \: P \\
+         \lbl{32} \: \lnot P \=\elim\land1(\ref{30})\\
+         \: \bot \= \elim\lnot(\ref{32},\ref{31})\\
+      \+
+         \lbl{33} \: Q \\
+         \lbl{34} \: \lnot Q \= \elim\land2(\ref{30})\\
+         \: \bot \= \elim\lnot(\ref{33},\ref{34})\\
+      \)
+      \: \bot \= \elim\lor(\ref{35})\\
+   \]
+   \: \lnot((\lnot P)\land(\lnot Q)) \= \intro\lnot \\
+\end{proofbox}
+
+
+\begin{proofbox}
+\lbl{51} x \: \forall x'.x'<x\to p(x')\\
+   \(
+       \lbl{52}\: x=a \\
+       \(
+          \: a=c \\
+               \: b<x \=\hbox{subst}(\ref{50})\\
+               \: p(b) \= \elim\forall(\ref{51})\\
+               \: b\neq b \= \elim\land\\
+               \: \bot \= \hbox{refl}\\
+       \+
+          \: c<a \\
+               \: c<x \=\hbox{subst}(\ref{52})\\
+               \: p(c) \= \elim\forall(\ref{51})\\
+               \: c\neq c \= \elim\land\\
+               \: \bot \\
+       \)
+               \: \bot \= \elim\lor(\ref{53})\\
+   \*
+       \(
+           \[
+               \: x=b \\
+                  \: a<x \\
+                  \: p(a) \= \elim\forall\\
+                  \: a\neq a\\
+                  \: \bot \\
+           \] \: x\neq b \= \intro\lnot \\
+       \*
+           \[
+              \: x=c \\
+                  \: b<x \\
+                  \: p(b) \= \elim\forall\\
+                  \: b\neq b\\
+                  \: \bot
+           \] \: x\neq c \= \intro\lnot \\
+       \)
+   \)
+   \: x\neq a \land x\neq b \land x\neq c \= \intro\land\\
+   \: p(x) \= \hbox{def} \\
+\end{proofbox}
+
+\begin{proofbox}
+   \: a<b \\
+   \lbl{40}\= b<c \\
+   \: a<c \lor (a=c \lor c<a) \\
+   \(
+       \lbl{43}\: a=c \lor c<a \\
+       \: p(x)\equiv(x\neq a\land (x\neq b \land x\neq c))\=\hbox{def}\\
+       \[
+          \lbl{41} x \: \forall x'.x'<x\to p(x')\\
+          \(
+              \lbl{42}\: x=a \\
+            \(
+               \: a=c \\
+               \: b<x \=\hbox{subst}(\ref{40})\\
+               \: p(b) \= \elim\forall(\ref{41})\\
+               \: b\neq b \= \elim\land\\
+               \: \bot \= \hbox{refl}\\
+            \+
+               \: c<a \\
+               \: c<x \=\hbox{subst}(\ref{42})\\
+               \: p(c) \= \elim\forall(\ref{41})\\
+               \: c\neq c \= \elim\land\\
+               \: \bot \\
+            \)
+            \: \bot \= \elim\lor(\ref{43})\\
+         \*
+            \(
+               \[
+                  \: x=b \\
+                  \: a<x \\
+                  \: p(a) \= \elim\forall\\
+                  \: a\neq a\\
+                  \: \bot \\
+               \]
+               \: x\neq b \= \intro\lnot \\
+            \*
+               \[
+                  \: x=c \\
+                  \: b<x \\
+                  \: p(b) \= \elim\forall\\
+                  \: b\neq b\\
+                  \: \bot \\
+               \]
+               \: x\neq c \= \intro\lnot \\
+            \)
+       \)
+       \: x\neq a \land x\neq b \land x\neq c \= \intro\land\\
+       \: p(x) \= \hbox{def}\\
+    \]
+    \: \forall x.(\forall x'.x'<x\to p(x'))\to p(x) \= \intro\forall\\
+   \: p(a) \= \elim\forall\\
+   \: a\neq a \= \elim\land\\
+   \: \bot\\
+   \: a<c \= \elim\bot \\
+\+
+   \: a<c \\
+\)
+\: a<c \= \elim\lor\\
+\end{proofbox}
+
+%=======================================================================
+\section{Krysia Broda's dragons exercise}
+
+\def\happy#1{{{\mathsf{happy}}(#1)}}
+\def\child#1#2{{{\mathsf{child}}(#1,#2)}}
+\def\fly#1{{{\mathsf{fly}}(#1)}}
+\def\dragon#1{{{\mathsf{dragon}}(#1)}}
+\def\green#1{{{\mathsf{green}}(#1)}}
+\def\parent#1#2{{{\mathsf{parent}}(#1,#2)}}
+
+\def\all{\forall}
+\def\some{\exists}
+\def\imp{\Rightarrow}
+\def\impby{\Leftarrow}
+
+\advance\proofboxmargin-3em
+
+\begin{proofbox}
+\lbl{happy}\:\all x.\happy x\impby[\all y.\child y x\imp\fly y]
+        \land\dragon x\\
+\lbl{fly}\:\all x.\green x \land \dragon x \imp \fly x\\
+\lbl{green}\:\all x.[\some y.\parent y x \land \green y]\imp\green x\\
+\lbl{dragon}\:\all z.\all x.\child x z \land \dragon z \imp \dragon x\\
+\lbl{parent}\:\all x.\all y.\parent x y \impby \child y x\\
+\[\all x_0\lbl{Dragon}\:\dragon{x_0}\\
+        \lbl{Green}\:\green{x_0}\\
+        \[\all y_0\lbl{child}\:\child {y_0}{x_0}\\
+                \(      \lbl{Parent}\:\parent{x_0}{y_0}
+                                \=\elim\all(\ref{parent})\\
+                        \:\parent{x_0}{y_0} \land\green{x_0}
+                                \=\intro\land(\ref{Green})\\
+\lbl{greenish}  \:\some z.\parent z {y_0} \land \green z
+                                \=\intro\some(z:=x_0)\\
+                        \:\green{y_0}\=\elim\all(\ref{green},x:=y_0)\\
+                \*
+                        \:\dragon{y_0}\=\elim\all(\ref{dragon},x:=y_0,
+                                z:=x_0,\ref{Dragon})\\
+                \)\lbl{greendragon}\:\green{y_0}\land\dragon{y_0}
+                                \=\intro\land\\
+                \:\fly{y_0}\=\elim\all(\ref{fly},x:=y_0,\ref{greendragon})\\
+        \]\lbl{taught}\:\all y.\child y{x_0}\imp\fly y\=\intro\all\\
+        \:\happy x\=\elim\all(\ref{happy},\ref{taught},\ref{Dragon})\\
+\]\:\all x.\happy x \impby \green x \impby \dragon x\=\intro\all\\
+\end{proofbox}
+\noindent
+Where the previous deduction is a premise of a rule, the reference is omitted.
+Where the substitution is of the same letter (possibly with a subscript) it
+is omitted, except for the $\alpha$-conversion (change of bound variable name)
+in line~\ref{greenish}.
+
+%=======================================================================
+\section{Proof boxes from my book}
+
+$$\proofboxformulawidth=18em\relax
+\begin{proofbox}
+\[\forall x:\lbl{ind box hyp}\:\forall x'.x'\prec x\imp\phi(x')
+   \=\mbox{induction hypothesis}\\
+\:\vdots\\
+\lbl{ind box pred}\:u\prec x\=\mbox{various terms $u$}\\
+\:\phi(u)\=\elim\forall(\ref{ind box hyp},\ref{ind box pred})\\
+\:\vdots\\
+\:\phi(x)\=\mbox{the property}\\
+\]\:\forall x.(\forall x'.x'\prec x\imp\phi(x'))\imp\phi(x)\=\intro\forall\\
+\:\forall x.\phi(x)\=\mbox{$\prec$-induction for $\phi$}\\
+\end{proofbox}$$
+$$\begin{proofbox}
+\lbl{ind eg 0}\:\phi(0)\=z\\
+\lbl{ind eg s}\:\forall n.\phi(n)\imp\phi(n+1)\=s\\
+\lbl{ind eg 1-}\:\phi(0)\imp\phi(1)\=\elim\forall(\ref{ind eg s})\\
+\lbl{ind eg 1}\:\phi(1)\=\elim\imp(\ref{ind eg 1-},\ref{ind eg 0})\\
+\lbl{ind eg 2-}\:\phi(1)\imp\phi(2)\=\elim\forall(\ref{ind eg s})\\
+\lbl{ind eg 2}\:\phi(2)\=\elim\imp(\ref{ind eg 2-},\ref{ind eg 1})\\
+\lbl{ind eg 3-}\:\phi(2)\imp\phi(3)\=\elim\forall(\ref{ind eg s})\\
+\lbl{ind eg 3}\:\phi(3)\=\elim\imp(\ref{ind eg 3-},\ref{ind eg 2})\\
+\end{proofbox}$$
+$$\begin{proofbox}
+\lbl{mrwf1}\:\forall x.(\forall x'.x'\lt x\imp\phi(x'))\imp\phi(x)
+\=\mbox{hypothesis}\\
+\lbl{mrwf4}\:\psi(y)\eqdef\forall x.(fx=y)\imp\phi(x)\=\mbox{definition}\\
+\[\forall y:\lbl{mrwf2}\:\forall y'.y'\prec y\imp\psi(y') \\
+   \[\forall x:\lbl{mrwf3}\:fx=y\\
+      \[\forall x':\:x'\lt x\\
+          \:fx'\prec y\=\hbox{monotonicity}\\
+          \:\psi(fx')\=\elim\forall(\ref{mrwf2})\\
+          \:\phi(x')\=\elim\forall(\hbox{def }\ref{mrwf4},\ref{mrwf3})\\
+      \]
+      \:\forall x'.x'\lt x\imp\phi(x')\=\intro\forall\\
+      \:\phi(x)\=\elim\forall(\ref{mrwf1})\\
+   \]
+   \:\forall x.(fx=y)\imp\phi(x)\=\intro\forall\\
+  \:\psi(y)\=\hbox{def}(\ref{mrwf4})\\
+\]
+\:\forall y.(\forall y'.y'\prec y\imp\psi(y'))\imp\psi(y)\=\intro\forall\\
+\:\forall y.\psi(y)\=(Y,{\prec})\hbox{-induction}\\
+\end{proofbox}$$
+$$\begin{proofbox}
+\lbl{qwf1}\:\forall y.[\forall y'.y'\eps y\imp\phi(y')]\imp\phi(y)\\
+\[\lbl{qwf2}\forall x:\:\forall x'.x'\prec x\imp\phi(fx')\\
+\[\forall y':\:y'\eps fx\\
+\lbl{qwf3}\:\exists x'.x'\prec x\land y'=fx'
+\=\hbox{surj on pred}\\
+\[\exists x':\:x'\prec x\\
+\:y'=fx'\\
+\:\phi(fx')\=\elim\forall(\ref{qwf2})\\
+\:\phi(y')\=\hbox{substitution}\\
+\]\:\phi(y')\=\elim\exists(\ref{qwf3})\\
+\]\:\forall y'.y'\eps fx\imp\phi(y')\=\intro\forall\\
+\:\phi(fx)\=\elim\forall(\ref{qwf1},y:=fx)\\
+\]\:\forall x.[\forall x'.x'\prec x\imp\phi(fx')]\imp\phi(fx)\=\intro\forall\\
+\end{proofbox}$$
+$$\begin{proofbox}
+\lbl{trwf1}\:\forall x_2,x.[x_2\ll x \biimplies
+x_2\prec x \lor \exists x_1. x_2\ll x_1\prec x]\\
+\lbl{trwf2}\:\forall x.[\forall x'.x'\prec x\imp\phi(x')]\imp\phi(x)
+\=\mbox{hypothesis}\\
+\lbl{trwf3}\:\psi(x)\eqdef\forall x_2.x_2\ll x\imp\phi(x_2)
+\=\mbox{definition}\\
+\lbl{trwf4}\:\forall x.\psi(x)\imp\phi(x)
+\=\intro\forall(\elim\forall(\ref{trwf2},\ref{trwf3}))\\
+\(\:\phi(x)\\
+\:\forall x_2.x_2\ll x\imp\phi(x_2)\\
+\[\forall x_1:\:x_2\ll x_1\\
+\:x_2\ll x\\
+\:\phi(x_2)\\
+\:\forall x_2.x_2\ll x\imp\phi(x_2)\\
+\:\psi(x_1)\\
+\]\:\forall x_1.x_1\prec x\imp\psi(x_1)\\
+\+\lbl{trwf5}\forall x:\:\forall x_1.x_1\prec x\imp\psi(x_1)\\
+\[\forall x_2:\:x_2\ll x\\
+\lbl{trwf7}\:x_2\prec x_1\lor\exists x_1.x_2\ll x_1\prec x
+\=\elim\forall(\ref{trwf1})\\
+\(\:x_2\prec x_1\\
+\:\psi(x_2)\=\elim\forall(\ref{trwf5})\\
+\:\phi(x_2)\=\elim\forall(\ref{trwf4})\\
+\+\exists x_1:\:x_2\ll x_1\prec x\\
+\:\psi(x_1)\=\elim\forall(\ref{trwf5})\\
+\:\phi(x_2)\=\elim\forall(\ref{trwf3},x:=x_1)\\ 
+\)\:\phi(x_2)\=\elim{\exists{\lor}}(\ref{trwf7})\\
+\]\:\forall x_2.x_2\ll x\imp\phi(x_2)\=\intro\forall\\
+\:\psi(x)\=\hbox{def}(\ref{trwf3})\\
+\)\:\forall x.[\forall x_1.x_1\prec x\imp\psi(x_1)]\biimplies\psi(x)
+\=\intro{\forall{\biimplies}}\hfill\\
+\end{proofbox}$$
+$$\begin{proofbox}
+\:\forall U.[\forall V.V\flt\prec U\imp\phi(V)]\biimplies\phi(U)\\
+\:\phi(\emptyset)\\
+\[\forall x,U:\:\phi(U)\\
+\lbl{fltindxhyp}\:
+        [\forall y.y\prec x\imp[\forall V.\phi(V)\imp\phi(V\cup\setof y)]]\\
+\[\forall V_0:\:V_0\flt\prec U\\
+\:\phi(V_0)\=\mbox{premise}\\
+\:\emptyset\flt\prec\setof x\imp\phi(V_0)\\
+\[\forall y,V_1:\:V_1\flt\prec x\\
+\lbl{fltindV0V1}\:\phi(V_0\cup V_1)\\
+\lbl{fltindy<x}\:y\prec x\\
+\:\phi(V_0\cup V_1\cup\setof y)
+        \=\elim\forall(\ref{fltindxhyp},\ref{fltindy<x},V:=V_0\cup V_1,
+        \ref{fltindV0V1})\\
+\]
+\:\forall y,V_1.V_1\flt\prec x\land y\prec x\land\phi(V_0\cup V_1)
+        \imp\phi(V_0\cup V_1\cup\setof y)\=\intro\forall\\
+\:\forall V_1.V_1\flt\prec\setof x\imp\phi(V_0\cup V_1)
+        \=\mbox{$\KK$-induction}\\
+\]
+\:\forall V_0,V_1.V_0\flt\prec U\land V_1\flt\prec\setof x
+        \imp\phi(V_0\cup V_1)\=\intro\forall\\
+\:\forall V.V\flt\prec U\cup\setof x\imp\phi(V)\=\mbox{Lemma}\\
+\:\phi(U\cup\setof x)\=\mbox{premise}\\
+\]
+\:\forall x.[\forall y.y\prec x\imp[\forall V.\phi(V)\imp\phi(V\cup\setof y)]]
+        \imp[\forall U.\phi(U)\imp\phi(U\cup\setof x)]\=\intro\forall\\
+\:\forall x.[\forall U.\phi(U)\imp\phi(U\cup\setof x)]
+        \=\mbox{$\prec$-induction}\\
+\:\forall U.\phi(U)\=\mbox{$\KK$-induction}\\
+\end{proofbox}$$
+$$\proofboxnonumbers\proofboxformulawidth=4em
+\begin{array}{cc}
+\begin{proofbox}\[\qquad\:\phi\=\qquad\\\:\vdots\\\:\psi\\\]
+\:\phi\imp\psi\=\intro\imp\end{proofbox}&
+\begin{proofbox}\[\forall x':\\\:\vdots\=\qquad\\\:\phi(x')\\\]
+\:\forall x.\phi(x)\=\intro\forall\end{proofbox}\\
+\begin{proofbox}\qquad\:\phi\lor\psi\\
+\(\qquad\:\phi\=\qquad\\\:\vdots\\\:\alpha\\
+\+\:\psi\=\qquad\\\:\vdots\\\:\alpha\\\)
+\:\alpha\=\elim\lor\end{proofbox}&
+\begin{proofbox}\:\exists x.\phi(x)\\
+\[\exists x':\:\phi(x')\=\qquad\\\:\vdots\\\:\alpha\\\]
+\:\alpha\=\elim\exists\end{proofbox}
+\end{array}$$
+$$\proofboxformulawidth=30em \begin{proofbox}
+\(\:\alpha\biimplies\psi(x,\top)\\
+\:\exists\beta.\psi(x,\beta)\=\mathsf{total}\\
+\[\exists\beta:\:\psi(x,\beta)\\
+\(\:\beta\\
+\:\beta=\top\\
+\:\psi(x,\top)\=\mathsf{subs}\\
+\:\alpha\=\elim\biimplies\\
+\*\:\alpha\\
+\:\psi(x,\top)\=\elim\biimplies\\
+\:\beta=\top\=\mathsf{func}\\
+\:\beta\\
+\)\:\alpha=\beta\=\intro\biimplies\\
+\:\psi(x,\alpha)\=\mathsf{subs}\\
+\]\:\psi(x,\alpha)\=\elim\exists\\
+\*
+\:\psi(x,\alpha)\\
+\(\:\alpha\\
+\:\alpha=\top\\
+\:\phi(x,\top)\=\mathsf{subs}\\
+\*\:\psi(x,\top)\\
+\:\alpha=\top\=\mathsf{func}\\
+\:\alpha\\
+\)
+\:\alpha\biimplies\psi(x,\top)\=\intro\biimplies\\
+\)\:\psi(x,\alpha)\biimplies(\alpha\biimplies\psi(x,\top))\=\intro\biimplies\\
+\end{proofbox}$$
+$$\proofboxformulawidth=7em \proofboxmargin=2em
+\begin{proofbox}
+\[\lbl{pnn0h}\:\alpha\\
+\lbl{pnn0r}\:\alpha\imp\alpha\\
+\:\alpha\=\qquad\quad(\ref{pnn0h})\\
+\]\:\alpha\imp(\alpha\imp\alpha)\imp\alpha\=\intro\forall\\
+\proofboxnonumbers\:(0)\\
+\end{proofbox}
+\hskip 0pt minus3em\relax
+\begin{proofbox}
+\[\lbl{pnn1h}\:\alpha\\
+\lbl{pnn1r}\:\alpha\imp\alpha\\
+\:\alpha\=\elim\imp(\ref{pnn1r},\ref{pnn1h})\\
+\]\:\alpha\imp(\alpha\imp\alpha)\imp\alpha\=\intro\forall\\
+\proofboxnonumbers\:(1)\\
+\end{proofbox}
+\hskip 0pt minus3em\relax
+\begin{proofbox}
+\[\lbl{pnn2h}\:\alpha\\
+\lbl{pnn2r}\:\alpha\imp\alpha\\
+\lbl{pnn21}\:\alpha\=\elim\imp(\ref{pnn2r},\ref{pnn2h})\\
+\:\alpha\=\elim\imp(\ref{pnn2r},\ref{pnn21})\\
+\]\:\alpha\imp(\alpha\imp\alpha)\imp\alpha\=\intro\forall\\
+\proofboxnonumbers\:(2)\\
+\end{proofbox}
+%  \hskip 0pt minus3em\relax
+%  \begin{proofbox}
+%  \[\lbl{pnn3h}\:\alpha\\
+%  \lbl{pnn3r}\:\alpha\imp\alpha\\
+%  \lbl{pnn31}\:\alpha\=\elim\imp(\ref{pnn3r},\ref{pnn3h})\\
+%  \lbl{pnn32}\:\alpha\=\elim\imp(\ref{pnn3r},\ref{pnn31})\\
+%  \:\alpha\=\elim\imp(\ref{pnn1r},\ref{pnn32})\\
+%  \]\:\alpha\imp(\alpha\imp\alpha)\imp\alpha\=\intro\forall\\
+%  \proofboxnonumbers\:(3)\\
+%\end{proofbox}%Overfull \hbox (17.42128pt too wide) detected
+$$
+$$\vbox{\proofboxformulawidth=12em \relax
+\begin{proofbox}
+\lbl{pthora1}\:\phi\land\psi\\
+\[\lbl{pthora2}\forall\alpha:\:\phi\implies(\psi\implies\alpha)\\
+\lbl{pthora3}\:\phi\=\elim{{\land}1}(\ref{pthora1})\\
+\lbl{pthora4}\:\psi\implies\alpha
+\=\elim\implies(\ref{pthora2},\ref{pthora3})\\
+\lbl{pthora5}\:\psi\=\elim{{\land}2}(\ref{pthora1})\\
+\lbl{pthora6}\:\alpha
+\=\elim\implies(\ref{pthora4},\ref{pthora5})\\
+\]\:\forall\alpha.(\phi\implies(\psi\implies\alpha))\implies\alpha
+\=\intro{\forall{\implies}}\\
+\end{proofbox}}
+\kern6em
+%
+% Underfull \hbox (badness 10000) in paragraph
+% Overfull \hbox (282.68869pt too wide) detected
+%
+\vbox{\baselineskip=\proofboxbaselineskip\relax
+$p_1:\phi\times\psi$\\
+$p_2:\phi\to(\psi\to\alpha)$\\
+$p_3=\pi_1(p_1):\phi$\\
+$p_4=p_2(p_3):\psi\to\alpha$\\
+$p_5=\pi_2(p_1):\psi$\\
+$p_6=p_4(p_5):\alpha$\\
+$p_7=\lambda\alpha.\lambda p_2.p_6
+%  =\lambda\alpha\lambda p_2.p_2(\pi_1(p_1))(\pi_2(p_1))
+%  :\Pi\alpha.(\phi\to(\psi\to\alpha))\to\alpha
+$\\}$$
+
+%=======================================================================
+\section{From my JSL paper}
+
+%--------------------------------------------------------------------------
+%                 save the proof box so that we can find out its height
+\setbox9=\vbox{%
+\proofboxbaselineskip=1.42em
+%
+%  parameters for version 1:
+   \proofboxmargin=80pt
+   \proofboxformulawidth=\hsize
+   \advance\proofboxformulawidth-2\proofboxmargin
+\iffalse
+   \def\isX{:X}%
+   \def\isPfX{:\finpower(X)}%
+\else
+   \def\isX{}\def\isPfX{}%
+\fi
+%
+\begin{proofbox}%%*** WARNING: the names of the labels dont match their numbers
+\lbl{fltwf1}\:\All U.[\All V.V\flt\prec U\Implies\phi(V)]
+\biimplies\phi(U)\\
+%\lbl{fltwf2}\:\All V.V\flt\prec\emptyset\Implies\bot
+%   \=\mbox{def}({\flt\prec})\\
+\lbl{fltwf3}\:\phi(\emptyset)
+    \=\elim\forall(\ref{fltwf1},\mbox{def}({\flt\prec}))\\ %\ref{fltwf2})\\
+\lbl{fltwf4}\:\psi(x)\eqdef\forall U.\phi(U)\Implies\phi(U\cup\setof x)\\
+\[\lbl{fltwf5}\lbl{fltindxhyp}\forall x\isX
+   \:\forall y.y\prec x\Implies\psi(y)\\
+%\:[\forall y.y\prec x\Implies[\All V.\phi(V)\Implies\phi(V\cup\setof y)]]\\
+\[\lbl{fltwf8}\forall V_0\isPfX
+\lbl{fltwf10}\:\phi(V_0)\\
+\lbl{fltwf9}\:\theta(W)\eqdef W\flt\prec\setof x\Implies\phi(V_0\cup W)\\
+\lbl{fltwf11}\:\theta(\emptyset)
+   \=\mbox{def}(\ref{fltwf9},\ref{fltwf10})\\
+\[\forall W\isPfX
+   \:\theta(W)\\
+  \forall y\isX\lbl{fltwf13}\: W\flt\prec\setof x\Implies\phi(V_0\cup W)
+   \=\mbox{def}(\ref{fltwf9})\\
+\[\lbl{fltwf14}\:W\cup\setof y\flt\prec\setof x
+   \equiv W\flt\prec\setof x\land y\prec x\\
+%\lbl{fltwf15}\:W\flt\prec\setof x\=\ref{fltwf14},\hbox{def}({\flt\prec})\\
+\lbl{fltwf16}\:\phi(V_0\cup W)\=\elim\Implies(\ref{fltwf13},\ref{fltwf14})\\
+%\lbl{fltwf17}\:y\prec x\=\ref{fltwf14},\hbox{def}({\flt\prec})\\
+\lbl{fltwf18}\:\psi(y)\equiv\forall V.\phi(V)\Implies\phi(V\cup\setof y)
+\=\elim\forall(\ref{fltwf5},\ref{fltwf14}),\mbox{def}(\ref{fltwf4})\\
+\:\phi(V_0\cup W\cup\setof y)\=\elim\forall(\ref{fltwf18},\ref{fltwf16})\\
+\]
+\:W\cup\setof y\flt\prec\setof x\Implies\phi(V_0\cup W\cup\setof y)
+   \=\intro\Implies\\
+\:\theta(W\cup\setof y)\=\mbox{def}(\ref{fltwf9})\\
+\]
+\:\theta(\emptyset)\land
+     \forall y.\All W.\big[\theta(W)\Implies\theta(W\cup\setof y)\big]
+     \=\intro\land(\ref{fltwf11},\intro\forall)\\
+\:\forall W.\theta(W)\=\mbox{$\KK$-induction for }\theta\\
+\:\All W.W\flt\prec\setof x\Implies\phi(V_0\cup W)\=\mbox{def}(\ref{fltwf9})\\
+\]
+%\:\All V_0.V_0\flt\prec U\Implies\All W.\theta(W)\=\intro\forall\\
+\lbl{fltwf24}\:\squashmuskip
+\All V_0.\phi(V_0)\Implies
+      \big(\All W.W\flt\prec\setof x\Implies\phi(V_0\cup W)\big)
+        \=\intro\forall\\    %\mbox{Currying, def(\ref{fltwf9})}\\
+\[\lbl{fltwf6}\forall U\isPfX
+   \:\phi(U)\\
+%   \:V_0\flt\prec U \=\elim\forall(\ref{fltwf1},\ref{fltwf6},\ref{fltwf8})\\
+\lbl{fltwfa}\:U=\emptyset\lor U\neq\emptyset
+   \=\hbox{Proposition~\ref{free semil}}\\
+\lbl{fltwfb}\:
+   U=\emptyset\Implies\All W.W\flt\prec(U\cup\setof x)\Implies\phi(W)
+   \=\elim\forall(\ref{fltwf24},V_0=\emptyset,\ref{fltwf3})\\
+\[\lbl{fltwfe}\forall V_0\isPfX\:V_0\flt\prec U\\
+\lbl{fltwff}\forall W\isPfX\:W\flt\prec\setof x\\
+\label{fltwfg}\:\phi(V_0)
+   \=\elim{\forall{\Impliedby}}(\ref{fltwf1},\ref{fltwf6},\ref{fltwfe})\\
+\lbl{fltwfh}\:\phi(V_0\cup W)
+   \=\elim\forall(\ref{fltwf24},\ref{fltwfg},\ref{fltwff})\\
+\]\:\All V_0,W.V_0\flt\prec U\land W\flt\prec\setof x\Implies\phi(V_0\cup W)
+  \=\intro\forall\\
+\lbl{fltwfk}\:
+   U\neq\emptyset\Implies\forall V.V\flt\prec(U\cup\setof x)\Implies\phi(V)
+  \=\hbox{Lemma \ref{flt power distr}}\\
+\lbl{fltwf27}\:\forall V.V\flt\prec(U\cup\setof x)\Implies\phi(V)
+        \=\elim\lor(\ref{fltwfa},\ref{fltwfb},\ref{fltwfk})\\
+\:\phi(U\cup\setof x)\=\elim\forall(\ref{fltwf1},\ref{fltwf27})\\
+\]\lbl{fltwf29}
+\:\forall U.\phi(U)\Implies\phi(U\cup\setof x)\equiv\psi(x)
+        \=\intro\forall,\hbox{def}(\ref{fltwf4})\\
+\]
+\:\forall x.[\All y.y\prec x\Implies\psi(y)]\Implies\psi(x)\=\intro\forall\\
+\lbl{fltwf32}\:\forall x.\psi(x)\=\mbox{$\prec$-induction for }\psi\\
+\:\phi(\emptyset)\land\All x.\All U.
+        \big[\phi(U)\Implies\phi(U\cup\setof x)\big]
+        \=\intro\land(\ref{fltwf3},\mbox{def}(\ref{fltwf4},\ref{fltwf32}))\\
+\:\All U.\phi(U)\=\mbox{$\KK$-induction for }\phi      \\%\;\hfill\qedsymbol\\
+\end{proofbox}%
+}% end of \setbox9=\vbox
+
+\box9
+
+%=======================================================================
+
+\nocite{*}
+\bibliographystyle{plain}
+%\bibliography{boxuser}
+
+\begin{thebibliography}{1}
+
+\bibitem{VickersSJ:reasprog}
+K.~Broda, S.~Eisenbach, H.~Khoshnevisan, and Steven Vickers.
+\newblock {\em Reasoned Programming}.
+\newblock International Series in Computer Science. Prentice Hall, 1994.
+
+\bibitem{TaylorP:intso}
+Paul Taylor.
+\newblock Intuitionistic sets and ordinals.
+\newblock {\em Journal of Symbolic Logic}, 61:705--744, 1996.
+
+\bibitem{TaylorP:prafm}
+Paul Taylor.
+\newblock {\em Practical Foundations of Mathematics}.
+\newblock Number~59 in Cambridge Studies in Advanced Mathematics. Cambridge
+  University Press, 1999.
+
+\end{thebibliography}
+
+
+%=======================================================================
+
+\end{document}
+
+
