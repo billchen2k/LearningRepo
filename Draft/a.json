@@ -1,240 +1,89 @@
 {
-    "ok": true,
-    "result": [
-        {
-            "update_id": 574556839,
-            "message": {
-                "message_id": 1,
-                "from": {
-                    "id": 886018984,
-                    "is_bot": false,
-                    "first_name": "Bill",
-                    "last_name": "Chen",
-                    "username": "BillChen2000",
-                    "language_code": "en"
+    "code": 0,
+    "message": "OK",
+    "result": {
+        "id": 7744758,
+        "number": None,
+        "token": None,
+        "user": {
+            "number": "10185101210",
+            "name": "陈俊潼",
+            "type": "本科生",
+            "category": None,
+            "removed": False,
+            "outId": "10185101210",
+            "level": 4,
+            "father": {
+                "number": "20180509",
+                "name": "薛寅申",
+                "type": "在职教师",
+                "category": None,
+                "removed": False,
+                "outId": "20180509",
+                "level": 3,
+                "father": {
+                    "number": "20060136",
+                    "name": "曹桂涛",
+                    "type": "在职教师",
+                    "category": None,
+                    "removed": False,
+                    "outId": "20060136",
+                    "level": 2,
+                    "father": {
+                        "number": "20070156",
+                        "name": "杨艳红",
+                        "type": "在职教师",
+                        "category": None,
+                        "removed": False,
+                        "outId": "20070156",
+                        "level": 1,
+                        "father": None,
+                        "assistant": None,
+                        "department": "孟宪承书院",
+                        "major": None,
+                        "grade": None,
+                        "userId": "20070156",
+                        "graduateType": "非毕业班",
+                        "studyType": None,
+                        "freeClock": 0,
+                        "lastRecord": None
+                    },
+                    "assistant": None,
+                    "department": "软件工程学院",
+                    "major": None,
+                    "grade": None,
+                    "userId": "20060136",
+                    "graduateType": "非毕业班",
+                    "studyType": None,
+                    "freeClock": 0,
+                    "lastRecord": None
                 },
-                "chat": {
-                    "id": 886018984,
-                    "first_name": "Bill",
-                    "last_name": "Chen",
-                    "username": "BillChen2000",
-                    "type": "private"
-                },
-                "date": 1581334843,
-                "text": "/start",
-                "entities": [
-                    {
-                        "offset": 0,
-                        "length": 6,
-                        "type": "bot_command"
-                    }
-                ]
-            }
+                "assistant": None,
+                "department": "信息学部软件工程学院",
+                "major": None,
+                "grade": None,
+                "userId": "20180509",
+                "graduateType": "非毕业班",
+                "studyType": None,
+                "freeClock": 0,
+                "lastRecord": None
+            },
+            "assistant": None,
+            "department": "计算机科学与软件工程学院",
+            "major": None,
+            "grade": None,
+            "userId": "10185101210",
+            "graduateType": "非毕业班",
+            "studyType": "全日制",
+            "freeClock": 0
         },
-        {
-            "update_id": 574556840,
-            "message": {
-                "message_id": 2,
-                "from": {
-                    "id": 886018984,
-                    "is_bot": false,
-                    "first_name": "Bill",
-                    "last_name": "Chen",
-                    "username": "BillChen2000",
-                    "language_code": "en"
-                },
-                "chat": {
-                    "id": 886018984,
-                    "first_name": "Bill",
-                    "last_name": "Chen",
-                    "username": "BillChen2000",
-                    "type": "private"
-                },
-                "date": 1581335118,
-                "text": "\uff1f"
-            }
-        },
-        {
-            "update_id": 574556841,
-            "message": {
-                "message_id": 3,
-                "from": {
-                    "id": 886018984,
-                    "is_bot": false,
-                    "first_name": "Bill",
-                    "last_name": "Chen",
-                    "username": "BillChen2000",
-                    "language_code": "en"
-                },
-                "chat": {
-                    "id": 886018984,
-                    "first_name": "Bill",
-                    "last_name": "Chen",
-                    "username": "BillChen2000",
-                    "type": "private"
-                },
-                "date": 1581335136,
-                "text": "Hello, ECNUBot.\ud83d\ude0a"
-            }
-        },
-        {
-            "update_id": 574556842,
-            "message": {
-                "message_id": 8,
-                "from": {
-                    "id": 38724011,
-                    "is_bot": false,
-                    "first_name": "Homan",
-                    "last_name": "\ud83d\udc27",
-                    "username": "HomanW104"
-                },
-                "chat": {
-                    "id": 38724011,
-                    "first_name": "Homan",
-                    "last_name": "\ud83d\udc27",
-                    "username": "HomanW104",
-                    "type": "private"
-                },
-                "date": 1581336164,
-                "text": "/start",
-                "entities": [
-                    {
-                        "offset": 0,
-                        "length": 6,
-                        "type": "bot_command"
-                    }
-                ]
-            }
-        },
-        {
-            "update_id": 574556843,
-            "message": {
-                "message_id": 9,
-                "from": {
-                    "id": 38724011,
-                    "is_bot": false,
-                    "first_name": "Homan",
-                    "last_name": "\ud83d\udc27",
-                    "username": "HomanW104",
-                    "language_code": "en"
-                },
-                "chat": {
-                    "id": 38724011,
-                    "first_name": "Homan",
-                    "last_name": "\ud83d\udc27",
-                    "username": "HomanW104",
-                    "type": "private"
-                },
-                "date": 1581336185,
-                "text": "\u67e5\u8bfe\u8868\uff01"
-            }
-        },
-        {
-            "update_id": 574556844,
-            "message": {
-                "message_id": 10,
-                "from": {
-                    "id": 38724011,
-                    "is_bot": false,
-                    "first_name": "Homan",
-                    "last_name": "\ud83d\udc27",
-                    "username": "HomanW104",
-                    "language_code": "en"
-                },
-                "chat": {
-                    "id": 38724011,
-                    "first_name": "Homan",
-                    "last_name": "\ud83d\udc27",
-                    "username": "HomanW104",
-                    "type": "private"
-                },
-                "date": 1581336193,
-                "text": "\u67e5\u8bfe\u8868"
-            }
-        },
-        {
-            "update_id": 574556845,
-            "message": {
-                "message_id": 11,
-                "from": {
-                    "id": 38724011,
-                    "is_bot": false,
-                    "first_name": "Homan",
-                    "last_name": "\ud83d\udc27",
-                    "username": "HomanW104",
-                    "language_code": "en"
-                },
-                "chat": {
-                    "id": 38724011,
-                    "first_name": "Homan",
-                    "last_name": "\ud83d\udc27",
-                    "username": "HomanW104",
-                    "type": "private"
-                },
-                "date": 1581336199,
-                "text": "\u6211\u8981\u67e5\u8bfe\u8868\uff01"
-            }
-        },
-        {
-            "update_id": 574556846,
-            "message": {
-                "message_id": 13,
-                "from": {
-                    "id": 38724011,
-                    "is_bot": false,
-                    "first_name": "Homan",
-                    "last_name": "\ud83d\udc27",
-                    "username": "HomanW104",
-                    "language_code": "en"
-                },
-                "chat": {
-                    "id": 38724011,
-                    "first_name": "Homan",
-                    "last_name": "\ud83d\udc27",
-                    "username": "HomanW104",
-                    "type": "private"
-                },
-                "date": 1581336252,
-                "text": "\u9760"
-            }
-        },
-        {
-            "update_id": 574556847,
-            "message": {
-                "message_id": 14,
-                "from": {
-                    "id": 886018984,
-                    "is_bot": false,
-                    "first_name": "Bill",
-                    "last_name": "Chen",
-                    "username": "BillChen2000",
-                    "language_code": "en"
-                },
-                "chat": {
-                    "id": 886018984,
-                    "first_name": "Bill",
-                    "last_name": "Chen",
-                    "username": "BillChen2000",
-                    "type": "private"
-                },
-                "date": 1581336425,
-                "text": "/connect",
-                "entities": [
-                    {
-                        "offset": 0,
-                        "length": 8,
-                        "type": "bot_command"
-                    }
-                ]
-            }
-        }
-    ]
-}
-
-{
-    "apiCanary": "WYSbtS0KmBjaIGSuW\/LuBOf+app74tYkUmZX619gKsAmpvjAvNswrjCBvxXmwstKZA\/ERQ9Feo37UjvM5I6CFCc5h5uJnms8MjPE2qhFyUFzBjIfHNPlaOfMJ\/GA9cvwu20mNt1dfKMrXJxokXjcP9vyytydqPPnQ\/aIHCCTluw4vCPu7g4hHXSpkc4jVACL8ZOQ2s0oiKDiObLC9I+3096rllx63Rx2qrpCNVw+mQpXgrSSgo4gsjvgCpjZyXaN:2:3c",
-    "telemetryContext": "X3RYno9hslTxA4pNgRFJTs4N4NST8gDdFFRvIL5pqWlc7h1NeA4OZ\/e8mbcru70GUU7LrMceYhbo4qn59ZWCw1pzaBm\/kl7IxXTjloUncJBjuQe6F3cEVEvaxOqQfOMKuI2Y8f+z1EQe80tx0UZnbE13K2eiO+BWsZdUFnGfGEzr+2vo2FrygW64Bj3RLDdOEdAfFyddRjr2wyGxsA4VNWRmLKZ9u0fWtRYAJFxiZl1JkSpfLMzvUZrJlKdZOvDvip94OQ15d\/XQqZIUxUrZvynNwNV53R0aehfnUXuNZMGU00F9MjLI+X2oWgibAaB2o88YawaWaM7jmi4lEf0uHVOIf\/EGsIODhmT5mFxPqodjPqb54iLc0JN9dX0JeXxwTgWEXSVcsyZ69hI09GW+DzN2YHWP7pz835mJ9\/2udy9vtD76v8rGcVKJC+a7Jaw1cBQZk2xZ81zXEzGmiJUuE+8LSvYtv2ITr3xw3hg0xQDlDAvZTQSGikeTvHtDakUCk8dsEqNT4rmdkMhBstyRyg==:2:3",
-    "isAvailable": true,
-    "nopaAllowed": false,
-    "type": "Live"
+        "location": "在学校",
+        "health": "健康，未超过37.3",
+        "date": "2020/09/28",
+        "reason": None,
+        "description": None,
+        "recordTime": 1601273463651,
+        "type": 0,
+        "clock": 1
+    }
 }
