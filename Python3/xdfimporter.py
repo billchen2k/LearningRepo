@@ -20,6 +20,7 @@ cal.add('X-WR-TIMEZONE', 'Asia/Shanghai')
 def createEvent(name, location, teacher, start, end):
     global REMINDER
     event = Event()
+    
     event.add('UID', str(uuid.uuid4()).upper() + '@Bill.Chen@live.com')
     startDate = datetime.strptime(start, '%Y-%m-%d %H:%M:%S').strftime('%Y%m%dT%H%M%S')
     endDate = datetime.strptime(end, '%Y-%m-%d %H:%M:%S').strftime('%Y%m%dT%H%M%S')
