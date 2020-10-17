@@ -1,0 +1,119 @@
+% \documentclass[a4paper, 10px]{ctexart}
+\documentclass{ctexart}
+\usepackage{amsmath}
+\usepackage[left=1in, right=1in, top=1.2in, bottom=1.2in]{geometry}
+\usepackage{ctex}
+\usepackage[utf8]{inputenc}
+\usepackage{boxproof}
+\usepackage{fontspec}
+\usepackage{a4wide}
+\usepackage{listings}
+% \setmainfont[Scale = 1]{Palatino}
+% \setCJKmainfont{Songti SC}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancypagestyle{plain}{
+    \fancyhead[L]{East China Normal University}
+    \fancyhead[R]{}
+    \fancyfoot[C]{\thepage}
+}
+\def\premise{\mathrm{premise}}
+\def\assumption{\mathrm{assumption}}
+\def\MT{\mathrm {MT\ }}
+\def\LEM{\mathrm{LEM}}
+\def\intro{\mathrm{i\ }}
+\def\elim{\mathrm{e\ }}
+\def\introa{\mathrm{i_1\ }}
+\def\elima{\mathrm{e_1\ }}
+\def\introb{\mathrm{i_2\ }}
+\def\elimb{\mathrm{e_2\ }}
+
+
+
+\def\n{\neg}
+\def\d{\vee}
+\def\c{\wedge}
+\def\NNF{\texttt{NNF}}
+\def\IMPLFREE{\texttt{IMPL\_FREE}}
+\def\CNF{\texttt{CNF}}
+\def\DISTR{\texttt{DISTR}}
+
+\title{Logic in Computer Science Assignment 2}
+\author{10185101210 陈俊潼}
+\date{October 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+
+\subsection{Convert the following formula into CNF.}
+
+$\neg(r \rightarrow(\neg((p \vee q) \wedge(\neg p \rightarrow(q \wedge r)))))\\$
+
+Let $\phi = \neg(r \rightarrow(\neg((p \vee q) \wedge(\neg p \rightarrow(q \wedge r)))))$.
+
+First apply \IMPLFREE:
+
+$$
+\begin{aligned}
+    \IMPLFREE(\phi) &= \n(r\to (\n((p\d q) \c (\n p \to (q \c r))))) \\
+    &= \n(\IMPLFREE(r \to (\n ((p \d q) \c  (\n p \to (q \c r)))))) \\
+    &= \n(\n r \d \IMPLFREE (\n((p \d q) \c (\n p \to (q \c r))))) \\
+    &= \n(\n r \d (\n(\IMPLFREE (p \d q) \c \IMPLFREE (\n p \to (q \c r))))) \\
+    &= \n(\n r \d (\n((p \d q) \c (\IMPLFREE (\n p \to (q \c r)))))) \\
+    &= \n(\n r \d (\n((p \d q) \c (\n \n p \d \IMPLFREE(q \c r))))) \\
+    &= \n(\n r \d (\n((p \d q) \c (\n \n p \d (\IMPLFREE q \c \IMPLFREE r))))) \\
+    &= \n(\n r \d (\n((p \d q) \c (\n \n p \d(q \c r))))) \\
+\end{aligned}
+$$
+
+Then apply \NNF:
+
+$$
+\begin{aligned}
+    \NNF(\IMPLFREE(\phi)) &= \NNF(\n(\n r \d (\n((p \d q) \c (\n \n p \d(q \c r)))))) \\
+    &= \NNF(\n \n r) \c \NNF (\n (\n ((p \d q) \c (\n \n p \d (q \c r))))) \\
+    &= r \c \NNF ((p \d q) \c (\n \n p \d (q \c r))) \\
+    &= r \c (\NNF(p \d q) \c \NNF (\n \n p \d (q \c r))) \\
+    &= r \c ((\NNF p \d \NNF q) \c (\NNF (\n \n p) \d \NNF (q \c r)))\\
+    &= r \c ((p \d q) \c (p \d (q \c r)))
+\end{aligned}
+$$
+
+\newpage
+
+Then apply \CNF:
+
+$$
+\begin{aligned}
+    \CNF(\NNF(\IMPLFREE(\phi))) &= \CNF(r \c ((p \d q) \c (p \d (q \c r)))) \\
+    &= r \c \CNF((p \d q) \c (p \d (q \c r)))\\
+    &= r \c \CNF(p \d q) \c \CNF(p \d (q \c r))\\
+    &= r \c \DISTR(p, q) \c \DISTR(\CNF(p), \CNF((q \c r))) \\
+    &= r \c \DISTR(p, q) \c \DISTR(p, (q \c r)) \\
+    &= r \c (p \d q) \c \DISTR(p, q) \c \DISTR(p, r)\\
+    &= r \c (p \d q) \c (p \d q) \c (p \d r)\\
+    &= r \c (p \d q) \c (p \d r) \\
+    & = r \c (p \d q)
+\end{aligned}
+$$
+\subsection{Determine the satisfiablity of the following formula with Horn algorithm.}
+
+$
+(p \wedge q \wedge s \rightarrow \perp) \wedge(q \wedge s \rightarrow p) \wedge(\top \rightarrow s) \wedge(s \rightarrow q)\\
+$
+
+Marked initially: $\top$
+
+Since $\top \to s$, mark s. (Now marked: s, $\top$)
+
+Since $s \to q$, mark q. (Now marked: s, q, $\top$)
+
+Since $q \c s \to p$, mark p. (Now marked: s, p, q, $\top$)
+
+Since $p \c q \c s \to \bot$, mark bot. (Now marked: s, p, q, $\top$, $\bot$)
+
+Since $\bot$ is marked at last, from Horn's algorithm, this formula is not satisfiable.
+\end{document}
