@@ -96,9 +96,17 @@ $$
     &= r \c (p \d q) \c \DISTR(p, q) \c \DISTR(p, r)\\
     &= r \c (p \d q) \c (p \d q) \c (p \d r)\\
     &= r \c (p \d q) \c (p \d r) \\
-    & = r \c (p \d q)
 \end{aligned}
 $$
+
+Above is the result of \CNF \ algorithm. Further more, this result can be simplified by:
+
+$$
+\begin{aligned}
+    r \c (p \d q) \c (p \d r) &=  r \c (p \d r) \\
+\end{aligned}
+$$
+
 \subsection{Determine the satisfiablity of the following formula with Horn algorithm.}
 
 $
