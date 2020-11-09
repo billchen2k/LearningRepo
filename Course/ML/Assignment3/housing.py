@@ -14,6 +14,8 @@ mox.file.shift('os', 'mox')
 with mox.file.File("s3://billc//ML//housing//data//housing.csv", "r") as f:
     input_data = pd.read_csv(f)
 
+# input_data = pd.read_csv('housing.csv')
+
 housing = input_data
 # 处理海岸数据
 housing.ocean_proximity = housing.ocean_proximity.replace(['NEAR BAY', '<1H OCEAN', 'INLAND', 'NEAR OCEAN', 'ISLAND'],
@@ -26,7 +28,7 @@ test.describe()
 train_x = train.drop('median_house_value', axis=1)
 train_y = train.median_house_value
 test_x = test.drop('median_house_value', axis=1)
-test_y = train.median_house_value
+test_y = test.median_house_value
 housing.head()
 
 #%%
@@ -39,8 +41,10 @@ test_x = test_x.fillna(train_x['total_bedrooms'].mean())
 from sklearn.linear_model import LinearRegression
 model = LinearRegression()
 model.fit(train_x, train_y)
-score = model.score(train_x, train_y)
-print("Finished. Accuracy: {}".format(score))
+predicted = model.predict(test_x)
+
+print("MSE: {}".format(sklearn.metrics.mean_squared_error(test_y, predicted)))
+print("Finished. Accuracy: {}".format(model.score(train_x, train_y)))
 
 with open('model', 'wb+') as f:
     pickle.dump(model, f)

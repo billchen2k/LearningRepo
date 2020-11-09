@@ -1,0 +1,104 @@
+% \documentclass[a4paper, 10px]{ctexart}
+\documentclass{ctexart}
+\usepackage[left=1in, right=1in, top=1.2in, bottom=1.2in]{geometry}
+\usepackage{ctex}
+\usepackage[utf8]{inputenc}
+\usepackage{boxproof}
+\usepackage{fontspec}
+\usepackage{a4wide}
+% \setmainfont[Scale = 1]{Palatino}
+% \setCJKmainfont{Songti SC}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancypagestyle{plain}{
+    \fancyhead[L]{East China Normal University}
+    \fancyhead[R]{}
+    \fancyfoot[C]{\thepage}
+}
+\def\premise{\mathrm{premise}}
+\def\assumption{\mathrm{assumption}}
+\def\MT{\mathrm{MT\ }}
+\def\LEM{\mathrm{LEM}}
+\def\PBC{\mathrm{PBC\ }}
+\def\intro{\mathrm{i\ }}
+\def\elim{\mathrm{e\ }}
+\def\introa{\mathrm{i_1\ }}
+\def\elima{\mathrm{e_1\ }}
+\def\introb{\mathrm{i_2\ }}
+\def\elimb{\mathrm{e_2\ }}
+
+\def\n{\neg}
+\def\d{\vee}
+\def\c{\wedge}
+\def\a{\forall}
+\def\e{\exists}
+
+\title{Logic in Computer Science Assignment 3}
+\author{10185101210 陈俊潼}
+\date{November 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Prove}
+Prove the following theorems with deduction rules.
+
+\subsection{$\forall x(P(x) \rightarrow \neg Q(x)) \vdash \neg(\exists x(P(x) \wedge Q(x)))$}
+
+Proof:
+
+$$
+\begin{proofbox}
+    \: \a x (P(x) \to \n Q(x)) \= \premise\\
+    \[
+        \: \e x(P(x) \c Q(x)) \= \assumption\\
+        \[
+            x_0 \: P(x_0) \c Q(x_0) \= \assumption \\
+            \: P(x_0) \= \c \elima 3 \\ 
+            \[
+                \: Q(x_0) \= \c \elimb 3\\
+                \: P(x_0) \to \n Q(x_0) \= \a \elim 1 \\
+                \: \n Q(x_0) \= \to \elim 6\\
+            \]
+            \: \bot \= \n \intro 5,7 \\
+        \]
+        \: \bot \= \e \elim 2, 3-8\\
+    \]
+    \: \n(\e x(P(x) \c Q(x))) \= \n \intro 2,9
+\end{proofbox}
+$$
+
+\newpage
+
+\subsection{$\forall x(P(x) \leftrightarrow x=b) \vdash P(b) \wedge \forall x \forall y(P(x) \wedge P(y) \rightarrow x=y)$}
+
+Proof: 
+$$
+\begin{proofbox}
+    \: \a (P(x) \to x = b) \= \premise \\
+    \: \a (x = b \to P(x)) \= \premise \\
+    \: b = b \= = \intro \\
+    \: b = b \to P(b) \= \a \elim 2\\
+    \: P(b) \= \to\elim 4\\
+    \[
+        x_0 \: P(x_0) \to x_0 = b \= \a\elim 1\\
+        \[
+            y_0 \: P(y_0) \to y_0 = b \= \a\elim 1\\
+            \[
+                \: P(x_0) \c P(y_0) \= \assumption \\
+                \: P(x_0) \= \c\elima 8 \\
+                \: x_0 = b \= \to\elim 6 \\
+                \: P(y_0) \= \c\elimb 8 \\
+                \: y_0 = b \= \to\elim 7 \\
+                \: x_0 = y_0 \= =\elim 10, 12\\
+            \]
+            \: P(x_0) \c P(y_0) \to x_0 = y_0 \= \to\intro 8,9-13\\
+        \]
+        \: \a y (P(x_0) \c P(y) \to x_0 = y) \= \a \intro 7-14\\
+    \]
+    \: \a x \a y (P(x) \c P(y) \to x = y) \= \a \intro 6-15\\
+    \: P(b) \c \a x \a y (P(x) \c P(y) \to x = y)\ \ \ \ \  \= \c\intro 5,16
+\end{proofbox}$$
+
+\end{document}
