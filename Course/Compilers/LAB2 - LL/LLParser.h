@@ -7,12 +7,455 @@
 #include <fstream>
 #include <iostream>
 #include <map>
+#include <set>
 #include <sstream>
 #include <string>
 #include <vector>
+#include <unordered_set>
 #include <algorithm>
 
+/* If set to 1, will use precalculated rule table instead of
+ * Calculating one by the program itself.
+ *
+ * Todo: Calculating a predict table.
+ */
+#define PREDEFINED_RULE_TABLE 1
+#define PARSEMODE_ERRORCHECKING 1
+#define PARSEMPDE_PARSE 2
+
+typedef std::vector<std::string> trow;
+typedef std::vector<trow> table;
+
 using namespace std;
+
+/**
+ * Predefined symbols and grammar rules.
+ */
+multimap<string, string> ruleMap = {
+    {"program", "compoundstmt"},
+    {"stmt", "ifstmt"},
+    {"stmt", "whilestmt"},
+    {"stmt", "assgstmt"},
+    {"stmt", "compoundstmt"},
+    {"compoundstmt", "{ stmts }"},
+    {"stmts", "stmt stmts"},
+    {"stmts", "E"},
+    {"ifstmt", "if ( boolexpr ) then stmt else stmt"},
+    {"whilestmt", "while ( boolexpr ) stmt"},
+    {"assgstmt", "ID = arithexpr ;"},
+    {"boolexpr", "arithexpr boolop arithexpr"},
+    {"boolop", "<"},
+    {"boolop", ">"},
+    {"boolop", "<="},
+    {"boolop", ">="},
+    {"boolop", "=="},
+    {"arithexpr", " multexpr arithexprprime"},
+    {"arithexprprime", "+ multexpr arithexprprime "},
+    {"arithexprprime", "- multexpr arithexprprime"},
+    {"arithexprprime", "E"},
+    {"multexpr", "simpleexpr multexprprime"},
+    {"multexprprime", "* simpleexpr multexprprime"},
+    {"multexprprime", "/ simpleexpr multexprprime "},
+    {"multexprprime", "E"},
+    {"simpleexpr", "ID"},
+    {"simpleexpr", "NUM"},
+    {"simpleexpr", "( arithexpr )"}
+};
+
+set<string> nonterminals = {
+        "program", "stmt", "compoundstmt", "stmts", "ifstmt", "whilestmt","assgstmt", "boolexpr", "boolop",
+        "arithexpr", "arithexprprime", "multexpr", "multexprprime", "simpleexpr"
+};
+
+/**
+ * E stands for empty symbol.
+ */
+set<string> terminals = {
+        "{", "}", "if", "(", ")", "then", "else", "while",
+        "ID", "=", ">", "<", ">=", "<=", "==", "+", "-", "*",
+        "/", "NUM", "E", ";", "$"
+};
+
+/**
+ * Split a string by space. Return a string vector.
+ * Line break is split by an <endl> token.
+ */
+vector<string> split(string const s) {
+    vector<std::string> result ;
+    istringstream stm(s);
+    string token;
+    string line;
+    while (getline(stm, line)) {
+        istringstream linestm(line);
+        while (linestm >> token) result.push_back(token);
+        if (token != "$") {
+            result.push_back("<endl>");
+        }
+    }
+    return result;
+}
+
+/* ************************* SymbolLookup ***************************
+ * Usage example: sl.n("stmt") to get a integer.
+ * */
+
+class SymbolLookup {
+private:
+    int ntCount = 0;
+    int tCount = 0;
+    map<string, int> tmap;
+    map<string, int> ntmap;
+
+public:
+    int t(string s);
+
+    int nt(string s);
+
+    string t_r(int num);
+
+    string nt_r(int num);
+
+    bool is_t(string s);
+
+    bool is_nt(string s);
+
+    pair<int, int>  getSize();
+
+    SymbolLookup(set<string> &_t, set<string> &_nt);
+};
+
+SymbolLookup::SymbolLookup(set<string> &_t, set<string> &_nt) {
+    for (auto oneT : _t) {
+        tmap[oneT] = tCount++;
+    }
+    for (auto oneNt : _nt) {
+        ntmap[oneNt] = ntCount++;
+    }
+}
+
+/**
+ * Convert non-terminal symbol s to a integer.
+ * @param s Non-terminal symbol.
+ * @return
+ */
+int SymbolLookup::nt(string s) {
+    auto it = ntmap.find(s);
+    return it != ntmap.end() ? it->second : -1;
+}
+
+/**
+ * Convert terminal symbol to a interger.
+ * @param s The terminal symbol.
+ * @return if -1 is returned, things goes wrong.
+ */
+int SymbolLookup::t(string s) {
+    auto it = tmap.find(s);
+    return it != tmap.end() ? it->second : -1;
+}
+
+/**
+ * Get the size of the symbol look up table.
+ * @return
+ */
+pair<int, int> SymbolLookup::getSize() {
+    return make_pair(this->ntCount, this->tCount);
+}
+
+/**
+ * Transform the terminal string number back to a terminal symbol string.
+ * @param num
+ * @return
+ */
+string SymbolLookup::t_r(int num) {
+    for(auto one: tmap) {
+        if (one.second == num) {
+            return one.first;
+        }
+    }
+    return "";
+}
+
+/**
+ * Transform a non-terminal string number back to a non-terminal symbol string.
+ * @param num
+ * @return
+ */
+string SymbolLookup::nt_r(int num) {
+    for(auto one: ntmap) {
+        if (one.second == num) {
+            return one.first;
+        }
+    }
+    return "";
+}
+
+bool SymbolLookup::is_t(string s) {
+    return tmap.find(s) != tmap.end();
+}
+
+bool SymbolLookup::is_nt(string s) {
+    return ntmap.find(s) != ntmap.end();
+}
+
+/* ************************* RuleTable *************************** */
+
+class RuleTable{
+private:
+    multimap<string, string> rules;
+    table ruleTable;
+
+    // First and follow set, used to calculate the ruleTable.
+    map<string, unordered_set<string>> first;
+    map<string, unordered_set<string>> follow;
+
+    SymbolLookup sl;
+
+    void generateFirst(string s);
+
+    void generateFollow(string s);
+
+public:
+    RuleTable(multimap<string, string> &_rules, SymbolLookup sl);
+
+    void printTableRow(string nonterminal);
+
+    string getRule(string nt, string t);
+};
+
+RuleTable::RuleTable(multimap<string, string> &_rules, SymbolLookup sl) : sl(sl) {
+    // Predefined Rules
+    ruleTable.resize(sl.getSize().first);
+    for(int i = 0; i < ruleTable.size(); i++){
+        ruleTable[i].resize(sl.getSize().second);
+    }
+    if(PREDEFINED_RULE_TABLE) {
+        // A predefined rule table.
+
+        ruleTable[sl.nt("program")][sl.t("{")] = "compoundstmt";
+
+        ruleTable[sl.nt("stmt")][sl.t("{")] = "compoundstmt";
+        ruleTable[sl.nt("stmt")][sl.t("if")] = "ifstmt";
+        ruleTable[sl.nt("stmt")][sl.t("while")] = "whilestmt";
+        ruleTable[sl.nt("stmt")][sl.t("ID")] = "assgstmt";
+        ruleTable[sl.nt("stmt")][sl.t("if")] = "ifstmt";
+
+        ruleTable[sl.nt("compoundstmt")][sl.t("{")] = "{ stmts }";
+
+        ruleTable[sl.nt("stmts")][sl.t("{")] = "stmt stmts";
+        ruleTable[sl.nt("stmts")][sl.t("}")] = "E";
+        ruleTable[sl.nt("stmts")][sl.t("if")] = "stmt stmts";
+        ruleTable[sl.nt("stmts")][sl.t("while")] = "stmt stmts";
+        ruleTable[sl.nt("stmts")][sl.t("ID")] = "stmt stmts";
+
+        ruleTable[sl.nt("ifstmt")][sl.t("if")] = "if ( boolexpr ) then stmt else stmt";
+
+        ruleTable[sl.nt("whilestmt")][sl.t("while")] = "while ( boolexpr ) stmt";
+
+        ruleTable[sl.nt("assgstmt")][sl.t("ID")] = "ID = arithexpr ;";
+
+        ruleTable[sl.nt("boolexpr")][sl.t("(")] = "arithexpr boolop arithexpr";
+        ruleTable[sl.nt("boolexpr")][sl.t("ID")] = "arithexpr boolop arithexpr";
+        ruleTable[sl.nt("boolexpr")][sl.t("NUM")] = "arithexpr boolop arithexpr";
+
+        ruleTable[sl.nt("boolop")][sl.t("<")] = "<";
+        ruleTable[sl.nt("boolop")][sl.t(">")] = ">";
+        ruleTable[sl.nt("boolop")][sl.t("<=")] = "<=";
+        ruleTable[sl.nt("boolop")][sl.t(">=")] = ">=";
+        ruleTable[sl.nt("boolop")][sl.t("==")] = "==";
+
+        ruleTable[sl.nt("arithexpr")][sl.t("(")] = "multexpr arithexprprime";
+        ruleTable[sl.nt("arithexpr")][sl.t("ID")] = "multexpr arithexprprime";
+        ruleTable[sl.nt("arithexpr")][sl.t("NUM")] = "multexpr arithexprprime";
+
+        ruleTable[sl.nt("arithexprprime")][sl.t(")")] = "E";
+        ruleTable[sl.nt("arithexprprime")][sl.t(";")] = "E";
+        ruleTable[sl.nt("arithexprprime")][sl.t("<")] = "E";
+        ruleTable[sl.nt("arithexprprime")][sl.t(">")] = "E";
+        ruleTable[sl.nt("arithexprprime")][sl.t("<=")] = "E";
+        ruleTable[sl.nt("arithexprprime")][sl.t(">=")] = "E";
+        ruleTable[sl.nt("arithexprprime")][sl.t("==")] = "E";
+        ruleTable[sl.nt("arithexprprime")][sl.t("+")] = "+ multexpr arithexprprime";
+        ruleTable[sl.nt("arithexprprime")][sl.t("-")] = "- multexpr arithexprprime";
+
+        ruleTable[sl.nt("multexpr")][sl.t("(")] = "simpleexpr multexprprime";
+        ruleTable[sl.nt("multexpr")][sl.t("ID")] = "simpleexpr multexprprime";
+        ruleTable[sl.nt("multexpr")][sl.t("NUM")] = "simpleexpr multexprprime";
+
+        ruleTable[sl.nt("multexprprime")][sl.t(")")] = "E";
+        ruleTable[sl.nt("multexprprime")][sl.t(";")] = "E";
+        ruleTable[sl.nt("multexprprime")][sl.t("<")] = "E";
+        ruleTable[sl.nt("multexprprime")][sl.t(">")] = "E";
+        ruleTable[sl.nt("multexprprime")][sl.t("<=")] = "E";
+        ruleTable[sl.nt("multexprprime")][sl.t(">=")] = "E";
+        ruleTable[sl.nt("multexprprime")][sl.t("==")] = "E";
+        ruleTable[sl.nt("multexprprime")][sl.t("+")] = "E";
+        ruleTable[sl.nt("multexprprime")][sl.t("-")] = "E";
+        ruleTable[sl.nt("multexprprime")][sl.t("*")] = "* simpleexpr multexprprime";
+        ruleTable[sl.nt("multexprprime")][sl.t("/")] = "/ simpleexpr multexprprime";
+
+        ruleTable[sl.nt("simpleexpr")][sl.t("(")] = "( arithexpr )";
+        ruleTable[sl.nt("simpleexpr")][sl.t("ID")] = "ID";
+        ruleTable[sl.nt("simpleexpr")][sl.t("NUM")] = "NUM";
+
+    }
+    else{
+        // Calculate the rule table on the go.
+
+        for (string one: terminals) {
+            generateFirst(one);
+        }
+        for (string one : nonterminals) {
+            generateFirst(one);
+        }
+    }
+}
+
+void RuleTable::generateFirst(string s) {
+    if (terminals.find(s) != terminals.end()) {
+        // for terminals
+        first[s] = unordered_set<string>();
+        first[s].insert(s);
+    }
+    else{
+        //for nonterminals
+    }
+}
+
+void RuleTable::printTableRow(string nonterminal) {
+    trow row = ruleTable[sl.nt(nonterminal)];
+    for(int i = 0; i < row.size(); i++) {
+        string derive = row[i];
+        if (derive.size() > 0) {
+            cout << left << sl.t_r(i) <<  ": " << nonterminal << " -> " << derive << endl;
+//            cout << setw(6) << left << sl.t_r(i) <<  ": " << nonterminal << " -> " << derive << endl;
+
+        }
+    }
+}
+
+/**
+ * Get derived rule.
+ * @param nt The nonterminal symbol, indicating a table row.
+ * @param t  The terminal symbol to look up for, indicating a table column.
+ * @return The rule found.
+ */
+string RuleTable::getRule(string nt, string t) {
+    return ruleTable[sl.nt(nt)][sl.t(t)];
+}
+
+/* ************************* LLParser *************************** */
+
+class LLParser {
+private:
+    int pos;
+    int linenum;                    // Current line number.
+    short mode;
+    vector<string> tokens;
+    int erroredLineNum;             // The line number which error occured
+
+    SymbolLookup sl;
+    RuleTable rt;
+
+public:
+    LLParser(string _src, RuleTable rt, SymbolLookup sl);
+
+    void parse();
+
+    void setMode(short _mode);
+
+    void forward(string top, int layer);
+};
+
+LLParser::LLParser(string _src, RuleTable rt, SymbolLookup sl) : rt(rt), sl(sl) {
+    this->pos = 0;
+    this->linenum = 1;
+    this->mode = PARSEMPDE_PARSE;
+    _src += " $";
+    this->tokens = split(_src);
+}
+
+void LLParser::setMode(short _mode) {
+    mode = _mode;
+}
+
+void LLParser::forward(string top, int layer) {
+    if (mode == PARSEMPDE_PARSE) {
+        if (top != "program") cout << endl;
+        for (int i = 0; i < layer; i++) cout << "\t";
+        cout << top;
+    }
+    if (erroredLineNum || tokens[pos] == "$" ) {
+        return;
+    }
+    if (tokens[pos] == "<endl>") {
+        pos++;
+        linenum++;
+    }
+    if (tokens[pos] == "$") {
+        return;
+    }
+    string derives = rt.getRule(top, tokens[pos]);
+    if (derives.size() == 0) {
+        // Rule not found, error occurred.
+        erroredLineNum = linenum;
+        if (tokens[pos - 1] == "<endl>") erroredLineNum--;
+        cout << "语法错误,第" << erroredLineNum<< "行,缺少\";\"" << endl;
+        // Fix the error
+        tokens.insert(tokens.begin() + pos, ";");
+        return;
+    }
+    vector<string> deriveSplit = split(derives);
+    deriveSplit.pop_back(); // Remove <endl>
+//   Print current derivation
+//  cout << top << " -> " << derives << " | " << tokens[pos] << endl;
+    for(auto oneSymbol : deriveSplit) {
+        if(sl.is_t(oneSymbol)) {
+            if (mode == PARSEMPDE_PARSE) {
+                cout << endl;
+                for (int i = 0; i < layer + 1; i++) cout << "\t";
+                cout << oneSymbol;
+            }
+            while (tokens[pos] == "<endl>"){
+                pos++;
+                linenum++;
+            }
+            if (tokens[pos] == oneSymbol) {
+                pos++;
+            }
+//            if (oneSymbol == tokens[pos]) {
+//                // Correctly matched
+//                pos++;
+//            }
+            if (oneSymbol == "E") {
+                // Empty derivation
+                return;
+            }
+        }
+        if(sl.is_nt(oneSymbol)) {
+            forward(oneSymbol, layer + 1);
+        }
+    }
+}
+
+void LLParser::parse() {
+    // Print the whole table
+    //    for (auto nt: nonterminals) {
+    //        cout << "---------------- " << nt << " ----------------\n";
+    //        rt.printTableRow(nt);
+    //    }
+    //    for(string one: tokens) {
+    //        printf("%s \n", one.c_str());
+    //    }
+    erroredLineNum = pos = 0;
+    linenum = 1;
+    // Let program be the initial token.
+    try {
+        forward("program", 0);
+    }
+    catch (exception e){
+        cout << "未知错误" << endl;
+    }
+}
 
 void read_prog(string &prog) {
     char c;
@@ -21,485 +464,28 @@ void read_prog(string &prog) {
     }
 }
 
-map<string, short> typeNameMap = {
-        {"auto",       1},
-        {"break",      2},
-        {"case",       3},
-        {"char",       4},
-        {"const",      5},
-        {"continue",   6},
-        {"default",    7},
-        {"do",         8},
-        {"double",     9},
-        {"else",       10},
-        {"enum",       11},
-        {"extern",     12},
-        {"float",      13},
-        {"for",        14},
-        {"goto",       15},
-        {"if",         16},
-        {"int",        17},
-        {"long",       18},
-        {"register",   19},
-        {"return",     20},
-        {"short",      21},
-        {"signed",     22},
-        {"sizeof",     23},
-        {"static",     24},
-        {"struct",     25},
-        {"switch",     26},
-        {"typedef",    27},
-        {"union",      28},
-        {"unsigned",   29},
-        {"void",       30},
-        {"volatile",   31},
-        {"while",      32},
-        {"-",          33},
-        {"--",         34},
-        {"-=",         35},
-        {"->",         36},
-        {"!",          37},
-        {"!=",         38},
-        {"%",          39},
-        {"%=",         40},
-        {"&",          41},
-        {"&&",         42},
-        {"&=",         43},
-        {"(",          44},
-        {")",          45},
-        {"*",          46},
-        {"*=",         47},
-        {",",          48},
-        {".",          49},
-        {"/",          50},
-        {"/=",         51},
-        {":",          52},
-        {";",          53},
-        {"?",          54},
-        {"[",          55},
-        {"]",          56},
-        {"^",          57},
-        {"^=",         58},
-        {"{",          59},
-        {"|",          60},
-        {"||",         61},
-        {"|=",         62},
-        {"}",          63},
-        {"~",          64},
-        {"+",          65},
-        {"++",         66},
-        {"+=",         67},
-        {"<",          68},
-        {"<<",         69},
-        {"<<=",        70},
-        {"<=",         71},
-        {"=",          72},
-        {"==",         73},
-        {">",          74},
-        {">=",         75},
-        {">>",         76},
-        {">>=",        77},
-        {"\"",         78},
-        {"Comment",    79},
-        {"Constant",   80},
-        {"Identifier", 81}
-};
-
-/************ Token ***********/
-
-class Token {
-private:
-    int tokenId;
-public:
-    enum class TypeName {
-        Keyword,
-        Operator,
-        Comments,
-        Constant,
-        Identifier,
-        Init,
-        End
-    };
-    TypeName type;
-    string lexeme;
-
-    Token(TypeName type, const string &lexeme);
-
-    Token(TypeName type, const string &lexeme, int tokenId);
-
-    short getTypeId();
-
-    void print();
-};
-
-short Token::getTypeId() {
-    switch (type) {
-        case TypeName::Keyword:
-        case TypeName::Operator:
-            return typeNameMap.find(this->lexeme)->second;
-        case TypeName::Comments:
-            return 79;
-        case TypeName::Constant:
-            return 80;
-        case TypeName::Identifier:
-            return 81;
-        default:
-            return 0;
-    }
-}
-
-Token::Token(Token::TypeName type, const string &lexeme) : type(type), lexeme(lexeme) {}
-
-Token::Token(Token::TypeName type, const string &lexeme, int tokenId) : type(type), lexeme(lexeme), tokenId(tokenId) {}
-
-void Token::print() {
-    if (tokenId != 1) {
-        cout << endl;
-    }
-    printf("%d: <%s,%d>", this->tokenId, this->lexeme.c_str(), this->getTypeId());
-}
-
-/************ Scanner ***********/
-
-class Scanner {
-private:
-    // Total token count
-    int tokenCount;
-    // Current position in the string
-    int pos;
-    // Src program string
-    string &src;
-
-    short quoteStatus;
-
-    enum class charType {
-        Alphabet,
-        Number,
-        Symbol,
-        Slash,
-        Blank,
-        Quote,
-        Endl,
-        Star,
-        Dot,
-        Eof
-    };
-
-    vector<string> Keywords = {
-            "auto", "break", "case", "char", "const",
-            "continue", "default", "do", "double", "else",
-            "enum", "extern", "float", "for", "goto", "if",
-            "int", "long", "register", "return", "return",
-            "short", "signed", "sizeof", "static", "struct",
-            "switch", "typedef", "union", "unsigned", "void",
-            "volatile"
-    };
-
-public:
-    Token next();
-
-    charType peek();
-
-    char get();
-
-    Scanner(string &src);
-
-    Token getIdentifierOrKeyword();
-
-    Token getNumber();
-
-    Token getOperator();
-
-    Token getCommentOrOperator();
-
-    Token getQuoteOrIdentifier();
-};
-
-Scanner::Scanner(string &src) : src(src) {
-    this->pos = 0;
-    this->tokenCount = 0;
-    this->quoteStatus = 0;
-}
-
-Token Scanner::getIdentifierOrKeyword() {
-    string out = "";
-    while (peek() == charType::Alphabet || peek() == charType::Number) {
-        out += get();
-    }
-    if (find(Keywords.begin(), Keywords.end(), out) != Keywords.end()) {
-        return Token(Token::TypeName::Keyword, out, tokenCount);
-    } else {
-        return Token(Token::TypeName::Identifier, out, tokenCount);
-    }
-}
-
-/**
- * Get next number Token. An automaton with 3 states.
- * @return
- */
-Token Scanner::getNumber() {
-    string out = "";
-    short state = 0;
-    while (1) {
-        switch (state) {
-            case 0:
-                switch (peek()) {
-                    case charType::Number:
-                        out += get();
-                        state = 0;
-                        break;
-                    case charType::Dot:
-                        out += get();
-                        state = 1;
-                        break;
-                    default:
-                        return Token(Token::TypeName::Constant, out, tokenCount);
-                }
-                break;
-            case 1:
-                switch (peek()) {
-                    case charType::Number:
-                        out += get();
-                        state = 1;
-                        break;
-                    default:
-                        return Token(Token::TypeName::Constant, out, tokenCount);
-                }
-
-        }
-    }
-}
-
-/**
- * Get next operator Token that's not start with '/'. An automaton with 3 states.
- * @return
- */
-Token Scanner::getOperator() {
-    string out = "";
-    short state = 0;
-    while (1) {
-        switch (state) {
-            case 0:
-                switch (src[pos]) {
-                    case '(':
-                    case ')':
-                    case ',':
-                    case '.':
-                    case ':':
-                    case ';':
-                    case '?':
-                    case '[':
-                    case ']':
-                    case '{':
-                    case '}':
-                    case '~':
-                        out += get();
-                        return Token(Token::TypeName::Operator, out, tokenCount);
-                    default:
-                        out += get();
-                        if (peek() == charType::Symbol) {
-                            state = 1;
-                        } else {
-                            return Token(Token::TypeName::Operator, out, tokenCount);
-                        }
-                }
-                break;
-            case 1:
-                switch (src[pos]) {
-                    case '-':
-                    case '=':
-                    case '&':
-                    case '|':
-                    case '+':
-                        out += get();
-                        return Token(Token::TypeName::Operator, out, tokenCount);
-                    default:
-                        out += get();
-                        if (peek() == charType::Symbol) {
-                            state = 2;
-                        } else {
-                            return Token(Token::TypeName::Operator, out, tokenCount);
-                        }
-                }
-                break;
-            case 2:
-                out += get();
-                return Token(Token::TypeName::Operator, out, tokenCount);
-        }
-    }
-}
-
-/**
- * When next token starts with '/', this method would judge if it's a comment or an operator.
- * @return
- */
-Token Scanner::getCommentOrOperator() {
-    string out = "";
-    out += get();
-    short state = 0;
-    while (1) {
-        switch (state) {
-            case 0:
-                switch (src[pos]) {
-                    case '=':
-                        out += get();
-                        return Token(Token::TypeName::Operator, out, tokenCount);
-                    case '*':
-                        // Multiline comment
-                        out += get();
-                        state = 2;
-                        break;
-                    case '/':
-                        // Single line comment
-                        out += get();
-                        state = 1;
-                        break;
-                    default:
-                        return Token(Token::TypeName::Operator, out, tokenCount);
-                }
-                break;
-            case 1:
-                switch (peek()) {
-                    case charType::Endl:
-                        pos++;
-                        return Token(Token::TypeName::Comments, out, tokenCount);
-                    default:
-                        out += get();
-                }
-                break;
-            case 2:
-                switch (peek()) {
-                    case charType::Star:
-                        out += get();
-                        state = 3;
-                        break;
-                    default:
-                        out += get();
-                }
-                break;
-            case 3:
-                switch (peek()) {
-                    case charType::Slash:
-                        out += get();
-                        return Token(Token::TypeName::Comments, out, tokenCount);
-                    default:
-                        out += get();
-                        state = 2;
-                }
-                break;
-        }
-    }
-}
-
-/**
- * Get next char and move position forward.
- * @return
- */
-char Scanner::get() {
-    return src[pos++];
-}
-
-/**
- * Peek next char. Char type is returned.
- * @return When returning charType::Slash, next Token might be comment or an operator.
- *         On contrast, tchartype::Symbol is returned.
- */
-Scanner::charType Scanner::peek() {
-    char nextChar = src[pos];
-    if (nextChar >= 'A' && nextChar <= 'Z' || nextChar >= 'a' && nextChar <= 'z') {
-        return charType::Alphabet;
-    }
-    if (nextChar >= '0' && nextChar <= '9') {
-        return charType::Number;
-    }
-    switch (src[pos]) {
-        case ' ':
-        case '\t':
-            return charType::Blank;
-        case '\n':
-            return charType::Endl;
-        case '.':
-            return charType::Dot;
-        case '*':
-            return charType::Star;
-        case '/':
-            return charType::Slash;
-        case '"':
-            return charType::Quote;
-        case '\0':
-            return charType::Eof;
-        default:
-            return charType::Symbol;
-    }
-}
-
-/**
- * If quoteStatus == 1, the lexer should be in quote mode, returning enything but quotes inside.
- * @return
- */
-Token Scanner::getQuoteOrIdentifier() {
-    string out = "";
-    switch (quoteStatus) {
-        case (0):
-            out += get();
-            this->quoteStatus = 1;
-            return Token(Token::TypeName::Operator, out, tokenCount);
-            break;
-        case (1):
-            while (peek() != charType::Quote) {
-                out += get();
-            }
-            this->quoteStatus = 2;
-            return Token(Token::TypeName::Identifier, out, tokenCount);
-        case (2):
-            out += get();
-            this->quoteStatus = 0;
-            return Token(Token::TypeName::Operator, out, tokenCount);
-    }
-}
-
-/**
- * Get next token.
- * @return
- */
-Token Scanner::next() {
-    while (peek() == charType::Blank || peek() == charType::Endl) {
-        get();
-    }
-    tokenCount++;
-    if (quoteStatus) {
-        // Currently in quotes
-        return getQuoteOrIdentifier();
-    }
-    switch (Scanner::peek()) {
-        case charType::Alphabet:
-            return getIdentifierOrKeyword();
-        case charType::Number:
-            return getNumber();
-        case charType::Slash:
-            return getCommentOrOperator();
-        case charType::Dot:
-        case charType::Symbol:
-            return getOperator();
-        case charType::Quote:
-            return getQuoteOrIdentifier();
-        case charType::Eof:
-        default:
-            return Token(Token::TypeName::End, "[end]", this->tokenCount);
-    }
-    return Token(Token::TypeName::End, "[end]", this->tokenCount);
-}
-
 void Analysis() {
     string prog;
     read_prog(prog);
+
     /********* Begin *********/
-    Scanner sc = Scanner(prog);
-    for (auto token = sc.next(); token.type != Token::TypeName::End; token = sc.next()) {
-        token.print();
-    }
+//    auto it = ruleMap.equal_range("stmts");
+//    for (auto itr = it.first; itr != it.second; ++itr) {
+//        cout << itr->first<< "->" << itr->second << '\n';
+//    }
+    // A lookup table to convert string into numbers.
+
+    SymbolLookup sl = SymbolLookup(terminals, nonterminals);
+    // A predict table for parser to use.
+    RuleTable rt = RuleTable(ruleMap, sl);
+    // Main parser.
+    LLParser parser = LLParser(prog, rt, sl);
+    parser.setMode(PARSEMODE_ERRORCHECKING);
+    parser.parse();
+    parser.setMode(PARSEMPDE_PARSE);
+    parser.parse();
+
     /********* End *********/
 }
 
 string prog;
-
