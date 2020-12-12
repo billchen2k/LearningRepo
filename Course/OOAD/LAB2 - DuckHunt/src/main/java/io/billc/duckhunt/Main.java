@@ -1,31 +1,22 @@
 package io.billc.duckhunt;
 
 
+import io.billc.duckhunt.Ducks.*;
+import io.billc.duckhunt.Game.DuckHunt;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class Main {
 
-    public static void createRun(){
-        JFrame frame = new JFrame("Duck Hunt");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        JLabel label = new JLabel("Hello World");
-
-        frame.getContentPane().add(label);
-        frame.setPreferredSize(new Dimension(512, 512));
-        frame.pack();
-        frame.setVisible(true);
-    }
-
     public static void main(String[] args) {
-	// write your code here
-
-        System.out.printf("Hello, I'm a duck.\n\n\n");
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createRun();
-            }
-        });
+        Duck[] ducks = {new Duck(), new DecoyDuck(), new MallardDuck(), new RedHeadDuck(), new RubberDuck()};
+        for(Duck one : ducks) {
+            one.performFly();
+            one.performQuack();
+            one.swim();
+        }
+        DuckHunt duckHunt = new DuckHunt();
+        duckHunt.start();
     }
 }

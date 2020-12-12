@@ -7,10 +7,14 @@
     <artifactId>DuckHunt</artifactId>
     <version>1.0</version>
     <dependencies>
+
         <dependency>
-            <groupId></groupId>
-            <artifactId>js</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
         </dependency>
+
     </dependencies>
     
 </project>
