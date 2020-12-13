@@ -8,5 +8,5 @@ import io.billc.duckhunt.Ducks.Duck;
  * @create 2020-12-12 20:29
  **/
 public interface FlyBehaviourInterface {
-	public abstract void fly();
+	public abstract Duck fly();
 }

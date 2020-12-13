@@ -3,6 +3,7 @@ package io.billc.duckhunt.Ducks;
 import io.billc.duckhunt.FlyBehaviour.FlyNoWay;
 import io.billc.duckhunt.FlyBehaviour.FlyWithWings;
 import io.billc.duckhunt.QuackBehaviour.Squick;
+import io.billc.duckhunt.Utils.Utils;
 
 /**
  * Mallard Duck.
@@ -16,5 +17,6 @@ public class MallardDuck extends Duck{
 		super("Mallard Duck");
 		super.setFlyBehaviour(new FlyWithWings(this));
 		super.setQuackBehaviour(new Squick(this));
+		displayImage = Utils.getImage("/image/duck2.png");
 	}
 }

@@ -7,4 +7,6 @@ package io.billc.duckhunt.QuackBehaviour;
  **/
 public interface QuackBehaviourInterface {
 	public abstract void quack();
+
+	public abstract boolean isQuacking();
 }

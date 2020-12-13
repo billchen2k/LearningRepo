@@ -10,11 +10,19 @@ import io.billc.duckhunt.Utils.Utils;
  **/
 public class Quack extends QuackBehaviour {
 
-	public Quack(Duck d) {
+	public Quack(Duck d){
 		super(d);
+		this.quackSound = Utils.getSound("/sound/duckQuack.wav");
 	}
 
 	public void quack() {
 		Utils.printFromDuck("I can quack. Quack, Quack, Quack.", relatedDuck);
+		quackSound.stop();
+		quackSound.play();
+	}
+
+	@Override
+	public boolean isQuacking() {
+		return quackSound.isPlaying();
 	}
 }

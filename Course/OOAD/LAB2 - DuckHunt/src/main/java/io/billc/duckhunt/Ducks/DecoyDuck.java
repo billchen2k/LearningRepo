@@ -3,6 +3,7 @@ package io.billc.duckhunt.Ducks;
 import io.billc.duckhunt.FlyBehaviour.FlyNoWay;
 import io.billc.duckhunt.FlyBehaviour.FlyWithWings;
 import io.billc.duckhunt.QuackBehaviour.MuteQuack;
+import io.billc.duckhunt.Utils.Utils;
 
 /**
  * @author billchen
@@ -14,5 +15,6 @@ public class DecoyDuck extends Duck{
 		super("Decoy Duck");
 		super.setFlyBehaviour(new FlyNoWay(this));
 		super.setQuackBehaviour(new MuteQuack(this));
+		displayImage = Utils.getImage("/image/duck1.png");
 	}
 }

@@ -15,8 +15,9 @@ public class FlyNoWay extends FlyBehaviour {
 	}
 
 	@Override
-	public void fly() {
-		Utils.printFromDuck("I am unable to fly.", relatedDuck);
+	public Duck fly() {
+		Utils.printFromDuck("I am unable to fly.", duck);
+		return duck;
 	}
 
 }

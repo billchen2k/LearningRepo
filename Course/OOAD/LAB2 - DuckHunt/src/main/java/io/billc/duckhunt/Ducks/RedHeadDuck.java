@@ -2,6 +2,7 @@ package io.billc.duckhunt.Ducks;
 
 import io.billc.duckhunt.FlyBehaviour.FlyWithWings;
 import io.billc.duckhunt.QuackBehaviour.Quack;
+import io.billc.duckhunt.Utils.Utils;
 
 /**
  * @author billchen
@@ -13,5 +14,6 @@ public class RedHeadDuck extends Duck{
 		super("Read Head Duck");
 		super.setFlyBehaviour(new FlyWithWings(this));
 		super.setQuackBehaviour(new Quack(this));
+		displayImage = Utils.getImage("/image/duck3.png");
 	}
 }

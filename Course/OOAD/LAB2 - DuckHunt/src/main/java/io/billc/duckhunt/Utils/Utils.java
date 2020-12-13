@@ -1,10 +1,11 @@
 package io.billc.duckhunt.Utils;
 
 import io.billc.duckhunt.Ducks.Duck;
-import sun.nio.ch.Util;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -31,9 +32,19 @@ public class Utils {
 		}
 	}
 
-	private static URL getResource(String p) {
+	public static URL getResource(String p) {
 		final URL resource = Utils.class.getResource(p);
 		return resource;
+	}
+
+	public static Sound getSound(String path) {
+		Sound sound = null;
+		try {
+			sound = new Sound(getResource(path));
+		} catch (Exception ex) {
+			ex.printStackTrace(System.err);
+		}
+		return sound;
 	}
 
 	public static BufferedImage getImage(String path) {
@@ -45,5 +56,21 @@ public class Utils {
 			System.exit(-1);
 		}
 		return image;
+	}
+
+	public static Font getFont(String name) {
+		Font font = null;
+		if (name == null) {
+			font = new Font("sans", Font.PLAIN, 24);
+		}
+		try {
+//			File fontFile = new File(getResource("/font/" + name).getPath());
+			font = Font.createFont(Font.TRUETYPE_FONT, Utils.class.getClassLoader().getResourceAsStream("/font/" + name));
+			GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+			ge.registerFont(font);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return font;
 	}
 }

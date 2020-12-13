@@ -2,6 +2,7 @@ package io.billc.duckhunt.Ducks;
 
 import io.billc.duckhunt.FlyBehaviour.FlyNoWay;
 import io.billc.duckhunt.QuackBehaviour.Squick;
+import io.billc.duckhunt.Utils.Utils;
 
 /**
  * @author billchen
@@ -13,5 +14,6 @@ public class RubberDuck extends Duck{
 		super("Rubber Duck");
 		super.setFlyBehaviour(new FlyNoWay(this));
 		super.setQuackBehaviour(new Squick(this));
+		displayImage = Utils.getImage("/image/duck4.png");
 	}
 }

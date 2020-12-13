@@ -1,6 +1,7 @@
 package io.billc.duckhunt.QuackBehaviour;
 
 import io.billc.duckhunt.Ducks.Duck;
+import io.billc.duckhunt.Utils.Sound;
 import io.billc.duckhunt.Utils.Utils;
 
 /**
@@ -13,6 +14,12 @@ import io.billc.duckhunt.Utils.Utils;
 public class QuackBehaviour implements QuackBehaviourInterface{
 
 	protected Duck relatedDuck;
+
+	@Override
+	public boolean isQuacking() {
+		return false;
+	}
+	protected Sound quackSound;
 
 	public void quack() {
 		Utils.printFromDuck("Undefined quack behaviour.", relatedDuck);

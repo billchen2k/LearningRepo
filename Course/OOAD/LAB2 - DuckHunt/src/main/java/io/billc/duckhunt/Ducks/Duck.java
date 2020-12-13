@@ -4,7 +4,14 @@ import io.billc.duckhunt.FlyBehaviour.FlyBehaviourInterface;
 import io.billc.duckhunt.FlyBehaviour.FlyWithWings;
 import io.billc.duckhunt.QuackBehaviour.Quack;
 import io.billc.duckhunt.QuackBehaviour.QuackBehaviourInterface;
+import io.billc.duckhunt.Utils.Config;
 import io.billc.duckhunt.Utils.Utils;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.awt.image.BufferedImage;
+import java.util.Random;
+
 /**
  * Duck class.
  *
@@ -14,28 +21,51 @@ import io.billc.duckhunt.Utils.Utils;
  **/
 public class Duck {
 
-	private static final int DUCK_STATUS_ACTIVE = 1;
-	private static final int DUCK_STATUS_SHOOTDOWN = 2;
-	private static final int DUCK_STATUS_RUNAWAY = 3;
-
 	private FlyBehaviourInterface flyBehaviour;
 
 	private QuackBehaviourInterface quackBehaviour;
 
-	private String duckType;
+	@Getter private String duckType;
 
-	private long duckId;
+	@Getter private long duckId;
 
-	private int x;
-	private int y;
-	private int duckStatus;
+	/** Real Games **/
+
+	public static final int DUCK_STATUS_ACTIVE = 1;
+	public static final int DUCK_STATUS_SHOOTDOWN = 2;
+	public static final int DUCK_STATUS_RUNAWAY = 3;
+
+	@Getter @Setter protected int x;
+	@Getter @Setter protected int y;
+	@Getter @Setter protected int duckStatus;
+	@Getter protected long birthTimeMills;
+
+	@Getter @Setter protected long shotTimeMills;
+	@Getter @Setter protected float flySlopeK;
+	@Getter @Setter protected int flyXDirection;
+	@Getter @Setter protected int flyYDirection;
+
+	protected BufferedImage displayImage;
+
+	public BufferedImage getDisplayImage() {
+		return displayImage;
+	}
 
 	public Duck() {
 		duckId = Utils.totalDucks + 1;
 		duckType = "Default Duck";
 		flyBehaviour = new FlyWithWings(this);
 		quackBehaviour = new Quack(this);
+
+		/** Real Games **/
 		Utils.totalDucks++;
+		x = new Random().nextInt(Config.FRAME_SIZE.width);
+		y = 350;
+		duckStatus = DUCK_STATUS_ACTIVE;
+		birthTimeMills = System.currentTimeMillis();
+		flySlopeK = new Random().nextFloat() % 2;
+		flyYDirection = -1;
+		flyXDirection = new Random().nextInt(2) == 1 ? 1 : -1;
 	}
 
 	protected Duck(String duckType) {
@@ -48,19 +78,16 @@ public class Duck {
 	}
 
 	public void performFly(){
-		flyBehaviour.fly();
+		Duck newd = flyBehaviour.fly();
+		setX(newd.getX());
+		setY(newd.getY());
+		setFlyYDirection(newd.getFlyYDirection());
+		setFlyXDirection(newd.getFlyXDirection());
 	}
 
 	public void swim() {
 		Utils.printFromDuck("I am swimming.", this);
-	}
-
-	public long getDuckId() {
-		return duckId;
-	}
-
-	public String getDuckType() {
-		return duckType;
+		setX((x + (int) Config.DUCK_FLY_SPEED_FACTOR * 2 * flyXDirection + Config.FRAME_SIZE.width) % Config.FRAME_SIZE.width);
 	}
 
 	protected void setFlyBehaviour(FlyBehaviourInterface flyBehaviour) {
@@ -69,6 +96,19 @@ public class Duck {
 
 	protected void setQuackBehaviour(QuackBehaviourInterface quackBehaviour) {
 		this.quackBehaviour = quackBehaviour;
+	}
+
+	public long getAgeMills() {
+		return System.currentTimeMillis() - birthTimeMills;
+	}
+
+	public boolean isQuacking() {
+		return quackBehaviour.isQuacking();
+	}
+
+	public void shotDown() {
+		shotTimeMills = System.currentTimeMillis();
+		duckStatus = DUCK_STATUS_SHOOTDOWN;
 	}
 
 
