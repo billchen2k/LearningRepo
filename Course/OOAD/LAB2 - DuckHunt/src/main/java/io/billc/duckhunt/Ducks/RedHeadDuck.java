@@ -12,7 +12,7 @@ import io.billc.duckhunt.Utils.Utils;
 public class RedHeadDuck extends Duck{
 	public RedHeadDuck() {
 		super("Read Head Duck");
-		super.setFlyBehaviour(new FlyWithWings(this));
+		super.setFlyBehaviour(new FlyWithWings());
 		super.setQuackBehaviour(new Quack(this));
 		displayImage = Utils.getImage("/image/duck3.png");
 	}

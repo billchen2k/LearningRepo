@@ -49,7 +49,7 @@ public class GamePanel extends JPanel implements MouseMotionListener {
 		ActionListener listener = (ActionEvent e) -> {
 			tick();
 		};
-		tickTimer = new Timer(50, listener);
+		tickTimer = new Timer(40, listener);
 		tickTimer.start();
 	}
 
@@ -92,10 +92,11 @@ public class GamePanel extends JPanel implements MouseMotionListener {
 			case 3:
 				ducks.add(new RubberDuck());
 		}
-
-
 	}
 
+	/**
+	 * Main tick, activates every frame.
+	 */
 	private void tick() {
 		if (System.currentTimeMillis() - startTimeMillis > Config.GAME_PLAY_DURATION * 1000) {
 			stopGame();
@@ -115,7 +116,7 @@ public class GamePanel extends JPanel implements MouseMotionListener {
 
 			/** Flyway duck **/
 			if (one.getAgeMills() > Config.DUCK_LIFESPAN_MILLS && one.getDuckStatus() == Duck.DUCK_STATUS_ACTIVE) {
-				one.setDuckStatus(Duck.DUCK_STATUS_RUNAWAY);
+				one.flyAway();
 				if (!flyawaySound.isPlaying()) {
 					flyawaySound.play();
 				}
@@ -163,7 +164,7 @@ public class GamePanel extends JPanel implements MouseMotionListener {
 	@Override
 	protected void paintComponent(Graphics g) {
 //		g.setFont(Utils.getFont("superhelio.ttf"));
-		g.setFont(new Font("superhelio", Font.PLAIN, 24));
+		g.setFont(Utils.getFontSuperhelio(24));
 		g.setColor(Color.WHITE);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
@@ -195,7 +196,6 @@ public class GamePanel extends JPanel implements MouseMotionListener {
 					}
 					else{
 						g2d.drawImage(oneDuck.getDisplayImage(), oneDuck.getX(), oneDuck.getY(), Config.DUCK_SIZE, Config.DUCK_SIZE, getParent());
-
 					}
 					break;
 			}

@@ -9,14 +9,10 @@ import io.billc.duckhunt.Utils.Utils;
  * @create 2020-12-12 21:20
  **/
 public class FlyBehaviour implements FlyBehaviourInterface{
-	protected Duck duck;
 
-	public Duck fly() {
+	public Duck fly(Duck duck) {
 		Utils.printFromDuck("Undefined fly behaviour.", duck);
 		return duck;
 	}
 
-	FlyBehaviour(Duck d) {
-		duck = d;
-	}
 }

@@ -54,7 +54,7 @@ public class Duck {
 	public Duck() {
 		duckId = Utils.totalDucks + 1;
 		duckType = "Default Duck";
-		flyBehaviour = new FlyWithWings(this);
+		flyBehaviour = new FlyWithWings();
 		quackBehaviour = new Quack(this);
 
 		/** Real Games **/
@@ -78,7 +78,7 @@ public class Duck {
 	}
 
 	public void performFly(){
-		Duck newd = flyBehaviour.fly();
+		Duck newd = flyBehaviour.fly(this);
 		setX(newd.getX());
 		setY(newd.getY());
 		setFlyYDirection(newd.getFlyYDirection());
@@ -109,6 +109,12 @@ public class Duck {
 	public void shotDown() {
 		shotTimeMills = System.currentTimeMillis();
 		duckStatus = DUCK_STATUS_SHOOTDOWN;
+		Utils.printFromDuck("Oops! I was shot down. I survived for " + getAgeMills() +" ms.", this);
+	}
+
+	public void flyAway() {
+		this.duckStatus = DUCK_STATUS_RUNAWAY;
+		Utils.printFromDuck("I haven't been shot down for " + Config.DUCK_LIFESPAN_MILLS + " ms. I will fly away.", this);
 	}
 
 

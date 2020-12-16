@@ -2,12 +2,13 @@ package io.billc.duckhunt.Utils;
 
 import io.billc.duckhunt.Ducks.Duck;
 
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -58,19 +59,23 @@ public class Utils {
 		return image;
 	}
 
-	public static Font getFont(String name) {
+	public static Font getFont(String name, int size) {
 		Font font = null;
 		if (name == null) {
 			font = new Font("sans", Font.PLAIN, 24);
 		}
 		try {
-//			File fontFile = new File(getResource("/font/" + name).getPath());
-			font = Font.createFont(Font.TRUETYPE_FONT, Utils.class.getClassLoader().getResourceAsStream("/font/" + name));
+			URL fontResource = getResource("/font/" + name);
+			font = Font.createFont(Font.TRUETYPE_FONT, Utils.class.getResourceAsStream("/font/" + name));
 			GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
 			ge.registerFont(font);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return font;
+		return font.deriveFont((float) size);
+	}
+
+	public static Font getFontSuperhelio(int size) {
+		return getFont("superhelio.ttf", size);
 	}
 }

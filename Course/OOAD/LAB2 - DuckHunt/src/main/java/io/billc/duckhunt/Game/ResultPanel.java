@@ -29,9 +29,9 @@ public class ResultPanel extends JPanel {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2d.drawImage(backgroundImage, 0, 0, Config.FRAME_SIZE.width, Config.FRAME_SIZE.height, getParent());
-		g2d.setFont(new Font("superhelio", Font.PLAIN, 48));
-		g2d.drawString("GAME OVER", (int) (Config.FRAME_SIZE.width * 0.35), (int) (Config.FRAME_SIZE.height * 0.3));
-		g2d.setFont(new Font("superhelio", Font.PLAIN, 24));
+		g2d.setFont(Utils.getFontSuperhelio(48));
+		g2d.drawString("TIME'S UP", (int) (Config.FRAME_SIZE.width * 0.37), (int) (Config.FRAME_SIZE.height * 0.3));
+		g2d.setFont(Utils.getFontSuperhelio(24));
 		g2d.drawString("HIT: " + String.valueOf(shotDownDucks), 300, 250);
 		g2d.drawString("MISS: " + String.valueOf(missedDucks), 300, 290);
 		g2d.drawString("TOTAL DUCKS:  " + String.valueOf(totalDucks), 300, 330);
@@ -47,16 +47,7 @@ public class ResultPanel extends JPanel {
 		this.totalDucks = totalDucks;
 		this.missedDucks = missedDucks;
 		this.shotDownDucks = shotDownDucks;
-		this.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mousePressed(MouseEvent e) {
-				add(new WelcomePanel());
-				repaint();
-				revalidate();
-			}
-		});
 	}
-
 
 	public void mouseDragged(MouseEvent e) {
 

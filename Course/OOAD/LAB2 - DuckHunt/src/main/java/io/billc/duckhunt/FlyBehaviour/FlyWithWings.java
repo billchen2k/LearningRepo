@@ -11,12 +11,8 @@ import io.billc.duckhunt.Utils.Utils;
  **/
 public class FlyWithWings extends FlyBehaviour {
 
-	public FlyWithWings(Duck d) {
-		super(d);
-	}
-
 	@Override
-	public Duck fly() {
+	public Duck fly(Duck duck) {
 		Utils.printFromDuck(String.format("I can fly with my wings. Current postion: X: %d, Y: %d", duck.getX(), duck.getY()), duck);
 
 		/** Move to next cordinate **/

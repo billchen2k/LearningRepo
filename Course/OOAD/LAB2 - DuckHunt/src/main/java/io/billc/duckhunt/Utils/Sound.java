@@ -44,11 +44,16 @@ public class Sound {
 	}
 
 	public Clip stop() {
-		readyClip.stop();
+		if (readyClip != null) {
+			readyClip.stop();
+		}
 		return readyClip;
 	}
 
 	public boolean isPlaying() {
+		if(readyClip == null) {
+			return false;
+		}
 		return readyClip.isRunning();
 	}
 

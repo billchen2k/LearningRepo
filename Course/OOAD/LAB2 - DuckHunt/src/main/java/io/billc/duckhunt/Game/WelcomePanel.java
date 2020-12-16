@@ -4,6 +4,7 @@ import io.billc.duckhunt.Ducks.DecoyDuck;
 import io.billc.duckhunt.Utils.Config;
 import io.billc.duckhunt.Utils.Utils;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -27,14 +28,25 @@ public class WelcomePanel extends JPanel{
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2d.drawImage(backgroundImage, 0, 0, Config.FRAME_SIZE.width, Config.FRAME_SIZE.height, getParent());
-		g2d.setFont(new Font("superhelio", Font.PLAIN, 48));
+		g2d.setFont(Utils.getFontSuperhelio(48));
 		g2d.drawString("DUCK HUNT", (int) (Config.FRAME_SIZE.width * 0.35), (int) (Config.FRAME_SIZE.height * 0.3));
-		g2d.setFont(new Font("superhelio", Font.PLAIN, 24));
+		g2d.setFont(Utils.getFontSuperhelio(24));
 		g2d.drawString("CLICK TO START", (int) (Config.FRAME_SIZE.width * 0.38), (int) (Config.FRAME_SIZE.height * 0.6));
 	}
 
 	public WelcomePanel() {
 		this.backgroundImage = Utils.getImage("/image/bg.png");
+//		try {
+//			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+//		}
+//		catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		JButton aboutButton = new JButton();
+//		aboutButton.setText("Source Code");
+//		aboutButton.setFont(Utils.getFontSuperhelio(18));
+//		aboutButton.setBounds(50, 450, 150, 40);
+//		add(aboutButton);
 	}
 
 	public void mouseDragged(MouseEvent e) {

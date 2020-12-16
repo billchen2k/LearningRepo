@@ -29,22 +29,29 @@ public class DuckHunt extends JFrame {
 
 	private Timer gameTimer;
 
+	private ActionListener resultTimerListener;
+
 	public DuckHunt() {
 		welcomePanel = new WelcomePanel();
+
 		gameTimer = new Timer(Config.GAME_PLAY_DURATION * 1000, new ActionListener() {
 			@SneakyThrows
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				resultPanel = gamePanel.getResultPanel();
 				gamePanel.setVisible(false);
+				remove(gamePanel);
+				repaint();
+				revalidate();
 				gameTimer.stop();
-				Timer listenerTime = new Timer(3000, new ActionListener() {
+				Timer listenerTimer = new Timer(3000, new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						resultPanel.addMouseListener(new MouseAdapter() {
 							@Override
 							public void mousePressed(MouseEvent e) {
 								resultPanel.setVisible(false);
+								remove(resultPanel);
 								gamePanel = new GamePanel();
 								add(gamePanel);
 								gameTimer.start();
@@ -54,7 +61,8 @@ public class DuckHunt extends JFrame {
 						});
 					}
 				});
-				listenerTime.start();
+				listenerTimer.start();
+				listenerTimer.setRepeats(false);
 				add(resultPanel);
 			}
 		});
@@ -68,11 +76,11 @@ public class DuckHunt extends JFrame {
 		this.setVisible(true);
 		this.setResizable(false);
 
-		this.add(new ResultPanel(0,0,0));
 		welcomePanel.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				welcomePanel.setVisible(false);
+				remove(welcomePanel);
 				gamePanel = new GamePanel();
 				add(gamePanel);
 				gameTimer.start();

@@ -10,12 +10,8 @@ import io.billc.duckhunt.Utils.Utils;
  **/
 public class FlyNoWay extends FlyBehaviour {
 
-	public FlyNoWay(Duck d) {
-		super(d);
-	}
-
 	@Override
-	public Duck fly() {
+	public Duck fly(Duck duck) {
 		Utils.printFromDuck("I am unable to fly.", duck);
 		return duck;
 	}

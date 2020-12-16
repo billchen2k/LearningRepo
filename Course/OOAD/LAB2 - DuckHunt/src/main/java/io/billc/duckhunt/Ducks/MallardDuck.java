@@ -15,7 +15,7 @@ import io.billc.duckhunt.Utils.Utils;
 public class MallardDuck extends Duck{
 	public MallardDuck() {
 		super("Mallard Duck");
-		super.setFlyBehaviour(new FlyWithWings(this));
+		super.setFlyBehaviour(new FlyWithWings());
 		super.setQuackBehaviour(new Squick(this));
 		displayImage = Utils.getImage("/image/duck2.png");
 	}

@@ -13,7 +13,7 @@ import io.billc.duckhunt.Utils.Utils;
 public class DecoyDuck extends Duck{
 	public DecoyDuck() {
 		super("Decoy Duck");
-		super.setFlyBehaviour(new FlyNoWay(this));
+		super.setFlyBehaviour(new FlyNoWay());
 		super.setQuackBehaviour(new MuteQuack(this));
 		displayImage = Utils.getImage("/image/duck1.png");
 	}

@@ -12,7 +12,7 @@ import io.billc.duckhunt.Utils.Utils;
 public class RubberDuck extends Duck{
 	public RubberDuck() {
 		super("Rubber Duck");
-		super.setFlyBehaviour(new FlyNoWay(this));
+		super.setFlyBehaviour(new FlyNoWay());
 		super.setQuackBehaviour(new Squick(this));
 		displayImage = Utils.getImage("/image/duck4.png");
 	}
