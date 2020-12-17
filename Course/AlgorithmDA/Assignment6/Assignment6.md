@@ -90,12 +90,6 @@ The cut is {AD, BC}, here AB and DC are both light edges.The situation is the sa
 
 ## 23.2-4
 
-For the first case, we can use a van Emde Boas tree to improve the time bound to $O(E \lg \lg V)$. Comparing to the Fibonacci heap implementation, this improves the asymptotic running time only for sparse graphs, and it cannot improve the running time polynomially. An advantage of this implementation is that it may have a lower overhead.
-
-For the second case, we can use a collection of doubly linked lists, each corresponding to an edge weight. This improves the bound to $O(E)$.
-
-## 23.2-4
-
 If the weights of the graph is in the range from 1 to |V|, then first we can use counting sort to sort all the edges, gives the complexity of $O(V + E)$. Then using the Kruskal’s algorithm, it will cost $O(V+E+V\lg V)$.
 
 If the weights of the graph is the range from 1 to W, then the different part is the time it costs in counting sort, which gives the complexity of $O(W+E)$. Then using the Kruskal’s algorithn, it will cost $O(W+E+V\lg V)$ time.
