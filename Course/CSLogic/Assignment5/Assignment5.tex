@@ -1,0 +1,145 @@
+% \documentclass[a4paper, 10px]{ctexart}
+\documentclass{ctexart}
+\usepackage[left=1in, right=1in, top=1.2in, bottom=1.2in]{geometry}
+\usepackage{ctex}
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\usepackage{a4wide}
+% \setmainfont[Scale = 1]{Palatino}
+% \setCJKmainfont{Songti SC}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\pagestyle{fancy}
+\fancypagestyle{plain}{
+    \fancyhead[L]{East China Normal University}
+    \fancyhead[R]{}
+    \fancyfoot[C]{\thepage}
+}
+\def\premise{\mathrm{premise}}
+\def\assumption{\mathrm{assumption}}
+\def\MT{\mathrm{MT\ }}
+\def\LEM{\mathrm{LEM}}
+\def\PBC{\mathrm{PBC\ }}
+\def\intro{\mathrm{i\ }}
+\def\elim{\mathrm{e\ }}
+\def\introa{\mathrm{i_1\ }}
+\def\elima{\mathrm{e_1\ }}
+\def\introb{\mathrm{i_2\ }}
+\def\elimb{\mathrm{e_2\ }}
+
+\def\n{\neg}
+\def\d{\vee}
+\def\c{\wedge}
+\def\a{\forall}
+\def\e{\exists}
+
+\def\SAT{\mathrm{SAT\ }}
+\def\AF{\mathrm{AF\ }}
+\def\AG{\mathrm{AG\ }}
+\def\EF{\mathrm{EF\ }}
+\def\EG{\mathrm{EG\ }}
+\def\U{\mathrm{\ U\ }}
+
+\def\st{\texttt{Start}}
+\def\cl{\texttt{Close}}
+\def\he{\texttt{Heat}}
+\def\er{\texttt{Error}}
+
+\def\bs{\ \backslash\ }
+
+\newcommand{\set}[1]{\{#1\}}
+
+\title{Logic in Computer Science Assignment 5}
+\author{10185101210 陈俊潼}
+\date{December 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Check CTL}
+
+\subsection{Check whether the following models satisfies the CTL formulas.}
+
+\subsubsection{$\AG (\st \to \AF \he)$}
+
+Applying SAT algorithm:
+\begin{equation*}
+\begin{split}
+    \SAT& (\AG (\st \to \AF \he))
+    = \SAT(\n \EF \n (\st \to \AF \he)) \\
+    &= S \bs \SAT(\EF \n (\st \to \AF \he)) \\
+    &= S \bs \SAT(E [\top \U \n (\st \to \AF \he)]) \\
+    &= S \bs \SAT_{EU}(\top, \n (\st \to \AF \he)) \\
+    & \qquad \qquad
+    \begin{split}
+        & \SAT(\top) = S \\
+        & \SAT(\n (\st \to \AF \he)) = S \bs \SAT (\st \to \AF \he) \\
+        & = S \bs \SAT (\n \st \vee \AF \he) \\
+        & = S \bs \SAT(\n \st) \cup \SAT(\AF \he) \\
+        & = S \bs \{1, 3, 4\} \cup \SAT_{AF}(\he) \\
+        & \qquad \qquad
+        \begin{split}
+            & \SAT_{AF} (\he) = \{4, 7\} \cup \{1,2,3,4,5,6,7\} \\
+            & = \{1,2,3,4,5,6,7\}
+        \end{split}
+        \\ & = S \bs \{\1,3,4\} \cup \{1,2,3,4,5,6,7\} \\
+        & = S \bs \{1,2,3,4,5,6,7\} \\
+        & = \emptyset\\
+    \end{split}
+    \\ & \Rightarrow \SAT_{EU}(\top, \n (\st \to \AF \he)) = \emptyset \\
+    \Rightarrow \SAT & (\AG (\st \to \AF \he)) = S
+\end{split}
+\end{equation*}
+
+So the model satisfies the CTL formula.
+
+\newpage
+
+\subsubsection{$\AG (A[\n \er \U (\AF \cl)])$}
+
+\begin{equation*}
+    \begin{split}
+        \SAT &(\AG (A \n \er \U \AF \cl)) \\
+        &= \SAT(\n \EF \n (A[\n \er \U (\AF \cl)])) \\
+        &= S \bs \SAT (\EF \n (A [\n \er \U (\AF \cl)])) \\
+        &= S \bs \SAT (E (\top \U ()\n A [\n \er \U (AF \cl)])) \\
+        &= S \bs \SAT_{EU} (\top, \n A[\n \er \U (\AF \cl)]) \\
+        & \qquad \qquad 
+        \begin{split}
+             & \SAT(\top) = S \\
+             & \SAT(\n A[\n \er \U (\AF \cl)]) \\ 
+             &= S \bs \SAT (A[\n \er \U (\AF \cl)]) \\
+             &= S \bs \SAT (\n (E [\er \U (\er \c \n (\AF \cl))]  \d \EG \n (\AF \cl))) \\
+             &= \SAT(E [\er \U (\er \c \n (\AF \cl))] \d \EG (\n (\AF \cl))) \\
+             &= \SAT(E [\er \U (\er \c \n (\AF \cl))]) \cup \SAT (\EG (\n (\AF \cl))) \\
+             &= \SAT_{EU}(\er, \er \c \n (\AF \cl)) \cup \SAT (\n \AF (\AF \cl)) \\
+             &= \SAT_{EU}(\er, \er \c \n (\AF \cl)) \cup (S \bs \SAT (\AF (\AF \cl)))\\
+             &= \SAT_{EU}(\er, \er \c \n (\AF \cl)) \cup (S \bs \SAT_{AF}(\AF \cl))\\
+             & \qquad \qquad
+             \begin{split}
+                 & \SAT(\er) = \set{2, 5} \\
+                 & \SAT(\er \c \n (\AF \cl)) \\
+                 & = \SAT(\er) \cap \SAT(\n \AF (\cl)) \\
+                 & = \set{2, 5} \cap (S \bs \SAT {\AF \cl)}) \\
+                 & = \set {2, 5} \cap (S \bs \set{1,2,3,4,5,6,7}) \\
+                 & = \emptyset
+             \end{split}
+             \\ & \Rightarrow \SAT_{EU}(\er, \er \c \n (\AF \cl)) = \emptyset \\
+             & \qquad \qquad
+             \begin{split}
+                 & \SAT(\AF \cl) = \SAT_{AF} (\cl)\\
+                 & = \set{3,4,5,6,7} \\
+                 & = \set{1,2,3,4,5,6,7}
+             \end{split}
+             \\ & = \emptyset \cup (S \bs \set{1,2,3,4,5,6,7}) \\
+             & = \emptyset
+        \end{split}
+        \\ & = S \bs \emptyset \\
+        & = S
+    \end{split}
+\end{equation*}
+
+So the model satisfies the CTL formula.
+
+\end{document}
