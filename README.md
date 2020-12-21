@@ -1,14 +1,18 @@
 # LearningRepo
 
-This is a repo that stores my codes and materials during my learning process of Software Engineering in ECNU.
-
-There might be mistakes and I hope to learn from you all.
+This is a repo of my codes and learning materials during while taking the bachelor's degree of Software Engineering in ECNU.
 
 ## /Course
 
-Here's my homework files, mostly in class while some of them are sets of moocs.
-#### CS:APP
-Computer System: A Programming Pespective.
+Foler for courses. Each course has a seperate folder and the LAB / Assignment / Keynotes are placed in it.
+
+Some useful things that's worth mentioning:
+
+- CS:APP: 5 Lab solution for CSAPP.
+- OSConecpts: Lab report and modified version of pintos.
+- DatabaseSystem: 5 LABs.
+- ComputerNetwork: 5 LABs.
+- DigitalImage: Labs and assignment is placed under a [dedicated repository](https://github.com/BillChen2K/DigitalImage).
 
 ## /Draft
 
@@ -21,5 +25,7 @@ Problems and contest solutions in EOJ(http://acm.ecnu.edu.cn).
 ## /temp
 
 I created this directory to store the output files for VS Code.
-It's messy there.
 
+---
+
+All contents are under MIT license. Use it as you want but do note the risk of plagiarizing.
