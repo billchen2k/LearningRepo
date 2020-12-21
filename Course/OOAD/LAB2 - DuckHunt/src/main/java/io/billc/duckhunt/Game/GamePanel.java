@@ -6,7 +6,6 @@ import io.billc.duckhunt.Utils.Sound;
 import io.billc.duckhunt.Utils.Utils;
 
 import javax.swing.*;
-import javax.xml.transform.Result;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
