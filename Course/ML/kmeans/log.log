@@ -1,0 +1,506 @@
+<2021-01-01 23:19:30>: 在
+<2021-01-01 23:19:44>: 在
+<2021-01-01 23:19:44>: 在
+<2021-01-01 23:19:44>: 在
+<2021-01-01 23:20:09>: ERROR 在
+<2021-01-01 23:20:09>: INFO 在
+<2021-01-01 23:20:09>: WARN 在
+<2021-01-01 23:20:51>: INFO Loading data from data.txt...
+<2021-01-01 23:26:17 INFO>: Loading data from data.txt...
+<2021-01-01 23:26:24 INFO>: Loading data from data.txt...
+<2021-01-01 23:26:51 INFO>: This is a simple program demonstrating K-Means algorithm.
+<2021-01-01 23:26:51 INFO>: Loading data from data.txt...
+<2021-01-02 14:30:49 INFO>: Loading data from data.txt...
+<2021-01-02 14:31:03 INFO>: Loading data from data.txt...
+<2021-01-02 16:02:23 INFO>: K-Means started. epoch = 0
+<2021-01-02 16:02:32 INFO>: K-Means started. epoch = 0
+<2021-01-02 16:03:05 INFO>: K-Means started. epoch = 0
+<2021-01-02 16:03:44 INFO>: K-Means started. epoch = 0
+<2021-01-02 16:12:32 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:12:55 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:12:55 INFO>: 0.0
+<2021-01-02 16:13:07 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:13:07 INFO>: 0.0
+<2021-01-02 16:13:07 INFO>: 0.0
+<2021-01-02 16:13:08 INFO>: 0.0
+<2021-01-02 16:13:08 INFO>: 0.0
+<2021-01-02 16:13:08 INFO>: 0.0
+<2021-01-02 16:13:09 INFO>: 0.0
+<2021-01-02 16:13:09 INFO>: 0.0
+<2021-01-02 16:13:09 INFO>: 0.0
+<2021-01-02 16:13:10 INFO>: 0.0
+<2021-01-02 16:13:10 INFO>: 0.0
+<2021-01-02 16:13:28 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:13:41 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:14:13 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:14:13 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:14:46 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:14:46 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:14:53 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:14:53 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:15:34 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:15:34 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:15:39 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:15:39 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:16:02 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:16:02 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:16:29 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:16:29 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:16:30 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:16:30 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:16:31 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:16:32 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:16:33 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:16:33 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:16:35 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:16:35 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:16:37 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:16:37 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:16:39 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:16:39 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:16:42 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:16:42 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:17:25 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:17:25 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 16:41:20 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:43:25 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 16:43:49 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:09:00 INFO>: This is a simple program demonstrating K-Means algorithm.
+<2021-01-02 17:09:00 INFO>: Loading data from data.txt...
+<2021-01-02 17:09:20 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:09:21 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:26:02 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:26:02 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:27:12 INFO>: This is a simple program demonstrating K-Means algorithm.
+<2021-01-02 17:27:12 INFO>: Loading data from data.txt...
+<2021-01-02 17:28:03 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:28:04 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:30:26 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:30:26 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:30:35 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:31:06 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:31:23 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:31:23 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:31:35 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:31:35 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:31:35 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:31:36 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:31:36 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:31:36 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:31:37 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:31:37 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:31:37 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:31:37 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:31:38 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:31:38 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:31:38 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:31:38 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:31:38 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:31:39 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:31:39 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:31:39 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:31:39 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:31:39 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:02 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:02 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:03 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:04 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:15 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:15 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:15 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:15 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:16 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:16 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:16 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:17 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:17 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:17 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:32 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:46 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:46 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:47 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:47 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:50 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:50 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:51 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:51 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:51 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:51 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:52 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:52 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:52 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:52 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:53 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:53 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:53 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:53 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:53 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:54 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:54 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:54 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:54 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:54 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:54 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:54 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:54 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:55 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:55 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:55 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:55 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:55 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:55 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:55 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:55 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:55 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:55 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:55 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:55 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:56 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:56 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:56 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:32:56 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:32:56 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:33:32 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:33:32 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:33:44 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:34:37 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:34:41 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:35:27 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:35:29 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:35:41 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:35:51 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:35:54 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:35:55 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:36:10 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:36:10 INFO>: Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:49:25 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:49:25 INFO>: [EPOCH 0] Centroid updated: [[10.53846154 12.15384615]
+ [ 6.85714286  3.71428571]]
+<2021-01-02 17:49:33 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:49:33 INFO>: [EPOCH 0] Centroid updated: [[13.9 14.2]
+ [ 4.6  4.2]]
+<2021-01-02 17:49:33 INFO>: [EPOCH 0] Current SSE: 11.654674875992491
+<2021-01-02 17:49:33 INFO>: [EPOCH 1] Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:49:58 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:49:58 INFO>: [EPOCH 0] Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:50:17 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:50:17 INFO>: [EPOCH 0] Centroid updated: [[ 8.18181818 11.27272727] [10.55555556  6.66666667]]
+<2021-01-02 17:50:17 INFO>: [EPOCH 0] Current SSE: 23.19458860654637
+<2021-01-02 17:50:18 INFO>: [EPOCH 1] Centroid updated: [[11.         13.77777778] [ 7.81818182  5.45454545]]
+<2021-01-02 17:50:18 INFO>: [EPOCH 1] Current SSE: 19.839128417732134
+<2021-01-02 17:50:18 INFO>: [EPOCH 2] Centroid updated: [[13.9 14.2] [ 4.6  4.2]]
+<2021-01-02 17:50:18 INFO>: [EPOCH 2] Current SSE: 11.654674875992491
+<2021-01-02 17:50:18 INFO>: [EPOCH 3] Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:51:03 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:51:04 INFO>: [EPOCH 0] Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:51:44 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:51:44 INFO>: [EPOCH 0] Centroid updated: [[ 5.09090909  4.81818182] [14.33333333 14.55555556]]
+<2021-01-02 17:51:44 INFO>: [EPOCH 0] Current SSE: 12.57577169192891; Centroid offset: 5.25572940343065
+<2021-01-02 17:51:44 INFO>: [EPOCH 1] Centroid updated: [[ 4.6  4.2] [13.9 14.2]]
+<2021-01-02 17:51:44 INFO>: [EPOCH 1] Current SSE: 11.654674875992491; Centroid offset: 0.9681621903028268
+<2021-01-02 17:51:44 INFO>: [EPOCH 2] Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:53:31 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:53:31 INFO>: [EPOCH 0] Centroid updated: [[15.         17.33333333] [ 8.23529412  7.76470588]]
+<2021-01-02 17:53:31 INFO>: [EPOCH 0] Current SSE: 16.92382489269086; Centroid offset: 9.207109066506861
+<2021-01-02 17:53:31 INFO>: [EPOCH 1] Centroid updated: [[14.33333333 14.55555556] [ 5.09090909  4.81818182]]
+<2021-01-02 17:53:31 INFO>: [EPOCH 1] Current SSE: 12.57577169192891; Centroid offset: 5.170073025042676
+<2021-01-02 17:53:32 INFO>: [EPOCH 2] Centroid updated: [[13.9 14.2] [ 4.6  4.2]]
+<2021-01-02 17:53:32 INFO>: [EPOCH 2] Current SSE: 11.654674875992491; Centroid offset: 0.9681621903028267
+<2021-01-02 17:53:32 INFO>: [EPOCH 3] Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:54:01 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:54:01 INFO>: [EPOCH 0] Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:54:01 INFO>: [EPOCH 0] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 17:54:39 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:55:03 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:55:03 INFO>: [EPOCH 0] Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:55:03 INFO>: [EPOCH 0] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 17:56:08 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:56:08 INFO>: [EPOCH 0] Centroid updated: [[ 4.6  4.2] [13.9 14.2]]
+<2021-01-02 17:56:09 INFO>: [EPOCH 1] Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:56:09 INFO>: [EPOCH 1] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 17:56:28 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 17:56:28 INFO>: [EPOCH 0] Centroid updated: [[14.         19.        ] [ 8.72222222  8.11111111]]
+<2021-01-02 17:56:28 INFO>: [EPOCH 1] Centroid updated: [[14.71428571 15.14285714] [ 6.30769231  6.        ]]
+<2021-01-02 17:56:29 INFO>: [EPOCH 2] Centroid updated: [[14.33333333 14.55555556] [ 5.09090909  4.81818182]]
+<2021-01-02 17:56:29 INFO>: [EPOCH 3] Centroid updated: [[13.9 14.2] [ 4.6  4.2]]
+<2021-01-02 17:56:29 INFO>: [EPOCH 4] Centroids are almost stable. Iterating stopped.
+<2021-01-02 17:56:29 INFO>: [EPOCH 4] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 18:00:49 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 18:00:49 INFO>: [EPOCH 0] Centroid updated: [[13.9 14.2] [ 4.6  4.2]]
+<2021-01-02 18:00:50 INFO>: [EPOCH 1] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:00:50 INFO>: [EPOCH 1] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 18:00:55 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 18:00:55 INFO>: [EPOCH 0] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:00:55 INFO>: [EPOCH 0] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 18:00:59 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 18:00:59 INFO>: [EPOCH 0] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:00:59 INFO>: [EPOCH 0] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 18:01:03 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 18:01:04 INFO>: [EPOCH 0] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:01:04 INFO>: [EPOCH 0] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 18:01:10 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 18:01:11 INFO>: [EPOCH 0] Centroid updated: [[ 7.3125  8.5   ] [17.     12.    ]]
+<2021-01-02 18:01:11 INFO>: [EPOCH 1] Centroid updated: [[ 5.5         5.58333333] [14.875      14.625     ]]
+<2021-01-02 18:01:11 INFO>: [EPOCH 2] Centroid updated: [[ 4.6  4.2] [13.9 14.2]]
+<2021-01-02 18:01:12 INFO>: [EPOCH 3] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:01:12 INFO>: [EPOCH 3] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 18:03:57 INFO>: K-Means started. K = 3, MAX_EPOCHS = 10
+<2021-01-02 18:04:14 INFO>: K-Means started. K = 3, MAX_EPOCHS = 10
+<2021-01-02 18:04:55 INFO>: K-Means started. K = 3, MAX_EPOCHS = 10
+<2021-01-02 18:05:01 INFO>: K-Means started. K = 3, MAX_EPOCHS = 10
+<2021-01-02 18:05:01 INFO>: [EPOCH 0] Centroid updated: [[17.         12.        ] [11.         14.71428571] [ 4.44444444  3.66666667]]
+<2021-01-02 18:05:02 INFO>: [EPOCH 1] Centroid updated: [[17.         12.        ] [11.83333333 15.66666667] [ 4.6         4.2       ]]
+<2021-01-02 18:05:02 INFO>: [EPOCH 2] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:05:02 INFO>: [EPOCH 2] Current SSE: 7.232632038258262; Centroid offset: 0.0
+<2021-01-02 18:05:15 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:05:15 INFO>: [EPOCH 0] Centroid updated: [[12.57142857 11.85714286] [ 3.          1.        ] [ 6.          4.6       ] [ 2.          4.        ] [14.25       17.        ]]
+<2021-01-02 18:05:16 INFO>: [EPOCH 1] Centroid updated: [[13.66666667 12.33333333] [ 3.          1.        ] [ 6.          5.33333333] [ 2.          4.        ] [14.25       17.        ]]
+<2021-01-02 18:05:16 INFO>: [EPOCH 2] Centroid updated: [[14.14285714 12.57142857] [ 3.          1.        ] [ 6.          5.33333333] [ 2.          4.        ] [13.33333333 18.        ]]
+<2021-01-02 18:05:17 INFO>: [EPOCH 3] Centroid updated: [[14.66666667 12.16666667] [ 3.          1.        ] [ 6.          5.33333333] [ 2.          4.        ] [12.75       17.25      ]]
+<2021-01-02 18:05:17 INFO>: [EPOCH 4] Centroid updated: [[15.6        11.8       ] [ 3.          1.        ] [ 6.          5.33333333] [ 2.          4.        ] [12.2        16.6       ]]
+<2021-01-02 18:05:18 INFO>: [EPOCH 5] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:05:18 INFO>: [EPOCH 5] Current SSE: 4.210883324125942; Centroid offset: 0.0
+<2021-01-02 18:05:26 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:05:27 INFO>: [EPOCH 0] Centroid updated: [[13.42857143 12.85714286] [ 3.75        1.75      ] [ 5.          5.2       ] [ 6.          9.        ] [15.         17.33333333]]
+<2021-01-02 18:05:27 INFO>: [EPOCH 1] Centroid updated: [[14.14285714 12.57142857] [ 3.75        1.75      ] [ 5.          5.2       ] [ 6.          9.        ] [13.33333333 18.        ]]
+<2021-01-02 18:05:27 INFO>: [EPOCH 2] Centroid updated: [[14.66666667 12.16666667] [ 3.75        1.75      ] [ 5.          5.2       ] [ 6.          9.        ] [12.75       17.25      ]]
+<2021-01-02 18:05:28 INFO>: [EPOCH 3] Centroid updated: [[17.   12.  ] [ 3.75  1.75] [ 5.    5.2 ] [ 8.   10.  ] [12.2  16.6 ]]
+<2021-01-02 18:05:28 INFO>: [EPOCH 4] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:05:28 INFO>: [EPOCH 4] Current SSE: 4.397310210038886; Centroid offset: 0.0
+<2021-01-02 18:07:05 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:07:06 INFO>: [EPOCH 0] Centroid updated: [[ 3.25   5.25 ] [ 6.75   4.75 ] [ 3.     1.   ] [14.    19.   ] [13.875 13.   ]]
+<2021-01-02 18:07:06 INFO>: [EPOCH 0] Current SSE: 4.300116660018423; Centroid offset: 4.125
+<2021-01-02 18:07:06 INFO>: [EPOCH 1] Centroid updated: [[ 3.66666667  6.        ] [ 6.75        4.75      ] [ 2.66666667  1.66666667] [14.         19.        ] [13.875      13.        ]]
+<2021-01-02 18:07:06 INFO>: [EPOCH 1] Current SSE: 4.394262023781676; Centroid offset: 1.136515141415488
+<2021-01-02 18:07:06 INFO>: [EPOCH 2] Centroid updated: [[ 4.25        6.75      ] [ 7.          3.33333333] [ 2.66666667  1.66666667] [14.         19.        ] [13.875      13.        ]]
+<2021-01-02 18:07:06 INFO>: [EPOCH 2] Current SSE: 4.060295601595264; Centroid offset: 1.7240134054647667
+<2021-01-02 18:07:07 INFO>: [EPOCH 3] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:07:07 INFO>: [EPOCH 3] Current SSE: 4.060295601595264; Centroid offset: 0.0
+<2021-01-02 18:07:19 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 18:07:20 INFO>: [EPOCH 0] Centroid updated: [[ 4.6  4.2] [13.9 14.2]]
+<2021-01-02 18:07:20 INFO>: [EPOCH 0] Current SSE: 11.654674875992491; Centroid offset: 5.389805191284746
+<2021-01-02 18:07:20 INFO>: [EPOCH 1] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:07:20 INFO>: [EPOCH 1] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 18:08:38 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:08:39 INFO>: [EPOCH 0] Centroid updated: [[14.125      15.        ] [ 3.75        1.75      ] [13.         11.        ] [ 5.16666667  5.83333333] [        nan         nan]]
+<2021-01-02 18:08:39 INFO>: [EPOCH 0] Current SSE: 5.21528024708589; Centroid offset: nan
+<2021-01-02 18:08:39 INFO>: [EPOCH 1] Centroid updated: [[ nan  nan] [ nan  nan] [ nan  nan] [ nan  nan] [9.25 9.2 ]]
+<2021-01-02 18:08:39 INFO>: [EPOCH 1] Current SSE: 6.953991659471559; Centroid offset: nan
+<2021-01-02 18:08:40 INFO>: [EPOCH 2] Centroid updated: [[9.25 9.2 ] [ nan  nan] [ nan  nan] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:08:40 INFO>: [EPOCH 2] Current SSE: 6.953991659471559; Centroid offset: nan
+<2021-01-02 18:08:40 INFO>: [EPOCH 3] Centroid updated: [[ nan  nan] [9.25 9.2 ] [ nan  nan] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:08:40 INFO>: [EPOCH 3] Current SSE: 6.953991659471559; Centroid offset: nan
+<2021-01-02 18:08:41 INFO>: [EPOCH 4] Centroid updated: [[9.25 9.2 ] [ nan  nan] [ nan  nan] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:08:41 INFO>: [EPOCH 4] Current SSE: 6.953991659471559; Centroid offset: nan
+<2021-01-02 18:08:41 INFO>: [EPOCH 5] Centroid updated: [[ nan  nan] [9.25 9.2 ] [ nan  nan] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:08:41 INFO>: [EPOCH 5] Current SSE: 6.953991659471559; Centroid offset: nan
+<2021-01-02 18:08:41 INFO>: [EPOCH 6] Centroid updated: [[9.25 9.2 ] [ nan  nan] [ nan  nan] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:08:41 INFO>: [EPOCH 6] Current SSE: 6.953991659471559; Centroid offset: nan
+<2021-01-02 18:08:42 INFO>: [EPOCH 7] Centroid updated: [[ nan  nan] [9.25 9.2 ] [ nan  nan] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:08:42 INFO>: [EPOCH 7] Current SSE: 6.953991659471559; Centroid offset: nan
+<2021-01-02 18:08:42 INFO>: [EPOCH 8] Centroid updated: [[9.25 9.2 ] [ nan  nan] [ nan  nan] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:08:42 INFO>: [EPOCH 8] Current SSE: 6.953991659471559; Centroid offset: nan
+<2021-01-02 18:08:43 INFO>: [EPOCH 9] Centroid updated: [[ nan  nan] [9.25 9.2 ] [ nan  nan] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:08:43 INFO>: [EPOCH 9] Current SSE: 6.953991659471559; Centroid offset: nan
+<2021-01-02 18:08:43 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:08:43 INFO>: [EPOCH 0] Centroid updated: [[10.75       14.        ] [14.         19.        ] [ 5.75        6.5       ] [17.         12.        ] [ 3.83333333  2.66666667]]
+<2021-01-02 18:08:43 INFO>: [EPOCH 0] Current SSE: 3.929710788176211; Centroid offset: 3.5843021946010944
+<2021-01-02 18:08:43 INFO>: [EPOCH 1] Centroid updated: [[10.75 14.  ] [14.   19.  ] [ 5.8   6.  ] [17.   12.  ] [ 3.4   2.4 ]]
+<2021-01-02 18:08:43 INFO>: [EPOCH 1] Current SSE: 3.895405648690935; Centroid offset: 0.7151145984308312
+<2021-01-02 18:08:44 INFO>: [EPOCH 2] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:08:44 INFO>: [EPOCH 2] Current SSE: 3.895405648690935; Centroid offset: 0.0
+<2021-01-02 18:08:44 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:08:44 INFO>: [EPOCH 0] Centroid updated: [[10.         12.5       ] [14.         19.        ] [ 4.25        6.75      ] [ 4.83333333  2.5       ] [15.16666667 13.16666667]]
+<2021-01-02 18:08:44 INFO>: [EPOCH 0] Current SSE: 4.483268603344321; Centroid offset: 6.661456297237114
+<2021-01-02 18:08:45 INFO>: [EPOCH 1] Centroid updated: [[10.33333333 13.33333333] [13.33333333 18.        ] [ 4.25        6.75      ] [ 4.83333333  2.5       ] [17.         12.        ]]
+<2021-01-02 18:08:45 INFO>: [EPOCH 1] Current SSE: 4.063858299181762; Centroid offset: 2.640496586292477
+<2021-01-02 18:08:45 INFO>: [EPOCH 2] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:08:45 INFO>: [EPOCH 2] Current SSE: 4.063858299181762; Centroid offset: 0.0
+<2021-01-02 18:09:03 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:09:03 INFO>: [EPOCH 0] Centroid updated: [[17.5  11.  ] [ 9.8  13.  ] [ 6.5   4.25] [ 2.8   3.2 ] [15.25 16.  ]]
+<2021-01-02 18:09:03 INFO>: [EPOCH 0] Current SSE: 5.086495545132328; Centroid offset: 5.083797792989017
+<2021-01-02 18:09:04 INFO>: [EPOCH 1] Centroid updated: [[17.         11.33333333] [10.33333333 13.33333333] [ 6.4         5.2       ] [ 2.8         3.2       ] [14.25       17.        ]]
+<2021-01-02 18:09:04 INFO>: [EPOCH 1] Current SSE: 4.44355681050035; Centroid offset: 1.9155068954891985
+<2021-01-02 18:09:04 INFO>: [EPOCH 2] Centroid updated: [[17.         12.        ] [10.33333333 13.33333333] [ 6.          5.33333333] [ 2.5         2.5       ] [13.33333333 18.        ]]
+<2021-01-02 18:09:04 INFO>: [EPOCH 2] Current SSE: 3.9356681049237885; Centroid offset: 1.7442763542512403
+<2021-01-02 18:09:04 INFO>: [EPOCH 3] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:09:04 INFO>: [EPOCH 3] Current SSE: 3.9356681049237885; Centroid offset: 0.0
+<2021-01-02 18:09:04 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:09:05 INFO>: [EPOCH 0] Centroid updated: [[11.83333333 15.66666667] [ 5.          7.33333333] [ 5.4         2.4       ] [17.         12.        ] [ 2.          4.        ]]
+<2021-01-02 18:09:05 INFO>: [EPOCH 0] Current SSE: 4.2216426274187; Centroid offset: 2.9388206251261177
+<2021-01-02 18:09:05 INFO>: [EPOCH 1] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:09:05 INFO>: [EPOCH 1] Current SSE: 4.2216426274187; Centroid offset: 0.0
+<2021-01-02 18:09:05 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:09:06 INFO>: [EPOCH 0] Centroid updated: [[16.         14.33333333] [10.75       14.        ] [ 5.          7.33333333] [ 7.          3.33333333] [ 2.5         2.5       ]]
+<2021-01-02 18:09:06 INFO>: [EPOCH 0] Current SSE: 4.371172251180502; Centroid offset: 4.479118216792229
+<2021-01-02 18:09:06 INFO>: [EPOCH 1] Centroid updated: [[16.6        13.4       ] [11.2        15.        ] [ 5.          7.33333333] [ 7.          3.33333333] [ 2.5         2.5       ]]
+<2021-01-02 18:09:06 INFO>: [EPOCH 1] Current SSE: 4.393892149396296; Centroid offset: 1.5600035612494967
+<2021-01-02 18:09:07 INFO>: [EPOCH 2] Centroid updated: [[17.         12.        ] [11.83333333 15.66666667] [ 5.          7.33333333] [ 7.          3.33333333] [ 2.5         2.5       ]]
+<2021-01-02 18:09:07 INFO>: [EPOCH 2] Current SSE: 3.9609457176982716; Centroid offset: 1.7220788470785988
+<2021-01-02 18:09:07 INFO>: [EPOCH 3] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:09:07 INFO>: [EPOCH 3] Current SSE: 3.9609457176982716; Centroid offset: 0.0
+<2021-01-02 18:09:07 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:09:07 INFO>: [EPOCH 0] Centroid updated: [[14.33333333 14.55555556] [ 3.          1.        ] [ 2.          4.        ] [ 5.6         5.6       ] [ 9.          7.5       ]]
+<2021-01-02 18:09:07 INFO>: [EPOCH 0] Current SSE: 4.903883610091475; Centroid offset: 7.168664665502198
+<2021-01-02 18:09:08 INFO>: [EPOCH 1] Centroid updated: [[14.33333333 14.55555556] [ 3.          1.        ] [ 2.          4.        ] [ 6.          4.6       ] [ 8.         10.        ]]
+<2021-01-02 18:09:08 INFO>: [EPOCH 1] Current SSE: 4.337737895978126; Centroid offset: 2.9
+<2021-01-02 18:09:08 INFO>: [EPOCH 2] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:09:08 INFO>: [EPOCH 2] Current SSE: 4.337737895978126; Centroid offset: 0.0
+<2021-01-02 18:09:54 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:09:55 INFO>: [EPOCH 0] Centroid updated: [[ 2.8  3.2] [ 6.   5.5] [ 8.   4. ] [11.2 15. ] [16.6 13.4]]
+<2021-01-02 18:09:55 INFO>: [EPOCH 0] Current SSE: 4.837774163665861; Centroid offset: 2.586503431275512
+<2021-01-02 18:09:55 INFO>: [EPOCH 1] Centroid updated: [[ 2.5         2.5       ] [ 5.25        6.5       ] [ 7.5         3.        ] [11.83333333 15.66666667] [17.         12.        ]]
+<2021-01-02 18:09:55 INFO>: [EPOCH 1] Current SSE: 4.122451717646308; Centroid offset: 2.521518501926083
+<2021-01-02 18:09:56 INFO>: [EPOCH 2] Centroid updated: [[ 2.5         2.5       ] [ 5.          7.33333333] [ 7.          3.33333333] [11.83333333 15.66666667] [17.         12.        ]]
+<2021-01-02 18:09:56 INFO>: [EPOCH 2] Current SSE: 3.960945717698272; Centroid offset: 1.0573814617041264
+<2021-01-02 18:09:56 INFO>: [EPOCH 3] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:09:56 INFO>: [EPOCH 3] Current SSE: 3.960945717698272; Centroid offset: 0.0
+<2021-01-02 18:09:56 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:09:56 INFO>: [EPOCH 0] Centroid updated: [[13.5         7.5       ] [ 2.5         2.5       ] [ 5.          5.        ] [ 7.          2.        ] [11.90909091 13.36363636]]
+<2021-01-02 18:09:56 INFO>: [EPOCH 0] Current SSE: 6.443605576461527; Centroid offset: 10.04781954883498
+<2021-01-02 18:09:57 INFO>: [EPOCH 1] Centroid updated: [[17.5  11.  ] [ 2.5   2.5 ] [ 5.25  6.5 ] [ 7.5   3.  ] [13.   15.  ]]
+<2021-01-02 18:09:57 INFO>: [EPOCH 1] Current SSE: 4.343638599927367; Centroid offset: 5.973296292252823
+<2021-01-02 18:09:57 INFO>: [EPOCH 2] Centroid updated: [[17.         12.        ] [ 2.5         2.5       ] [ 5.          7.33333333] [ 7.          3.33333333] [11.83333333 15.66666667]]
+<2021-01-02 18:09:57 INFO>: [EPOCH 2] Current SSE: 3.9609457176982716; Centroid offset: 2.0429417786885433
+<2021-01-02 18:09:58 INFO>: [EPOCH 3] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:09:58 INFO>: [EPOCH 3] Current SSE: 3.9609457176982716; Centroid offset: 0.0
+<2021-01-02 18:09:58 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:09:58 INFO>: [EPOCH 0] Centroid updated: [[17.         14.        ] [12.2        16.6       ] [ 7.25        7.75      ] [ 3.85714286  3.14285714] [17.         11.33333333]]
+<2021-01-02 18:09:58 INFO>: [EPOCH 0] Current SSE: 4.357054459732462; Centroid offset: 3.396184667356088
+<2021-01-02 18:09:58 INFO>: [EPOCH 1] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:09:58 INFO>: [EPOCH 1] Current SSE: 4.357054459732462; Centroid offset: 0.0
+<2021-01-02 18:09:58 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:09:59 INFO>: [EPOCH 0] Centroid updated: [[13.33333333 18.        ] [17.5        11.        ] [10.33333333 13.33333333] [16.5        13.        ] [ 4.6         4.2       ]]
+<2021-01-02 18:09:59 INFO>: [EPOCH 0] Current SSE: 4.024600179804141; Centroid offset: 4.564354645876384
+<2021-01-02 18:10:00 INFO>: [EPOCH 1] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:10:00 INFO>: [EPOCH 1] Current SSE: 4.024600179804141; Centroid offset: 0.0
+<2021-01-02 18:10:38 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:10:38 INFO>: [EPOCH 0] Centroid updated: [[12.   10.75] [16.   15.75] [11.   15.  ] [ 2.5   2.5 ] [ 6.    4.6 ]]
+<2021-01-02 18:10:38 INFO>: [EPOCH 0] Current SSE: 5.4829673654987845; Centroid offset: 4.526035793053342
+<2021-01-02 18:10:38 INFO>: [EPOCH 1] Centroid updated: [[13.         11.        ] [16.         15.        ] [11.         15.        ] [ 2.5         2.5       ] [ 6.          5.33333333]]
+<2021-01-02 18:10:38 INFO>: [EPOCH 1] Current SSE: 4.993520735182704; Centroid offset: 1.4706385612303854
+<2021-01-02 18:10:39 INFO>: [EPOCH 2] Centroid updated: [[13.         11.        ] [16.75       14.        ] [11.5        16.        ] [ 2.5         2.5       ] [ 6.          5.33333333]]
+<2021-01-02 18:10:39 INFO>: [EPOCH 2] Current SSE: 5.066427783743004; Centroid offset: 1.6770509831248424
+<2021-01-02 18:10:39 INFO>: [EPOCH 3] Centroid updated: [[13.         11.        ] [17.33333333 12.33333333] [12.2        16.6       ] [ 2.5         2.5       ] [ 6.          5.33333333]]
+<2021-01-02 18:10:39 INFO>: [EPOCH 3] Current SSE: 4.638178654577914; Centroid offset: 1.9919978804094027
+<2021-01-02 18:10:40 INFO>: [EPOCH 4] Centroid updated: [[10.         11.        ] [17.         12.        ] [12.2        16.6       ] [ 2.5         2.5       ] [ 6.          5.33333333]]
+<2021-01-02 18:10:40 INFO>: [EPOCH 4] Current SSE: 3.8714607475208282; Centroid offset: 3.0368111930480994
+<2021-01-02 18:10:40 INFO>: [EPOCH 5] Centroid updated: [[10.         12.5       ] [17.         12.        ] [12.75       17.25      ] [ 2.5         2.5       ] [ 6.          5.33333333]]
+<2021-01-02 18:10:40 INFO>: [EPOCH 5] Current SSE: 4.023086665782328; Centroid offset: 1.7248188310660337
+<2021-01-02 18:10:40 INFO>: [EPOCH 6] Centroid updated: [[10.33333333 13.33333333] [17.         12.        ] [13.33333333 18.        ] [ 2.5         2.5       ] [ 6.          5.33333333]]
+<2021-01-02 18:10:40 INFO>: [EPOCH 6] Current SSE: 3.9356681049237876; Centroid offset: 1.3070322617798442
+<2021-01-02 18:10:41 INFO>: [EPOCH 7] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:10:41 INFO>: [EPOCH 7] Current SSE: 3.9356681049237876; Centroid offset: 0.0
+<2021-01-02 18:10:41 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:10:41 INFO>: [EPOCH 0] Centroid updated: [[ 5.          5.2       ] [ 3.75        1.75      ] [ 8.         10.        ] [15.         17.33333333] [14.         13.16666667]]
+<2021-01-02 18:10:41 INFO>: [EPOCH 0] Current SSE: 5.339901099347837; Centroid offset: 4.9163559223835245
+<2021-01-02 18:10:42 INFO>: [EPOCH 1] Centroid updated: [[ 5.          5.2       ] [ 3.75        1.75      ] [ 8.         10.        ] [13.33333333 18.        ] [14.83333333 12.83333333]]
+<2021-01-02 18:10:42 INFO>: [EPOCH 1] Current SSE: 4.92026102727382; Centroid offset: 2.0069324297987157
+<2021-01-02 18:10:42 INFO>: [EPOCH 2] Centroid updated: [[ 5.          5.2       ] [ 3.75        1.75      ] [ 8.66666667 11.33333333] [12.75       17.25      ] [17.         12.        ]]
+<2021-01-02 18:10:42 INFO>: [EPOCH 2] Current SSE: 4.4583083106340755; Centroid offset: 2.917856900001933
+<2021-01-02 18:10:43 INFO>: [EPOCH 3] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:10:43 INFO>: [EPOCH 3] Current SSE: 4.4583083106340755; Centroid offset: 0.0
+<2021-01-02 18:10:43 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:10:43 INFO>: [EPOCH 0] Centroid updated: [[15.6  11.8 ] [ 4.75  2.  ] [ 8.    4.  ] [ 3.8   6.  ] [12.2  16.6 ]]
+<2021-01-02 18:10:43 INFO>: [EPOCH 0] Current SSE: 4.653671599032142; Centroid offset: 3.493207694941713
+<2021-01-02 18:10:43 INFO>: [EPOCH 1] Centroid updated: [[15.6        11.8       ] [ 2.66666667  1.66666667] [ 7.          3.33333333] [ 4.25        6.75      ] [12.2        16.6       ]]
+<2021-01-02 18:10:43 INFO>: [EPOCH 1] Current SSE: 4.27607828828364; Centroid offset: 2.580859030116394
+<2021-01-02 18:10:44 INFO>: [EPOCH 2] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:10:44 INFO>: [EPOCH 2] Current SSE: 4.27607828828364; Centroid offset: 0.0
+<2021-01-02 18:10:44 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:10:44 INFO>: [EPOCH 0] Centroid updated: [[14.4  12.6 ] [ 8.   10.  ] [14.25 17.  ] [ 3.25  5.25] [ 5.4   2.4 ]]
+<2021-01-02 18:10:44 INFO>: [EPOCH 0] Current SSE: 5.345226690900278; Centroid offset: 5.322358499763051
+<2021-01-02 18:10:45 INFO>: [EPOCH 1] Centroid updated: [[17.         12.        ] [ 8.66666667 11.33333333] [12.75       17.25      ] [ 3.25        5.25      ] [ 5.4         2.4       ]]
+<2021-01-02 18:10:45 INFO>: [EPOCH 1] Current SSE: 4.476398643224816; Centroid offset: 3.413901319930355
+<2021-01-02 18:10:45 INFO>: [EPOCH 2] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:10:45 INFO>: [EPOCH 2] Current SSE: 4.476398643224816; Centroid offset: 0.0
+<2021-01-02 18:11:19 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 18:11:19 INFO>: [EPOCH 0] Centroid updated: [[13.9 14.2] [ 4.6  4.2]]
+<2021-01-02 18:11:19 INFO>: [EPOCH 0] Current SSE: 11.654674875992491; Centroid offset: 7.102816342831905
+<2021-01-02 18:11:19 INFO>: [EPOCH 1] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:11:19 INFO>: [EPOCH 1] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 18:11:19 INFO>: K-Means started. K = 3, MAX_EPOCHS = 10
+<2021-01-02 18:11:20 INFO>: [EPOCH 0] Centroid updated: [[14.33333333 14.55555556] [ 6.6         7.4       ] [ 3.83333333  2.66666667]]
+<2021-01-02 18:11:20 INFO>: [EPOCH 0] Current SSE: 8.448298459125272; Centroid offset: 5.284229974154521
+<2021-01-02 18:11:20 INFO>: [EPOCH 1] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:11:20 INFO>: [EPOCH 1] Current SSE: 8.448298459125272; Centroid offset: 0.0
+<2021-01-02 18:11:20 INFO>: K-Means started. K = 4, MAX_EPOCHS = 10
+<2021-01-02 18:11:21 INFO>: [EPOCH 0] Centroid updated: [[ 5.09090909  4.81818182] [17.         12.        ] [11.         15.        ] [14.         19.        ]]
+<2021-01-02 18:11:21 INFO>: [EPOCH 0] Current SSE: 4.984405115805991; Centroid offset: 8.265231369222331
+<2021-01-02 18:11:21 INFO>: [EPOCH 1] Centroid updated: [[ 4.6   4.2 ] [17.   12.  ] [10.75 14.  ] [14.   19.  ]]
+<2021-01-02 18:11:21 INFO>: [EPOCH 1] Current SSE: 4.767624125452288; Centroid offset: 1.298322184924747
+<2021-01-02 18:11:21 INFO>: [EPOCH 2] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:11:21 INFO>: [EPOCH 2] Current SSE: 4.767624125452288; Centroid offset: 0.0
+<2021-01-02 18:11:21 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:11:22 INFO>: [EPOCH 0] Centroid updated: [[ 2.5         2.5       ] [ 7.          3.33333333] [16.6        13.4       ] [11.5        16.        ] [ 6.25        8.25      ]]
+<2021-01-02 18:11:22 INFO>: [EPOCH 0] Current SSE: 4.663414133577703; Centroid offset: 7.05261968664442
+<2021-01-02 18:11:22 INFO>: [EPOCH 1] Centroid updated: [[ 2.5         2.5       ] [ 7.          3.33333333] [17.         12.        ] [12.2        16.6       ] [ 6.25        8.25      ]]
+<2021-01-02 18:11:22 INFO>: [EPOCH 1] Current SSE: 4.209327554730257; Centroid offset: 1.7233687939614089
+<2021-01-02 18:11:23 INFO>: [EPOCH 2] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:11:23 INFO>: [EPOCH 2] Current SSE: 4.209327554730257; Centroid offset: 0.0
+<2021-01-02 18:11:40 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 18:11:40 INFO>: [EPOCH 0] Centroid updated: [[10.9375 10.875 ] [ 2.5     2.5   ]]
+<2021-01-02 18:11:40 INFO>: [EPOCH 0] Current SSE: 15.376532292770138; Centroid offset: 8.508497590644309
+<2021-01-02 18:11:40 INFO>: [EPOCH 1] Centroid updated: [[13.18181818 13.72727273] [ 4.44444444  3.66666667]]
+<2021-01-02 18:11:40 INFO>: [EPOCH 1] Current SSE: 12.304774580747134; Centroid offset: 4.279532582026388
+<2021-01-02 18:11:41 INFO>: [EPOCH 2] Centroid updated: [[13.9 14.2] [ 4.6  4.2]]
+<2021-01-02 18:11:41 INFO>: [EPOCH 2] Current SSE: 11.654674875992491; Centroid offset: 1.023668976601201
+<2021-01-02 18:11:41 INFO>: [EPOCH 3] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:11:41 INFO>: [EPOCH 3] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 18:11:41 INFO>: K-Means started. K = 3, MAX_EPOCHS = 10
+<2021-01-02 18:11:42 INFO>: [EPOCH 0] Centroid updated: [[ 2.5         2.5       ] [ 6.          5.33333333] [13.9        14.2       ]]
+<2021-01-02 18:11:42 INFO>: [EPOCH 0] Current SSE: 7.7010156453631; Centroid offset: 7.131697631778222
+<2021-01-02 18:11:42 INFO>: [EPOCH 1] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:11:42 INFO>: [EPOCH 1] Current SSE: 7.7010156453631; Centroid offset: 0.0
+<2021-01-02 18:11:42 INFO>: K-Means started. K = 4, MAX_EPOCHS = 10
+<2021-01-02 18:11:42 INFO>: [EPOCH 0] Centroid updated: [[ 3.          1.        ] [        nan         nan] [11.85714286 11.5       ] [ 3.25        5.25      ]]
+<2021-01-02 18:11:42 INFO>: [EPOCH 0] Current SSE: 7.134526820109805; Centroid offset: nan
+<2021-01-02 18:11:43 INFO>: [EPOCH 1] Centroid updated: [[ nan  nan] [9.25 9.2 ] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:11:43 INFO>: [EPOCH 1] Current SSE: 8.692489574339449; Centroid offset: nan
+<2021-01-02 18:11:43 INFO>: [EPOCH 2] Centroid updated: [[9.25 9.2 ] [ nan  nan] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:11:43 INFO>: [EPOCH 2] Current SSE: 8.692489574339449; Centroid offset: nan
+<2021-01-02 18:11:44 INFO>: [EPOCH 3] Centroid updated: [[ nan  nan] [9.25 9.2 ] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:11:44 INFO>: [EPOCH 3] Current SSE: 8.692489574339449; Centroid offset: nan
+<2021-01-02 18:11:44 INFO>: [EPOCH 4] Centroid updated: [[9.25 9.2 ] [ nan  nan] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:11:44 INFO>: [EPOCH 4] Current SSE: 8.692489574339449; Centroid offset: nan
+<2021-01-02 18:11:45 INFO>: [EPOCH 5] Centroid updated: [[ nan  nan] [9.25 9.2 ] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:11:45 INFO>: [EPOCH 5] Current SSE: 8.692489574339449; Centroid offset: nan
+<2021-01-02 18:11:45 INFO>: [EPOCH 6] Centroid updated: [[9.25 9.2 ] [ nan  nan] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:11:45 INFO>: [EPOCH 6] Current SSE: 8.692489574339449; Centroid offset: nan
+<2021-01-02 18:11:45 INFO>: [EPOCH 7] Centroid updated: [[ nan  nan] [9.25 9.2 ] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:11:45 INFO>: [EPOCH 7] Current SSE: 8.692489574339449; Centroid offset: nan
+<2021-01-02 18:11:46 INFO>: [EPOCH 8] Centroid updated: [[9.25 9.2 ] [ nan  nan] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:11:46 INFO>: [EPOCH 8] Current SSE: 8.692489574339449; Centroid offset: nan
+<2021-01-02 18:11:46 INFO>: [EPOCH 9] Centroid updated: [[ nan  nan] [9.25 9.2 ] [ nan  nan] [ nan  nan]]
+<2021-01-02 18:11:46 INFO>: [EPOCH 9] Current SSE: 8.692489574339449; Centroid offset: nan
+<2021-01-02 18:11:46 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:11:47 INFO>: [EPOCH 0] Centroid updated: [[ 7.          3.33333333] [15.25       11.25      ] [13.         16.16666667] [ 4.25        6.75      ] [ 2.66666667  1.66666667]]
+<2021-01-02 18:11:47 INFO>: [EPOCH 0] Current SSE: 4.512862901498348; Centroid offset: 6.6290606004504475
+<2021-01-02 18:11:47 INFO>: [EPOCH 1] Centroid updated: [[ 7.          3.33333333] [15.6        11.8       ] [12.2        16.6       ] [ 4.25        6.75      ] [ 2.66666667  1.66666667]]
+<2021-01-02 18:11:47 INFO>: [EPOCH 1] Current SSE: 4.27607828828364; Centroid offset: 1.1192755593587218
+<2021-01-02 18:11:47 INFO>: [EPOCH 2] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:11:47 INFO>: [EPOCH 2] Current SSE: 4.27607828828364; Centroid offset: 0.0
+<2021-01-02 18:12:35 INFO>: K-Means started. K = 2, MAX_EPOCHS = 10
+<2021-01-02 18:12:35 INFO>: [EPOCH 0] Centroid updated: [[ 6.45454545  8.72727273] [12.66666667  9.77777778]]
+<2021-01-02 18:12:35 INFO>: [EPOCH 0] Current SSE: 22.43798550407776; Centroid offset: 11.240127911268964
+<2021-01-02 18:12:36 INFO>: [EPOCH 1] Centroid updated: [[ 4.6  4.2] [13.9 14.2]]
+<2021-01-02 18:12:36 INFO>: [EPOCH 1] Current SSE: 11.654674875992491; Centroid offset: 6.70915029522441
+<2021-01-02 18:12:36 INFO>: [EPOCH 2] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:12:36 INFO>: [EPOCH 2] Current SSE: 11.654674875992491; Centroid offset: 0.0
+<2021-01-02 18:12:36 INFO>: K-Means started. K = 3, MAX_EPOCHS = 10
+<2021-01-02 18:12:36 INFO>: [EPOCH 0] Centroid updated: [[ 2.8  3.2] [ 6.4  5.2] [13.9 14.2]]
+<2021-01-02 18:12:36 INFO>: [EPOCH 0] Current SSE: 8.02260931140645; Centroid offset: 3.889730067755344
+<2021-01-02 18:12:37 INFO>: [EPOCH 1] Centroid updated: [[ 2.5         2.5       ] [ 6.          5.33333333] [13.9        14.2       ]]
+<2021-01-02 18:12:37 INFO>: [EPOCH 1] Current SSE: 7.7010156453631; Centroid offset: 0.8705043238133732
+<2021-01-02 18:12:37 INFO>: [EPOCH 2] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:12:37 INFO>: [EPOCH 2] Current SSE: 7.7010156453631; Centroid offset: 0.0
+<2021-01-02 18:12:37 INFO>: K-Means started. K = 4, MAX_EPOCHS = 10
+<2021-01-02 18:12:38 INFO>: [EPOCH 0] Centroid updated: [[17.         12.        ] [13.33333333 18.        ] [ 4.6         4.2       ] [10.33333333 13.33333333]]
+<2021-01-02 18:12:38 INFO>: [EPOCH 0] Current SSE: 4.971160835128657; Centroid offset: 4.58257569495584
+<2021-01-02 18:12:38 INFO>: [EPOCH 1] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:12:38 INFO>: [EPOCH 1] Current SSE: 4.971160835128657; Centroid offset: 0.0
+<2021-01-02 18:12:38 INFO>: K-Means started. K = 5, MAX_EPOCHS = 10
+<2021-01-02 18:12:38 INFO>: [EPOCH 0] Centroid updated: [[ 5.          7.33333333] [ 7.          3.33333333] [17.         12.        ] [ 2.5         2.5       ] [11.83333333 15.66666667]]
+<2021-01-02 18:12:38 INFO>: [EPOCH 0] Current SSE: 3.9609457176982716; Centroid offset: 3.192874010111336
+<2021-01-02 18:12:39 INFO>: [EPOCH 1] Centroids are almost stable. Iterating stopped.
+<2021-01-02 18:12:39 INFO>: [EPOCH 1] Current SSE: 3.9609457176982716; Centroid offset: 0.0
