@@ -36,6 +36,15 @@ def evaluate():
 def plot():
     plt.scatter(data[:, 0], data[:, 1])
     plt.show()
+    ks = [2, 3, 4, 5]
+    sses = [10, 9, 8.5, 7.2342]
+    plt.plot(ks, sses)
+    plt.grid(True)
+    plt.legend({"SSE"})
+    plt.xlabel("K")
+    plt.ylabel("SSE")
+    plt.title("SSE & K")
+    plt.show()
 
 def kmeans():
     pass
