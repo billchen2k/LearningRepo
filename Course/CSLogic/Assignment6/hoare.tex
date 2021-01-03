@@ -1,0 +1,117 @@
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage{trimspaces}
+\usepackage{xparse}
+
+\makeatletter
+
+\newif\ifdebug
+% \debugtrue % Uncomment to show labels
+
+\newcounter{hoareblock}
+\newcounter{hoareline}
+
+\def\hoare@labelprefix{hoare@\thehoareblock @}
+\def\hoare@storelabel#1{%
+    \expandafter\xdef\csname\hoare@labelprefix #1\endcsname{\thehoareline}%
+}
+
+\def\hoare@labellogtext#1{\text{\texttt{\textcolor{red}{#1}}}}
+\def\hoare@loglabel#1{%
+    \ifdebug%
+    \IfValueT{#1}{%
+        \hskip -3em\relax \makebox[1ex][r]{\hoare@labellogtext{#1}}\hskip 3em\relax%
+    }%
+    \else\fi%
+}
+
+\newenvironment{hoare}%
+{%
+    % Counts
+    \newcommand{\getNextLine}{%
+        \stepcounter{hoareline}%
+        \makebox[-1ex][r]{\thehoareline.}&\quad%
+    }%
+    %
+    % Label resolution
+    \def\hoare@resolve##1{%
+        \ifnum0<0\trim@spaces{##1}\relax\trim@spaces{##1}\else\hoare@get{\trim@spaces{##1}}\fi%
+    }%
+    \def\hoare@get##1{%
+        \ifnum0<0\csname\hoare@labelprefix\trim@spaces{##1}\endcsname\else%
+            \hoare@labellogtext{ERROR}%
+        \fi%
+        \csname\hoare@labelprefix\trim@spaces{##1}\endcsname%
+    }
+    %
+    % Constants
+    \def\True{\text{True}}%
+    \def\False{\text{False}}%
+    \let\T\True%
+    \let\F\False%
+    %
+    % Components
+    \def\hoare@body##1{\enspace\text{\spaceskip=0.8ex\relax\texttt{##1}}\enspace}%
+    \def\hoare@just##1{&& \makebox[4ex][l]{\text{(##1)}}}%
+    %
+    % Lines
+    \DeclareDocumentCommand{\heq}{>{\TrimSpaces}o m m m m}{%
+        \hoare@loglabel{##1}%
+        \getNextLine \{##2\}\hoare@body{##3}\{##4\}\hoare@just{##5}\\%
+        \IfValueT{##1}{\hoare@storelabel{##1}}%
+    }%
+    \DeclareDocumentCommand{\lheq}{>{\TrimSpaces}o m m m m}{%
+        \hoare@loglabel{##1}%
+        \getNextLine \{##2\}\hoare@just{##5}\\&\;\hookrightarrow%
+        \hoare@body{##3}\{##4\}\\[0.5em]%
+        \IfValueT{##1}{\hoare@storelabel{##1}}%
+    }%
+    \DeclareDocumentCommand{\teq}{>{\TrimSpaces}o m m m m}{%
+        \hoare@loglabel{##1}%
+        \getNextLine [##2]\hoare@body{##3}[##4]\hoare@just{##5}\\%
+        \IfValueT{##1}{\hoare@storelabel{##1}}%
+    }%
+    \DeclareDocumentCommand{\lteq}{>{\TrimSpaces}o m m m m}{%
+        \hoare@loglabel{##1}%
+        \getNextLine [##2]\hoare@just{##5}\\&\;\hookrightarrow%
+        \hoare@body{##3}[##4]\\[0.5em]%
+        \IfValueT{##1}{\hoare@storelabel{##1}}%
+    }%
+    \DeclareDocumentCommand{\imp}{>{\TrimSpaces}o m m m}{%
+        \hoare@loglabel{##1}%
+        \getNextLine ##2 \hskip1ex\rightarrow\hskip1ex ##3 \hoare@just{##4}\\%
+        \IfValueT{##1}{\hoare@storelabel{##1}}%
+    }%
+    \DeclareDocumentCommand{\limp}{>{\TrimSpaces}o m m m}{%
+        \hoare@loglabel{##1}%
+        \getNextLine ##2 \hskip1ex\rightarrow \hoare@just{##4}\\&%
+        \hskip5ex ##3\\%
+        \IfValueT{##1}{\hoare@storelabel{##1}}%
+    }%
+    %
+    % Justifications
+    \def\A{Asgn.}% Assignment
+    \def\L{Logic}%
+    \def\M{Math}%
+    \def\Seq(##1,##2){Seq. \hoare@resolve{##1}, \hoare@resolve{##2}}% Sequence
+    \def\PrS(##1,##2){Pre. Str. \hoare@resolve{##1}, \hoare@resolve{##2}}% Precondition strengthening
+    \def\PrE(##1){Pre. Eq. \hoare@resolve{##1}}% Precondition equivalence
+    \def\PoW(##1,##2){Post. Wk. \hoare@resolve{##1}, \hoare@resolve{##2}}% Postcondition weakening
+    \def\PoE(##1){Post. Eq. \hoare@resolve{##1}}% Postcondition equivalence
+    \def\Cond(##1,##2){Cond. \hoare@resolve{##1}, \hoare@resolve{##2}}% Conditional
+    \def\While(##1){While \hoare@resolve{##1}}% While (partial correctness)
+    \def\WhileT(##1,##2){While \hoare@resolve{##1}}% While (total correctness)
+    %
+    % Style
+    \addtolength{\jot}{0.5ex}% Normal spacing of each line
+    \mathtoolsset{showonlyrefs=true}% Disable default line numbers
+    \stepcounter{hoareblock}% Move to new block number, so labels don't get mixed
+    \setcounter{hoareline}{0}% Reset the line number back to 0, so 1 is the first line
+    \frenchspacing% Prevents extra spacing following any '.'
+    \flalign% Actually align the things
+}%
+{%
+    \endflalign%
+}%
+
+\makeatother

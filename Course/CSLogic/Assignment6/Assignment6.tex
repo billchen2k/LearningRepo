@@ -1,0 +1,127 @@
+\documentclass{ctexart}
+\usepackage[left=1in, right=1in, top=1.2in, bottom=1.2in]{geometry}
+\usepackage{ctex}
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\usepackage{a4wide}
+% \setmainfont[Scale = 1]{Palatino}
+% \setCJKmainfont{Songti SC}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{setspace}
+\pagestyle{fancy}
+\fancypagestyle{plain}{
+    \fancyhead[L]{East China Normal University}
+    \fancyhead[R]{}
+    \fancyfoot[C]{\thepage}
+}
+\def\premise{\mathrm{premise}}
+\def\assumption{\mathrm{assumption}}
+\def\MT{\mathrm{MT\ }}
+\def\LEM{\mathrm{LEM}}
+\def\PBC{\mathrm{PBC\ }}
+\def\intro{\mathrm{i\ }}
+\def\elim{\mathrm{e\ }}
+\def\introa{\mathrm{i_1\ }}
+\def\elima{\mathrm{e_1\ }}
+\def\introb{\mathrm{i_2\ }}
+\def\elimb{\mathrm{e_2\ }}
+
+\def\n{\neg}
+\def\d{\vee}
+\def\c{\wedge}
+\def\a{\forall}
+\def\e{\exists}
+
+\def\assignment{\textsf{Assignment}}
+\def\implied{\textsf{Implied}}
+\def\ifstmt{\textsf{If-Statement}}
+\def\invarianthg{\textsf{Invariant Hyp.} \c \textsf{Guard}}
+\def\partialwhile{\textsf{Partial-While}}
+
+\newcommand{\hoare}[1]{\qquad\llparenthesis\ #1 \ \rrparenthesis}
+
+\def\max{\text{max}}
+\def\ran{\text{ran}}
+
+\title{Logic in Computer Science Assignment 6}
+\author{10185101210 陈俊潼}
+\date{January 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Prove}
+
+\subsection{Prove the following progam \texttt{MAX} is partial correctness.}
+\begin{equation*}
+    \begin{split}
+        \{n > 0 \c dom(f) =& [0\ldots n-1] \c ran(f) \in N\} \\
+        & Max \\
+        \{y = &max\Big(ran(f)\Big)\}
+    \end{split}
+\end{equation*}
+
+\textbf{Proof:}
+
+First we add an empty else statement and a pair of brace for the original code to make it more clear in the process of proving. So the refined version of the \texttt{MAX} program would be:
+
+\begin{flalign*}
+    \linespread{1}
+    & \texttt{y = f[0]} \\
+    & \texttt{i = 1} \\
+    & \texttt{while (i < n)} \\
+    & \texttt{\{} \\
+    & \qquad \texttt{if (y < f[i])} \\
+    & \qquad \texttt{\{} \\
+    & \qquad \qquad \texttt{y = f[i])} \\
+    & \qquad \texttt{\}} \\
+    & \qquad \texttt{else} \\
+    & \qquad \texttt{\{} \\
+    & \qquad \texttt{\}} \\
+    & \qquad \texttt{i = i + 1} \\
+    & \texttt{\}}
+\end{flalign*}
+\newpage
+Then analysing the algorithm, we assume the loop invariant to be \texttt{y = max(ran(f[0:i]))}. Now we can proof its partial correctness as follows:
+\setlength{\jot}{1pt}
+\begin{flalign*}
+    \setstretch{1}
+    & \hoare{\top} \\
+    & \hoare{f[0] = \max(f[0])} & \implied \\
+    & \hoare{f[0] = \max(\ran(f[0:1]))} & \implied \\
+    & \texttt{y = f[0]} \\
+    & \hoare{y = \max(\ran(f[0:1]))} & \assignment \\
+    & \texttt{i = 1} \\
+    & \hoare{y = \max(\ran(f[0:i]))} & \assignment \\
+    & \texttt{while (i < n)} \\
+    & \texttt{\{} \\
+    & \qquad \hoare{y = \max(\ran(f[0:i])) \c i< n} & \invarianthg \\
+    & \qquad \hoare{y = \max(\ran(f[0:i]))} & \implied \\
+    & \qquad \hoare{\Big(y<f[i] \to \max(\ran(f[0:i])) < f[i] \Big) \c \\ & \qquad \qquad \qquad \qquad \qquad \n(y<f[i]) \to y = \max(\ran(f[0:i]))} & \implied \\
+    & \qquad \texttt{if (y < f[i])} \\
+    & \qquad \texttt{\{} \\
+    & \qquad \qquad \hoare{\max(\ran(f[0:i])) < f[i]} & \ifstmt \\
+    & \qquad \qquad \hoare{f[i] = \max(\ran(f[0:i]),\ f[i])} & \implied \\
+    & \qquad \qquad \texttt{y = f[i]} \\
+    & \qquad \qquad \hoare{y = \max(\ran(f[0:i]),\ f[i])} & \assignment \\
+    & \qquad \qquad \hoare{y = \max(\ran(f[0:i+1]))} & \implied \\
+    & \qquad \texttt{\}} \\
+    & \qquad \texttt{else} \\
+    & \qquad \texttt{\{} \\
+    & \qquad \qquad  \hoare{y = \max(\ran(f[0:i]))} & \ifstmt \\
+    & \qquad \qquad  \hoare{y = \max(\ran(f[0:i+1]))} & \implied \\
+    & \qquad \texttt{\}} \\
+    & \qquad \hoare{y = \max(\ran(f[0:i+1]))} & \ifstmt \\
+    & \qquad \texttt{i = i + 1} \\
+    & \qquad \hoare{y = \max(\ran(f[0:i]))} & \assignment \\
+    & \texttt{\}} \\
+    & \hoare{y = \max(\ran(f[0:i])) \c \n(i < n)} & \partialwhile \\
+    & \hoare{y = \max(\ran(f[0:i])) \c i \ge n } & \implied \\
+    & \hoare{y = \max(\ran(f[0:n]))} & \implied \\
+    & \hoare{y = \max(\ran(f))} & \implied
+\end{flalign*}
+
+\end{document}
