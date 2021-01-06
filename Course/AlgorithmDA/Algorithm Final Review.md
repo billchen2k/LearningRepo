@@ -1,6 +1,6 @@
-# Algorithm Mid-term Review
+# Algorithm Final Review
 
-<center>Nobember 2020</center>
+<center>January 2021</center>
 
 ## Preface. 基础
 

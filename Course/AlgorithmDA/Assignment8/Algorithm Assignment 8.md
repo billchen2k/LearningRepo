@@ -53,15 +53,12 @@ We now suppose there exists a path $v_0 \to v_1 \to v_2 \to \dots  \to v_0$ be a
 
 ## 34.2-6
 
+Given a certificate (a sequence of vertices) of the language HAM-PATH = {<G, u, v>: there is a hamiltonian path from u to v in graph G}. To verify it is a solution, we only need to check if the sequence contains every vertices in G and for every consequent pair `(u, v)` there’s a path connecting them. Let n be the number of vertices in the graph, the complexity of verifying this problem is $O(n^2)$, which is a polynomial time. So this language belongs to NP.
 
+### 34.5-7
 
+First we prove this problem is NP. Since given a certificate (a sequence of vertices), we can verify if it is the longest simple-path of the graph in polynomial time, this problem is NP.
 
+Then we can reduce the longest-simple-cycle problem to a Hamiltonian Cycle problem. Convert the longest simple-path problem into “Is there a simple path of length at least n-1, where n is the number of vertices in G?”, this is equivalent to find a Hamilton path that traverses every node at least once in a graph. Since Hamiltonian Cycle problem is NP-hard, this problem is also NP-hard.
 
-
-
-
-
-
-
-
-
+Since it’s NP and NP-hard, the longest-simple-cycle problem is NP-complete.
