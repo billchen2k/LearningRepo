@@ -69,7 +69,19 @@ Eg2. 注意 $n^{lgc}$ 和 $c^{lgn}$ 的等价性
 
 ## Sorting
 
+| 排序算法 | 最佳时间复杂度 | 平均时间复杂度 | 最坏时间复杂度  | 稳定性 |
+| -------- | -------------- | -------------- | --------------- | ------ |
+| 选择排序 | O(N^2)         | O(N^2)         | O(N^2)          | 不稳定 |
+| 插入排序 | O(N)           | O(N^2)         | O(N^2)          | 稳定   |
+| 冒泡排序 | O(N)           | O(N^2)         | O(N^2)          | 稳定   |
+| 希尔排序 | O(N)           | O(NlogN)       | O(N^S)（1<S<2） | 不稳定 |
+| 快速排序 | O(NlogN)       | O(NlogN)       | O(N^2)          | 不稳定 |
+| 堆排序   | O(NlogN)       | O(NlogN)       | O(NlogN)        | 不稳定 |
+| 归并排序 | O(NlogN)       | O(NlogN)       | O(NlogN)        | 稳定   |
+
 ### Heap Sort
+
+分为 `Build Heap` 和 `Max Heapify` 两个步骤。
 
 节点的高度：该节点到叶节点最长简单路径上边的数目
 
@@ -93,7 +105,7 @@ Eg2. 注意 $n^{lgc}$ 和 $c^{lgn}$ 的等价性
 
 简单的排序。对于桶排序，可以在内部使用 merge sort 来将最差复杂度减少一些。
 
-## Dynamic Programming
+## 动态规划
 
 ### 矩阵链乘法
 
@@ -112,13 +124,89 @@ Eg.
 
 ![image-20201118152456084](https://billc.oss-cn-shanghai.aliyuncs.com/img/2020-11-18-dlAz4d.png)
 
+## 贪心
+
+### 霍夫曼编码
+
+期中考过了。
+
 ## 图算法
+
+### 查找
+
+#### BFS 广度优先搜索
+
+维护一个队列，使用三种颜色查找。
+
+广度优先树：由源节点可以到达的节点组成
+
+#### DFS 深度优先搜索
+
+概念：每个节点有发现时间 $u.d$ 和完成时间 $u.f$。
+
+DFS 的执行过程：
+
+![image-20210111230722660](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-11-5ZR1H5.png)
+
+几个边的概念（针对 DFS 的概念）：
+
+![img](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-11-uB6m0J.png)
+
+定义：
+
+![image-20210111230442500](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-11-NDpF1j.png)
+
+横向边：其他所有的边。
+
+### Topological Sorty 拓补排序
+
+对原图进行 DFS 即可，每结束一个节点就将该节点输出到最终结果的链表的最前方。
+
+### 最小生成树
+
+轻量级边：横跨两个分隔的权重最小的边。
+
+#### Kruskal
+
+从小到大遍历所有边，如果这一条边左右已经属于同一棵树则跳过。
+
+![image-20210112225305579](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-12-u5rj3F.png)
+
+复杂度 $O(VlgV)$
+
+#### Prim
+
+算法的每一步从连接 A 和 A 之外的所有轻量级边中选择一个加入到 A 中。
+
+![image-20210112225314295](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-12-ckp2vr.png)
 
 ## 最短路
 
+### 单源最短路
+
+#### Belman-Ford
+
+可以处理负权重的问题。
+
+运行的总时间为 O(VE)，
+
+![image-20210113002802457](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-13-t6uhHR.png)
+
+#### Dijikstra
+
+不能处理负权重的问题。
+
+复杂度为 O(ElogV)。
+
+![image-20210113002811788](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-13-8ogj9Y.png)
+
+### 多源最短路
+
+#### Floyd-Warshall 算法
 
 
-### 最大流
+
+## 最大流
 
 最大流最小切割定理：最大流最小割定理是网络流理论的重要定理。是指在一个网络流中，能够从源点到达汇点的最大流量等于如果从网络中移除就能够导致网络流中断的边的集合的最小容量和。即在任何网络中，最大流的值等于最小割的容量。
 
