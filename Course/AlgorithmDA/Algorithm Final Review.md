@@ -39,7 +39,7 @@
 >
 > o(g(n)) ={ f(n) ：存在正常量 c、$n_0$，使 $\forall n \ge n_0,, 0 \le f(n) \lt cg(n)$ }
 
-（非紧张确界的差别：趋近与无穷是是否相等）
+（非紧张确界的差别：趋近于无穷是时是否相等）
 
 Eg.
 
@@ -95,6 +95,8 @@ Eg2. 注意 $n^{lgc}$ 和 $c^{lgn}$ 的等价性
 
 ![image-20201118002705194](https://billc.oss-cn-shanghai.aliyuncs.com/img/2020-11-18-UQoSi4.png)
 
+只要划分是常数比例的，算法的运行时间总是 O(nlgn)。
+
 ### Counting Sort
 
 使用三个数组，B 存放输出、A 原数组、C 存放临时
@@ -103,9 +105,38 @@ Eg2. 注意 $n^{lgc}$ 和 $c^{lgn}$ 的等价性
 
 ### Bucket Sort & Radix Sort
 
-简单的排序。对于桶排序，可以在内部使用 merge sort 来将最差复杂度减少一些。
+简单的排序。对于桶排序，可以在内部使用 merge sort 来将最差复杂度减少一些。对于桶排序，可以使用更加复杂的方式来决定。
+
+#### 排序方法的下界
+
+决策树模型决定了排序算法的下界。
+
+![image-20210113201308950](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-13-4o5bUO.png)
+
+核心：
+$$
+n! \le l \le 2^h
+$$
+
 
 ## 动态规划
+
+核心步骤：
+
+1. 刻画一个最优解的结构特征
+2. 递归地定义最优解的值
+3. 计算最优解的值，采用自底向上的方法
+4. 利用计算出的信息构造最优解
+
+### Cut-Rod
+
+自顶向下法既递归。
+
+![image-20210113195144320](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-13-6WRshq.png)
+
+Concepts: 子问题图：
+
+![image-20210113195239876](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-13-tFFxlx.png)
 
 ### 矩阵链乘法
 
@@ -126,6 +157,12 @@ Eg.
 
 ## 贪心
 
+### 活动选择问题
+
+注意问题的最优子结构：
+
+最优子结构的意思是局部最优解能决定全局最优解（对有些问题这个要求并不能完全满足，故有时需要引入一定的近似）。简单地说，问题能够分解成子问题来解决。（Wikipedia）
+
 ### 霍夫曼编码
 
 期中考过了。
@@ -140,9 +177,62 @@ Eg.
 
 广度优先树：由源节点可以到达的节点组成
 
+伪代码：
+
+```pseudocode
+BFS(G, s)
+for each vertex u in G.V-{s}
+	u.color = WHITE
+	u.d = inf
+	u.pi = NIL
+s.color = gray
+s.d = 0
+s.pi = NUL
+Q = empty
+ENQUEUE (Q, s)
+while Q != empty:
+	u = DEQUEUE(Q)
+	for each vertex v in G.Adj[u]
+		if u.color == WHITE:
+            v.color = GRAY
+            u.d = u.d + 1
+            v.pi = u
+            ENQUEUE (Q, v)
+	u.color = BLACK
+```
+
+
+
 #### DFS 深度优先搜索
 
 概念：每个节点有发现时间 $u.d$ 和完成时间 $u.f$。
+
+伪代码：
+
+```pseudocode
+DFS(G)
+for each vertex u in G.V
+	u.color = WHITE
+	u.pi = NIL
+time = 0
+for each vertex u in G.V
+	if u.color == WHITE
+		DFS_VISIT(u)
+		
+DFS_VISIT(G, u)
+time = time + 1
+u.d = time
+u.color = GRAY
+for each v in G:Adj[u]
+	if v.color == WHITE:
+		v.pi = u
+		DFS_VISIT(G, v)
+u.color = BLACK
+time = time + 1
+u.f = time
+```
+
+
 
 DFS 的执行过程：
 
@@ -157,6 +247,8 @@ DFS 的执行过程：
 ![image-20210111230442500](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-11-NDpF1j.png)
 
 横向边：其他所有的边。
+
+
 
 ### Topological Sorty 拓补排序
 
@@ -174,11 +266,15 @@ DFS 的执行过程：
 
 复杂度 $O(VlgV)$
 
+使用不想交的数据结构来维护不相交的元素集合。
+
 #### Prim
 
 算法的每一步从连接 A 和 A 之外的所有轻量级边中选择一个加入到 A 中。
 
 ![image-20210112225314295](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-12-ckp2vr.png)
+
+复杂度：$O(E\lg V)$
 
 ## 最短路
 
@@ -202,13 +298,54 @@ DFS 的执行过程：
 
 ### 多源最短路
 
+#### SLOW_SHORTEST_PATH
+
+使用类似于矩阵乘法的思想进行计算。
+
+复杂度 $O(V^4)$ 或 $O(V^3logV)$
+
+![image-20210113162716826](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-13-g5Y7aH.png)
+
 #### Floyd-Warshall 算法
 
+动态规划，三重循环。
+$$
+d_{i j}^{(k)}=\left\{\begin{array}{ll}
+w_{i j} & \text { 若 } k=0 \\
+\min \left(d_{i j}^{(k-1)}, d_{i k}^{(k-1)}+d_{k j}^{(k-1)}\right) & \text { 若 } k \geqslant 1
+\end{array}\right.
+$$
 
+
+复杂度：$O(V^3)$
 
 ## 最大流
 
+**容量守恒**：对于所有节点 $u, v\in V， 要求 0 \le f(u,v) \le c(u,v)$，其中 f 是流，c 是容量
+
+**流量守恒**：对于 $u\in V - \{s, t\}, \sum_{v\in  V} f(v,u) = \sum_{v \ in V} f(u,v)$。
+
+### Ford-Fulkerson
+
+利用残存网络来计算。
+
+概念：递增、抵消 Cancellation
+
+增广路经：残存网络中一条 s 到 t 的简单路径
+
+残存容量：在增广路径 p 上能够为每条边增加的流量的最大值为路径 p 的残存容量.
+
+**切割**
+
+![image-20210113184609095](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-13-XFhzxn.png)
+
 最大流最小切割定理：最大流最小割定理是网络流理论的重要定理。是指在一个网络流中，能够从源点到达汇点的最大流量等于如果从网络中移除就能够导致网络流中断的边的集合的最小容量和。即在任何网络中，最大流的值等于最小割的容量。
+
+**最小切割**：一个网络的最小切割是网络中容量最小的切割。
+
+![image-20210113184714595](https://billc.oss-cn-shanghai.aliyuncs.com/img/2021-01-13-uySszv.png)
+
+Ford-Fulkerson：利用 p 来对流进行修改。
 
 ## NP 完全性
 
@@ -218,15 +355,27 @@ Reference: https://zhuanlan.zhihu.com/p/73953567
 
 - P 问题：多项式时间内能解决的问题
 - NP 问题：多项式时间内能证明的问题
-- NPC 问题 (NP-Complete)：NP 完备问题，对多项式时间规约这个工具而言是完备的（所有其他问题都可以规约到 NPC 问题上）
+- NPC 问题 (NP-Complete)：NP 完备问题，对多项式时间规约这个工具而言是完备的（所有其他问题都可以规约到 NPC 问题上）。定义：
+  - 如果一个问题Q，它满足以下两条性质：
+    (1). Q是NP问题
+    (2). 任一NP问题都可在多项式时间内归约到问题Q
+    那么我们说问题Q是NPC问题。
 - NP-Hard 问题：最难的问题，如果所有[NP](https://zh.wikipedia.org/wiki/NP_(複雜度))问题都可以[多项式时间归约](https://zh.wikipedia.org/wiki/多项式时间归约)到某个问题，则称该问题为NP困难。（Definitio of Wikipedia）
+  - 一个问题仅满足性质(2)，而不满足性质(1)时，我们说该问题时NPH问题（NP-hard，NP-难问题）。
 
-一个 NPC 问题首先要是一个 NP问题，然后是 NP-Hard 问题。也可以通过
+一个 NPC 问题首先要是一个 NP问题，然后是 NP-Hard 问题。
 
 ### Examples
 
 - 欧拉回路：经过所有 edge 一次（P 问题） $O(V+E)$
-  哈密尔顿回路：经过所有点一次（NPC 问题）
+  哈密尔顿回路：**经过所有点一次**（NPC 问题）
+
+其他一些经典的 NPC 问题：布尔可满足性问题 SAT、顶点覆盖问题、分团覆盖问题
+
+Vertex Cover, Clique Cover.
+
+- 顶点覆盖问题：对于图 G，顶点覆盖是一个子集 $V’ \subseteq V$，如果有 $(u,v) \in E$，则 $u \in V’$ 或 $v \in V’$ 或同时成立。
+- 分团问题：无向图 G 的团 $V’\subseteq V$ 其中每一对定点之间都由 E 中的一条边连接。（一个团是 G 的一个完全子图）。团问题是要寻找图中规模最大的团的问题。
 
 P、NP、NP-Hard 之间的关系
 
@@ -235,6 +384,22 @@ P、NP、NP-Hard 之间的关系
 ---
 
 ## 期末考试相关
+
+题目分布：
+
+- [ ] 排序算法
+- [x] 堆排序
+- [ ] 主方法
+- [x] 图遍历算法
+- [ ] 生成树算法
+- [x] 路径问题
+- [x] 多源点对最短路径
+- [ ] 动态规划法
+- [x] 贪心法
+- [x] 网络流
+- [x] 复杂性
+
+
 
 考试形式和期中考试类似，选择和简答题相对简单
 
