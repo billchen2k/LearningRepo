@@ -88,8 +88,9 @@ First we add an empty else statement and a pair of brace for the original code t
 Then analysing the algorithm, we assume the loop invariant to be \texttt{y = max(ran(f[0:i]))}. Now we can proof its partial correctness as follows:
 \setlength{\jot}{1pt}
 \begin{flalign*}
-    \setstretch{1}
-    & \hoare{\top} \\
+    \setstretch{0}
+    & \hoare{n > 0 \c dom(f) = [0\ldots n-1] \c ran(f) \in N} \\
+    & \hoare{\top}  & \implied \\
     & \hoare{f[0] = \max(f[0])} & \implied \\
     & \hoare{f[0] = \max(\ran(f[0:1]))} & \implied \\
     & \texttt{y = f[0]} \\

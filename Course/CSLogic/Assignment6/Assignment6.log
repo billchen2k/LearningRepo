@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.27)  4 JAN 2021 03:17
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.27)  4 JAN 2021 21:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -477,7 +477,7 @@ Overfull \hbox (5.36932pt too wide) in paragraph at lines 88--90
  []
 
 
-LaTeX Font Warning: Command \normalsize invalid in math mode on input line 125.
+LaTeX Font Warning: Command \normalsize invalid in math mode on input line 126.
 
 
 Package fontspec Info: Could not resolve font "PingFang SC/I" (it probably
@@ -501,7 +501,7 @@ Package fontspec Info: Font family 'PingFangSC(0)' created for font 'PingFang
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 
-LaTeX Font Warning: Command \normalsize invalid in math mode on input line 125.
+LaTeX Font Warning: Command \normalsize invalid in math mode on input line 126.
 
 [2] (./Assignment6.aux)
 
@@ -512,7 +512,7 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  8384 strings out of 481198
  222069 string characters out of 5920626
- 508184 words of memory out of 5000000
+ 509184 words of memory out of 5000000
  25398 multiletter control sequences out of 15000+600000
  543294 words of font info for 97 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191

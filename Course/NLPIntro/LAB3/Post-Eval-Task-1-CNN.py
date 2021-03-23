@@ -10,8 +10,11 @@ nltk.download('stopwords')
 ### Load data from csv -------------------------------
 print("Loading data from csv...")
 
-train_data = pd.read_csv("train.csv") # Data set used to train.
-test_data = pd.read_csv("dev.csv") # Data set used to set.
+train_data = pd.read_csv("train.csv")  # Data set used to train.
+test_data = pd.read_csv("dev.csv")  # Data set used to set.
+
+train_data = train_data[train_data.label!=0]
+test_data = test_data[test_data.label!=0]
 
 # Add a new column called 'edited' as the edited headline.
 
@@ -71,6 +74,7 @@ def convert2vector(headlines):
 
     return np.array(vectors)
 
+
 print("Tokenizing words...")
 
 x_train_original = convert2vector(train_data["original"])
@@ -122,38 +126,42 @@ BATCH_SIZE = 100
 # Building a FFNN network, Linear Regression
 
 model = keras.Sequential([
-    keras.layers.Conv1D(10, 20, activation='relu',input_shape=x_train.shape[1:]),
+    keras.layers.Conv1D(10, 20, activation='relu', input_shape=x_train.shape[1:]),
     keras.layers.Reshape(target_shape=[10 * 581]),
     keras.layers.Dense(64, activation='softmax'),
     keras.layers.Dropout(0.2),
-    keras.layers.Dense(1) # Output layer
+    keras.layers.Dense(1)  # Output layer
 ])
 
 optimizer = tf.keras.optimizers.RMSprop(learning_rate=LEARNING_RATE)
 
 # Using mean square error as loss function
-model.compile(loss=keras.losses.mean_squared_error, optimizer=optimizer, metrics= ['mse'])
+model.compile(loss=keras.losses.mean_squared_error, optimizer=optimizer, metrics=['mse'])
 
 model.summary()
 
 history = model.fit(x_train, y_train, batch_size=BATCH_SIZE, epochs=TRAINING_EPOCHS)
 
+#######
+
 model.evaluate(x_test, y_test, verbose=2)
+
 
 # Testing the rmse of predicting result
 def rmse(pred, traget):
-    return np.sqrt(np.mean((pred-traget)**2))
+    return np.sqrt(np.mean((pred - traget) ** 2))
+
 
 def roundToOneDecimal(value):
     value = value.reshape(value.shape[0])
     roundedValue = np.array([round(one, 1) for one in value])
     return roundedValue.reshape([value.shape[0], 1])
 
+
 y_pred = model.predict(x_test)
 # y_pred = roundToOneDecimal(y_pred)
 
 print("RMSE: {}".format(rmse(y_pred, y_test)))
-
 
 ### Predict the final result -------------------------
 
@@ -180,7 +188,6 @@ y_grading = model.predict(x_grading)
 
 # y_grading = roundToOneDecimal(y_grading)
 y_grading = y_grading.reshape([x_grading.shape[0]])
-
 
 result = pd.DataFrame({"id": grading_data["id"], "pred": y_grading})
 result.to_csv("task-1-output.csv", index=False)
