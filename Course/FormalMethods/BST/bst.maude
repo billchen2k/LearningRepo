@@ -1,0 +1,64 @@
+fmod BINARY-TREE is
+
+including NAT .
+sorts BTree Leaf .
+subsort Leaf < BTree .
+op leaf : -> Leaf .
+op ((_,_,_)) : BTree Nat BTree -> BTree .
+
+op insert : BTree Nat -> BTree .
+eq insert(leaf, N) = (leaf, N, leaf) .
+vars LT RT : BTree .
+vars N N' : Nat .
+
+op right-most : BTree -> Nat .
+op left-most : BTree -> Nat .
+ceq right-most((LT,N,RT)) = right-most(RT) if RT =/= leaf .
+eq right-most((LT,N,leaf)) = N .
+ceq left-most((LT,N,RT)) = left-most(LT) if LT =/= leaf .
+eq right-most((leaf,N,RT)) = N .
+
+op isBSTree : BTree -> Bool .
+eq isBSTree(leaf) = true .
+ceq isBSTree((LT,N,RT)) = isBSTree(LT) and isBSTree(RT) and
+right-most(LT) < N and left-most(RT) > N
+if LT =/= leaf /\ RT =/= leaf .
+
+op rm-right-most : BTree -> BTree .
+eq rm-right-most(leaf) = leaf .
+ceq rm-right-most((LT,N,RT)) = rm-right-most(RT) if RT =/= leaf .
+eq rm-right-most((LT,N,leaf)) = LT .
+
+op insert : BTree Nat -> BTree .
+eq insert(leaf,N) = (leaf,N,leaf) .
+
+eq insert((LT,N',RT),N) =
+    (if N' > N then (insert(LT,N),N',RT)
+        else
+            (if N' < N then (LT,N',insert(RT,N))
+            else
+        (LT,N',RT) fi)
+    fi) .
+
+op search : BTree Nat -> Bool .
+eq search(leaf,N) = false .
+
+ceq search((LT,N',RT),N) = (if N' > N then search(LT,N)
+    else
+        (if N' < N then search(RT,N)
+        else true fi)
+    fi)
+    if isBSTree((LT,N',RT)) .
+
+
+op remove : BTree Nat -> BTree .
+eq remove(leaf,N) = leaf .
+
+ceq remove((LT,N,RT),N') = (remove(LT,N'),N,RT) if N > N' /\ isBSTree((LT,N,RT)) .
+ceq remove((LT,N,RT),N') = (LT,N,remove(RT,N')) if N < N' /\ isBSTree((LT,N,RT)) .
+ceq remove((LT,N,RT),N) =
+    (if LT == leaf then RT
+    else (rm-right-most(LT),right-most(LT),RT) fi)
+    if isBSTree((LT,N,RT)) .
+
+endfm

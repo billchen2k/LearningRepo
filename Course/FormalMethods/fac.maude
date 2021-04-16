@@ -1,0 +1,10 @@
+fmod FAC is
+    including NAT .
+
+    op fac : Nat -> Nat .
+
+    var N : Nat .
+    eq fac(0) = 1 .
+    eq fac(s N) = (s N) * fac(N).
+
+endfm

@@ -1,0 +1,15 @@
+fmod PMAT: is
+  sort Nat .
+
+  op 0 : -> Nat .
+  op s : Nat -> Nat .
+
+  op _+_ : Nat Nat -> Nat .   --- Declareation
+  
+  var X : Nat .
+  var Y : Nat .
+
+  eq 0 + X = X . --- Declare 0 + X equals X
+  eq s(Y) + X = s(Y + X) .
+
+endfm
