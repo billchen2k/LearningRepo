@@ -1,0 +1,44 @@
+#####################################################
+# Copyright: 2016-2020 www.corvin.cn ROS小课堂
+# Description:使用小车上三个红外测距传感器进行避障
+#   走迷宫,这里是一些可以配置的参数.
+#   infrared_topic:订阅的红外传感器话题.
+#   cmd_topic:控制移动的话题名.
+#   yaw_service:发布IMU模块yaw偏行角的服务.
+#   infrared_service:发布红外测据信息的服务名.
+#   linear_x:移动时前进速度大小.
+#   linear_y:横向移动时大小.
+#   angular_speed:原地转圈时角速度大小.
+#   warn_dist:小车是否可以前进的距离.
+#   tolerance_dist:距离容忍值.
+#   odom_frame:odom的tf名称.
+#   base_frame:底盘的tf名称.
+#   forward_dist:每次前进时移动的距离.
+# Author: corvin,adam
+# History:
+#   20200404:init this file.
+#   20200406:增加yaw service,rate参数.
+#   20200412:增加获取红外测距信息的service.
+#   20200424:更新注释,增加参数介绍.
+#   20200830:增加初始化参数.
+######################################################
+infrared_topic: /mobilebase_arduino/sensor/GP2Y0A41
+cmd_topic: /cmd_vel
+yaw_service: /imu_node/GetYawData
+infrared_service: /mobilebase_arduino/getInfraredDistance
+odom_frame: /odom_combined
+base_frame: /base_footprint
+linear_x: 0.17
+linear_y: 0.15
+angular_speed: 0.5
+warn_dist: 0.25
+tolerance_dist: 0.05
+forward_dist: 0.50
+
+init_switch: false
+circle_dist: 0.18
+wall_dist: 0.16
+init_tolerance_dist: 0.01
+init_linear_x: 0.17
+init_linear_y: 0.05
+init_angular_speed: 0.2

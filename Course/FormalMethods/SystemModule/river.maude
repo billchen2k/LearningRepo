@@ -1,0 +1,35 @@
+fmod river is
+    sorts Object Objects .
+    sort RiverSides .
+    subsort Object < Objects .
+
+    op __ : Object Objects -> Objects .
+
+    ops left right : -> RiverSides .
+    ops chuanfu lang yang baicai : RiverSides -> Object .
+endfm
+
+mod MOVE is
+    var X Y Z A : RiverSides .
+
+    op move : RiverSides -> RiverSides .
+    eq move(left) = right .
+    eq move(right) = left .
+
+    rl chuanfu(X) yang(X) => chuanfu(move(X)) yang(move(X))
+    crl chuanfu(X) lang(X) baicai(Y) yang(Z) =>
+        chuanfu(move(X)) lang(move(X)) baicai(move(Y)) yang(move(Z)) if Y =/= Z .
+
+    crl chuanfu(X) baicai(X) lang(Y) yang(Z) =>
+        chuanfu(move(X)) baicai(move(X)) lang(move(Y)) yang(move(Z)) if Y =/= Z .
+
+    
+    crl chuanfu(X) lang(Y) baicai(Z) yang(A) =>
+        chuanfu(move(X)) lang(move(Y)) baicai(move(Z)) yang(move(A)) if Y =/= Z .
+        
+        
+endm
+
+eof
+
+chuanfu(left) lang(left) yang(left) baicai(left)

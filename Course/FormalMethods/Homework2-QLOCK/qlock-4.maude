@@ -1,0 +1,42 @@
+fmod LABEL is
+    sort Label .
+    ops rs ws cs : -> Label [ctor] .
+endfm
+
+fmod PID is
+    sort Pid .
+    ops p1 p2 p3 p4 p5 p6 p7 p8 : -> Pid [ctor] .
+endfm
+
+fmod QUEUE is
+    pr PID .
+    sort Queue .
+    op empty : -> Queue [ctor] .
+    op _|_ : Pid Queue -> Queue [ctor] .
+    op enq : Queue Pid -> Queue .
+    op deq : Queue -> Queue .
+    var Q : Queue .
+    vars X Y : Pid .
+    eq enq(empty,X) = X | empty .
+    eq enq(Y | Q,X) = Y | enq(Q,X) .
+    eq deq(empty) = empty .
+    eq deq(X | Q) = Q .
+endfm
+
+mod QLOCK is
+    pr LABEL .
+    pr QUEUE .
+    sort OCom Config .
+    subsort OCom < Config .
+    op __ : Config Config -> Config [ctor assoc comm] .
+    op pc[_]:_ : Pid Label -> OCom [ctor] .
+    op queue:_ : Queue -> OCom [ctor] .
+    op ic : -> Config .
+    eq ic = (pc[p1]: rs) (pc[p2]: rs) (pc[p3]: rs) (pc[p4]: rs) (pc[p5]: rs) (pc[p6]: rs) (pc[p7]: rs) (pc[p8]: rs) (queue: empty) .
+    var I : Pid .
+    var Q : Queue .
+    rl [want] : (pc[I]: rs) (queue: Q) => (pc[I]: ws) (queue: enq(Q,I)).
+    rl [try] : (pc[I]: ws) (queue: (I | Q)) => (pc[I]: cs) (queue: (I | Q)) .
+    rl [exit] : (pc[I]: cs) (queue: Q) => (pc[I]: rs) (queue: deq(Q)) .
+endm
+

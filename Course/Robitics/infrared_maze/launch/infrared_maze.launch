@@ -1,0 +1,16 @@
+<!--
+  Copyright: 2016-2020 www.corvin.cn
+  Author: jally, corvin
+  Description:
+    maze with infrared
+  History:
+    20200325: intial this file.
+-->
+<launch>
+  <arg name="cfg_file" default="$(find infrared_maze)/cfg/param.yaml" />
+
+  <!-- startup infrared_obstacle_avoidance_node -->
+  <node pkg="infrared_maze" type="infrared_maze_node" name="infrared_maze_node" output="screen">
+    <rosparam file="$(arg cfg_file)" command="load" />
+  </node>
+</launch>
