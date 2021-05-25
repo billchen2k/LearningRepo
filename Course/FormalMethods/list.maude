@@ -1,9 +1,18 @@
 fmod LIST-NAT is
+
     protecting NAT .
 
     sort List-Nat .
     subsort Nat < List-Nat .
 
-    op nil: -> List-Nat [ctor] .
-    op _,_ : Nat List-Nat -> List-Nat [ctor]
+    op nil : -> List-Nat [ctor] .
+    op _,_ : Nat List-Nat -> List-Nat [ctor id: nil] .
+
+    op len : List-Nat -> Nat .
+    var LN : List-Nat .
+    var N : Nat .
+    eq len(nil) = 0 .
+    eq len(N, LN) = len(LN) + 1 .
+    --- eq len(N) = 1 . --- Imclearportant
+
 endfm

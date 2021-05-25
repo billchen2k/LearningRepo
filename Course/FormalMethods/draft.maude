@@ -3,8 +3,21 @@ fmod PEANO is
     op 0 : -> Nat [ctor] .
     op s : Nat -> Nat [ctor iter] .
     op _+_ : Nat Nat -> Nat .
+    op _*_ : Nat Nat -> Nat .
+    op _-_ : Nat Nat -> Nat .
     
     vars M N : Nat .
+
+    --- Add
     eq 0 + N = N .
     eq s(M) + N = s(M + N) .
+
+    --- Mult
+    eq 0 * N = 0 .
+    eq s(M) * N = N + (M * N) .
+
+    --- Substraction https://math.stackexchange.com/questions/461719/what-is-the-peano-definition-of-subtraction
+    eq N - N = 0 .
+    eq M - N = s(M - s(N)) .
+
 endfm

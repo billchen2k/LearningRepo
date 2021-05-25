@@ -1,5 +1,7 @@
 fmod CROSS_BRIDGE is
 
+    protecting NAT .
+
+    rl p(N1, P) p(N2, p) f(P) t(N) => P
     
-    
-endfm
+endfm search from line 33 to line 37.

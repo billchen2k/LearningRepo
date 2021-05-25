@@ -1,19 +1,51 @@
+#include <algorithm>
+#include <cmath>
+#include <cstdio>
 #include <iostream>
-#include <vector>
-#include <string>
+#include <unordered_map>
+
+const double r = 0.57721566490153286060651209;
 using namespace std;
-int main() {
-	string input;
-	cin >> input;
-	int flags[256] = {0}, lenmax = 0, left = 0;
-	for (int i = 0; i < input.size(); ++i) {
-		int index = int(input[i]);
-		if (flags[index] == 0 || flags[index] < left) {
-			lenmax = max(lenmax, i - left + 1);
-		} else {
-			left = flags[index];
+typedef long long ll;
+
+/**
+ * @brief Calculate harmonic number. 1/1 + 1/2 + 1/3 + ... + 1/n
+ * 
+ * @param n 
+ * @return double 
+ */
+double harm(ll n) {
+	return log(n) + r + 1.0 / (2 * n);
+}
+
+double calc(double m, ll a, ll b) {
+	double res = 0;
+	if (b < 10e10) {
+		for (double i = a; i <= b; i++) {
+			res += ((double)m / (double)i);
 		}
-		flags[index] = i + 1;
 	}
-	cout << lenmax;
+	else {
+		res = m * harm(b) - m * harm(a);
+	}
+	return res;
+}
+
+int main() {
+	ll n, m, k;
+	double P = 0;
+	cin >> n >> m >> k;
+	if (m > n)
+		m = n; // Not necessary
+	if (k > m) {
+		P += calc(m, k, n);
+	} else {
+		double certain_count = m - k + 1;
+		P += certain_count;
+		P += calc(m, m + 1, n);
+		// P = certain_count + (n - m) * (m / n);
+	}
+	printf("%.10f", P);
+
+	return 0;
 }

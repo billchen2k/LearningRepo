@@ -1,0 +1,8 @@
+cozmo
+ipython
+numpy
+Pillow
+requests
+flask
+opencv-python==3.4.14.51
+matplotlib

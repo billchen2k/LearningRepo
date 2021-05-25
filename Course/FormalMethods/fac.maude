@@ -6,5 +6,5 @@ fmod FAC is
     var N : Nat .
     eq fac(0) = 1 .
     eq fac(s N) = (s N) * fac(N).
-
+    
 endfm

@@ -19,12 +19,14 @@ test_data = pd.read_csv("dev.csv") # Data set used to set.
 # Add a new column called 'edited' as the edited headline.
 
 def add_edited(dataset):
-    dataset["edited1"] = dataset.apply(
+    edited1 = dataset.apply(
         lambda x: re.sub(r"<.+/>", x["edit1"], x["original1"]), axis=1
     )
-    dataset["edited2"] = dataset.apply(
+    dataset["edited1"] = edited1
+    edited2 = dataset.apply(
         lambda x: re.sub(r"<.+/>", x["edit2"], x["original2"]), axis=1
     )
+    dataset["edited2"] = edited2
     dataset["original1"] = dataset["original1"].str.replace(r"<(.+)/>", "\g<1>")
     dataset["original2"] = dataset["original2"].str.replace(r"<(.+)/>", "\g<1>")
 
