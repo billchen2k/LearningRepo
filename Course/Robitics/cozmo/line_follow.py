@@ -30,7 +30,7 @@ from matplotlib import pyplot as plt
 
 
 # A class for rects
-class rect:
+class Rect:
     def __init__(self, x=0, y=0, w=0, h=0, name=''):
         self.x = x
         self.y = y
@@ -57,11 +57,11 @@ class rect:
 
 # Zones where path contour is search in
 ZONE_BOTTOM = 'bottom zone'
-b_zn = rect(30, 180, 260, 20, ZONE_BOTTOM)
+b_zn = Rect(30, 180, 260, 20, ZONE_BOTTOM)
 ZONE_LEFT = 'left zone'
-l_zn = rect(0, 80, 30, 100, ZONE_LEFT)
+l_zn = Rect(0, 80, 30, 100, ZONE_LEFT)
 ZONE_RIGHT = 'right zone'
-r_zn = rect(290, 80, 30, 100, ZONE_RIGHT)
+r_zn = Rect(290, 80, 30, 100, ZONE_RIGHT)
 
 # Constants for corrections
 gap_s = 20
@@ -74,16 +74,25 @@ move_s = 5
 move_m = 10
 move_l = 15
 
+# proposed_s = 10
+# proposed_m = 15
+# proposed_l = 25
+# proposed_xl = 40
+# speed = 20
+
 proposed_s = 10
-proposed_m = 15
-proposed_l = 25
-proposed_xl = 40
+proposed_m = 12
+proposed_l = 20
+proposed_xl = 30
+speed = 40
+
 sharp_forward = 40
 sharp_turn = 90
 cam_center = 160
 step_l = 20
 
-speed = 25  # Modified
+# speed = 30  # Modified
+
 
 min_perimeter = 40
 min_center = 80
@@ -173,7 +182,7 @@ def get_cnt_rects(img, zn):
     # Find bound rect of path
     cnt_rects = []
     for cnt in cnts:
-        cnt_rect = rect()
+        cnt_rect = Rect()
         cnt_rect.x, cnt_rect.y, cnt_rect.w, cnt_rect.h = cv2.boundingRect(cnt)
         cnt_rect.move(zn.x, zn.y)
         cnt_rects.append(cnt_rect)
@@ -323,6 +332,12 @@ def correct_position(robot: cozmo.robot.Robot, cur_center, mode):
     else:
         return proposed_xl
 
+def set_top_white(img: np.array):
+    for i in range(320):
+        for j in range(40):
+            img[j][i] = [0,0,0]
+    return img
+
 
 def step_forward(robot: cozmo.robot.Robot):
     """ Implements the main forward step. The robot takes a step forward and then
@@ -335,6 +350,11 @@ def step_forward(robot: cozmo.robot.Robot):
     camera_manual(robot)
     robot.set_head_angle(cozmo.robot.MIN_HEAD_ANGLE).wait_for_completed()
     pth_img = np.array(robot.world.latest_image.raw_image)
+
+    #
+    pth_img = set_top_white(pth_img)
+    #
+
     b_rect = get_path_rect(pth_img, b_zn)
     pth_img = draw_path_rect(pth_img, b_rect, (0, 255, 0))
     tmp_l_rect = get_path_rect(pth_img, l_zn)
@@ -362,6 +382,8 @@ def step_forward(robot: cozmo.robot.Robot):
         r_rect = None
     else:
         log.warning('Path was lost')
+        # Rush out through the end of the line
+        robot.drive_straight(distance_mm(sharp_forward), speed_mmps(speed), False).wait_for_completed()
         return False
     if show_img:
         cv2.imshow('step_forward', pth_img)
@@ -387,7 +409,6 @@ def drive_forward(robot: cozmo.robot.Robot):
         # time.sleep(proposed_step / speed)
     else:
         log.warning('Path was lost')
-        robot.drive_straight(distance_mm(sharp_forward), speed_mmps(speed), False).wait_for_completed()
         return False
     if show_img:
         cv2.imshow('step_forward', pth_img)
@@ -441,7 +462,7 @@ def camera_manual(robot: cozmo.robot.Robot):
     """ Set camera to manual exposure to brighten up the image
     """
     log.info('Camera manual...')
-    robot.camera.set_manual_exposure(40, 0.4)
+    robot.camera.set_manual_exposure(10, 1.5)
 
 
 def camera_auto(robot: cozmo.robot.Robot):

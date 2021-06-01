@@ -158,7 +158,7 @@ def get_cnt_rects(img, zn):
     # Prepare image
     raw_img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     crp_img = raw_img[zn.y:zn.y + zn.h, zn.x:zn.x + zn.w]
-    blr_img = cv2.GaussianBlur(crp_img, (5, 5), 0)
+    blr_img = cv2.GaussianBlur(crp_img, (10, 10), 0)
     th, thr_img = cv2.threshold(blr_img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
     log.info('Threshold value in ' + zn.name + ': ' + str(th))
     inv_img = cv2.bitwise_not(thr_img)
