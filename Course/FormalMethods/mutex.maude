@@ -1,0 +1,11 @@
+mod MUTEX is
+    sorts Pro Token Name Status Configuration .
+    ops $ * : -> Token .
+    op [_,_] : Name Status -> Proc .
+    ops waiting critical : -> Status .
+
+    rl $ [a, wait] => [a, critical] .
+    rl * [b, wait] => [b, critical] .
+    rl [a, critical] => [a, wait] * .
+    rl [b, critical] => [b, wait] $ .
+endm
