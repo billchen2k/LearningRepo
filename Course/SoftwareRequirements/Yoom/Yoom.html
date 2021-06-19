@@ -1,0 +1,2304 @@
+<!doctype html>
+<html style='font-size:16px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='file:///Users/billchen/Library/Application Support/abnerworks.Typora/themes/gitbook/fonts.css' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-fences-math .MathJax_SVG_Display, .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: visible; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; zoom: 90%; }
+#math-inline-preview-content { zoom: 1.1; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-math .MathJax_SVG_Display { margin-top: 8px; cursor: default; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ''; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+
+
+/* roboto-300 - latin */
+/* roboto-300italic - latin */
+/* roboto-regular - latin */
+/* roboto-italic - latin */
+/* roboto-500 - latin */
+/* roboto-500italic - latin */
+/* roboto-700 - latin */
+/* roboto-700italic - latin */
+/* roboto-900 - latin */
+/* roboto-900italic - latin */
+/* sorucecodepro-400 - latin */
+@font-face {
+     font-family: 'Source Code Pro';
+     font-style: normal;
+     font-weight: 400;
+     src: local('Source Code Pro'), local('SourceCodePro-Regular'),
+     url('file:///Users/billchen/Library/Application%20Support/abnerworks.Typora/themes/gitbook/SourceCodePro-Regular.ttf') format('truetype');
+}@import '';
+
+/*by H16nning*/
+
+:root {
+    --bg-color: white;
+    --side-bar-bg-color: #F5F7F9;
+    --control-text-color: #3b454e;
+    --primary-color: rgb(56, 132, 255);
+    --primary-btn-border-color: rgb(56, 132, 255);
+    --active-file-bg-color: #E6ECF1;
+    --active-file-text-color: inherit;
+    --active-file-border-color: rgb(56, 132, 255);
+    --item-hover-text-color: #242A31;
+    --item-hover-bg-color: #F5F7F9;
+    --window-border: 1px solid #E6ECF1;
+    --select-text-font-color: white;
+    --select-text-bg-color: #3277E5;
+
+    --md-char-color: #9DAAB6;
+    --heading-char-color: #9DAAB6;
+    --meta-content-color: rgb(56, 132, 255);
+
+    --borders: #E6ECF1;
+    --table-border-color: #E6ECF1;
+    --boxes: #F5F7F9;
+    --boxes-darker: #d8e0e7;
+    --boxes-darker2: #bac2c9;
+    --boxes-darkest: #9DAAB6;
+    --drag-placeholder-color: #d8e0e7;
+
+    --mds: #183055;
+    --text-color: #3b454e;
+    --heading-text-color: #242a31;
+    --light-text-color: #9DAAB6;
+    --light-text-color-darker: #74818D;
+    --codeboxes: #183055;
+    --rawblock-edit-panel-bd: transparent;
+    
+    --primary-color-white: #82abec;
+    --primary-color-white-darker: #5a83c5;
+    --primary-color-darker: #2f6dd1;
+    --focus-ring-color: rgb(56, 132, 255);
+
+    --danger-color: rgb(255, 70, 66);
+
+    /*****************************/
+
+    --font-family: "Roboto", sans-serif;
+    --code-font-family: "Source Code Pro";
+    --monospace: "Source Code Pro";
+}
+
+html, .form-control, .modal {
+    font-size: 16px;
+}
+
+
+body {
+    background: var(--bg-color);
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: #3b454e;
+    line-height: 1.625rem;
+    height: 100%;
+}
+
+#write {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px;
+    padding-bottom: 100px;
+    position: static;
+    width: 100%;
+}
+
+#write>ul:first-child,
+#write>ol:first-child {
+    margin-top: 30px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none !important;
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+a:hover {
+    color: var(--primary-color-darker);
+}
+
+.ty-preferences a {
+    color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    color: var(--heading-text-color);
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: solid 2px var(--borders);
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+#write>h1.md-focus:before, #write>h2.md-focus:before, #write>h3.md-focus:before, #write>h4.md-focus:before, #write>h5.md-focus:before, #write>h6.md-focus:before {
+    color: var(--light-text-color);
+    border: none;
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0px;
+    line-height: 1;
+}
+
+#write>h1.md-focus:before {
+    content: "h1";
+    top: 1.25rem;
+    left: -1.75rem;
+}
+
+#write>h2.md-focus:before {
+    content: "h2";
+    top: 0.8rem;
+    left: -1.75rem;
+}
+
+#write>h3.md-focus:before {
+    content: "h3";
+    top: 0.55rem;
+    left: -1.75rem;
+}
+
+#write>h4.md-focus:before {
+    content: "h4";
+    top: 0.35rem;
+    left: -1.75rem;
+}
+
+#write>h5.md-focus:before {
+    content: "h5";
+    top: 0.2rem;
+    left: -1.75rem;
+}
+
+#write>h6.md-focus:before {
+    content: "h6";
+    top: 0.2rem;
+    left: -1.75rem;
+}
+
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child,
+blockquote h1, blockquote h2, blockquote h3, blockquote h4, blockquote h5, blockquote h6 {
+    margin-top: 0rem;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl
+{
+    margin: 0.5rem 0rem 1.5rem 0rem;
+}
+
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--borders);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+.md-blockmeta {
+    color: var(--md-char-color);
+}
+
+mark {
+    background-color: hsla(217, 100%, 50%, 0.2);
+    color: var(--text-color);
+}
+
+/*BLOCKQUOTE*/
+
+blockquote {
+    width: 100%;
+    background-color: var(--boxes);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+
+blockquote blockquote {
+    padding-right: 0;
+}
+
+
+/*TABLE*/
+
+table {
+    font-size: .875rem;
+    padding: 0;
+    margin: 1.5rem 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid var(--borders);
+    border-bottom: 1px solid var(--borders);
+    margin: 0;
+    padding: 0;
+}
+
+table tr.md-end-block {
+    border-top: none;
+}
+
+table tr th {
+    font-weight: bold;
+    border: none;
+    border-bottom: solid 2px var(--borders);
+    margin: 0;
+    padding: 10px 16px;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+
+table tr td {
+    border: none;
+    margin: 0;
+    padding: 10px 16px;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+
+#write table tr td:hover, #write table tr th:hover {
+    background-color: var(--boxes);
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+
+/*OTHER TABLE THINGS*/
+
+.ty-table-edit {
+    padding: 0.3rem;
+    border: solid 1px var(--borders);
+    border-radius: 0.3rem;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+}
+
+.ty-table-edit:active, .ty-table-edit:focus,
+.popover:active, .popover:focus {
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+.popover {
+    border: solid 1px var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    border-radius: 0.3rem;
+}
+
+.popover .arrow {
+    border-bottom-color: var(--borders);
+}
+
+.md-grid-board .md-grid-ext {
+    background-color: var(--boxes);
+}
+
+.md-grid-board tr[row='1'] .md-grid-ext {
+    background-color: var(--boxes-darkest);
+}
+
+.md-grid-board a.md-active, .md-grid-board a:hover {
+    background-color: var(--primary-color-white);
+    border-color: var(--primary-color-white-darker);
+}
+
+#md-grid-width, #md-grid-height {
+    border-radius: 0.3rem;
+    border-color: var(--borders);
+}
+
+#md-grid-width, #md-grid-height {
+    border-radius: 0.3rem;
+    border-color: var(--borders);
+    transition-duration: 0.3s;
+    transition-property: border-color;
+}
+
+#md-grid-width:focus, #md-grid-height:focus {
+    border-radius: 0.3rem;
+    border-color: var(--primary-color);
+}
+
+/*CODE*/
+
+.CodeMirror {
+   padding: 1rem;
+   font-family: "Source Code Pro", monospace;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    background-color: none;
+    border-right: none;
+    border-radius: 0px;
+    width: 2rem;
+    color: white;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+    border-left: solid 2px var(--light-text-color-darker);
+}
+
+.CodeMirror.cm-s-typora-default .CodeMirror-activeline-background {
+    background-color: var(--boxes);
+}
+
+.cm-s-inner .CodeMirror-cursor {
+    color: black;
+    border-left: solid 1px black
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    color: var(--bg-color);
+    opacity: 0.6;
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cm-s-inner span.cm-comment {
+    color: #9DAAB6;
+}
+
+.cm-s-inner span.cm-string,
+.cm-s-inner span.cm-string-2 {
+    color: #71A7FF;
+}
+
+.cm-s-inner span.cm-number {
+    color: #FF9D3D;
+}
+
+.cm-s-inner span.cm-variable,
+.cm-s-inner span.cm-variable-2 {
+    color: white;
+}
+
+.cm-s-inner span.cm-def {
+    color: white;
+}
+
+.cm-s-inner span.cm-operator {
+    color: #FF9D3D;
+}
+
+.cm-s-inner span.cm-keyword {
+    color: #61E3A5;
+}
+
+.cm-s-inner span.cm-atom {
+    color: #bd93f9;
+}
+
+.cm-s-inner span.cm-meta {
+    color: #f8f8f2;
+}
+
+.cm-s-inner span.cm-link {
+    color: var(--primary-color);
+}
+
+.cm-s-inner span.cm-tag, .cm-s-inner .cm-header {
+    color: #b4f6d6;
+}
+
+.cm-s-inner span.cm-attribute {
+    color: #FF9D3D;
+}
+
+.cm-s-inner span.cm-qualifier, .cm-s-inner span.cm-type, .cm-s-inner span.cm-variable-3 {
+    color: #82ee9d;
+}
+
+.cm-s-inner span.cm-property  {
+    color: #ffd6ad;
+}
+
+.cm-s-inner span.cm-builtin {
+    color: #8ffaaa;
+}
+
+.md-fences.md-focus .cm-s-inner .CodeMirror-activeline-background {
+    background: none;
+}
+
+.cm-s-inner .CodeMirror-selected,
+.cm-s-inner .CodeMirror-selectedtext {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cm-s-typora-default .cm-header, .cm-s-typora-default .cm-property {
+    color: var(--primary-color);
+}
+
+#typora-source span.cm-variable {
+    color: var(--window-border);
+}
+
+#typora-source span.cm-def {
+    color: var(--text-color);
+}
+
+#write .code-tooltip {
+    box-shadow: rgba(116, 129, 141, 0.08) 0px 2px 6px 0px;
+    border: solid 1px var(--borders);
+    border-radius: 0.3rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 15rem;
+    height: 2.5rem;
+    bottom: -3rem;
+    padding: 0.1875rem;
+}
+
+#write .code-tooltip .ty-input {
+    border: solid 1px var(--borders);
+    height: 2rem;
+    line-height: 2rem;
+    margin: 0rem;
+    padding-left: 0.5rem !important;
+    text-align: left;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: var(--font-family);
+    transition-duration: 0.3s;
+    transition-property: border;
+}
+
+#write .code-tooltip .ty-input:focus {
+    border-color: var(--primary-color);
+}
+
+.html-for-mac .ty-cm-lang-input:empty:after {
+    left: 0.5rem;
+}
+
+.autoComplt-list li, .fences-auto-suggest li {
+    font-weight: 500;
+    transition-duration: 0.3s;
+    transition-property: background-color, color;
+}
+
+.autoComplt-list li.active, .fences-auto-suggest li:hover {
+    background-color: var(--boxes);
+    color: var(--primary-color);
+}
+
+.md-fences,
+tt {
+    border-radius: 0.3rem;
+    color: #ffffff;
+    padding: 1.5rem;
+    font-size: 0.8rem;
+}
+
+code {
+    padding: 0.25rem 0.5rem;
+    background-color: var(--boxes);
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
+}
+
+.md-fences .CodeMirror div.CodeMirror-cursor {
+    border-left: solid 1px white;
+}
+
+.md-fences {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    background-color: var(--mds);
+}
+
+/*CHECKBOXES*/
+
+.md-task-list-item > input:before, input[type=checkbox]:before {
+    border-radius: 0.2rem;
+    margin-top: -0.08rem;
+    margin-left: -0.1rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--borders);
+	content: " ";
+    display: block;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+
+.md-task-list-item:hover > input:before, input[type=checkbox]:hover:before {
+    background-color: var(--boxes-darker);
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before, input[type=checkbox]:checked:before {
+    background-color: var(--primary-color);
+}
+
+.md-task-list-item:hover > input:checked:before,
+.md-task-list-item:hover > input[checked]:before, input[type=checkbox]:hover:checked:before {
+    background-color: var(--primary-color-darker);
+}
+
+.md-task-list-item > input:after,
+.md-task-list-item > input:after, input[type=checkbox]:after {
+    transform: rotate(-45deg);
+	position: absolute;
+	border: 2px solid white;
+	border-top: 0;
+    border-right: 0;
+	top: 0.16rem;
+	left: 0.1rem;
+	width: 0.6rem;
+	height: 0.375rem;
+    content: " ";
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after, input[type=checkbox]:checked:after {
+    opacity: 1;
+}
+
+.ty-preferences input[type=checkbox]:before {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.ty-preferences input[type=checkbox]:after {
+    width: 0.5rem;
+    height: 0.32rem;
+    top: 0.19rem;
+    left: 0.14rem;
+}
+
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    line-height: 1.45;
+    background-color: var(--boxes);
+    border: 0;
+    border-radius: 0.3rem;
+    color: var(--text-color);
+    border-left: solid 4px var(--boxes-darkest);
+}
+
+.md-image>.md-meta {
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: var(--md-char-color);
+    opacity: 1;
+}
+
+/*TOC*/
+
+.md-toc {
+    margin: 1.5rem 0rem;
+}
+
+.md-toc:focus .md-toc-content { border: none; }
+
+.md-toc-tooltip .btn {
+    padding: 0.5rem;
+    line-height: 1rem;
+}
+
+.md-toc-tooltip .btn:hover {
+    color: var(--primary-color) !important /*required*/;
+    background-color: var(--boxes) !important /*required*/;
+}
+
+
+/*MATH*/
+
+.MathJax_SVG:focus {
+    outline: none;
+}
+
+.md-rawblock {
+    margin: 1.5rem 0rem;
+}
+
+.md-rawblock-container {
+    transition-duration: 0.3s;
+    transition-property: box-shadow, border;
+    padding: 8px;
+    border: solid 1px transparent;
+    border-radius: 0.3rem;
+}
+
+.md-rawblock:hover>.md-rawblock-container {
+    background-color: transparent;
+    border: solid 1px var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+.md-math-block .md-rawblock-control:not(.md-rawblock-tooltip) {
+    background-color: var(--bg-color);
+    border-left: solid 2px var(--primary-color);
+    border-right: solid 2px var(--primary-color);
+}
+
+.md-math-block .md-rawblock-before {
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    border-top: solid 2px var(--primary-color);
+}
+
+.md-math-block .md-rawblock-after {
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    border-bottom: solid 2px var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+#write .md-math-block .code-tooltip {
+    width: 100%;
+}
+
+.md-mathblock-input span.cm-tag {
+    color: #15726d;
+}
+
+.md-mathblock-input span.cm-atom {
+    color: #8a1fa0;
+}
+
+.md-mathblock-input span.cm-number {
+    color: #df4617;
+}
+
+
+/*HTML*/
+
+.md-htmlblock-panel {
+    border: solid 2px var(--primary-color);
+    border-radius: 0.3rem;
+}
+
+
+/*FOOTER*/
+
+footer.ty-footer {
+    border: none;
+}
+
+.footer-item {
+    opacity: 1 !important;
+    color: var(--light-text-color);
+    transition: 0.3s;
+}
+
+.footer-item:hover {
+    color: var(--light-text-color-darker) !important;
+}
+
+#outline-btn:hover {
+    color: var(--light-text-color-darker) !important;
+}
+
+/*SIDEBAR*/
+
+#typora-sidebar {
+    border-right: solid 1px var(--borders);
+}
+
+.info-panel-tab {
+    opacity: 1;
+}
+
+.info-panel-tab-border {
+    color: var(--primary-color);
+}
+
+#ty-sidebar-search-back-btn {
+    margin: auto;
+}
+
+.ty-show-outline-filter #file-library-search, .ty-show-search #file-library-search {
+    height: 4rem;
+}
+
+#file-library-search-input {
+    height: 2rem;
+}
+
+#file-library-search-panel input {
+    margin-top: 8px !important;
+}
+
+.ty-sidebar-search-panel .searchpanel-search-option-btn {
+    top: 14px;
+}
+
+#typora-sidebar #filesearch-case-ion-btn, #typora-sidebar #filesearch-word-ion-btn {
+    background: none;
+    margin-top: 0.45rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+#typora-sidebar #filesearch-case-ion-btn:hover, #typora-sidebar #filesearch-word-ion-btn:hover {
+    color: var(--primary-color);
+}
+
+/*sidebar outline*/
+
+#close-outline-filter-btn {
+    top: 15px;
+    opacity: 1;
+    color: var(--light-text-color) !important;
+}
+
+#close-outline-filter-btn:hover {
+    color: var(--primary-color) !important;
+    background-color: transparent !important;
+}
+
+#close-outline-filter-btn:active {
+    background-color: transparent !important;
+}
+
+#outline-content {
+    padding-right: 0px;
+    line-height: 1rem;
+}
+
+.outline-item {
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.outline-item .outline-label {
+    display: block;
+    width: 100%;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    border-right: solid 2px transparent;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--light-text-color-darker);
+    transition-duration: 0.3s;
+    transition-property: color;
+}
+
+.outline-item:hover {
+    background: none;
+}
+
+.outline-item:hover .outline-label {
+    color: var(--primary-color);
+}
+
+.outline-label:hover {
+    text-decoration: none;
+}
+
+.outline-active.outline-label {
+    border-right: solid 2px var(--primary-color);
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.outline-expander {
+    padding-top: 0.4rem;
+    padding-right: 0.5rem;
+}
+
+/*sidebar file-list and search results*/
+
+#file-library-list[data-state=complete] #sidebar-loading-template {
+    padding: 0rem;
+}
+
+#typora-sidebar .file-list-item, .ty-search-item {
+    border: none;
+    transition-duration: 0.3s !important;
+    transition-property: background-color, border, color, height !important;
+    padding: 1rem;
+}
+
+#typora-sidebar .file-list-item:hover, .ty-search-item:hover {
+    background: var(--borders);
+}
+
+#typora-sidebar .ty-search-item-line:hover, #typora-sidebar .ty-search-item-line.active {
+    background-color: transparent;
+}
+
+#typora-sidebar .ty-search-item-line.active {
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+#typora-sidebar .file-list-item-file-name {
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-bottom: 0rem;
+    line-height: 1.8rem;
+    float: right;
+}
+
+#typora-sidebar .file-list-item-file-ext-part {
+    font-weight: 800;
+    opacity: 0.5;
+}
+
+#typora-sidebar .file-list-item-parent-loc, #typora-sidebar .file-list-item-time {
+    font-weight: 400;
+    opacity: 0.5;
+    display: block;
+}
+
+#typora-sidebar .file-list-item-summary {
+    float: left;
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+#typora-sidebar input.file-list-item-file-name {
+    margin: 0.5rem 0rem 0.5rem 0.7rem;
+    padding: 0.4rem !important;
+    line-height: 1rem;
+    float: right;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    background-color: white !important;
+}
+
+#typora-sidebar .file-list-item.file-library-file-node {
+    border: none;
+}
+
+#typora-sidebar .file-tree-node.active .file-node-background,
+#typora-sidebar .file-list-item.active,
+#typora-sidebar .ty-search-item.active  {
+    background-color: white;
+    outline: 1px solid var(--borders);
+    border: none;
+    color: var(--primary-color) !important;
+}
+
+#typora-sidebar .file-tree-node.active .file-node-content {
+    color: var(--primary-color) !important;
+}
+
+#typora-sidebar .file-tree-node {
+    padding: 0rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-left: 0.8rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-content {
+    padding: 0rem;
+    line-height: 2.2rem;
+    height: 2.2rem;
+    background: none;
+}
+
+#typora-sidebar .file-tree-node .file-node-background {
+    padding: 0rem;
+    height: 2.2rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon {
+    margin-right: 0.5rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon.fa-file-text-o {
+    margin-top: 0.33rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon.fa-folder {
+    margin-top: 0.36rem;
+}
+
+#typora-sidebar .file-tree-node .fa-caret-down, #typora-sidebar .file-tree-node .fa-caret-right {
+    position: relative;
+    top: 5px;
+}
+
+#typora-sidebar .file-tree-node .file-tree-rename-input {
+    height: 2.2rem;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0rem;
+    padding-left: 0rem;
+}
+
+#typora-sidebar .ty-search-item-collapse-icon {
+    top: 9px;
+}
+
+/*no left border*/
+#typora-sidebar .file-tree-node.active>.file-node-background {
+    border: none;
+}
+
+/*no dotted highlighting*/
+.file-library-node:not(.file-node-root):focus>.file-node-content {
+    outline: none;
+}
+
+#typora-sidebar #sidebar-files-menu {
+    border: solid 1px var(--borders);
+    border-radius: 0.3rem;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+#typora-sidebar #ty-sidebar-footer {
+    background-color: var(--bg-color);
+    border-top: solid 1px var(--borders);
+    font-weight: 500;
+}
+
+#typora-sidebar #ty-sidebar-footer li {
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
+}
+
+#typora-sidebar #ty-sidebar-footer li:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+/*cursor*/
+.file-node-content:hover {
+    cursor: pointer;
+}
+
+.file-tree-node:not(.file-node-root):not(.file-node-expanded) .file-node-background{
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.file-tree-node:not(.file-node-root):not(.file-node-expanded):hover .file-node-background{
+    background-color: var(--borders);
+}
+
+#typora-sidebar .sidebar-footer-item {
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
+    font-weight: 700;
+}
+
+#typora-sidebar .sidebar-footer-item:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+#typora-quick-open {
+    background-color: white;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 0rem;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+#typora-quick-open-input {
+    margin-right: 20px;
+}
+
+#typora-quick-open-input .input {
+    box-shadow: none;
+    border: none;
+    margin: 0.5rem;
+    margin-left: 0.8rem;
+}
+
+.typora-quick-open-item {
+    background-color: white;
+    border: none;
+    font-weight: 500;;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.typora-quick-open-item:hover {
+    background-color: var(--boxes);
+    color: var(--primary-color);
+}
+
+.typora-quick-open-item.active {
+    background-color: var(--boxes);
+    border: none;
+}
+
+.ty-quick-open-category-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    opacity: 1;
+    color: var(--light-text-color);
+    line-height: 32px;
+    padding-top: 6px;
+    height: 32px;
+}
+
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+.md-lang {
+    color: var(--primary-color);
+}
+
+
+/*NOTIFICATION*/
+
+#md-notification {
+    border-bottom: solid 1px var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+#md-notifcation .btn {
+    border: 0;
+}
+
+/*PREFERENCES*/
+
+.ty-preferences {
+    font-family: var(--font-family);
+}
+
+.ty-preferences .window-header {
+    justify-content: space-between;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    border-bottom: solid 1px var(--borders);
+}
+
+.ty-preferences .window-header-content {
+    background-color: white;
+    margin: 0rem;
+}
+
+
+.ty-preferences .window-header h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0rem;
+    margin-left: 1rem;
+}
+
+.unibody-window .ty-preferences .window-header h2 {
+    margin-left: 1rem !important;
+}
+
+.ty-preferences .window-header-back {
+    margin-left: 1.2rem;
+}
+
+.ty-preferences .window-header-back .icon {
+    border-right: none;
+}
+
+/*preferences sidebar*/
+.ty-preferences .window-content {
+    background-color: white;
+}
+
+.ty-preferences .nav-group-item {
+    color: var(--text-color);
+    height: 2.5rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    padding: 0px 0px 0px 2rem;
+    font-size: 1rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.ty-preferences .nav-group-item:hover {
+    background-color: var(--borders);
+    border-radius: 0px;
+}
+
+.ty-preferences .nav-group-item.active {
+    border-radius: 0rem;
+    border: none;
+    outline: 1px solid var(--borders);
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.ty-preferences .pane-sm {
+    background: var(--boxes);
+    flex-basis: 240px;
+    flex-grow: 0;
+    justify-content: center;
+    border-right: 1px solid var(--borders);
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.ty-preferences .pane-sm .list-group {
+    width: 100%;
+    max-width: 30rem;
+}
+
+.ty-preferences .list-group-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ty-preferences .list-group-header div {
+    width: 100%;
+    margin-right: 18px;
+    margin-left: 18px;
+}
+
+.ty-preferences .pane-sm .search-input {
+    margin: 0rem !important;
+    width: 100%;
+    font-size: 1rem !important;
+    height: 2.75rem;
+}
+
+.ty-preferences .pane-sm .search-input:active, .ty-preferences .pane-sm .search-input:focus {
+    border: solid 1px var(--primary-color) !important;
+    outline: none;
+}
+
+/*preferences main*/
+.ty-preferences .panel-header {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+/*preferences stuff*/
+.ty-preferences .dropdown-menu>li, .dropdown-item {
+    font-weight: 500;
+    font-size: 1rem;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.ty-preferences .dropdown-menu .active, .ty-preferences .dropdown-menu li:hover, .dropdown-item:hover {
+    background-color: var(--boxes);
+    color: var(--primary-color);
+}
+
+#ty-spell-check-dict-missing-secondary-btn:hover {
+    color: var(--primary-color) !important;
+}
+
+.header-close .icon {
+    border: none !important;
+}
+
+
+/*DROPDOWN*/
+
+.dropdown-menu:not(.megamenu-menu-list), .auto-suggest-container {
+    background-color: var(--bg-color);
+    border: solid 1px var(--borders) !important;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    user-select: none;
+}
+
+.dropdown-menu>li>a {
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>li>a:hover, .menu-style-btn.active, .context-menu.dropdown-menu>.active>a, .context-menu.dropdown-menu>li>a:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+.menu-style-btn {
+    color: var(--text-color);
+    border: none;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.menu-style-btn:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+    border: none;
+}
+
+header .menu-style-btn:hover {
+    background-color: transparent;
+}
+
+.menu-item-container {
+    padding: 0 12px 0 4px;
+}
+
+.menu-item-container a.menu-style-btn {
+    padding: 0.3rem 0.6rem;
+    margin: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: var(--borders);
+}
+
+
+/*BUTTON*/
+
+.btn, button {
+    border: none !important;
+    border-radius: 0.3em !important;
+    color: var(--text-color) !important;
+    transition-duration: 0.2s;
+    transition-property: all;
+    font-size: 0.9em !important;
+    font-weight: 500;
+    outline: none;
+}
+
+.btn-default {
+    border: none !important;
+    border-radius: 0.3em !important;
+    background-color: var(--boxes) !important;
+}
+
+.btn:hover, .button-hover {
+    border: none;
+    border-radius: 0.3em;
+    background-color: var(--borders) !important;
+    color: var(--text-color);
+}
+
+button:active, button.active,
+.btn:active, .btn-default:active {
+    border: none;
+    border-radius: 0.3em;
+    background-color: var(--boxes-darker) !important;
+    box-shadow: none;
+    outline: none;
+    color: var(--text-color);
+}
+
+.btn:focus {
+    border: none !important;
+    outline: none !important;
+    background-color: var(--boxes-darker);
+}
+
+.btn-primary {
+    border: none;
+    border-radius: 0.3em;
+    background-color: var(--primary-color);
+    color: white !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    color: white;
+    background-color: var(--primary-color-darker) !important;
+}
+
+.btn.dropdown-toggle-split, .btn.dropdown-toggle-split:hover {
+    border-radius: 0em 0.3em 0.3em 0em !important;
+}
+
+#ty-spell-check-dict-missing-primary-btn {
+    border-radius: 0.3em 0em 0em 0.3em !important;
+}
+
+.open>.dropdown-toggle.btn-primary {
+    background-color: var(--primary-color);
+    border-color: transparent;
+}
+
+
+/*GHOST BUTTON*/
+
+.window-header button,
+#close-sidebar-menu-btn, .html-for-mac .sidebar-tab-btn,
+.label-hint, .ty-table-edit .btn {
+    background-color: transparent !important;
+    color: var(--light-text-color) !important;
+    opacity: 1 !important;
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+.window-header button:hover, .window-header button:focus,
+#close-sidebar-menu-btn:hover, #close-sidebar-menu-btn:focus, .html-for-mac .sidebar-tab-btn:hover, .html-for-mac .sidebar-tab-btn:focus,
+.label-hint:hover, .label-hint:focus, .ty-table-edit .btn:hover, .ty-table-edit .btn:focus {
+    color: var(--primary-color) !important;
+    background: none !important;
+}
+
+.ty-table-edit .btn.active {
+    color: var(--primary-color) !important;
+    box-shadow: none;
+}
+
+
+/*IMAGE BUTTON*/
+
+.md-image-btn {
+    background-color: var(--boxes);
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.md-image-btn:before {
+    color: var(--text-color);
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+.md-image-btn:hover {
+    background-color: var(--borders);
+}
+
+.md-image-btn:hover:before {
+    color: var(--primary-color);
+}
+
+.md-image-input-src-btn {
+    border-radius: 0.3rem 0rem 0rem 0.3rem !important;
+}
+
+.md-image-pick-file-btn {
+    border-left: none;
+    border-radius: 0rem 0.3rem 0.3rem 0rem !important;
+}
+
+
+/*SEARCH-INPUTS*/
+
+.search-input, .search, .form-control, #file-library-search-input {
+    background-color: transparent !important;
+    border-radius: 0.3rem !important;
+    border: solid 1px var(--boxes-darker2) !important;
+    box-shadow: none !important;
+    color: var(---heading-text-color) !important;
+    font-size: 0.9rem !important;
+    font-weight: 500;
+    padding: 0.7rem !important;
+    height: 2rem;
+    transition-duration: 0.2s;
+    transition-property: border;
+}
+
+.search-input:focus, .search:focus, .form-control:focus, #file-library-search-input:focus {
+    background-color: transparent !important;
+    border-radius: 0.r3em !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: none !important;
+    color: var(--heading-text-color) !important;
+    font-size: 0.9rem !important;
+    font-weight: 500;
+    padding: 0.7rem !important;
+}
+
+.search-input::placeholder, .search::placeholder, .form-control::placeholder, #file-library-search-input::placeholder {
+    color: var(--light-text-color-darker) !important;
+}
+
+.clear-btn-icon {
+    top: 9px !important /*required*/;
+    right: 9px !important /*required*/;
+}
+
+.content tr.search-hit, .search-hit, .md-search-hit, .md-search-hit.md-search-select, .md-search-select, .ty-file-search-match-text {
+    background: rgba(56, 132, 255, 0.3) !important;
+}
+
+
+/*SEARCHPANEL*/
+
+#md-searchpanel {
+    border-bottom: 1px solid var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    max-height: 46px;
+}
+
+#md-searchpanel.searchpanel-replace-mode {
+    max-height: 84px;
+}
+
+#md-searchpanel input {
+    height: 2rem;
+    margin: 0rem !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+}
+
+#md-searchpanel .input-group-addon {
+    height: 2rem
+}
+
+#md-searchpanel .input-group-addon.close-btn {
+    padding-left: 8px;
+}
+
+
+.unibody-window #md-searchpanel .btn {
+    line-height: 2rem;
+}
+
+.searchpanel-search-option-btn {
+    top: 9px;
+    border: none;
+    color: var(--light-text-color-darker) !important /*required*/;
+    transition-duration: 0.3s;
+}
+
+.searchpanel-search-option-btn:hover {
+    color: var(--primary-color) !important /*required*/;
+    background-color: transparent !important /*required*/;
+}
+
+.searchpanel-search-option-btn.select, .searchpanel-search-option-btn.active {
+    color: white !important;
+    background-color: var(--primary-color) !important;
+}
+
+#searchpanel-case-option-btn {
+    right: 33px;
+}
+
+#searchpanel-word-option-btn {
+    right: 9px;
+}
+
+#searchpanel-word-option-btn, #searchpanel-case-option-btn {
+    background: none;
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+}
+
+/*NUMBER-INPUT*/
+input[type="number"] {
+    background-color: var(--boxes) !important;
+    border: none !important;
+    border-radius: 0.3rem;
+}
+
+input[type="number"]:focus {
+    background-color: var(--item-hover-bg-color) !important;
+}
+
+
+/*SELECTS*/
+
+select {
+    background-color: var(--bg-color) !important;
+    border-radius: 0.3rem !important;
+    border: solid 1px var(--boxes-darker2) !important;
+    box-shadow: none !important;
+    color: var(---heading-text-color) !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    padding: 0.3rem !important;
+    height: 2.1rem;
+    transition-duration: 0.2s;
+    transition-property: border;
+}
+
+select:hover {
+    background-color: var(--bg-color) !important;
+    border-radius: 0.r3em !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: none !important;
+    color: var(--heading-text-color) !important;
+    font-size: 0.9rem !important;
+}
+
+
+/*MODAL*/
+
+.modal-header, #common-dialog .modal-header {
+    border-bottom: solid 1px var(--borders);
+    padding-bottom: 15px;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    user-select: none;
+}
+
+.modal-body {
+    font-size: 0.9rem;
+    color: var(--light-text-color-darker);
+    user-select: none;
+}
+
+.modal-content {
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    border: solid 1px var(--borders);
+    border-radius: 0.3rem;
+}
+
+.modal-footer {
+    border-top: solid 1px var(--borders);
+}
+
+.modal-open .modal.fade.in {
+    background-color: rgba(8, 57, 136, 0.1);
+}
+
+
+/*SCROLLBAR*/
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 8px;
+    padding: 4px;
+    position: absolute;
+    background-color: var(--borders);
+    border: solid 1px var(--boxes-darker);
+    border-radius: 4.5px;
+}
+
+::-webkit-scrollbar:hover {
+    background-color: var(--borders);
+}
+
+::-webkit-scrollbar-corner {
+    background: 0 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--boxes-darker2);
+    background-clip: padding-box;
+    border-radius: 4.5px;
+    margin-right: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--boxes-darkest);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--boxes-darkest);
+}
+
+
+/*LANGS*/
+
+.ty-spell-check-panel-item {
+  font-weight: 500;
+  transition-duration: 0.2s;
+  transition-property: background-color, color;
+}
+
+.ty-spell-check-panel-item:hover {
+  color: var(--primary-color);
+  background-color: var(--boxes);
+}
+
+.ty-spell-check-panel-item.ty-active {
+  background-color: var(--boxes);
+}
+
+
+/*TOOLTIP*/
+
+.ty-tooltip {
+    background-color: var(--bg-color) !important;
+    border-radius: 0.3rem !important;
+    border: 1px solid var(--borders) !important;
+    -webkit-filter: none !important;
+    filter: none;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+
+/*FOOTER*/
+
+.footer-item:hover {
+  background-color: var(--boxes) !important;
+}
+
+#footer-word-count-info {
+    padding: 4px 0;
+}
+
+.footer-word-count-info-line {
+    padding: 0.25rem;
+    line-height: 1.6rem;
+}
+
+#footer-word-count-info tr {
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+#footer-word-count-info tr td:nth-child(1) {
+    padding: 0rem;
+    padding-right: 1rem;
+}
+
+#footer-word-count-info .ty-footer-word-count-all tr:hover {
+    color: var(--primary-color) !important;
+    background-color: var(--boxes) !important;
+}
+
+
+/*MEGAMENU*/
+
+.megamenu-menu {
+    box-shadow: none;
+    background-color: var(--boxes);
+    border-right: 1px solid var(--borders);
+}
+
+.megamenu-opened .megamenu-menu {
+    left: 0px;
+}
+
+#megamenu-menu-list {
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+}
+
+#megamenu-menu-list li a {
+    color: var(--text-color);
+    height: 2rem;
+    line-height: 1.8rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+#megamenu-menu-list li a:hover {
+    background-color: var(--borders);
+}
+
+#megamenu-menu-list li a.active {
+    color: var(--primary-color);
+    background-color: white;
+    outline: solid 1px var(--borders);
+}
+
+#megamenu-menu-list .divider {
+    background-color: var(--borders);
+    margin: 16px 0 0 0;
+}
+
+.megamenu-menu-list .saved #m-saved {
+    cursor: default;
+}
+
+.megamenu-menu-list .saved #m-saved .fa {
+    color: var(--primary-color);
+}
+
+.megamenu-menu-list .saved #m-saved:hover {
+    background-color: transparent;
+}
+
+.megamenu-menu-list #m-close:hover {
+    color: var(--danger-color);
+}
+
+.megamenu-menu-header {
+    border-bottom: solid 1px var(--borders);
+    margin-bottom: 1.2rem;
+    height: 74px;
+    transition-duration: 0.3s;
+}
+
+.megamenu-menu-header:hover {
+    background-color: var(--borders);
+}
+
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 16px;
+    left: 56px;
+    top: 24px;
+}
+
+#megamenu-back-btn {
+    color: var(--text-color);
+    font-size: 16px;
+    left: 24px;
+    top: 24px;
+}
+
+.megamenu-opened header {
+    background-color: var(--bg-color);
+    background-image: none;
+}
+
+.megamenu-content {
+    background-color: var(--bg-color);
+    background-image: none;
+}
+
+.megamenu-menu-panel:not(:first-of-type) {
+    margin-top: 2rem;
+}
+
+.megamenu-menu-panel h1 {
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin: 1rem 0rem 0.4rem 0rem;
+}
+
+.megamenu-menu-panel h2 {
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin: 1rem 0rem 0.4rem 0rem;
+}
+
+/*recent files*/
+
+#recent-file-panel tbody tr {
+    font-weight: 600;
+    transition-duration: 0.4s;
+}
+
+#recent-file-panel tbody tr:hover, .megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: var(--primary-color);
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: var(--boxes);
+}
+
+/*about help*/
+
+.about-content-slogon {
+    color: var(--light-text-color);
+}
+
+/*for the god himself*/
+.about-content-slogon span {
+    color: var(--primary-color) !important;
+}
+
+#about-content tbody tr {
+    font-weight: 500;
+    transition-duration: 0.4s;
+}
+
+#about-content tbody tr:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes) !important /*required important*/;
+}
+
+.long-btn {
+    margin-bottom: 12px;
+    margin-left: 2px;
+    box-shadow: rgba(116, 129, 141, 0.1) 2px 2px 6px;
+    background-color: white;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 1rem;
+
+    font-weight: 500;
+    font-size: 1rem;
+
+    transition-duration: 0.2s;
+}
+
+.long-btn:hover {
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color) !important /*important required*/;
+}
+
+#m-import-local:hover .preference-item-hint {
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
+#recent-file-panel-action-btn {
+    height: 34px;
+    border: none;
+    background-color: var(--boxes);
+}
+
+#theme-preview-grid {
+    max-width: none;
+    padding: 1rem;
+    background-color: var(--boxes);
+    border-radius: 0.5rem;
+}
+
+.theme-preview-div {
+    border: none;
+    border-radius: 0.4rem;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 0px 15px;
+    margin: 0.75rem;
+    transition-duration: 0.3s;
+}
+
+.theme-preview-div:hover {
+    box-shadow: rgba(116, 129, 141, 0.5) 3px 8px 15px;
+    cursor: pointer;
+    transform: rotate3d(1, -0.2, 0.2, 15deg);
+}
+
+.theme-preview-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4rem;
+}
+
+.theme-preview-content html {
+    width: 100%;
+    height: 100%;
+}
+
+.theme-preview-div.active .fa {
+    color: var(--primary-color);
+    bottom: 4px;
+    left: 4px;
+}
+
+.theme-preview-div .fa-check-circle:before {
+    background-color: var(--bg-color);
+    padding: 0px 2px;
+    border-radius: 1rem;
+}
+
+.megamenu-menu-panel tbody tr {
+    border-radius: 0.3rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.megamenu-menu-panel tbody tr:hover {
+    background-color: var(--borders) !important /*required important*/;
+}
+
+/*MIN MAX CLOSE*/
+#w-min, #w-max, #w-restore, #w-close {
+    border-radius: 0px !important;
+    font-size: 10px !important;
+    width: 46px !important;
+    height: 29px !important;
+}
+
+.btn.toolbar-icon svg, .btn.toolbar-icon .ty-icon {
+    position: relative;
+    top: 2px;
+}
+
+#w-close.btn.toolbar-icon .ty-icon {
+    left: 1px;
+}
+
+#w-close:hover {
+    background-color: var(--danger-color) !important;
+    color: white !important;
+}
+
+
+/*EXTRA STUFF*/
+
+a[type="page-link"] {
+    display: block;
+    background-color: white;
+    box-shadow: rgba(116, 129, 141, 0.2) 0px 3px 8px 0px;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 1rem;
+
+    font-weight: 600;
+
+    transition-duration: 0.2s;
+    transition-property: border, box-shadow;
+}
+
+
+a[type="page-link"]:hover {
+    box-shadow: rgba(116, 129, 161, 0.1) 0px 3px 8px 0px;
+    border: 1px solid var(--primary-color);
+}
+
+p[type="description"] {
+    color: var(--light-text-color);
+    margin: 0rem;
+    margin-bottom: 1rem;
+}
+
+ :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>Yoom</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='yoom-meetings-在线音视频会议系统-软件需求文档'><span>Yoom Meetings 在线音视频会议系统 软件需求文档</span></h1><blockquote><p><span>10185101210 陈俊潼</span></p></blockquote><center><b>Index</b></center><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n2502"><a class="md-toc-inner" href="#yoom-meetings-在线音视频会议系统-软件需求文档">Yoom Meetings 在线音视频会议系统 软件需求文档</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2508"><a class="md-toc-inner" href="#简介--introduction">简介 / Introduction</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2509"><a class="md-toc-inner" href="#愿景--purpose">愿景 / Purpose</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2512"><a class="md-toc-inner" href="#范围--scope">范围 / Scope</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2516"><a class="md-toc-inner" href="#术语定义--definition">术语定义 / Definition</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2554"><a class="md-toc-inner" href="#角色定义--actors">角色定义 / Actors</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2572"><a class="md-toc-inner" href="#概览--overview">概览 / Overview</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2573"><a class="md-toc-inner" href="#状态机">状态机</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2594"><a class="md-toc-inner" href="#状态迁移接口">状态迁移接口</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2653"><a class="md-toc-inner" href="#业务需求--solutions">业务需求 / Solutions</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2656"><a class="md-toc-inner" href="#ym10011v1-通话-1">YM1001：1v1 通话</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2657"><a class="md-toc-inner" href="#用户界面-1">用户界面</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2658"><a class="md-toc-inner" href="#时序图-1">时序图</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2669"><a class="md-toc-inner" href="#需求描述及用例描述">需求描述及用例描述</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n2677"><a class="md-toc-inner" href="#用例描述join-meeting-by-pstn">用例描述：Join Meeting By PSTN</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2704"><a class="md-toc-inner" href="#ym1002nvn-通话-1">YM1002：NvN 通话</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2705"><a class="md-toc-inner" href="#用户界面-2">用户界面</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2706"><a class="md-toc-inner" href="#时序图-2">时序图</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2714"><a class="md-toc-inner" href="#需求描述-1">需求描述</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2715"><a class="md-toc-inner" href="#ym2001会中参会权限管理">YM2001：会中参会权限管理</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2716"><a class="md-toc-inner" href="#用户界面-3">用户界面</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2717"><a class="md-toc-inner" href="#需求描述-2">需求描述</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2718"><a class="md-toc-inner" href="#ym3001实时字幕">YM3001：实时字幕</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2719"><a class="md-toc-inner" href="#用户界面-4">用户界面</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2720"><a class="md-toc-inner" href="#"> </a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2721"><a class="md-toc-inner" href="#时序图-3">时序图</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2722"><a class="md-toc-inner" href="#需求描述-3">需求描述</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2728"><a class="md-toc-inner" href="#ym3002会中特效">YM3002：会中特效</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2729"><a class="md-toc-inner" href="#用户界面-5">用户界面</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2730"><a class="md-toc-inner" href="#时序图-4">时序图</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2731"><a class="md-toc-inner" href="#需求描述-4">需求描述</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2732"><a class="md-toc-inner" href="#性能需求--performace-requirements">性能需求 / Performace Requirements</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2733"><a class="md-toc-inner" href="#ym10011v1-通话-2">YM1001：1v1 通话</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2734"><a class="md-toc-inner" href="#ym1002nvn-通话-2">YM1002：NvN 通话</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2735"><a class="md-toc-inner" href="#外部系统限制--design-constraints">外部系统限制 / Design Constraints</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2736"><a class="md-toc-inner" href="#终端平台要求">终端平台要求</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2737"><a class="md-toc-inner" href="#移动端">移动端</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2751"><a class="md-toc-inner" href="#桌面端">桌面端</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2770"><a class="md-toc-inner" href="#网页端">网页端</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2830"><a class="md-toc-inner" href="#硬件要求">硬件要求</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2831"><a class="md-toc-inner" href="#网络上行带宽要求">网络上行带宽要求</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2859"><a class="md-toc-inner" href="#网络下行带宽要求">网络下行带宽要求</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2903"><a class="md-toc-inner" href="#修订记录--version-records">修订记录 / Version Records</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2904"><a class="md-toc-inner" href="#v02">V0.2</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2906"><a class="md-toc-inner" href="#v01">V0.1</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2937"><a class="md-toc-inner" href="#附录--appendix">附录 / Appendix</a></span></p></div><h2 id='简介--introduction'><span>简介 / Introduction</span></h2><h3 id='愿景--purpose'><span>愿景 / Purpose</span></h3><p><span>Yoom Meetings 是一套高性能、高效、创新、安全的多人会议协作系统。后疫情时代，网上协作、远程办公成了大量中小企业的趋势，Work From Home 的流行也让音视频会议成为了企业推进工作必不可少的环节。Yoom Meetings 提供了一套高可用的可靠的会议系统。Yoom Meetings 支持多端入会、会中特效、字幕翻译，同时也针对企业会议室应用提供了整体解决方案，包括 Yoom 会议室的功能，兼容传统视频会议的 SIP 协议连接，支持主流视频会议品牌设备接入 Yoom 音视频会议。本音视频会议系统旨在提高远程协作的流程，提供流畅的音视频会议体验，为各体量的有音视频会议需求的企业提供可靠优质的解决方案。</span></p><p><span>Yoom Meetings 希望助力组织和个人更高效、更领先、更愉悦。</span></p><h3 id='范围--scope'><span>范围 / Scope</span></h3><p><span>Yoom Meetings 针对从数十人的小型团队到上万人的大型高校、企业都提出了安全可靠的解决方案，我们将处理音视频会议从发起、会中再到会议结束的过程中的所有过程。为了提供流畅的入会流程，提供了使用 ID 入会、链接入会和 PSTN 入会等多种解决方案；在会中为主持人和联席主持人提供了细粒度的权限管理方案和权限控制；在会后提供了详细的会议参会情况记录与聊天记录回顾，方便主持人回顾会议内容。</span></p><p><span>本系统的系统关联图如下：</span></p><p><img src="YoomMeetings/Context%20Diagram.png" referrerpolicy="no-referrer" alt="Context Diagram"></p><h3 id='术语定义--definition'><span>术语定义 / Definition</span></h3><figure><table><thead><tr><th><span>术语</span></th><th><span>英文全称</span></th><th><span>含义</span></th></tr></thead><tbody><tr><td><span>RTC</span></td><td><span>Real Time Conference</span></td><td><span>实时音视频，本系统提供高并发、低延迟、高清流畅、安全可靠的音视频服务。</span></td></tr><tr><td><span>SIP</span></td><td><span>Session Initiation Protocol</span></td><td><span>会话初始协议，由IETF（Internet Engineering Task Force，因特网工程任务组）制定的多媒体通信协议。 它是一个基于文本的应用层控制协议，用于创建、修改和释放一个或多个参与者的会话。</span></td></tr><tr><td><span>PSTN</span></td><td><span>Public Switched Telephone Network</span></td><td><span>公共交换网络，使用电话号码邀请参会人拨入会议的协议</span></td></tr><tr><td><span>VC</span></td><td><span>Video Conference</span></td><td><span>视频会议系统</span></td></tr><tr><td><span>PB</span></td><td><span>Protocol Buffers</span></td><td><span>约定接口和相关数据结构的数据描述语言</span></td></tr><tr><td><span>App Container</span></td><td><span>-</span></td><td><span>App的容器，每个独立的App都需要有一个 App Container 来实现自己的 Container，包括 apis、UI-SDK、PageManager</span></td></tr><tr><td><span>YM-SDK</span></td><td><span>-</span></td><td><span>包含底层 C++ 能力，视频会议所使用的 RTC SDK.</span></td></tr><tr><td><span>YM-Core</span></td><td><span>-</span></td><td><span>包视频会议的核心业务逻辑，会被多个App复用。运行于App Container内。包括：</span><br><span>- UI-SDK：包含 UI 部分的外部 SDK 封装</span><br><span>- 状态机：视频会议所使用的状态机</span><br><span>- Page-Manager：界面管理及界面容器</span></td></tr></tbody></table></figure><h3 id='角色定义--actors'><span>角色定义 / Actors</span></h3><p><span>系统中的角色主要区分成了以下四类：</span></p><figure><table><thead><tr><th><span>角色名称</span></th><th><span>职责描述</span></th></tr></thead><tbody><tr><td><span>Host</span></td><td><span>会议主持人，具备结束会议、管理成员、转移主持人权限、终止会议、禁音所有参会者、修改入会权限或取消禁音所有参会者等最高权限，主持人只能有一人</span></td></tr><tr><td><span>Co-Host</span></td><td><span>联席主持人，联席主持人可以具有多人，具备主持人除转移主持人以外的所有权限，协助管理会议状态和入会这信息</span></td></tr><tr><td><span>Participant</span></td><td><span>会议的参与者，可以控制自己的会议状态和离开会议，无法对其他人的状态做出修改或终止本会议</span></td></tr><tr><td><span>Non-Participant</span></td><td><span>会议的非参与者，指准备加入会议的用户，可以通过 PSTN、会议 ID、会议链接加入会议。包括未进入会议室的用户和在会议室等候（如需要）的用户。</span></td></tr></tbody></table></figure><h3 id='概览--overview'><span>概览 / Overview</span></h3><h4 id='状态机'><span>状态机</span></h4><p><span>Yoom 对每个参会者维持了一个状态机，用户指示当前用户的状态。</span></p><p><code>YMCORE-STATEMACHINE</code><span>：状态机图</span></p><p><img src="YoomMeetings/State%20Machine.png" referrerpolicy="no-referrer" alt="State Machine"></p><p><span>各状态含义如下：</span></p><figure><table><thead><tr><th><span>State</span></th><th><span>含义</span></th></tr></thead><tbody><tr><td><span>IDLE</span></td><td><span>空闲状态，未进入会议的待命状态</span></td></tr><tr><td><span>CALLING</span></td><td><span>当用户</span><strong><span>呼叫</span></strong><span>其他用户时，弹出的呼叫页面</span></td></tr><tr><td><span>RINGING</span></td><td><span>当用户</span><strong><span>被叫</span></strong><span>时，弹出的被叫页面</span></td></tr><tr><td><span>ONTHECALL</span></td><td><span>处在会议中的状态</span></td></tr></tbody></table></figure><h4 id='状态迁移接口'><span>状态迁移接口</span></h4><ul><li><p><code>invite</code><span> 正常情况下的1v1会议或多人会议的邀请操作</span></p></li><li><p><code>joinMeeting</code><span>正常情况下</span></p><ul><li><span>1v1会议：在服务端创建会议成功，并且对方接听，然后进入ON_THE_CALL</span></li><li><span>多人会议：在服务端创建会议成功，然后进入ON_THE_CALL</span></li></ul></li><li><p><code>cancelInvitation</code><span>取消1v1会议邀请</span></p></li><li><p><code>receiveInvitation</code><span> 收到邀请，进入Ringing状态</span></p></li><li><p><code>refuseInvitation</code><span> Ringing状态拒绝邀请</span></p></li><li><p><code>resetInvitation</code></p><ul><li><span>CALLING状态下：重置会议1v1会议或多人会议的邀请，一般用于创建会议失败等等意外情况</span></li><li><span>RINGING状态下：重置会议1v1会议或多人会议的邀请，一般用于创建会议失败等等意外情况</span></li></ul></li><li><p><code>acceptInvitation</code><span> 用户点击操作接受按钮，接受邀请并进入ON_THE_CALL</span></p></li><li><p><code>forceAcceptInvitation</code><span> 用户先收到了Zoom多人会议的RINGING推送，然后通过卡片加入相同会议</span></p></li><li><p><code>forceInvite1v1</code><span> 跨设备切换到1v1会议，具体情况是：别的设备在会中，本设备发起1v1会议。会先弹出确认框，确认后后端直接下发状态然后进入CALLING状态</span></p></li><li><p><code>recoveryMeeting</code><span> 客户端整体意外crash并重启之后，会自动恢复多人会议</span></p></li><li><p><code>forceJoinMeeting</code><span> 通过卡片进入Zoom多人会议，并加入会议的操作</span></p></li><li><p><code>previewJoinMeeting</code><span> 通过卡片进入自研SDK的Lark多人会议，打开预览界面，然后点击加入会议的操作</span></p></li><li><p><code>hangup</code></p><ul><li><span>主动挂断会议（结束会议 / 自己离开会议）</span></li><li><span>SDK 报错或者加入会议失败导致了离开会议</span></li><li><span>当参会者申请加入另一个会议时，强制离开当前会议</span></li></ul></li><li><p><code>terminate</code></p><ul><li><span>被踢出会议</span></li><li><span>1v1会议对方断线或离开</span></li><li><span>其他情况下，服务端下发了IDLE状态会自动退出会议</span></li></ul></li><li><p><code>rejoin</code></p><ul><li><span>在 sdk 重连失败后，用户点击重新加会，调用 </span><code>rejoinVideoChat</code><span> 来重新进入会议</span></li></ul></li></ul><h2 id='业务需求--solutions'><span>业务需求 / Solutions</span></h2><p><span>系统用例图如下图所示：</span></p><p><img src="YoomMeetings/Use%20Case%20Diagram.png" referrerpolicy="no-referrer" alt="Use Case Diagram"></p><h3 id='ym10011v1-通话-1'><span>YM1001：1v1 通话</span></h3><h4 id='用户界面-1'><span>用户界面</span></h4><h4 id='时序图-1'><span>时序图</span></h4><p><code>YM1001-SQ00: 1v1_start_invitation</code><span>：发起 1v1 邀请</span></p><p><img src="Sequence%20Diagram/00_1v1_start_invitation.png" referrerpolicy="no-referrer" alt="00_1v1_start_invitation"></p><p><code>YM1001-SQ01: 1v1_invitation_fail</code><span>：1v1 邀请失败：</span></p><p><img src="Sequence%20Diagram/01_1v1_invitation_fail.png" referrerpolicy="no-referrer" alt="01_1v1_invitation_fail"></p><p><code>YM1001-SQ02: 1v1_accept_invitation</code><span>：1v1 通话接受邀请：</span></p><p><img src="Sequence%20Diagram/02_1v1_accept_invitation.png" referrerpolicy="no-referrer" alt="02_1v1_accept_invitation"></p><p><code>YM1001-SQ03: 1v1_cancel_invitation</code><span>：1v1 通话取消发起邀请：</span></p><p><img src="Sequence%20Diagram/03_1v1_cancel_invitation.png" referrerpolicy="no-referrer" alt="03_1v1_cancel_invitation"></p><p><code>YM1001-SQ03: 1v1_hang_over</code><span>：1v1 通话挂断（任意一方）：</span></p><p><img src="Sequence%20Diagram/04_1v1_hang_over.png" referrerpolicy="no-referrer" alt="04_1v1_hang_over"></p><h4 id='需求描述及用例描述'><span>需求描述及用例描述</span></h4><ul><li><span>不同用户之间应当能直接向对方发起 1v1 通话</span></li><li><span>可以使用对方的用户名、邮箱、手机号来发起 1v1 通话</span></li><li><span>非参会者可以使用</span></li></ul><h5 id='用例描述join-meeting-by-pstn'><span>用例描述：Join Meeting By PSTN</span></h5><figure><table><thead><tr><th><span>Key</span></th><th><span>Value</span></th></tr></thead><tbody><tr><td><span>Use Case</span></td><td><span>Join Meeting By PSTN</span></td></tr><tr><td><span>Actors</span></td><td><span>Non-participant, Host</span></td></tr><tr><td><span>Pre-condition</span></td><td><span>用户应当正确登录进了系统；</span><br><span>用户应当被 Host 通过 PSTN 邀请通过电话拨入会议；</span></td></tr><tr><td><span>Post-condition</span></td><td><span>Non-participant 被 Host 邀请进该会议</span></td></tr><tr><td><span>Main Flow</span></td><td><span>Non-participant 收到电话邀请</span><br><span>Non-participant 接受电话邀请，进入会议</span></td></tr><tr><td><span>Alternative Flow</span></td><td><span>Non-participant 当前正在另一个会议，收到电话邀请</span><br><span>Non-participant 选择是否接受会议邀请，如果接受邀请，则退出当前会议，并加入新的会议</span><br><span>如果拒接邀请，则忽略该邀请，用户继续在原会议进行通话</span></td></tr><tr><td><span>Exception</span></td><td><span>None</span></td></tr></tbody></table></figure><p>&nbsp;</p><h3 id='ym1002nvn-通话-1'><span>YM1002：NvN 通话</span></h3><h4 id='用户界面-2'><span>用户界面</span></h4><h4 id='时序图-2'><span>时序图</span></h4><p><img src="Sequence%20Diagram/05_nvn_start_invitation.png" referrerpolicy="no-referrer" alt="05_nvn_start_invitation"></p><p><img src="Sequence%20Diagram/06_nvn_invitation_fail.png" referrerpolicy="no-referrer" alt="06_nvn_invitation_fail"></p><p><img src="Sequence%20Diagram/07_nvn_accept_invitation.png" referrerpolicy="no-referrer" alt="07_nvn_accept_invitation"></p><p><img src="Sequence%20Diagram/08_nvn_refuse_invitation.png" referrerpolicy="no-referrer" alt="08_nvn_refuse_invitation"></p><p><img src="Sequence%20Diagram/09_nvn_leave_meeting.png" referrerpolicy="no-referrer" alt="09_nvn_leave_meeting"></p><p><img src="Sequence%20Diagram/10_nvn_end_meeting.png" referrerpolicy="no-referrer" alt="10_nvn_end_meeting"></p><p>&nbsp;</p><h4 id='需求描述-1'><span>需求描述</span></h4><h3 id='ym2001会中参会权限管理'><span>YM2001：会中参会权限管理</span></h3><h4 id='用户界面-3'><span>用户界面</span></h4><h4 id='需求描述-2'><span>需求描述</span></h4><h3 id='ym3001实时字幕'><span>YM3001：实时字幕</span></h3><h4 id='用户界面-4'><span>用户界面</span></h4><h4 ><span> </span></h4><h4 id='时序图-3'><span>时序图</span></h4><h4 id='需求描述-3'><span>需求描述</span></h4><ul><li><span>需要在会中</span></li><li><span>主持人 Host 和联席主持人 Co-Host</span></li></ul><h3 id='ym3002会中特效'><span>YM3002：会中特效</span></h3><h4 id='用户界面-5'><span>用户界面</span></h4><h4 id='时序图-4'><span>时序图</span></h4><h4 id='需求描述-4'><span>需求描述</span></h4><h2 id='性能需求--performace-requirements'><span>性能需求 / Performace Requirements</span></h2><h3 id='ym10011v1-通话-2'><span>YM1001：1v1 通话</span></h3><h3 id='ym1002nvn-通话-2'><span>YM1002：NvN 通话</span></h3><h2 id='外部系统限制--design-constraints'><span>外部系统限制 / Design Constraints</span></h2><h3 id='终端平台要求'><span>终端平台要求</span></h3><h4 id='移动端'><span>移动端</span></h4><p><span>Yoom Meetings 安卓端最低适配到基于 Android 5.0 的设备，手机的分辨率不应低于 720x1080。最低的内存配置为 2GB，推荐的内存配置为 3GB 及以上。</span></p><p><span>iOS 端支持在 iOS 12.0 及以上的系统的所有苹果设备，包括：</span></p><figure><table><thead><tr><th><span>iPad</span></th><th><span>iPhone</span></th><th><span>Apple Watch</span></th></tr></thead><tbody><tr><td><span>iPad</span><br></td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><p><span>PS. 暂时不兼容使用鸿蒙系统的华为终端手机设备，预计在 2021 年第四季度完成适配工作。</span></p><h4 id='桌面端'><span>桌面端</span></h4><p><span>Yoom Meetings 的 Windows 端可在 Windows 7 及更高版本的系统上运行。目前已在 Windows 10 20H2 版本上测试通过，无运行异常。</span></p><p><span>最低配置要求：</span></p><ul><li><span>Intel Corel i3</span></li><li><span>4GB 运行内存</span></li><li><span>1280 x 720 分辨率</span></li></ul><p><span>推荐配置要求：</span></p><ul><li><span>Intel Corel i3</span></li><li><span>8GB 运行内存</span></li><li><span>1280 x 720 屏幕分辨率</span></li></ul><p><span>mac 端目前兼容了 macOS 10.11 及更高级的版本，在苹果 2014 年及之后发布的设备中可用。</span></p><h4 id='网页端'><span>网页端</span></h4><p><span>Yoom Meetings 目前兼容的浏览器为：</span></p><figure><table><thead><tr><th><span>系统</span></th><th><span>Chrome</span></th><th><span>Firefox</span></th><th><span>Safari</span></th><th><span>Edge</span></th><th><span>Edge Chromium</span></th><th><span>Internet Explorer</span></th><th><span>Opera</span></th></tr></thead><tbody><tr><td><span>Windows</span></td><td><span>√</span></td><td><span>√</span></td><td><span>-</span></td><td><span>√</span></td><td><span>√</span></td><td><span>×</span></td><td><span>√</span></td></tr><tr><td><span>Android</span></td><td><span>√</span></td><td><span>√</span></td><td><span>-</span></td><td><span>-</span></td><td><span>√</span></td><td><span>-</span></td><td><span>√</span></td></tr><tr><td><span>iOS</span></td><td><span>√</span></td><td><span>√</span></td><td><span>√*</span></td><td><span>-</span></td><td><span>√</span></td><td><span>-</span></td><td><span>√</span></td></tr><tr><td><span>macOS</span></td><td><span>√</span></td><td><span>√</span></td><td><span>√*</span></td><td><span>-</span></td><td><span>√</span></td><td><span>-</span></td><td><span>√</span></td></tr><tr><td><span>Linux</span></td><td><span>√</span></td><td><span>√</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td><td><span>-</span></td><td><span>√</span></td></tr></tbody></table></figure><p><span>注：在使用 Yoom Meetings 之前，请将浏览器升级至最新版本。以上兼容性报告均在截止 2021 年 6 月 15 日前的最新版本上测试。</span></p><p><span>*：由于权限问题，会中特效功能暂时无法在 Safari 浏览器上使用。</span></p><h3 id='硬件要求'><span>硬件要求</span></h3><h4 id='网络上行带宽要求'><span>网络上行带宽要求</span></h4><p><span>为了保证会议质量，网络上行带宽需要满足下列需求：</span></p><figure><table><thead><tr><th><span>场景</span></th><th><span>终端</span></th><th><span>带宽要求</span></th></tr></thead><tbody><tr><td><span>音频会议</span></td><td><span>移动端/桌面端/网页端</span></td><td><span>64 Kbps</span></td></tr><tr><td><span>视频会议</span></td><td><span>移动端</span></td><td><span>1 Mbps （高质量视频）</span></td></tr><tr><td><span>视频会议</span></td><td><span>桌面端</span></td><td><span>3 Mbps （高质量视频）</span></td></tr><tr><td><span>视频会议</span></td><td><span>网页端</span></td><td><span>2 Mbps （高质量视频）</span></td></tr><tr><td><span>屏幕共享</span></td><td><span>移动端/桌面端/网页端</span></td><td><span>2 Mbps （高质量屏幕）</span></td></tr></tbody></table></figure><p><span>备注：各终端在网络条件受限的情况下，Yoom 会自动调整带宽至 0.5 Mbps。</span></p><h4 id='网络下行带宽要求'><span>网络下行带宽要求</span></h4><p><span>为了保证会议质量，网络下行带宽需要满足下列需求：</span></p><figure><table><thead><tr><th><span>场景</span></th><th><span>终端</span></th><th><span>带宽要求</span></th></tr></thead><tbody><tr><td><span>音频会议</span></td><td><span>移动端/桌面端/网页端</span></td><td><span>192 Kbps</span></td></tr><tr><td><span>视频会议 - 宫格视图</span></td><td><span>移动端</span></td><td><span>0.5 Mbps （高质量视频）</span></td></tr><tr><td><span>视频会议 - 缩略视图</span></td><td><span>移动端</span></td><td><span>0.5 Mbps （高质量视频）</span></td></tr><tr><td><span>视频会议 - 宫格视图</span></td><td><span>桌面端</span></td><td><span>1 Mbps （高质量视频）</span></td></tr><tr><td><span>视频会议 - 缩略视图</span></td><td><span>桌面端</span></td><td><span>2 Mbps （高质量视频）</span></td></tr><tr><td><span>视频会议 - 演讲者视图</span></td><td><span>桌面端</span></td><td><span>3 Mbps （高质量视频）</span></td></tr><tr><td><span>视频会议 - 宫格视图</span></td><td><span>网页端</span></td><td><span>1 Mbps （高质量视频）</span></td></tr><tr><td><span>视频会议 - 缩略视图</span></td><td><span>网页端</span></td><td><span>2 Mbps （高质量视频）</span></td></tr><tr><td><span>视频会议 - 演讲者视图</span></td><td><span>网页端</span></td><td><span>3 Mbps （高质量视频）</span></td></tr></tbody></table></figure><p><span>备注：以上带宽要求为实现单流推送的最低网络要求，如要实现更高质量的会议或支持千方会议，需要将各项的带宽需求提升 3 倍，否则可能会出现性能问题或卡顿。</span></p><h2 id='修订记录--version-records'><span>修订记录 / Version Records</span></h2><h3 id='v02'><span>V0.2</span></h3><p>&nbsp;</p><h3 id='v01'><span>V0.1</span></h3><figure><table><thead><tr><th><span>Key</span></th><th><span>Value</span></th></tr></thead><tbody><tr><td><span>版本号</span></td><td><span>0.1</span></td></tr><tr><td><span>修订日期</span></td><td><span>2021-06-01</span></td></tr><tr><td><span>修订内容</span></td><td><span>初始版本发布</span></td></tr><tr><td><span>需求影响</span></td><td><span>无</span></td></tr><tr><td><span>评审人</span></td><td><span>@William Tester, @Charlie Tester</span></td></tr><tr><td><span>评审日期</span></td><td><span>2021-06-02</span></td></tr><tr><td><span>评审结果</span></td><td><span>通过</span></td></tr><tr><td><span>文件存档</span></td><td><a href='https://example.com/yoommeetings/sds0.1.pdf' target='_blank' class='url'>https://example.com/yoommeetings/sds0.1.pdf</a></td></tr></tbody></table></figure><p>&nbsp;</p><hr /><h2 id='附录--appendix'><span>附录 / Appendix</span></h2><p><span>本需求文档基于我在实习期间接触到的真实商业项目完成，出于商业保密要求，需求文档具体参数内容、系统名称等内容为合理范围内的的虚构，仅供满足课程考核需求。</span></p><p><span>陈俊潼 ·  2021 年 6 月</span></p><p><span>华东师范大学 · 软件工程学院</span></p></div></div>
+</body>
+</html>

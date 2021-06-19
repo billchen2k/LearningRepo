@@ -1,0 +1,45 @@
+\contentsline {section}{Yoom Meetings 在线音视频会议系统 软件需求文档}{1}{section*.1}%
+\contentsline {subsection}{简介 / Introduction}{2}{subsection*.3}%
+\contentsline {subsubsection}{愿景 / Purpose}{2}{subsubsection*.4}%
+\contentsline {subsubsection}{范围 / Scope}{2}{subsubsection*.5}%
+\contentsline {subsubsection}{术语定义 / Definition}{2}{subsubsection*.6}%
+\contentsline {subsubsection}{角色定义 / Actors}{3}{subsubsection*.7}%
+\contentsline {subsubsection}{概览 / Overview}{4}{subsubsection*.8}%
+\contentsline {paragraph}{状态机}{4}{paragraph*.9}%
+\contentsline {paragraph}{状态迁移接口}{5}{paragraph*.10}%
+\contentsline {subsection}{业务需求 / Solutions}{8}{subsection*.11}%
+\contentsline {subsubsection}{YM1001：1v1 通话}{8}{subsubsection*.12}%
+\contentsline {paragraph}{用户界面}{8}{paragraph*.13}%
+\contentsline {paragraph}{时序图}{9}{paragraph*.14}%
+\contentsline {paragraph}{需求描述及用例描述}{9}{paragraph*.15}%
+\contentsline {subparagraph}{用例描述：Join Meeting By PSTN}{12}{subparagraph*.16}%
+\contentsline {subparagraph}{用例描述：Join Meeting By 1v1 Invitation}{12}{subparagraph*.17}%
+\contentsline {subsubsection}{YM1002：NvN 通话}{13}{subsubsection*.18}%
+\contentsline {paragraph}{用户界面}{13}{paragraph*.19}%
+\contentsline {paragraph}{时序图}{13}{paragraph*.20}%
+\contentsline {paragraph}{需求描述及用例描述}{14}{paragraph*.21}%
+\contentsline {subparagraph}{用例描述：Join Meeting By Link}{14}{subparagraph*.22}%
+\contentsline {subsubsection}{YM2001：会中参会权限管理}{15}{subsubsection*.23}%
+\contentsline {paragraph}{用户界面}{15}{paragraph*.24}%
+\contentsline {paragraph}{需求描述及用例描述}{15}{paragraph*.25}%
+\contentsline {subsubsection}{YM3001：实时字幕}{15}{subsubsection*.26}%
+\contentsline {paragraph}{用户界面}{15}{paragraph*.27}%
+\contentsline {paragraph}{需求描述及用例描述}{15}{paragraph*.28}%
+\contentsline {subsubsection}{YM3002：会中特效}{15}{subsubsection*.29}%
+\contentsline {paragraph}{用户界面}{15}{paragraph*.30}%
+\contentsline {paragraph}{需求描述及用例描述}{15}{paragraph*.31}%
+\contentsline {subsection}{性能需求 / Performace Requirements}{18}{subsection*.32}%
+\contentsline {subsubsection}{YM1001：1v1 通话}{18}{subsubsection*.33}%
+\contentsline {subsubsection}{YM1002：NvN 通话}{18}{subsubsection*.34}%
+\contentsline {subsection}{外部系统限制 / Design Constraints}{18}{subsection*.35}%
+\contentsline {subsubsection}{终端平台要求}{18}{subsubsection*.36}%
+\contentsline {paragraph}{移动端}{18}{paragraph*.37}%
+\contentsline {paragraph}{桌面端}{19}{paragraph*.38}%
+\contentsline {paragraph}{网页端}{19}{paragraph*.39}%
+\contentsline {subsubsection}{硬件要求}{20}{subsubsection*.40}%
+\contentsline {paragraph}{网络上行带宽要求}{20}{paragraph*.41}%
+\contentsline {paragraph}{网络下行带宽要求}{20}{paragraph*.42}%
+\contentsline {subsection}{附录 / Appendix}{21}{subsection*.43}%
+\contentsline {subsubsection}{修订记录 / Version Records}{21}{subsubsection*.44}%
+\contentsline {subsubsection}{V0.2}{21}{subsubsection*.45}%
+\contentsline {subsubsection}{V0.1}{21}{subsubsection*.46}%
